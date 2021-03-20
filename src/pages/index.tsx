@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ContactForm from '../components/ContactForm'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
   }
   return (
     <div className={styles.container}>
+      <ContactForm />
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -66,6 +68,7 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+      
     </div>
   )
 }
