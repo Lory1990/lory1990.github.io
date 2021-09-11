@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mongodb:before {
+  content: "\e913";
+}
+
 .icon-docker:before {
   content: "\e90f";
 }
