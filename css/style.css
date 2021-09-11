@@ -605,19 +605,19 @@ figure figcaption p {
   margin-top: 5px;
 }
 
-#feature {
+#feature, #coding-languages {
   padding: 80px 0;
 }
 
-#feature .media {
+#feature .media, #coding-languages .media {
   margin: 0px 0 70px 0;
 }
 
-#feature .media .media-left {
+#feature .media .media-left, #coding-languages  .media .media-left {
   padding-right: 25px;
 }
 
-#feature h3 {
+#feature h3  , #coding-languages h3{
   color: #222222;
   font-size: 18px;
   text-transform: uppercase;
@@ -627,13 +627,13 @@ figure figcaption p {
   font-weight: 400;
 }
 
-#feature p {
+#feature p , #coding-languages p{
   line-height: 25px;
   font-size: 14px;
   color: #777777;
 }
 
-#feature .icon {
+#feature .icon,  #coding-languages .icon {
   text-decoration: none;
   color: #fff;
   background-color: #02bdd5;

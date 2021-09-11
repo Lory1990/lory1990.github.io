@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?3xalmo');
-  src:  url('fonts/icons.eot?3xalmo#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?3xalmo') format('truetype'),
-    url('fonts/icons.woff?3xalmo') format('woff'),
-    url('fonts/icons.svg?3xalmo#icons') format('svg');
+  src:  url('fonts/icons.eot?zhtkdw');
+  src:  url('fonts/icons.eot?zhtkdw#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?zhtkdw') format('truetype'),
+    url('fonts/icons.woff?zhtkdw') format('woff'),
+    url('fonts/icons.svg?zhtkdw#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-docker:before {
+  content: "\e90f";
+}
+.icon-kubernetes:before {
+  content: "\e910";
+}
+.icon-redis:before {
+  content: "\e911";
+}
+.icon-vps:before {
+  content: "\e912";
+}
+.icon-github:before {
+  content: "\e914";
+}
+.icon-gitlab:before {
+  content: "\e915";
+}
+.icon-storybook:before {
+  content: "\e916";
+}
 .icon-react:before {
   content: "\e90b";
 }
