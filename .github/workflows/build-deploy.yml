@@ -3,7 +3,7 @@
 name: Github Page Deploy
 
 on: 
-  push
+  manual
 #on:
 #  push:
 #    branches: [main]
