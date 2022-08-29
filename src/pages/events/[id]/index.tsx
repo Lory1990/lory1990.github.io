@@ -1,4 +1,3 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 
 const Events: React.FC = () => {
@@ -19,7 +18,7 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps = async ({ locale }: GetStaticPropsContext) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale)),
+
     },
   };
 };

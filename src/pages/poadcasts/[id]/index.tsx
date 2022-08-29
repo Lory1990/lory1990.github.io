@@ -1,4 +1,3 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 
 const PoadcastSingle: NextPage = () => {
@@ -16,10 +15,12 @@ export async function getStaticPaths() {
     };
   }
 
-export const getStaticProps: GetStaticProps = async ({ locale }: GetStaticPropsContext) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
+
+  export const getStaticProps: GetStaticProps = async ({ locale }: GetStaticPropsContext) => {
+    return {
+      props: {
+  
+      },
+    };
   };
-};
+  
