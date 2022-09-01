@@ -11,8 +11,8 @@ interface BlogCardProps {
 
 export default function BlogCard({ image, title, description, link }: BlogCardProps) {
     const theme = useTheme()
-    const { ref: refButtonHover, isHovered: isButtonHovered } = useHover()
-    const { ref: refCardHover, isHovered: isCardHovered } = useHover()
+    const { hoverRef: refButtonHover, isHovered: isButtonHovered } = useHover()
+    const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
     const primaryColorRGB = hexRgb(theme.palette.primary.main)
 
 
@@ -41,7 +41,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     height: "100%",
                     width: "100%",
                     opacity: 1,
-                    background: "linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.25) 40%)",
+                    background: "linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.0) 40%)",
                     WebkitTransition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     ...isCardHovered && {
@@ -58,15 +58,15 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     height: "100%",
                     width: "100%",
                     background:
-                        `linear-gradient(0deg, rgba(0,0,0,0.7) 0%,
+                        `linear-gradient(0deg, rgba(0,0,0,0.6) 0%,
                     rgba(
                     ${primaryColorRGB.red / 2},
                     ${primaryColorRGB.green / 2},
-                    ${primaryColorRGB.blue},0.3) 50%,
+                    ${primaryColorRGB.blue},0.2) 50%,
                     rgba(
                     ${primaryColorRGB.red},
                     ${primaryColorRGB.green},
-                    ${primaryColorRGB.blue},0.6) 100%)`,
+                    ${primaryColorRGB.blue},0.5) 100%)`,
                     opacity: 0,
                     ...isCardHovered && {
                         opacity: 1

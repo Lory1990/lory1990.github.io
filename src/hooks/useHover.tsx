@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 
 export default function useHover() {
   const [isHovered, setIsHovered] = useState(false);
-  const ref = useRef(null);
+  const hoverRef = useRef(null);
   const handleMouseOver = () => setIsHovered(true);
   const handleMouseOut = () => setIsHovered(false);
   useEffect(
     () => {
-      const node = ref.current;
+      const node = hoverRef.current;
       if (node) {
         node.addEventListener("mouseover", handleMouseOver);
         node.addEventListener("mouseout", handleMouseOut);
@@ -17,7 +17,7 @@ export default function useHover() {
         };
       }
     },
-    [ref.current] // Recall only if ref changes
+    [hoverRef.current] // Recall only if ref changes
   );
-  return { ref, isHovered };
+  return { hoverRef, isHovered };
 }
