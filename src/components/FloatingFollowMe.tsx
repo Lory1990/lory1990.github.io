@@ -2,7 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, Button, IconButton, Link, Typography } from '@mui/material';
+import { Box, IconButton, Link, Typography, useTheme } from '@mui/material';
 import useHover from '../hooks/useHover';
 
 interface FloatingFollowMeProps {
@@ -24,7 +24,7 @@ const createSocialIcon = (link: string, icon: JSX.Element): JSX.Element => {
     </IconButton >)
 }
 export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLink, githubLink }: FloatingFollowMeProps) {
-
+    const theme = useTheme()
 
     return (
         <Box
@@ -43,12 +43,13 @@ export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLi
                     transform: "rotate(90deg)",
                     marginBottom: "45px"
                 }}
+                color={theme.palette.grey[600]}
             >
                 Follow Me
             </Typography>
             <Box
                 sx={{
-                    borderLeft: "0.2px solid black",
+                    borderLeft: `0.2px solid ${theme.palette.grey[600]}`,
                     height: "50px",
                     width: "0.2px",
                     marginBottom: "15px"
