@@ -1,13 +1,29 @@
-import { GetStaticProps, GetStaticPropsContext } from "next";
+import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import projects, { IProject } from "../../assets/projects-list";
+import BlogCard from "../../components/BlogCard";
+import CardsBand from "../../components/CardsBand";
+import CustomHead from "../../components/CustomHead";
 import { IListProps } from "../../types/IListProps";
 
 export interface IProjectListProps extends IListProps<IProject>{
   
 }
 
-const ProjectListPage: React.FC = (props: IProjectListProps) => {
-  return <div>Projects Page</div>;
+const ProjectListPage: NextPage<IProjectListProps> = ({list}) => {
+  return <div>
+    <CustomHead title={"Projects"} />
+    <CardsBand>
+        {list.map((project: IProject) => {
+          return <BlogCard
+            key={project.slug}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={`projects/${project.slug}`}
+          />;
+        })}
+      </CardsBand>
+  </div>;
 };
 
 

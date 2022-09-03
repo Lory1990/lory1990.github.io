@@ -1,9 +1,10 @@
-import { AppBar, Button, IconButton, Toolbar, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material";
+import { AppBar, Button, IconButton, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material";
 import { Box, Theme } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import useHover from "../hooks/useHover";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 
 export interface HeaderElement {
@@ -20,36 +21,36 @@ function HeaderElementComponent({ label, link }: HeaderElement) {
     const { hoverRef, isHovered } = useHover()
     const router = useRouter()
     return (
-        <Box
-
-            onClick={() => router.push(link)}
-            ref={hoverRef}
-            sx={{
-                height: "100%",
-                display: "flex",
-
-                marginLeft: "15px",
-                position: "relative",
-                marginRight: "15px",
-                flexDirection: "column",
-                justifyContent: "center",
-                color: (router.pathname == link || isHovered) ? theme.palette.secondary.main : "inherit",
-                transition: "color 500ms linear",
-            }}
-        >
-            <Typography sx={{ fontWeight: "bold" }}>
-                {label.toUpperCase()}
-            </Typography>
-            <Box className="slider"
+        <Link href={link}>
+            <Box
+                ref={hoverRef}
                 sx={{
-                    width: router.pathname == link ? "100%" : "0%",
-                    height: "2px",
-                    borderBottom: `${theme.palette.secondary.main} 3px solid`,
-                    transition: "width 500ms ease",
-                    position: "absolute",
-                    bottom: "0px"
-                }} />
-        </Box>
+                    height: "100%",
+                    display: "flex",
+                    cursor: "pointer",
+                    marginLeft: "15px",
+                    position: "relative",
+                    marginRight: "15px",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    color: (router.pathname == link || isHovered) ? theme.palette.secondary.main : "inherit",
+                    transition: "color 500ms linear",
+                }}
+            >
+                <Typography sx={{ fontWeight: "bold" }}>
+                    {label.toUpperCase()}
+                </Typography>
+                <Box className="slider"
+                    sx={{
+                        width: router.pathname == link ? "100%" : "0%",
+                        height: "2px",
+                        borderBottom: `${theme.palette.secondary.main} 3px solid`,
+                        transition: "width 500ms ease",
+                        position: "absolute",
+                        bottom: "0px"
+                    }} />
+            </Box>
+        </Link>
     )
 }
 
@@ -76,7 +77,7 @@ export default function Header({ headerElements }: HeaderProps) {
     return (
         <AppBar
             elevation={trigger ? 4 : 0}
-            position="sticky"
+            position="fixed"
             sx={{
                 background: trigger ? theme.palette.primary.main : 'transparent',
                 transition: "background 200ms linear",

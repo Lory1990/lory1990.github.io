@@ -12,9 +12,16 @@ interface FloatingFollowMeProps {
     linkedinLink?: string
 }
 
+interface ISocialIconProps {
+    link?: string,
+    icon?: JSX.Element
+}
 
-const createSocialIcon = (link: string, icon: JSX.Element): JSX.Element => {
+const SocialIcon: React.FC<ISocialIconProps> = ({ link, icon }) => {
     const { hoverRef, isHovered } = useHover()
+
+    if (!link) return null;
+
     return (<IconButton
         ref={hoverRef}
         color={isHovered ? "primary" : "default"}
@@ -23,9 +30,9 @@ const createSocialIcon = (link: string, icon: JSX.Element): JSX.Element => {
         {icon}
     </IconButton >)
 }
-export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLink, githubLink }: FloatingFollowMeProps) {
-    const theme = useTheme()
+const FloatingFollowMe: React.FC<FloatingFollowMeProps> = ({ twitterLink, linkedinLink, facebookLink, githubLink }) => {
 
+    const theme = useTheme()
     return (
         <Box
             sx={{
@@ -55,10 +62,12 @@ export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLi
                     marginBottom: "15px"
                 }}>
             </Box>
-            {githubLink && createSocialIcon(githubLink, <GitHubIcon />)}
-            {facebookLink && createSocialIcon(facebookLink, <FacebookOutlinedIcon />)}
-            {twitterLink && createSocialIcon(twitterLink, <TwitterIcon />)}
-            {linkedinLink && createSocialIcon(linkedinLink, <LinkedInIcon />)}
+            <SocialIcon icon={<GitHubIcon />} link={githubLink} />
+            <SocialIcon icon={<FacebookOutlinedIcon />} link={facebookLink} />
+            <SocialIcon icon={<TwitterIcon />} link={twitterLink} />
+            <SocialIcon icon={<LinkedInIcon />} link={linkedinLink} />
         </Box>
     )
 }
+
+export default FloatingFollowMe

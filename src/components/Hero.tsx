@@ -4,13 +4,33 @@ import { Box } from "@mui/system";
 import hexRgb from "hex-rgb";
 import useHover from "../hooks/useHover";
 import AOSBox from "./AOSBox";
+import EventIcon from '@mui/icons-material/Event';
+import PlaceIcon from '@mui/icons-material/Place';
 
+interface ISingleDataProps{
+  text?:string,
+  icon?: JSX.Element
+}
+
+const SingleData : React.FC<ISingleDataProps> = ({icon, text}) => {
+  
+  if(!text) return null;
+
+  return (<Typography
+     sx={{
+      display: "flex",
+      alignItems: "center",
+      gap: "5px"
+     }}
+  >{icon} {text}</Typography>)
+}
 export interface IHeroProps {
   image: string;
   title: string;
   subtitle?: string;
   date?: string;
   place?: string;
+  backgroundImage?: string;
 }
 
 const Hero: React.FC<IHeroProps> = ({
@@ -44,10 +64,10 @@ const Hero: React.FC<IHeroProps> = ({
         }}
       >
         <AOSBox dataAos="fade-down">
-          <h1>{title}</h1>
+          <Typography variant="h1">{title}</Typography>
         </AOSBox>
         <AOSBox dataAos="fade-down" dataAosDelay="200">
-          {subtitle && <Box>{subtitle}</Box>}
+          {subtitle && <Typography variant="subtitle1">{subtitle}</Typography>}
         </AOSBox>
       </Box>
 
@@ -61,9 +81,14 @@ const Hero: React.FC<IHeroProps> = ({
           flex: "none",
         }}
       >
-        
-          {date && <Box>Date image {date}</Box>}
-          {place && <Box>Date image {place}</Box>}
+        <SingleData
+          text={date}
+          icon={<EventIcon />}
+        />
+        <SingleData
+          text={place}
+          icon={<PlaceIcon />} 
+        />
         
       </Box>
     </Box>
