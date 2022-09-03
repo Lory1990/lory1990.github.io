@@ -29,13 +29,13 @@ export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLi
     return (
         <Box
             sx={{
+                position: "fixed",
                 width: "fit-content",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                position: "absolute",
-                bottom: 20,
-                right: 0
+                bottom: "20px",
+                right: "0px"
             }}>
             <Typography
                 variant="body1"
@@ -58,7 +58,6 @@ export default function FloatingFollowMe({ twitterLink, linkedinLink, facebookLi
             {facebookLink && createSocialIcon(facebookLink, <FacebookOutlinedIcon />)}
             {twitterLink && createSocialIcon(twitterLink, <TwitterIcon />)}
             {linkedinLink && createSocialIcon(linkedinLink, <LinkedInIcon />)}
-
-        </Box >
+        </Box>
     )
 }
