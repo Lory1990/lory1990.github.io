@@ -1,43 +1,56 @@
-import BlogCard from '../components/BlogCard'
-import FloatingFollowMe from '../components/FloatingFollowMe'
-import Header, { HeaderElement } from '../components/Header'
-import MUIThemeProvider from '../MUIThemeProvider'
+import { Typography } from "@mui/material";
+import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
+import events, { IEvent } from "../assets/events-list";
+import podcasts, { IPodcast } from "../assets/podcast-list";
+import projects, { IProject } from "../assets/projects-list";
+import BlogCard from "../components/BlogCard";
+import CardsBand from "../components/CardsBand";
+import CustomHead from "../components/CustomHead";
+import FloatingFollowMe from "../components/FloatingFollowMe";
+import Header from "../components/Header";
 
+export interface IHomeProps {
+  events?: IEvent[];
+  podcasts?: IPodcast[];
+  projects?: IProject[];
+}
 
-const headerElements: HeaderElement[] = [
-  { link: "/", label: "Home" },
-  { link: "/ciao", label: "Chi Sono" },
-  { link: "/test2", label: "I miei progetti" },
-  { link: "/pod", label: "Podcasts" },
-  { link: "/contatti", label: "Contatti" },
-]
-export default function Home() {
+export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
   return (
     <div>
-      <MUIThemeProvider>
-        <Header headerElements={headerElements} />
-
-
-        <BlogCard
-          title='Sakura Trees'
-          description='The importance of sakura trees in japanese culture'
-          image='https://images.unsplash.com/photo-1611053571700-93bc64a26af9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80'
-          link='https://www.google.com/search?q=sakura+trees&sxsrf=ALiCzsbm6nJd5GlkqIMklLQyljfxeGxq3A:1661721384039&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjDqL7Guur5AhXA_bsIHfVNBtUQ_AUoAXoECAEQAw&biw=958&bih=919&dpr=1'
-        />
-        <BlogCard
-          title='Sakura Trees, pt2'
-          description='The importance of sakura trees in asian culture'
-          image='https://images.unsplash.com/photo-1611053571700-93bc64a26af9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80'
-          link='ht'
-        />
-        <FloatingFollowMe
-          githubLink="asd"
-          twitterLink="asd"
-          facebookLink="asd"
-          linkedinLink="asd"
-        />
-      </MUIThemeProvider>
-
+      <CustomHead />
+      <FloatingFollowMe
+        githubLink="asd"
+        twitterLink="asd"
+        facebookLink="asd"
+        linkedinLink="asd"
+      />
+      <Typography>My Projects</Typography>
+      <CardsBand>
+        {projects.map((project: IProject) => {
+          return <BlogCard
+            key={project.slug}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={`projects/${project.slug}`}
+          />;
+        })}
+      </CardsBand>
     </div>
-  )
-}
+  );
+};
+
+export const getStaticProps: GetStaticProps<IHomeProps> = async (
+  context: GetStaticPropsContext
+) => {
+  return {
+    props: {
+      events: events.slice(0, 3),
+      podcasts: podcasts.slice(0, 3),
+      projects: projects.slice(0, 3),
+    },
+  };
+};
+
+export default Home;

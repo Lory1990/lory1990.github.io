@@ -1,6 +1,8 @@
-import { Button, Card, Link, Slide, Typography, useTheme } from "@mui/material"
+import { Button, Card, Slide, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
+import Link from "next/link"
+import { useRouter } from "next/router"
 import useHover from "../hooks/useHover"
 interface BlogCardProps {
     image: string
@@ -14,6 +16,11 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
     const { hoverRef: refButtonHover, isHovered: isButtonHovered } = useHover()
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
     const primaryColorRGB = hexRgb(theme.palette.primary.main)
+    const router = useRouter();
+
+    const onButtonClick = () =>{
+        router.push(link)
+    }
 
 
 
@@ -88,14 +95,13 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         {description}
                     </Typography>
                     <Slide direction="up" in={isCardHovered}>
-                        <Button
-                            component={Link}
-                            href={link}
-                            ref={refButtonHover}
-                            variant={isButtonHovered ? "contained" : "outlined"}
-                            color="primary"
-                            sx={{ marginTop: "30px", color: !isButtonHovered && "white", border: `2px solid ${theme.palette.primary}`, pointerEvents: "auto" }}
-                        >
+                            <Button
+                                ref={refButtonHover}
+                                onClick={onButtonClick}
+                                variant={isButtonHovered ? "contained" : "outlined"}
+                                color="primary"
+                                sx={{ marginTop: "30px", color: !isButtonHovered && "white", border: `2px solid ${theme.palette.primary}`, pointerEvents: "auto" }}
+                            >
                             Read More
                         </Button>
                     </Slide>

@@ -1,6 +1,7 @@
 import Script from "next/script";
 import { Html, Head, Main, NextScript } from "next/document";
 
+
 //GA SCRIPT FROM - https://nextjs.org/docs/messages/next-script-for-ga
 export default function Document() {
   return (
