@@ -1,13 +1,21 @@
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import events, { IEvent } from '../../../assets/events-list'
+import CustomHead from "../../../components/CustomHead";
+import Hero from "../../../components/Hero";
 
 interface IEventPageProps extends IEvent{
 }
 
-const Events: NextPage<IEventPageProps> = (props) => {
+const Events: NextPage<IEventPageProps> = ({date, subtitle, description, image, title, video}) => {
   return <div>
-    <h1>Events Page</h1>
-    data: {JSON.stringify(props)}
+    <CustomHead title={title} />
+    <Hero
+      title={title}
+      date={date}
+      image={image}
+      subtitle={subtitle}
+     />
+     qui metto altre cose
     </div>;
 };
 
