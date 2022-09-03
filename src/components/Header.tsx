@@ -3,6 +3,8 @@ import { Box, Theme } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import useHover from "../hooks/useHover";
+import { useRouter } from "next/router";
+
 
 export interface HeaderElement {
     label: string
@@ -16,24 +18,37 @@ interface HeaderProps {
 function HeaderElementComponent({ label, link }: HeaderElement) {
     const theme = useTheme()
     const { hoverRef, isHovered } = useHover()
+    const router = useRouter()
     return (
         <Box
-            onClick={() => console.log(label)}
+
+            onClick={() => router.push(link)}
             ref={hoverRef}
             sx={{
                 height: "100%",
                 display: "flex",
-                alignItems: "center",
+
                 marginLeft: "15px",
+                position: "relative",
                 marginRight: "15px",
-                borderBottom: `${theme.palette.secondary.main} 2px solid`,
-                color: isHovered ? theme.palette.secondary.main : "inherit",
-                transition: "color 300ms linear",
+                flexDirection: "column",
+                justifyContent: "center",
+                color: (router.pathname == link || isHovered) ? theme.palette.secondary.main : "inherit",
+                transition: "color 500ms linear",
             }}
         >
-            <Typography  >
+            <Typography sx={{ fontWeight: "bold" }}>
                 {label.toUpperCase()}
             </Typography>
+            <Box className="slider"
+                sx={{
+                    width: router.pathname == link ? "100%" : "0%",
+                    height: "2px",
+                    borderBottom: `${theme.palette.secondary.main} 3px solid`,
+                    transition: "width 500ms ease",
+                    position: "absolute",
+                    bottom: "0px"
+                }} />
         </Box>
     )
 }

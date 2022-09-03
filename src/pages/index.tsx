@@ -5,11 +5,11 @@ import MUIThemeProvider from '../MUIThemeProvider'
 
 
 const headerElements: HeaderElement[] = [
-  { link: "#", label: "Home" },
-  { link: "#", label: "Chi Sono" },
-  { link: "#", label: "I miei progetti" },
-  { link: "#", label: "Podcasts" },
-  { link: "#", label: "Contatti" },
+  { link: "/", label: "Home" },
+  { link: "/ciao", label: "Chi Sono" },
+  { link: "/test2", label: "I miei progetti" },
+  { link: "/pod", label: "Podcasts" },
+  { link: "/contatti", label: "Contatti" },
 ]
 export default function Home() {
   return (
