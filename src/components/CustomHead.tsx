@@ -25,14 +25,14 @@ export interface ICustomHeadProps {
 
 export const CustomHead: React.FC<ICustomHeadProps> = ({
   type = "website",
-  url = "https://azimutmarketplace.it",
+  url = "https://lory1990.github.io",
   image = "/assets/img/placeholders/logo.svg",
   description,
   ...props
 }) => {
-  const title = props.title ? `${props.title} | AzimutMarketplace` : "AzimutMarketplace";
-  const realUrl = url?.startsWith("http") ? url : "https://azimutmarketplace.it/" + url;
-  const realImage = image?.startsWith("http") ? image : "https://azimutmarketplace.it/" + image;
+  const title = props.title ? `${props.title} | Lorenzo De Francesco` : "Lorenzo De Francesco";
+  const realUrl = url?.startsWith("http") ? url : "https://lory1990.github.io/" + url;
+  const realImage = image?.startsWith("http") ? image : "https://lory1990.github.io/" + image;
 
   return (
     <Helmet>
