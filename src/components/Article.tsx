@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import IArticleData, { IArticleDataType } from "../types/IArticleData"
 import CarouselBand from "./bands/CarouselBand"
-import CoutnersBand from "./bands/CoutnersBand"
+import CountersBand from "./bands/CountersBand"
 import CtaBand from "./bands/CtaBand"
 import TextBand from "./bands/TextBand"
 import TextImageBand from "./bands/TextImageBand"
@@ -20,7 +20,7 @@ const Article : React.FC<IArticleProps> = ({ data }) =>{
                     return <CarouselBand {...item} key={index} />
                     break;
                 case IArticleDataType.COUNTERS:
-                    return <CoutnersBand {...item}  key={index} />
+                    return <CountersBand {...item}  key={index} />
                     break;     
                 case IArticleDataType.CTA:
                     return <CtaBand {...item}  key={index} />
@@ -38,7 +38,7 @@ const Article : React.FC<IArticleProps> = ({ data }) =>{
                     return <TitleBand {...item}   key={index}/>
                     break;     
                 default:
-                    return <></>
+                    return null
                     break;
             }
         })}
