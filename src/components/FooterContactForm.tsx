@@ -2,7 +2,7 @@ import { Formik, FormikProps, useFormikContext } from "formik";
 import axios from "axios";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
-import { Box, Button, CircularProgress, TextField } from "@mui/material";
+import { Box, Button, CircularProgress, TextField, Typography } from "@mui/material";
 import * as Yup from 'yup'
 
 const validationSchema = Yup.object({
@@ -44,7 +44,12 @@ const ContactForm: React.FC = () => {
   );
 };
 
-const FooterContactForm: React.FC = () => {
+export interface IFooterContactFormProps{
+    title?: string,
+    subtitle?: string,
+}
+
+const FooterContactForm: React.FC<IFooterContactFormProps> = ({title, subtitle}) => {
   const router = useRouter();
 
   const onSubmit = async (
@@ -71,6 +76,8 @@ const FooterContactForm: React.FC = () => {
 
   return (
     <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
+        {title && <Typography>{title}</Typography>}
+        {subtitle && <Typography>{subtitle}</Typography>}
       <ContactForm />
     </Formik>
   );
