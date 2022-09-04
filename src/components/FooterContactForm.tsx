@@ -76,9 +76,11 @@ const FooterContactForm: React.FC<IFooterContactFormProps> = ({title, subtitle})
 
   return (
     <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
-        {title && <Typography>{title}</Typography>}
-        {subtitle && <Typography>{subtitle}</Typography>}
-      <ContactForm />
+        <Box>
+            {title && <Typography>{title}</Typography>}
+            {subtitle && <Typography>{subtitle}</Typography>}
+            <ContactForm />
+      </Box>
     </Formik>
   );
 };
