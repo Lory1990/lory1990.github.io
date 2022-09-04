@@ -1,4 +1,4 @@
-import { AppBar, Button, IconButton, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material";
+import { AppBar, IconButton, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material";
 import { Box, Theme } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";

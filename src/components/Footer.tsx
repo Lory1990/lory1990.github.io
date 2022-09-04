@@ -1,11 +1,10 @@
-import { Box, IconButton, Link, Typography, useTheme } from "@mui/material"
+import { Box, IconButton, Link, useMediaQuery, Typography, useTheme } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { ISocialIconProps, ISocialLinks } from "../types/ISocialProps";
-import useHover from "../hooks/useHover";
-
+import { Theme } from "@mui/system";
 interface IFooterProps extends ISocialLinks {
     text1?: string
     text2?: string
@@ -42,6 +41,8 @@ const SocialCircle: React.FC<ISocialIconProps> = ({ link, icon }) => {
 
 export default function Footer({ githubLink, twitterLink, facebookLink, linkedinLink, text1, text2, text3 }: IFooterProps) {
     const theme = useTheme()
+    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+    console.log(matches)
     return (
         <Box
             id="footer"
@@ -49,17 +50,19 @@ export default function Footer({ githubLink, twitterLink, facebookLink, linkedin
                 width: "100%",
                 justifyContent: "flex-end",
                 display: "flex",
+                flexDirection: matches ? "row" : "column-reverse",
+
                 backgroundColor: theme.palette.grey[900],
                 paddingTop: "20px",
                 paddingBottom: "20px"
             })}>
-            <Box sx={{ width: "33%", display: "flex", justifyContent: "center" }}>
+            <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
                 <SocialCircle icon={<GitHubIcon />} link={githubLink} />
                 <SocialCircle icon={<FacebookOutlinedIcon />} link={facebookLink} />
                 <SocialCircle icon={<TwitterIcon />} link={twitterLink} />
                 <SocialCircle icon={<LinkedInIcon />} link={linkedinLink} />
             </Box>
-            <Box sx={{ width: "33%", display: "flex", justifyContent: "center" }}>
+            <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
                 <Box sx={{ width: "fit-content" }}>
                     <Typography variant="body1" color="white" sx={{ fontWeight: "bold" }}>
                         {text1}
