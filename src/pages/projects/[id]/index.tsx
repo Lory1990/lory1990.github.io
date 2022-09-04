@@ -13,7 +13,7 @@ const SingleProjectPage: NextPage<IProjectProps> = ({ article, background, date,
     title={title}
     date={date}
     image={image}
-    backgoundImage={backgound}
+    backgroundImage={background}
     subtitle={subtitle}
    />
    qui metto altre cose

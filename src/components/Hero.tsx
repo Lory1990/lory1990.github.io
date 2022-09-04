@@ -37,6 +37,7 @@ const Hero: React.FC<IHeroProps> = ({
   date,
   place,
   image,
+  backgroundImage,
   title,
   subtitle,
 }) => {
