@@ -4,18 +4,8 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, IconButton, Link, Typography, useTheme } from '@mui/material';
 import useHover from '../hooks/useHover';
+import { ISocialIconProps, ISocialLinks } from '../types/ISocialProps';
 
-interface FloatingFollowMeProps {
-    twitterLink?: string
-    facebookLink?: string
-    githubLink?: string
-    linkedinLink?: string
-}
-
-interface ISocialIconProps {
-    link?: string,
-    icon?: JSX.Element
-}
 
 const SocialIcon: React.FC<ISocialIconProps> = ({ link, icon }) => {
     const { hoverRef, isHovered } = useHover()
@@ -30,7 +20,7 @@ const SocialIcon: React.FC<ISocialIconProps> = ({ link, icon }) => {
         {icon}
     </IconButton >)
 }
-const FloatingFollowMe: React.FC<FloatingFollowMeProps> = ({ twitterLink, linkedinLink, facebookLink, githubLink }) => {
+const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, facebookLink, githubLink }) => {
 
     const theme = useTheme()
     return (

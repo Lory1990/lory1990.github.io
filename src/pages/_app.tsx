@@ -23,11 +23,22 @@ function PersonalWebsite({ Component, pageProps }) {
     });
   }, []);
 
+
   return <MUIThemeProvider>
-      <Header headerElements={headerElements} />
-      <Component {...pageProps} />
-      <Footer />
-    </MUIThemeProvider>
+    <Header headerElements={headerElements} />
+    <Component {...pageProps} />
+    <Footer
+      githubLink="https://github.com/Lory1990"
+      twitterLink="https://www.facebook.com/lory1990" // TODO Remove
+      facebookLink="https://www.facebook.com/lory1990"
+      linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
+      text1="Lorenzo De Francesco"
+      text2="IT Manager"
+      text3="Milano (MI)"
+
+
+    />
+  </MUIThemeProvider>
 }
 
 export default PersonalWebsite;

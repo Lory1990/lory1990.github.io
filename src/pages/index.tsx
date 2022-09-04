@@ -20,10 +20,10 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
     <div>
       <CustomHead />
       <FloatingFollowMe
-        githubLink="asd"
-        twitterLink="asd"
-        facebookLink="asd"
-        linkedinLink="asd"
+        githubLink="https://github.com/Lory1990"
+        twitterLink="https://www.facebook.com/lory1990" // TODO Remove
+        facebookLink="https://www.facebook.com/lory1990"
+        linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
       />
       <Typography>My Projects</Typography>
       <CardsBand>
