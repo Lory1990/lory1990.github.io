@@ -3,6 +3,7 @@ import projects, { IProject } from "../../assets/projects-list";
 import BlogCard from "../../components/BlogCard";
 import CardsBand from "../../components/CardsBand";
 import CustomHead from "../../components/CustomHead";
+import Hero from "../../components/Hero";
 import { IListProps } from "../../types/IListProps";
 
 export interface IProjectListProps extends IListProps<IProject>{
@@ -12,7 +13,12 @@ export interface IProjectListProps extends IListProps<IProject>{
 const ProjectListPage: NextPage<IProjectListProps> = ({list}) => {
   return <div>
     <CustomHead title={"Projects"} />
-    <CardsBand>
+    <Hero
+      title={"Projects"}
+    />
+    <CardsBand
+        columns={3}
+    >
         {list.map((project: IProject) => {
           return <BlogCard
             key={project.slug}

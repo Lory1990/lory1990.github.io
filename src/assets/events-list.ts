@@ -1,3 +1,4 @@
+import IArticleData from "../types/IArticleData"
 
 export interface IEvent{
     slug:string,
@@ -8,6 +9,7 @@ export interface IEvent{
     date:string
     image: string
     video:string
+    article?: IArticleData[]
 }
 
 const events : IEvent[] = [

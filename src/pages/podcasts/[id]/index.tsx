@@ -1,13 +1,22 @@
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import podcasts, { IPodcast } from "../../../assets/podcast-list";
+import Article from "../../../components/Article";
+import CustomHead from "../../../components/CustomHead";
+import Hero from "../../../components/Hero";
 
 interface IPodcastProps extends IPodcast{
 }
 
-const SinglePodcastPage: NextPage<IPodcastProps> = (props) => {
+const SinglePodcastPage: NextPage<IPodcastProps> = ({ date, title, description, article, subtitle, image, slug }) => {
   return <div>
-    <h1>Single Podcast Props</h1>
-    data: {JSON.stringify(props)}
+    <CustomHead title={title} />
+    <Hero
+      title={title}
+      date={date}
+      backgroundImage={image}
+      subtitle={subtitle}
+     />
+     <Article data={article} />
     </div>;
 };
 

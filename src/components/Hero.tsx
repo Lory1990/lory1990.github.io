@@ -25,7 +25,6 @@ const SingleData : React.FC<ISingleDataProps> = ({icon, text}) => {
   >{icon} {text}</Typography>)
 }
 export interface IHeroProps {
-  image: string;
   title: string;
   subtitle?: string;
   date?: string;
@@ -36,7 +35,6 @@ export interface IHeroProps {
 const Hero: React.FC<IHeroProps> = ({
   date,
   place,
-  image,
   backgroundImage,
   title,
   subtitle,

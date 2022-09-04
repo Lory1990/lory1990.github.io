@@ -1,6 +1,8 @@
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import projects, { IProject } from "../../../assets/projects-list";
+import Article from "../../../components/Article";
 import CustomHead from "../../../components/CustomHead";
+import FooterContactForm from "../../../components/FooterContactForm";
 import Hero from "../../../components/Hero";
 
 interface IProjectProps extends IProject{
@@ -12,11 +14,11 @@ const SingleProjectPage: NextPage<IProjectProps> = ({ article, background, date,
   <Hero
     title={title}
     date={date}
-    image={image}
     backgroundImage={background}
     subtitle={subtitle}
    />
-   qui metto altre cose
+   <Article data={article} />
+   <FooterContactForm />
   </div>;
 };
 

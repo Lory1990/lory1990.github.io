@@ -1,20 +1,47 @@
-import { Box } from '@mui/material';
+import { Box, SxProps } from "@mui/material";
 
-
-const CardsBand : React.FC<React.HTMLAttributes<HTMLDivElement>> = ({  children }) => {
-
-    return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "20px",
-                justifyContent: "center",
-                margin: "40px 0px"
-            }}>
-            {children}
-        </Box>
-    )
+export interface ICardsBandProps extends React.HTMLAttributes<HTMLDivElement> {
+  columns?: number;
 }
 
-export default CardsBand
+const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
+  let theme: SxProps;
+
+  if (columns) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${columns}, 1fr)`,
+            columnGap: "40px",
+            rowGap: "40px",
+            margin: "40px 0px",
+          }}
+        >
+          {children}
+        </Box>
+      </Box>
+    );
+  } else {
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        gap: "20px",
+        justifyContent: "center",
+        margin: "40px 0px",
+      }}
+    >
+      {children}
+    </Box>;
+  }
+};
+
+export default CardsBand;
