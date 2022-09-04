@@ -8,10 +8,11 @@ import TextImageBand from "./bands/TextImageBand"
 import TitleBand from "./bands/TitleBand"
 
 export interface IArticleProps{
-    data: IArticleData[],
+    data?: IArticleData[],
 }
 
 const Article : React.FC<IArticleProps> = ({ data }) =>{
+    if(!data) return null
     return <Box sx={{display: "flex", flexDirection: "column"}}>
         {data.map((item : IArticleData, index : number) => {
             switch(item.type){
