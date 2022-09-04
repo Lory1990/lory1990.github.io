@@ -42,7 +42,7 @@ const SocialCircle: React.FC<ISocialIconProps> = ({ link, icon }) => {
 export default function Footer({ githubLink, twitterLink, facebookLink, linkedinLink, text1, text2, text3 }: IFooterProps) {
     const theme = useTheme()
     const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
-    console.log(matches)
+
     return (
         <Box
             id="footer"
