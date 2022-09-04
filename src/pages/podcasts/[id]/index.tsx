@@ -13,9 +13,9 @@ const SinglePodcastPage: NextPage<IPodcastProps> = ({ date, title, description, 
     <Hero
       title={title}
       date={date}
-      backgroundImage={image}
       subtitle={subtitle}
-     />
+      backgroundImage={image}
+           />
      <Article data={article} />
     </div>;
 };

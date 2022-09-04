@@ -75,10 +75,12 @@ const projects : IProject[] = [
     {
         "slug": "comuncazione-per-personal-trainer",
         "title": "Comunicazione Per Personal Trainer",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
+        "description": "Personal trainer online video portal",
+        "subtitle": "Personal trainer online video portal",
         "link": "https://developers.google.com/",
-        "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "background": "/img/comunicazione-per-personal-trainer/hero-background.png",
+        "image": "/img/comunicazione-per-personal-trainer/image-background.jpg",
+        "date": "2018",
     },
     {
         "slug": "yobu",

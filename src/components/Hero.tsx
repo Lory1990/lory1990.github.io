@@ -6,6 +6,7 @@ import useHover from "../hooks/useHover";
 import AOSBox from "./AOSBox";
 import EventIcon from '@mui/icons-material/Event';
 import PlaceIcon from '@mui/icons-material/Place';
+import { url } from "inspector";
 
 interface ISingleDataProps{
   text?:string,
@@ -48,6 +49,7 @@ const Hero: React.FC<IHeroProps> = ({
         padding: "1em",
         width: "100%",
         background: "red",
+        backgroundImage: 'url('+backgroundImage+')',
         display: "flex",
         flexDirection: "column",
       }}
@@ -63,10 +65,10 @@ const Hero: React.FC<IHeroProps> = ({
         }}
       >
         <AOSBox dataAos="fade-down">
-          <Typography variant="h1">{title}</Typography>
+          <Typography variant="h1" sx={{ color: "white", fontWeight: "bold"}}>{title}</Typography>
         </AOSBox>
         <AOSBox dataAos="fade-down" dataAosDelay="200">
-          {subtitle && <Typography variant="subtitle1">{subtitle}</Typography>}
+          {subtitle && <Typography variant="subtitle1" sx={{ color: "white", fontSize: "1.5em"}} >{subtitle}</Typography>}
         </AOSBox>
       </Box>
 
