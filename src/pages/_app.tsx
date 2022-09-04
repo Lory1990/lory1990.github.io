@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Header, { HeaderElement } from '../components/Header'
 import MUIThemeProvider from '../MUIThemeProvider'
+import Footer from "../components/Footer";
 
 const headerElements: HeaderElement[] = [
   { link: "/", label: "Home" },
@@ -25,6 +26,7 @@ function PersonalWebsite({ Component, pageProps }) {
   return <MUIThemeProvider>
       <Header headerElements={headerElements} />
       <Component {...pageProps} />
+      <Footer />
     </MUIThemeProvider>
 }
 
