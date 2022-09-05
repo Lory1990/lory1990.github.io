@@ -30,7 +30,9 @@ const ProjectListPage: NextPage<IProjectListProps> = ({list}) => {
           />;
         })}
       </CardsBand>
-      <FooterContactForm />
+      <FooterContactForm 
+        title={"Do like these projects? Do you need a software developer? Here I am!"}
+      />
   </div>;
 };
 

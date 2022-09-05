@@ -1,14 +1,19 @@
-import { Formik, FormikProps, useFormikContext } from "formik";
-import axios from "axios";
+import { Formik, FormikProps, useFormikContext, Form } from "formik";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
-import { Box, Button, CircularProgress, TextField, Typography } from "@mui/material";
-import * as Yup from 'yup'
+import {
+  Box,
+  Button,
+  CircularProgress,
+  TextField,
+  Typography,
+} from "@mui/material";
+import * as Yup from "yup";
 
 const validationSchema = Yup.object({
-    text: Yup.string().email().required(),
-    email: Yup.string().required(),
-})
+  text: Yup.string().required(),
+  email: Yup.string().email().required(),
+});
 export interface IFormatData {
   text: string;
   email: string;
@@ -22,34 +27,47 @@ const ContactForm: React.FC = () => {
       <TextField
         variant="outlined"
         value={context.values.email}
-        onChange={e =>  context.setFieldValue("email",e.target.value)}
+        onChange={(e) => context.setFieldValue("email", e.target.value)}
         error={Boolean(context.errors.email)}
+        label="Your email address"
       />
       <TextField
         variant="outlined"
         multiline={true}
-        onChange={e =>  context.setFieldValue("text",e.target.value)}
+        label="Your messsage"
+        onChange={(e) => context.setFieldValue("text", e.target.value)}
         rows={5}
         value={context.values.text}
         error={Boolean(context.errors.text)}
       />
-      <Box>
-        {context.isSubmitting ?
-            <CircularProgress />
-        :
-            <Button type="submit">Contact me</Button>
-        }
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        {context.isSubmitting ? (
+          <CircularProgress />
+        ) : (
+          <Button variant="contained" color="primary" type="submit">
+            Contact me
+          </Button>
+        )}
       </Box>
     </>
   );
 };
 
-export interface IFooterContactFormProps{
-    title?: string,
-    subtitle?: string,
+export interface IFooterContactFormProps {
+  title?: string;
+  subtitle?: string;
 }
 
-const FooterContactForm: React.FC<IFooterContactFormProps> = ({title, subtitle}) => {
+const FooterContactForm: React.FC<IFooterContactFormProps> = ({
+  title,
+  subtitle,
+}) => {
   const router = useRouter();
 
   const onSubmit = async (
@@ -69,17 +87,53 @@ const FooterContactForm: React.FC<IFooterContactFormProps> = ({title, subtitle})
         process.env.NEXT_PUBLIC_EMAILJS_APIKEY
       );
     } catch (exception) {
-        console.error(exception)
+      console.error(exception);
       formikProps.setSubmitting(false);
     }
   };
 
   return (
-    <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
-        <Box>
-            {title && <Typography>{title}</Typography>}
-            {subtitle && <Typography>{subtitle}</Typography>}
+    <Formik
+      validateOnBlur={false}
+      validateOnChange={false}
+      validationSchema={validationSchema}
+      initialValues={{ email: "", text: "" }}
+      onSubmit={onSubmit}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "40px 0",
+        }}
+      >
+        <Form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "500px",
+            width: "100%",
+            gap: "20px",
+            marginBottom: "30px",
+          }}
+        >
+          {title && (
+            <Typography sx={{ textAlign: "center" }}>{title}</Typography>
+          )}
+          {subtitle && (
+            <Typography sx={{ textAlign: "center" }}>{subtitle}</Typography>
+          )}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
             <ContactForm />
+          </Box>
+        </Form>
       </Box>
     </Formik>
   );
