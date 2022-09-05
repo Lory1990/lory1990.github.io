@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 
-interface HeaderElement {
+export interface HeaderElement {
     label: string
     link: string
 }
@@ -151,7 +151,7 @@ export default function Header({ headerElements }: HeaderProps) {
                 <Box>
                     <List>
                         {headerElements.map(({ label, link }) => (
-                            <DrawerItem label={label} link={link} setDrawerOpen={setDrawerOpen} />
+                            <DrawerItem key={label} label={label} link={link} setDrawerOpen={setDrawerOpen} />
                         ))}
                     </List>
                 </Box>
