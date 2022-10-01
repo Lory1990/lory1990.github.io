@@ -19,10 +19,14 @@ const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: `repeat(${columns}, 1fr)`,
+            gridTemplateColumns: {
+              xs:`1fr`, 
+              md:`repeat(${columns}, 1fr)`, 
+            },
             columnGap: "40px",
             rowGap: "40px",
             margin: "40px 0px",
+            
           }}
         >
           {children}
