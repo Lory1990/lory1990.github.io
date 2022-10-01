@@ -138,8 +138,6 @@ export default function Header({ headerElements }: HeaderProps) {
                         >
                             <MenuIcon />
                         </IconButton>}
-
-                    <div id="cont"></div>
                 </Box>
             </AppBar >
 
