@@ -10,7 +10,7 @@ import { Box } from "@mui/material";
 const headerElements: HeaderElement[] = [
   { link: "/", label: "Home" },
   { link: "/about", label: "About" },
-  { link: "/projects", label: "Portfolio" },
+  { link: "/projects", label: "Projects" },
   { link: "/events", label: "Events" },
   { link: "/podcasts", label: "Podcasts" },
   { link: "/contact-me", label: "Contact" },
