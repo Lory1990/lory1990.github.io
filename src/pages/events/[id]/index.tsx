@@ -8,14 +8,15 @@ import Hero from "../../../components/Hero";
 interface IEventPageProps extends IEvent{
 }
 
-const Events: NextPage<IEventPageProps> = ({article, date, subtitle, description, image, title, video}) => {
+const Events: NextPage<IEventPageProps> = ({article, date, venue, subtitle, description, image, title, video, cover}) => {
   return <div>
     <CustomHead title={title} />
     <Hero
       title={title}
       date={date}
-      backgroundImage={image}
+      backgroundImage={cover}
       subtitle={subtitle}
+      place={venue}
      />
      <Article data={article} />
     <FooterContactForm />

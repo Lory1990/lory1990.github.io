@@ -57,10 +57,10 @@ export default function Footer({ githubLink, twitterLink, facebookLink, linkedin
                 paddingBottom: "20px"
             })}>
             <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
-                <SocialCircle icon={<GitHubIcon />} link={githubLink} />
-                <SocialCircle icon={<FacebookOutlinedIcon />} link={facebookLink} />
-                <SocialCircle icon={<TwitterIcon />} link={twitterLink} />
-                <SocialCircle icon={<LinkedInIcon />} link={linkedinLink} />
+                {githubLink && <SocialCircle icon={<GitHubIcon />} link={githubLink} />}
+                {facebookLink && <SocialCircle icon={<FacebookOutlinedIcon />} link={facebookLink} />}
+                {twitterLink && <SocialCircle icon={<TwitterIcon />} link={twitterLink} />}
+                {linkedinLink && <SocialCircle icon={<LinkedInIcon />} link={linkedinLink} />}
             </Box>
             <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
                 <Box sx={{ width: "fit-content" }}>

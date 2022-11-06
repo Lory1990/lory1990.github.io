@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+#__next{
+  min-height: 100vh;
+}
+
 * {
   box-sizing: border-box;
 }
