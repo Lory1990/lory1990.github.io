@@ -3,11 +3,13 @@ import IArticleData from "../types/IArticleData";
 export interface IPodcast{
     slug:string,
     title:string,
+    link?: string,
     subtitle?: string,
     description?:string,
     date:string
     image: string,
     article?: IArticleData[],
+    audioUrl?: string,
     url?:{
         spotify?:string,
         anchor?:string,

@@ -20,13 +20,12 @@ const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
           sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs:`1fr`, 
-              md:`repeat(${columns}, 1fr)`, 
+              xs: `1fr`,
+              md: `repeat(${columns}, 1fr)`,
             },
             columnGap: "40px",
             rowGap: "40px",
             margin: "40px 0px",
-            
           }}
         >
           {children}
@@ -34,17 +33,19 @@ const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
       </Box>
     );
   } else {
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        gap: "20px",
-        justifyContent: "center",
-        margin: "40px 0px",
-      }}
-    >
-      {children}
-    </Box>;
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "20px",
+          justifyContent: "center",
+          margin: "40px 0px",
+        }}
+      >
+        {children}
+      </Box>
+    );
   }
 };
 

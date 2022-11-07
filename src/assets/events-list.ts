@@ -17,6 +17,13 @@ export interface IEvent{
 
 const events : IEvent[] = [
     {
+        "title": "Colloquio tecnico per neolaureati, tips&tricks",
+        "slug": "colloquio-tecnico-per-neolaureati-tipsandtricks",
+        "date": "2022-06-21",
+        "isOnline": true,
+        "image": "/img/opinno.svg"
+    },
+    {
         "title": "TECH ITALIA - Colmare il debito tecnico",
         "slug": "tech-italia-colmare-il-debito-tecnico",
         "date": "2022-06-23",

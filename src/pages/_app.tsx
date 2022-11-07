@@ -1,11 +1,15 @@
 import AOS from "aos";
 import "../styles/globals.css";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header, { HeaderElement } from "../components/Header";
 import MUIThemeProvider from "../MUIThemeProvider";
 import Footer from "../components/Footer";
 import { Box } from "@mui/material";
+import PodcastPlayer from "../components/PodcastPlayer/PodcastPlayer";
+import PodcastProvider from "../context/PodcastProvider";
+import { fetchPodcastData } from "../client/PodcastClient";
+import { useQuery } from "react-query";
 
 const headerElements: HeaderElement[] = [
   { link: "/", label: "Home" },
@@ -17,29 +21,44 @@ const headerElements: HeaderElement[] = [
 ];
 
 function PersonalWebsite({ Component, pageProps }) {
+
+  const [podcastData, setPodcastData] = useState<any>()
+
   useEffect(() => {
     AOS.init({
       duration: 450,
     });
+
+    fetchPodcastData().then(value=>{
+      setPodcastData(value)
+    })
   }, []);
 
   return (
-    <MUIThemeProvider>
-      <Box id="main-content" sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-        <Header headerElements={headerElements} />
-        <Box id="main-content" sx={{ flex: 1 }}>
-          <Component {...pageProps} />
+    <PodcastProvider>
+      <MUIThemeProvider>
+        <Box
+          id="main-content"
+          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        >
+          <Header headerElements={headerElements} />
+          <Box id="main-content" sx={{ flex: 1 }}>
+            <Component {...pageProps} />
+          </Box>
+          <Footer
+            githubLink="https://github.com/Lory1990"
+            facebookLink="https://www.facebook.com/lory1990"
+            linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
+            text1="Lorenzo De Francesco"
+            text2="IT Manager"
+            text3="Milano (MI)"
+          />
         </Box>
-        <Footer
-          githubLink="https://github.com/Lory1990"
-          facebookLink="https://www.facebook.com/lory1990"
-          linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
-          text1="Lorenzo De Francesco"
-          text2="IT Manager"
-          text3="Milano (MI)"
-        />
-      </Box>
-    </MUIThemeProvider>
+        {podcastData &&
+          <PodcastPlayer list={podcastData.item} />
+        }
+      </MUIThemeProvider>
+    </PodcastProvider>
   );
 }
 
