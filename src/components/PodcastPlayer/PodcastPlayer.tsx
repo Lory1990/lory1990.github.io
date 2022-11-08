@@ -5,35 +5,98 @@ import {
   CardActions,
   CardContent,
   CardHeader,
+  LinearProgress,
   SxProps,
 } from "@mui/material";
 import { GetStaticProps, GetStaticPropsContext } from "next";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IPodcast } from "../../assets/podcast-list";
 import { fetchPodcastData } from "../../client/PodcastClient";
 import { PodcastContext } from "../../context/PodcastProvider";
-import FastRewindIcon from '@mui/icons-material/FastRewind';
-import FastForwardIcon from '@mui/icons-material/FastForward';
-import PauseIcon from '@mui/icons-material/Pause';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import FastRewindIcon from "@mui/icons-material/FastRewind";
+import FastForwardIcon from "@mui/icons-material/FastForward";
+import PauseIcon from "@mui/icons-material/Pause";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import CloseIcon from "@mui/icons-material/Close";
+import PodcastButton from "./Button";
+import Image from "next/image";
 
 export interface IPodcastPlayerProps {
   list: IPodcast[];
 }
 
 const PodcastPlayer: React.FC<IPodcastPlayerProps> = ({ list }) => {
-  const { play, playingSong, open, setOpen, setPlay } =
-    useContext(PodcastContext);
+  const { play, playingSong, open, setOpen, setPlay, setPlayingSong } = useContext(PodcastContext);
+
+  const [trackPercentage, setTrackPercentage] = useState<number>(0)
+
+  const playingSongData = list?.[playingSong];
+
+  useEffect(()=>{
+    const audioElement = document.getElementById('audioPlayer') as HTMLAudioElement;
+
+    audioElement.ontimeupdate = (event) => {
+      const timestamp = (event as any).timeStamp;
+      
+      if(playingSongData.audioLength){
+        setTrackPercentage(timestamp / playingSongData.audioLength * 100);
+      }else{
+        setTrackPercentage(0)
+      }
+    };
+  },[])
+
+  useEffect(() => {
+    setPlaySong(play)
+  }, [play])
+  
+
+  const setPlaySong = (play) =>{
+    const audioElement = document.getElementById('audioPlayer') as HTMLAudioElement;
+    if(play){
+      audioElement.play()
+    }else{
+      audioElement.pause();
+    }
+      
+  }
+
+  const onRewind = () =>{
+    let newSong = playingSong - 1
+    if(newSong < 0) newSong = list?.length - 1;
+    setPlayingSong(newSong)
+    if(play){
+      
+    }
+  }
+
+  const onPlay = () =>{
+    setPlay(!play)
+  }
+
+  const onForward = () =>{
+    let newSong = playingSong + 1
+    if(newSong >= list?.length) newSong = 0;
+    setTrackPercentage(0)
+    setPlayingSong(newSong)
+  }
 
   const closePlayer = () => {
     setOpen(false);
     setPlay(false);
   };
 
+  const onPlaying = (event: any) =>{
+    console.log(event)
+
+  }
+
   return (
     <Card
       id="podcast-player"
       sx={{
+        borderBottomLeftRadius: "0",
+        borderBottomRightRadius: "0",
         position: "fixed",
         transition: "all 1s ease 0s",
         bottom: open
@@ -65,26 +128,85 @@ const PodcastPlayer: React.FC<IPodcastPlayerProps> = ({ list }) => {
     >
       <Box
         sx={{
+          padding: "10px",
+          display: "flex",
           flex: "none",
+          flexDirection: "row-reverse",
         }}
       >
-        aasdasd
-        <Button onClick={closePlayer}>X</Button>
+        <PodcastButton
+          onClick={closePlayer}
+          sx={{
+            height: "35px",
+            width: "35px",
+          }}
+        >
+          <CloseIcon />
+        </PodcastButton>
       </Box>
-      <CardContent>
-        <audio src={list?.[playingSong]?.audioUrl} />
+      <CardContent
+        sx={{
+          flex: 1,
+          display: "flex",
+          gap: "10px",
+          flexDirection: "row",
+          alignItems: "center"
+        }}
+      >
+        <Box>
+        {playingSongData?.image && <Image src={playingSongData?.image} alt={`Cover for ${playingSongData?.title}`} height={100} width={100}/>}
+        </Box>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            gap: "20px",
+            flexDirection: "column",
+          }}
+        >
+        {playingSongData?.title}
+        <LinearProgress value={trackPercentage} variant="determinate" />
+        <audio id="audioPlayer" src={list?.[playingSong]?.audioUrl} onPlay={onPlaying} />
+        </Box>
+        
       </CardContent>
-      <CardActions>
-        <Button>
-            <FastRewindIcon />
-        </Button>
-        <Button>
-            { play ? <PauseIcon /> : <PlayArrowIcon />}
-        </Button>
+      <CardActions
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "1em",
+          justifyContent: "center",
+        }}
+      >
+        <PodcastButton
+          onClick={onRewind}
+          sx={{
+            height: "40px",
+            width: "40px",
+          }}
+        >
+          <FastRewindIcon />
+        </PodcastButton>
+        <PodcastButton
+          onClick={onPlay}
+          sx={{
+            height: "75px",
+            width: "75px",
+            fontSize: "50px",
+          }}
+        >
+          {play ? <PauseIcon /> : <PlayArrowIcon />}
+        </PodcastButton>
 
-        <Button>
-            <FastForwardIcon />
-        </Button>
+        <PodcastButton
+          onClick={onForward}
+          sx={{
+            height: "40px",
+            width: "40px",
+          }}
+        >
+          <FastForwardIcon />
+        </PodcastButton>
       </CardActions>
     </Card>
   );

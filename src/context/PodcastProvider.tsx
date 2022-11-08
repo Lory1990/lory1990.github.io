@@ -14,7 +14,7 @@ export const PodcastContext = React.createContext<IPodcastContextType>({});
 
 const PodcastProvider : React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) =>{
 
-    const [ play, setPlay ] = useState<boolean>();
+    const [ play, setPlay ] = useState<boolean>(false);
     const [ open, setOpen ] = useState<boolean>(true);
     const [ playingSong, setPlayingSong] = useState<number>(0); 
 

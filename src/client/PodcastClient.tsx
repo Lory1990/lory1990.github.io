@@ -16,7 +16,10 @@ export async function fetchPodcastData() {
     item: parsed.item.map((single, index) => {
       return {
         ...single,
+        date: single.pubDate,
         audioUrl: single.enclosure["@_url"],
+        audioLength:single.enclosure["@_length"],
+        image: single?.["itunes:image"]?.["@_href"]
       };
     }),
   };

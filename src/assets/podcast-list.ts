@@ -10,6 +10,7 @@ export interface IPodcast{
     image: string,
     article?: IArticleData[],
     audioUrl?: string,
+    audioLength?: number,
     url?:{
         spotify?:string,
         anchor?:string,
