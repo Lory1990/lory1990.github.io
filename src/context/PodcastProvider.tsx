@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 
 export interface IPodcastContextType{
-    play?: boolean,
+    state?: StateEnum,
     open?: boolean,
     playingSong?:number,
+    play?: (index : number) => void;
+    pause?: () => void;
+    stop?: () => void;
     setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
-    setPlay?: React.Dispatch<React.SetStateAction<boolean>>;
-    setPlayingSong?: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export enum StateEnum{
+    PLAY,
+    STOP,
+    PAUSE
 }
 
 export const PodcastContext = React.createContext<IPodcastContextType>({});
@@ -14,14 +21,34 @@ export const PodcastContext = React.createContext<IPodcastContextType>({});
 
 const PodcastProvider : React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) =>{
 
-    const [ play, setPlay ] = useState<boolean>(false);
-    const [ open, setOpen ] = useState<boolean>(true);
+    const [ state, setState ] = useState<StateEnum>(StateEnum.STOP);
+    const [ open, setOpen ] = useState<boolean>(false);
     const [ playingSong, setPlayingSong] = useState<number>(0); 
 
+    const play = (index : number) =>{
+        setPlayingSong(index)
+        setState(StateEnum.PLAY)
+        setOpen(true)
+    }
+
+    const pause = () =>{
+        setState(StateEnum.STOP)
+        setOpen(true)
+    }
+
+    const stop = () =>{
+        setPlayingSong(-1)
+        setState(StateEnum.STOP)
+        setOpen(false)
+    }
+
     const value = {
-        play, setPlay,
+        state,
+        play,
+        pause,
+        stop,
         open, setOpen,
-        playingSong, setPlayingSong
+        playingSong
     }
 
     return <PodcastContext.Provider value={value}>

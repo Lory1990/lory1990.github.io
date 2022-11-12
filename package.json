@@ -28,12 +28,12 @@
     "next": "^13.0.2",
     "next-sitemap": "^3.1.30",
     "react": "18.2.0",
+    "react-awesome-reveal": "^4.1.0",
     "react-dom": "18.2.0",
     "react-h5-audio-player": "^3.8.6",
     "react-helmet": "^6.1.0",
     "react-query": "^3.39.2",
     "typescript": "^4.8.4",
-    "xml2js": "^0.4.23",
     "yup": "^0.32.11"
   },
   "devDependencies": {

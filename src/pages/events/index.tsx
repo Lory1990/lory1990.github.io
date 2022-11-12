@@ -10,12 +10,18 @@ import { IListProps } from "../../types/IListProps";
 import Title from "../../components/typography/Title";
 import PageWrapper from "../../components/PageWrapper";
 import FooterContactForm from "../../components/FooterContactForm";
+import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
+
+const fadeDuration = 750;
 
 export interface IEventListProps extends IListProps<IEvent> {}
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
 
   const nextEvent = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days > 0).reverse()?.[0];
+
+  const [showOther, setShowOther] = useState<boolean>();
 
   return (
     <div>
@@ -40,10 +46,12 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
             marginBottom: "15px",
           }}
         >
-          {list.map((event: IEvent) => {
+          <Fade duration={fadeDuration} cascade={true} direction={"left"}>
+          {list?.map?.((event: IEvent) => {
             if (DateTime.fromISO(event.date).diffNow("day").days > 0) return null;
             return <EventCard key={event.slug} {...event} />;
           })}
+          </Fade>
         </Box>
         <FooterContactForm 
           title="I am available for talks"

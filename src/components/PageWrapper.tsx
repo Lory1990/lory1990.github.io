@@ -1,7 +1,10 @@
-import { Box } from "@mui/material"
+import { Box, SxProps, Theme } from "@mui/material"
 
+export interface IPageWrapperProps extends React.HTMLAttributes<HTMLDivElement>{
+    sx?:  SxProps<Theme>;
+}
 
-export const PageWrapper : React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) =>{
+export const PageWrapper : React.FC<IPageWrapperProps> = ({children, sx}) =>{
 
 
     return <Box sx={{
@@ -18,6 +21,7 @@ export const PageWrapper : React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ch
             sm: "1200px",
             xs: "none",
         },
+        ...sx,
     }}>{children}</Box>
 }
 
