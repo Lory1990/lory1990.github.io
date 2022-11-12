@@ -11,6 +11,7 @@ import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { Box, Button } from "@mui/material";
 import FooterContactForm from "../../components/FooterContactForm";
+import ListWithShowMore from "../../components/ListWithShowMore";
 
 const fadeDuration = 500;
 
@@ -39,31 +40,13 @@ const Poadcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
       <PageWrapper
         sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
       >
-        <Fade duration={fadeDuration} cascade={true} direction={"up"}>
-          {list?.slice?.(0,3)?.map?.((single: IPodcast, index: number) => {
-            return <PodcastCard key={single.slug} index={index} {...single} />;
-          })}
-          {!showOther &&
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Button onClick={() => setShowOther(true)} color="primary" variant="contained">Show more</Button>
-            </Box>
-          }
-          </Fade>
-          {showOther && (
-            <Fade duration={fadeDuration} cascade={true} direction={"up"}>
-              {list?.slice?.(3)?.map?.((single: IPodcast, index: number) => {
-                return (
-                  <PodcastCard key={single.slug} index={index} {...single} />
-                );
-              })}
-            </Fade>
-          )}
+        <ListWithShowMore
+          animationComponent={Fade}
+          animationComponentProps={{duration:750, cascade: true, direction: "left"}}
+          list={list}
+          singleElementComponent={PodcastCard}
+          sliceList={3}
+        />
       </PageWrapper>
       <FooterContactForm 
         title={"I am available for collaboration"}

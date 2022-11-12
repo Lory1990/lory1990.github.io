@@ -12,16 +12,14 @@ import PageWrapper from "../../components/PageWrapper";
 import FooterContactForm from "../../components/FooterContactForm";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
-
-const fadeDuration = 750;
+import ListWithShowMore from "../../components/ListWithShowMore";
 
 export interface IEventListProps extends IListProps<IEvent> {}
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
 
   const nextEvent = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days > 0).reverse()?.[0];
-
-  const [showOther, setShowOther] = useState<boolean>();
+  const pastEvents = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days < 0);
 
   return (
     <div>
@@ -38,21 +36,14 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
           </>
         }
         
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            marginBottom: "15px",
-          }}
-        >
-          <Fade duration={fadeDuration} cascade={true} direction={"left"}>
-          {list?.map?.((event: IEvent) => {
-            if (DateTime.fromISO(event.date).diffNow("day").days > 0) return null;
-            return <EventCard key={event.slug} {...event} />;
-          })}
-          </Fade>
-        </Box>
+        <ListWithShowMore
+          animationComponent={Fade}
+          animationComponentProps={{duration:750, cascade: true, direction: "left"}}
+          list={pastEvents}
+          singleElementComponent={EventCard}
+          sliceList={3}
+        />
+
         <FooterContactForm 
           title="I am available for talks"
           subtitle="Do you need a techinical speaker? Drop a message 👇"
