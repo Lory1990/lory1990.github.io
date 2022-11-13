@@ -24,7 +24,6 @@ const PodcastCard: React.FC<IPodcastCardProps> = ({
 
   const [open, setOpen] = useState<boolean>(false);
 
-  console.log(other);
 
   const playSelected = (event: any) => {
     event.preventDefault();

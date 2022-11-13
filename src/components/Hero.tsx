@@ -31,6 +31,7 @@ export interface IHeroProps {
   date?: string;
   place?: string;
   backgroundImage?: string;
+  hideTitleOnCover?: boolean;
 }
 
 const Hero: React.FC<IHeroProps> = ({
@@ -39,8 +40,8 @@ const Hero: React.FC<IHeroProps> = ({
   backgroundImage,
   title,
   subtitle,
+  hideTitleOnCover,
 }) => {
-  const theme = useTheme();
 
   return (
     <Box
@@ -48,8 +49,9 @@ const Hero: React.FC<IHeroProps> = ({
         minHeight: "100vh",
         padding: "1em",
         width: "100%",
-        background: "red",
+        background: "darkgrey",
         backgroundImage: 'url('+backgroundImage+')',
+        backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
       }}
@@ -64,12 +66,16 @@ const Hero: React.FC<IHeroProps> = ({
           flex: "1",
         }}
       >
-        <AOSBox dataAos="fade-down">
-          <Typography variant="h1" sx={{ color: "white", fontWeight: "bold"}}>{title}</Typography>
-        </AOSBox>
-        <AOSBox dataAos="fade-down" dataAosDelay="200">
-          {subtitle && <Typography variant="subtitle1" sx={{ color: "white", fontSize: "1.5em"}} >{subtitle}</Typography>}
-        </AOSBox>
+        {!hideTitleOnCover &&
+          <>
+            <AOSBox dataAos="fade-down">
+              <Typography variant="h1" sx={{ color: "white", fontWeight: "bold"}}>{title}</Typography>
+            </AOSBox>
+            <AOSBox dataAos="fade-down" dataAosDelay="200">
+              {subtitle && <Typography variant="subtitle1" sx={{ color: "white", fontSize: "1.5em"}} >{subtitle}</Typography>}
+            </AOSBox>
+          </>
+        }
       </Box>
 
       <Box

@@ -38,8 +38,8 @@ function PersonalWebsite({ Component, pageProps }) {
     <PodcastProvider>
       <MUIThemeProvider>
         <Box
-          id="main-content"
-          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+          id="main-page"
+          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh"}}
         >
           <Header headerElements={headerElements} />
           <Box id="main-content" sx={{ flex: 1 }}>
