@@ -5,6 +5,10 @@ import CustomHead from "../../../components/CustomHead";
 import FooterContactForm from "../../../components/FooterContactForm";
 import Hero from "../../../components/Hero";
 import PageWrapper from "../../../components/PageWrapper";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { height } from "@mui/system";
+import { Box, Typography } from "@mui/material";
+import SectionTitle from "../../../components/typography/SectionTitle";
 
 interface IProjectProps extends IProject {}
 
@@ -12,13 +16,10 @@ const SingleProjectPage: NextPage<IProjectProps> = ({
   hideTitleOnCover,
   article,
   background,
-  date,
-  description,
   subtitle,
-  image,
-  link,
   title,
-  githubLink,
+  desktopScreenshots,
+  mobileScreenshots,
   hero,
 }) => {
   return (
@@ -31,8 +32,41 @@ const SingleProjectPage: NextPage<IProjectProps> = ({
         hideTitleOnCover={hideTitleOnCover}
         {...hero}
       />
+      {}
       <Article data={article} />
       <PageWrapper>
+        {desktopScreenshots && (
+          <>
+          <SectionTitle>Screenshots</SectionTitle>
+          <Splide
+            options={{
+              rewind: true,
+              type: "loop",
+              autoplay: true,
+              perMove: 1,
+              perPage: 1,
+              padding: "0rem",
+              focus: "center",
+              lazyLoad: "nearby",
+              trimSpace: "move",
+              preloadPages: 2,
+            }}
+          >
+            {desktopScreenshots.map((image: string, index) => {
+              return (
+                <SplideSlide key={index}>
+                  <Box sx={{ display: "flex", justifyContent: "center",height: "500px" }}>
+                    <img
+                      src={image}
+                      alt={`Desktop screenshot ${index + 1} for ${title}`}
+                    />
+                  </Box>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+          </>
+        )}
         <FooterContactForm />
       </PageWrapper>
     </div>

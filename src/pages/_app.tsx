@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import PodcastPlayer from "../components/PodcastPlayer/PodcastPlayer";
 import PodcastProvider from "../context/PodcastProvider";
 import { fetchPodcastData } from "../client/PodcastClient";
-import { useQuery } from "react-query";
+import '@splidejs/react-splide/css';
 
 const headerElements: HeaderElement[] = [
   { link: "/", label: "Home" },

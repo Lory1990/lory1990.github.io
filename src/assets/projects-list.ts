@@ -7,6 +7,8 @@ export interface IProject{
     subtitle?: string,
     description?:string,
     date?:string
+    desktopScreenshots?: string[],
+    mobileScreenshots?: string[],
     link?:{
         web?: string,
         instagram?: string,
@@ -92,12 +94,19 @@ const projects : IProject[] = [
         "slug": "newo",
         "title": "Newo",
         "description": "Web application for invoice advance",
+        "subtitle": "Web application for invoice advance",
         "link": {
             "web": "https://newopay.it/"
         },
         "date": "2022-01-01",
         "image": "/img/projects/newo/logo-2.png",
         "background": "/img/projects/spire-energia/cover.jpg",
+        desktopScreenshots:[
+            "/img/projects/newo/desktop-01.svg",
+            "/img/projects/newo/desktop-02.svg",
+            "/img/projects/newo/desktop-03.svg",
+            "/img/projects/newo/desktop-04.svg",
+        ]
     },
     {
         "slug": "stage-air",
@@ -110,6 +119,24 @@ const projects : IProject[] = [
         "title": "The Personal Trainer",
         "description": "Fitness tracker",
         "date": "2022-01-01",
+        desktopScreenshots:[
+            "/img/projects/the-personal-trainer/desktop-01.jpg",
+            "/img/projects/the-personal-trainer/desktop-02.jpg",
+            "/img/projects/the-personal-trainer/desktop-03.jpg",
+            "/img/projects/the-personal-trainer/desktop-04.svg",
+        ],
+        mobileScreenshots:[
+            "/img/projects/the-personal-trainer/mobile-1.jpg",
+            "/img/projects/the-personal-trainer/mobile-2.jpg",
+            "/img/projects/the-personal-trainer/mobile-3.jpg",
+            "/img/projects/the-personal-trainer/mobile-4.jpg",
+            "/img/projects/the-personal-trainer/mobile-5.jpg",
+            "/img/projects/the-personal-trainer/mobile-6.jpg",
+            "/img/projects/the-personal-trainer/mobile-7.jpg",
+            "/img/projects/the-personal-trainer/mobile-8.jpg",
+            "/img/projects/the-personal-trainer/mobile-9.gif",
+            "/img/projects/the-personal-trainer/mobile-10.gif",
+        ],
         link:{
             instagram: "https://www.instagram.com/appthept/",
         }
@@ -122,6 +149,13 @@ const projects : IProject[] = [
         "background": "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
         "image": "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
         "date": "2018",
+        desktopScreenshots:[
+            "/img/projects/comunicazione-per-personal-trainer/desktop-1.jpg",
+            "/img/projects/comunicazione-per-personal-trainer/desktop-2.jpg",
+            "/img/projects/comunicazione-per-personal-trainer/desktop-3.jpg",
+            "/img/projects/comunicazione-per-personal-trainer/desktop-4.jpg",
+            "/img/projects/comunicazione-per-personal-trainer/desktop-5.jpg",
+        ]
     },
     {
         "slug": "yobu",
@@ -138,6 +172,11 @@ const projects : IProject[] = [
         "date": "2017 - 2019",
         "background": "/img/projects/cryptoforecast/cryptoforecast.jpg",
         "image": "/img/projects/cryptoforecast/cryptoforecast.jpg",
+        desktopScreenshots:[
+            "/img/projects/cryptoforecast/desktop-01.jpeg",
+            "/img/projects/cryptoforecast/desktop-02.png",
+            "/img/projects/cryptoforecast/desktop-03.jpg",
+        ]
     },
     {
         "slug": "navium",
