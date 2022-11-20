@@ -24,8 +24,10 @@ const EventCard: React.FC<IEventCardProps> = ({
             xs: "flex",
           },
           flexDirection: "column",
+          gap: "0.5em",
           gridTemplateColumns: "60px 1fr 50px 1fr",
           alignItems: "center",
+          textAlign: "center",
           padding: "10px",
           "&:hover": {
             boxShadow:

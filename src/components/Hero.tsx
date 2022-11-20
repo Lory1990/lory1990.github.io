@@ -26,12 +26,13 @@ const SingleData : React.FC<ISingleDataProps> = ({icon, text}) => {
   >{icon} {text}</Typography>)
 }
 export interface IHeroProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   date?: string;
   place?: string;
   backgroundImage?: string;
   hideTitleOnCover?: boolean;
+  color?: string
 }
 
 const Hero: React.FC<IHeroProps> = ({
@@ -39,8 +40,10 @@ const Hero: React.FC<IHeroProps> = ({
   place,
   backgroundImage,
   title,
+  color = "white",
   subtitle,
   hideTitleOnCover,
+
 }) => {
 
   return (
@@ -69,10 +72,10 @@ const Hero: React.FC<IHeroProps> = ({
         {!hideTitleOnCover &&
           <>
             <AOSBox dataAos="fade-down">
-              <Typography variant="h1" sx={{ color: "white", fontWeight: "bold"}}>{title}</Typography>
+              <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" }}}>{title}</Typography>
             </AOSBox>
             <AOSBox dataAos="fade-down" dataAosDelay="200">
-              {subtitle && <Typography variant="subtitle1" sx={{ color: "white", fontSize: "1.5em"}} >{subtitle}</Typography>}
+              {subtitle && <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em"}} >{subtitle}</Typography>}
             </AOSBox>
           </>
         }
@@ -81,7 +84,11 @@ const Hero: React.FC<IHeroProps> = ({
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: {
+            sm: "row",
+            xs: "column"
+          },
+          gap:"0.75em",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",

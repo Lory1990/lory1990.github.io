@@ -5,7 +5,6 @@ export interface ICardsBandProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
-  let theme: SxProps;
 
   if (columns) {
     return (
@@ -19,13 +18,21 @@ const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
         <Box
           sx={{
             display: "grid",
+            flex: "1",
             gridTemplateColumns: {
               xs: `1fr`,
               md: `repeat(${columns}, 1fr)`,
             },
-            columnGap: "40px",
-            rowGap: "40px",
-            margin: "40px 0px",
+            justifyItems: "center",
+            gap:"10px",
+            columnGap: {
+              xs: `10px`,
+              sm: `40px`,
+            },
+            rowGap: {
+              xs: `10px`,
+              sm: `40px`,
+            },
           }}
         >
           {children}

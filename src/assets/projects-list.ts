@@ -1,3 +1,4 @@
+import { IHeroProps } from "../components/Hero";
 import IArticleData, { IArticleDataType } from "../types/IArticleData";
 
 export interface IProject{
@@ -6,53 +7,94 @@ export interface IProject{
     subtitle?: string,
     description?:string,
     date?:string
-    link?:string,
+    link?:{
+        web?: string,
+        instagram?: string,
+        linkedin?: string,
+        facebook?: string,
+        youtube?: string
+        github?:string,
+        twitter?: string
+    },
     githubLink?: string
     image?: string,
     background?: string,
-    article?: IArticleData[]
+    hideTitleOnCover?: boolean,
+    article?: IArticleData[],
+    tile?:{
+        color?: string
+    },
+    hero?:IHeroProps
+    stack?: string[],
+    development?: string
 }
 
 const projects : IProject[] = [
     {
         "slug": "tryvium",
         "title": "Tryvium",
-        "subtitle": "Google Developer Group",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
+        "description": "Crypto Booking Platform",
+        "subtitle": "The best crypto-friendly booking platform",
+        "link": {
+            "web": "https://tryvium.io",
+            "facebook": "https://www.facebook.com/tryviumtravels",
+            "instagram": "https://www.instagram.com/tryvium/",
+            "linkedin": "https://www.linkedin.com/company/tryvium-travels-ltd/",
+            "github": "https://github.com/tryvium-travels",
+            "youtube": "https://www.youtube.com/c/Tryvium",
+            "twitter": "https://twitter.com/TryviumTravels",
+        },
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "image": "/img/projects/tryvium/cover.jpg",
+        "background":"/img/projects/tryvium/hero.png",
     },
     {
         "slug": "tongy",
         "title": "Tongy",
-        "subtitle": "Google Developer Group",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://tongy.it/",
+        "description": "Platform to study english for babies",
+        "subtitle": "Platform to study english for babies",
+        "link": {
+            "web": "https://tongy.it/",
+            "linkedin": "https://www.linkedin.com/company/tongybilingual/",
+            "instagram": "https://www.instagram.com/tongy.bilingual/",
+            "facebook": "https://www.facebook.com/tongy.bilingual"
+        },
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "image": "/img/projects/tongy/logo.png",
+        "background": "/img/projects/tongy/cover.png",
+        "hero":{
+            "color": "#1FA79A"
+        }
     },
     {
         "slug": "autoconnexa",
         "title": "Autoconnexa",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
+        "description": "InsurTech Platform for Cars",
+        "link": {
+            "web": "https://autoconnexa.it/",
+        },
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "image": "/img/projects/autoconnexa/logo.png",
+        "background": "/img/projects/autoconnexa/cover.png",
     },
     {
         "slug": "spire-energia",
         "title": "Spire Energia",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
+        "description": "A platform to monitor buildings consumptions",
+        "link": {
+            "web":"https://spire-energia.com/",
+        },
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "image": "/img/projects/spire-energia/logo.png",
+        "background": "/img/projects/spire-energia/cover.jpg",
     },
     {
         "slug": "newo",
         "title": "Newo",
         "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
+        "link": {
+            "web": "https://newopay.it/"
+        },
         "date": "2022-01-01",
         "image": "https://developers.google.com/images/branding/google_developer_group.png",
     },
@@ -60,15 +102,12 @@ const projects : IProject[] = [
         "slug": "stage-air",
         "title": "Stage Air",
         "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
-        "date": "2022-01-01",
         "image": "https://developers.google.com/images/branding/google_developer_group.png",
     },
     {
         "slug": "the-personal-trainer",
         "title": "The PT",
         "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "link": "https://developers.google.com/",
         "date": "2022-01-01",
         "image": "https://developers.google.com/images/branding/google_developer_group.png",
     },
@@ -77,7 +116,6 @@ const projects : IProject[] = [
         "title": "Comunicazione Per Personal Trainer",
         "description": "Personal trainer online video portal",
         "subtitle": "Personal trainer online video portal",
-        "link": "https://developers.google.com/",
         "background": "/img/comunicazione-per-personal-trainer/hero-background.png",
         "image": "/img/comunicazione-per-personal-trainer/image-background.jpg",
         "date": "2018",
@@ -95,7 +133,6 @@ const projects : IProject[] = [
         "title": "Cryptoforecast",
         "description": "Platform to predict the price of all Cryptos",
         "subtitle": "The only platform to predict the price af all crypto values",
-        "link": "https://developers.google.com/",
         "date": "2017 - 2019",
         "background": "/img/cryptoforecast/cryptoforecast.jpg",
         "image": "/img/cryptoforecast/cryptoforecast.jpg",

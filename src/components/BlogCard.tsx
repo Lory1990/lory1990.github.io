@@ -28,7 +28,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
         <Card
             ref={refCardHover}
             sx={{
-                width: "300px",
+                width: "100%",
                 height: "400px",
                 position: "relative",
                 backgroundImage: `url(${image})`,
