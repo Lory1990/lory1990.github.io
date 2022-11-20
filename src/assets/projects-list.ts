@@ -85,39 +85,42 @@ const projects : IProject[] = [
             "web":"https://spire-energia.com/",
         },
         "date": "2022-01-01",
-        "image": "/img/projects/spire-energia/logo.png",
+        "image": "/img/projects/spire-energia/logo-2.png",
         "background": "/img/projects/spire-energia/cover.jpg",
     },
     {
         "slug": "newo",
         "title": "Newo",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
+        "description": "Web application for invoice advance",
         "link": {
             "web": "https://newopay.it/"
         },
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "image": "/img/projects/newo/logo-2.png",
+        "background": "/img/projects/spire-energia/cover.jpg",
     },
     {
         "slug": "stage-air",
         "title": "Stage Air",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        "description": "The biggest platform for internships",
+        "date": "2019",
     },
     {
         "slug": "the-personal-trainer",
-        "title": "The PT",
-        "description": "The Google Developer Group is a collection of developers and developers who have been involved in the development of the group.",
+        "title": "The Personal Trainer",
+        "description": "Fitness tracker",
         "date": "2022-01-01",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
+        link:{
+            instagram: "https://www.instagram.com/appthept/",
+        }
     },
     {
         "slug": "comuncazione-per-personal-trainer",
         "title": "Comunicazione Per Personal Trainer",
         "description": "Personal trainer online video portal",
         "subtitle": "Personal trainer online video portal",
-        "background": "/img/comunicazione-per-personal-trainer/hero-background.png",
-        "image": "/img/comunicazione-per-personal-trainer/image-background.jpg",
+        "background": "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
+        "image": "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
         "date": "2018",
     },
     {
@@ -126,7 +129,6 @@ const projects : IProject[] = [
         "subtitle": "A freamework to build apps faster and smarter",
         "description": "A freamework to build apps faster and smarter",
         "date": "2019",
-        "image": "https://developers.google.com/images/branding/google_developer_group.png",
     },
     {
         "slug": "cryptoforecast",
@@ -134,16 +136,16 @@ const projects : IProject[] = [
         "description": "Platform to predict the price of all Cryptos",
         "subtitle": "The only platform to predict the price af all crypto values",
         "date": "2017 - 2019",
-        "background": "/img/cryptoforecast/cryptoforecast.jpg",
-        "image": "/img/cryptoforecast/cryptoforecast.jpg",
+        "background": "/img/projects/cryptoforecast/cryptoforecast.jpg",
+        "image": "/img/projects/cryptoforecast/cryptoforecast.jpg",
     },
     {
         "slug": "navium",
         "title": "Navium",
         "subtitle": "The all in one solution to predict ship damage onboard",
         "date": "2014 - 2017",
-        "image": "/img/navium/card-logo.png",
-        "background": "/img/navium/card-background.png",
+        "image": "/img/projects/navium/card-logo.png",
+        "background": "/img/projects/navium/card-background.png",
         article: [
             {
                 type: IArticleDataType.TEXT,

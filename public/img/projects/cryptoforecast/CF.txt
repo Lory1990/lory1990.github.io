@@ -1,0 +1,9 @@
+La piattaforma Cryptoforecast è un sistema integrato rivoluzionario in ambito crypto, in una sola piattaforma si sono volute centralizzare tutte le informazioni utili al trader per effettuare operazioni sui mercati. I moduli sviluppati sono:
+
+    Algoritmo di forecast bastato sulla stagionalità
+    Indici di mercato modulari personalizzati
+    Strumenti di forecast personalizzabili personalizzati rispetto alle esigenze di ogni trader
+    Categorizzazione di tutte le monete
+    Monitoraggio in tempo reale di tutti i valori delle monete
+    Possibilità di scaricare gli storici di tutte le pair di tutti gli exchanges
+    Sistema di monitoraggio utenti e iscrizioni
