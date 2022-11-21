@@ -8,6 +8,8 @@ import CardsBand from "../components/CardsBand";
 import CustomHead from "../components/CustomHead";
 import FloatingFollowMe from "../components/FloatingFollowMe";
 import Header from "../components/Header";
+import PageWrapper from "../components/PageWrapper";
+import SectionTitle from "../components/typography/SectionTitle";
 
 export interface IHomeProps {
   events?: IEvent[];
@@ -21,22 +23,23 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
       <CustomHead />
       <FloatingFollowMe
         githubLink="https://github.com/Lory1990"
-        twitterLink="https://www.facebook.com/lory1990" // TODO Remove
         facebookLink="https://www.facebook.com/lory1990"
         linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
       />
-      <Typography>My Projects</Typography>
-      <CardsBand>
-        {projects.map((project: IProject) => {
-          return <BlogCard
-            key={project.slug}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            link={`projects/${project.slug}`}
-          />;
-        })}
-      </CardsBand>
+      <PageWrapper>
+        <SectionTitle>My Projects</SectionTitle>
+        <CardsBand columns={3}>
+          {projects.map((project: IProject) => {
+            return <BlogCard
+              key={project.slug}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={`projects/${project.slug}`}
+            />;
+          })}
+        </CardsBand>
+      </PageWrapper>
     </div>
   );
 };
