@@ -5,11 +5,14 @@ import React, { useState } from "react";
 import useHover from "../hooks/useHover";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
+import { outlinedColor } from "../utils";
+import CloseIcon from '@mui/icons-material/Close';
 
 export interface HeaderElement {
     label: string
     link: string
+    onClick?: () => void
+    type?: "vertical" | "horizontal"
 }
 
 interface DrawerElement extends HeaderElement {
@@ -20,70 +23,67 @@ interface HeaderProps {
 }
 
 
-function HeaderElementComponent({ label, link }: HeaderElement) {
+function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
     const theme = useTheme()
     const { hoverRef, isHovered } = useHover()
-    const router = useRouter()
 
+    const router = useRouter()
     return (
-        <Link href={link}>
+        <Link href={link}
+            style={{
+                display: "flex",
+                justifyContent: "center"
+            }}>
             <Box
                 ref={hoverRef}
+                onClick={onClick}
                 sx={{
-                    height: "100%",
+                    height: type == "horizontal" ? "100%" : "unset",
+                    textAlign: type == "vertical" ? "center" : "unset",
+                    width: type == "vertical" ? "fit-content" : "unset",
+                    marginTop: type == "vertical" ? "10px" : "unset",
+                    marginBottom: type == "vertical" ? "10px" : "unset",
                     display: "flex",
                     cursor: "pointer",
-                    marginLeft: "15px",
+                    marginLeft: "25px",
                     position: "relative",
-                    marginRight: "15px",
+                    marginRight: "25px",
                     flexDirection: "column",
                     justifyContent: "center",
-                    color: (router.pathname == link || isHovered) ? theme.palette.secondary.main : "inherit",
-                    transition: "color 500ms linear",
+                    color: (router.pathname == link || isHovered) ? theme.palette.primary.main : "#313450",
+                    transition: "color 300ms linear",
                 }}
             >
-                <Typography sx={{ fontWeight: "bold" }}>
-                    {label.toUpperCase()}
+                <Typography sx={{ fontWeight: 500, fontSize: type == "vertical" ? "25px" : "18px" }}>
+                    {label}
                 </Typography>
                 <Box className="slider"
                     sx={{
-                        width: router.pathname == link ? "100%" : "0%",
-                        height: "2px",
-                        borderBottom: `${theme.palette.secondary.main} 3px solid`,
-                        transition: "width 500ms ease",
                         position: "absolute",
-                        bottom: "0px"
+                        height: "1px",
+                        bottom: type == "vertical" ? "-3px" : "10px",
+                        right: isHovered ? "unset" : 0,
+                        width:
+                            router.pathname == link
+                                ?
+                                "100%"
+                                :
+                                isHovered
+                                    ?
+                                    "100%"
+                                    :
+                                    "0%"
+                        ,
+                        borderBottom: `${theme.palette.primary.main} 3px solid`,
+                        transition: "width 500ms ease",
                     }} />
             </Box>
         </Link>
     )
 }
 
-function DrawerItem({ link, label, setDrawerOpen }: DrawerElement) {
-    const router = useRouter()
-
-    return (
-        <ListItem key={link} disablePadding>
-            <ListItemButton onClick={() => setDrawerOpen(false)}>
-                <Link href={link}>
-                    <ListItemText primary={
-                        <Typography
-                            sx={(theme: Theme) => (
-                                {
-                                    fontWeight: "bold",
-                                    color: router.pathname == link ? theme.palette.secondary.main : "inherit",
-                                })}>
-                            {label.toUpperCase()}
-                        </Typography>}
-                    />
-                </Link>
-            </ListItemButton>
-        </ListItem>
-    )
-}
 export default function Header({ headerElements }: HeaderProps) {
     const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
-    const theme = useTheme()
     const [drawerOpen, setDrawerOpen] = useState(false)
 
     const trigger = useScrollTrigger({
@@ -106,11 +106,21 @@ export default function Header({ headerElements }: HeaderProps) {
     return (
         <>
             <AppBar
-                elevation={trigger ? 4 : 0}
+                elevation={0}
                 position="fixed"
                 sx={{
-                    background: trigger ? theme.palette.primary.main : 'transparent',
+                    zIndex: 1201,
+                    backgroundColor:
+                        matches
+                            ?
+                            trigger ? "white" : 'transparent'
+                            :
+                            'transparent',
                     transition: "background 200ms linear",
+                    borderBottom:
+                        matches ?
+                            trigger ? `2px solid ${outlinedColor}` : "unset"
+                            : "unset",
                     ...toolbarStyle
                 }}>
                 <Box sx={{
@@ -131,28 +141,31 @@ export default function Header({ headerElements }: HeaderProps) {
 
                         : <IconButton
                             size="large"
-                            edge="start"
-                            color="inherit"
-                            sx={{ ml: 2 }}
+                            color="primary"
+                            sx={{ mr: 1 }}
                             onClick={() => setDrawerOpen(!drawerOpen)}
                         >
-                            <MenuIcon />
+                            {drawerOpen ? <CloseIcon /> : <MenuIcon />}
                         </IconButton>}
                 </Box>
             </AppBar >
 
             <Drawer
-                anchor={"right"}
+                anchor={"top"}
                 open={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
+                PaperProps={{
+                    sx: {
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center"
+                    }
+                }}
             >
-                <Box>
-                    <List>
-                        {headerElements.map(({ label, link }) => (
-                            <DrawerItem key={label} label={label} link={link} setDrawerOpen={setDrawerOpen} />
-                        ))}
-                    </List>
-                </Box>
+                {headerElements.map(({ label, link }) => (
+                    <HeaderElementComponent key={label} link={link} label={label} onClick={() => setDrawerOpen(false)} type={"vertical"} />
+                ))}
 
             </Drawer>
 

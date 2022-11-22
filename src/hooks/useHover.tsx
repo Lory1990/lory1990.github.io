@@ -1,10 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 
+
+export enum HoverType {
+  MOUSEOVER,
+  MOUSEOUT
+}
 export default function useHover() {
   const [isHovered, setIsHovered] = useState(false);
+  const [hoverType, setHoverType] = useState<HoverType>();
   const hoverRef = useRef(null);
-  const handleMouseOver = () => setIsHovered(true);
-  const handleMouseOut = () => setIsHovered(false);
+  const handleMouseOver = () => {
+    setIsHovered(true)
+    setHoverType(HoverType.MOUSEOVER)
+  };
+  const handleMouseOut = () => {
+    setIsHovered(false)
+    setHoverType(HoverType.MOUSEOUT)
+  };
   useEffect(
     () => {
       const node = hoverRef.current;
@@ -19,5 +31,5 @@ export default function useHover() {
     },
     [hoverRef.current] // Recall only if ref changes
   );
-  return { hoverRef, isHovered };
+  return { hoverRef, isHovered, hoverType };
 }

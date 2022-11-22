@@ -3,3 +3,4 @@ node_modules
 out
 sitemap*
 robots.txt
+.DS_Store

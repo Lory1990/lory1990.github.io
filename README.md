@@ -15,10 +15,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Structure
-
-### Style
-Almost all the style is managed by the [Material UI](https://mui.com/) package and the relative [`sx prop`](https://mui.com/system/getting-started/overview/) (More infomation about the usage of `sx prop` [here](https://mui.com/system/getting-started/usage/#why-use-mui-system)).
-
-Whenever the `sx prop` is not able to _do the job_, alternatives such as [`makeStyles(...)`](https://mui.com/system/styles/basics/#hook-api), [`styled(...)(...)`](https://mui.com/system/styles/basics/#styled-components-api) (even tough they're deprecated) or plain CSS have been used.

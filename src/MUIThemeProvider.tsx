@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { lime } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: lime[500],
+            main: "#754ef9",
         },
     },
+    typography: {
+        fontFamily: `"Poppins", "Roboto", "Helvetica", "Arial", sans-serif`
+    }
 });
 
 interface MUIThemeProviderProps {

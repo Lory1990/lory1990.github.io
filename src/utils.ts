@@ -1,0 +1,1 @@
+export const outlinedColor = "rgba(0, 0, 0, 0.06)";
