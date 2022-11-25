@@ -1,7 +1,7 @@
 name: Pretty Code
 
 on:
-  pull_request:
+  push:
     branches:
       - "*"
 
