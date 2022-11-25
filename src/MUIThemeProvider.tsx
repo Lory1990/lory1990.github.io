@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+declare module '@mui/material/Typography' {
+    interface TypographyPropsVariantOverrides {
+        dashed: true;
+    }
+}
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -9,6 +15,23 @@ const theme = createTheme({
     },
     typography: {
         fontFamily: `"Poppins", "Roboto", "Helvetica", "Arial", sans-serif`
+    },
+    components: {
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                }
+            },
+            variants: [
+                {
+                    props: { variant: 'h6' },
+                    style: {
+                        fontSize: "1rem",
+                        fontWeight: 600,
+                    },
+                },
+            ],
+        },
     }
 });
 
