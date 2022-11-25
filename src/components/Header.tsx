@@ -1,4 +1,4 @@
-import { AppBar, IconButton, Drawer, Typography, useMediaQuery, useScrollTrigger, useTheme, List, ListItemButton, ListItemText, ListItem } from "@mui/material";
+import { AppBar, IconButton, Drawer, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material";
 import { Box, Theme } from "@mui/system";
 import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState } from "react";
@@ -8,16 +8,13 @@ import Link from "next/link";
 import { outlinedColor } from "../utils";
 import CloseIcon from '@mui/icons-material/Close';
 
-export interface HeaderElement {
+interface HeaderElement {
     label: string
     link: string
     onClick?: () => void
     type?: "vertical" | "horizontal"
 }
 
-interface DrawerElement extends HeaderElement {
-    setDrawerOpen: Function
-}
 interface HeaderProps {
     headerElements: HeaderElement[]
 }
@@ -45,9 +42,9 @@ function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
                     marginBottom: type == "vertical" ? "10px" : "unset",
                     display: "flex",
                     cursor: "pointer",
-                    marginLeft: "25px",
+                    marginLeft: "15px",
                     position: "relative",
-                    marginRight: "25px",
+                    marginRight: "15px",
                     flexDirection: "column",
                     justifyContent: "center",
                     color: (router.pathname == link || isHovered) ? theme.palette.primary.main : "#313450",
