@@ -1,4 +1,4 @@
-import { Button, Card, Slide, Typography, useTheme } from "@mui/material"
+import { Button, Card, CardContent, Fade, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
 import Link from "next/link"
@@ -13,36 +13,39 @@ interface BlogCardProps {
 
 export default function BlogCard({ image, title, description, link }: BlogCardProps) {
     const theme = useTheme()
-    const { hoverRef: refButtonHover, isHovered: isButtonHovered } = useHover()
+    const { hoverRef: refTitleHover, isHovered: isTitleHovered } = useHover()
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
     const primaryColorRGB = hexRgb(theme.palette.primary.main)
     const router = useRouter();
 
-    const onButtonClick = () =>{
+    const onButtonClick = () => {
         router.push(link)
     }
 
-
-
     return (
-        <Card
-            ref={refCardHover}
-            sx={{
-                width: "100%",
-                height: "350px",
-                position: "relative",
-                backgroundImage: `url(${image})`,
-                backgroundSize: "100%",
-                backgroundPosition: "center",
-                transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                ...isCardHovered && {
-                    backgroundSize: "130%"
-                }
-            }}>
+        <Box sx={{
+            width: "300px",
+            position: "relative"
+        }}>
+            <Card
+                elevation={0}
+                ref={refCardHover}
+                sx={{
+                    height: "400px",
 
+                    width: "100%",
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    // transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    // WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    // ...isCardHovered && {
+                    //     backgroundSize: "130%"
+                    // }
+                }}>
 
-            <Box
+                {/* <Box
                 sx={{
                     position: "absolute",
                     height: "100%",
@@ -56,57 +59,61 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
 
                     }
                 }}
-            />
-            <Box
-                sx={{
-                    position: "absolute",
-                    WebkitTransition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    height: "100%",
-                    width: "100%",
-                    background:
-                        `linear-gradient(0deg, rgba(0,0,0,0.6) 0%,
-                    rgba(
-                    ${primaryColorRGB.red / 2},
-                    ${primaryColorRGB.green / 2},
-                    ${primaryColorRGB.blue},0.2) 50%,
-                    rgba(
-                    ${primaryColorRGB.red},
-                    ${primaryColorRGB.green},
-                    ${primaryColorRGB.blue},0.5) 100%)`,
-                    opacity: 0,
-                    ...isCardHovered && {
-                        opacity: 1
-                    }
-                }} />
+            /> */}
+                <Box
+                    sx={{
+                        position: "absolute",
+                        WebkitTransition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                        transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                        height: "100%",
+                        width: "100%",
+                        background: `rgba(
+                        ${primaryColorRGB.red},
+                        ${primaryColorRGB.green},
+                        ${primaryColorRGB.blue},0.3)`,
+                        // background:
+                        //     `linear-gradient(0deg, rgba(0,0,0,0.6) 0%,
+                        // rgba(
+                        // ${primaryColorRGB.red / 2},
+                        // ${primaryColorRGB.green / 2},
+                        // ${primaryColorRGB.blue},0.2) 50%,
+                        // rgba(
+                        // ${primaryColorRGB.red},
+                        // ${primaryColorRGB.green},
+                        // ${primaryColorRGB.blue},0.5) 100%)`,
+                        opacity: 0,
+                        ...(isCardHovered || isTitleHovered) && {
+                            opacity: 1
+                        }
+                    }} />
 
-
-            <Box sx={{ position: "absolute", bottom: "10px" }}>
-                <Box sx={{ margin: "30px" }}>
-                    <Typography
-                        sx={{
-                            fontSize: "24px",
-                            fontWeight: 600,
-                            color: "white"
-                        }}>
-                        {title}
-                    </Typography>
-                    <Typography variant="body1" sx={{ color: "white" }}>
-                        {description}
-                    </Typography>
-                    <Slide direction="up" in={isCardHovered}>
+                <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
+                    <Fade in={isCardHovered || isTitleHovered} >
+                        <Box>
                             <Button
-                                ref={refButtonHover}
+
                                 onClick={onButtonClick}
-                                variant={isButtonHovered ? "contained" : "outlined"}
-                                color="primary"
-                                sx={{ marginTop: "30px", color: !isButtonHovered && "white", border: `2px solid ${theme.palette.primary}`, pointerEvents: "auto" }}
+                                variant="contained"
+                                color="neutral"
                             >
-                            Read More
-                        </Button>
-                    </Slide>
+                                Read More
+                            </Button>
+                        </Box>
+                    </Fade>
                 </Box>
+            </Card>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", position: "absolute", width: "100%", top: 350 }}>
+                <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold" }}>
+                            {title}
+                        </Typography>
+                        <Typography variant="body1">{description}</Typography>
+                    </CardContent>
+                </Card>
             </Box>
-        </Card >
+
+
+        </Box>
     )
 }

@@ -31,6 +31,7 @@ declare module '@mui/material/Button' {
 }
 
 
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -81,7 +82,7 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    color: "rgba(9, 14, 52,1)"
+                    color: "#323450"
                 }
             },
             variants: [
@@ -96,7 +97,7 @@ const theme = createTheme({
         },
     }
 });
-
+theme.shadows[1] = "0px 0px 15px rgb(0 0 0 / 10%)"
 interface MUIThemeProviderProps {
     children: JSX.Element | JSX.Element[]
 }
