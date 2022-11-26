@@ -8,7 +8,7 @@ import Link from "next/link";
 import { outlinedColor } from "../utils";
 import CloseIcon from '@mui/icons-material/Close';
 
-interface HeaderElement {
+export interface HeaderElement {
     label: string
     link: string
     onClick?: () => void
