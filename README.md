@@ -6,6 +6,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Before running the development server, install the packages by typing on your terminal:
+
+```bash
+npm install
+# or
+yarn install
+```
+
 In order to run the development server, type on your terminal:
 
 ```bash
