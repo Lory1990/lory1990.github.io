@@ -51,7 +51,7 @@ function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
                     transition: "color 300ms linear",
                 }}
             >
-                <Typography sx={{ fontWeight: 500, fontSize: type == "vertical" ? "25px" : "18px" }}>
+                <Typography sx={{  fontSize: type == "vertical" ? "25px" : "18px" }}>
                     {label}
                 </Typography>
                 <Box className="slider"
