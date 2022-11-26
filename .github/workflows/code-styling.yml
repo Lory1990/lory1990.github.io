@@ -1,4 +1,5 @@
-name: Pretty Code
+# https://github.com/marketplace/actions/prettier-action
+name: Code Styling
 
 on:
   push:
@@ -13,10 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          # Make sure the actual branch is checked out when running on pull requests
-          ref: ${{ github.head_ref }}
           # This is important to fetch the changes to the previous commit
-          fetch-depth: 0
+          #fetch-depth: 0
+          persist-credentials: false
 
       - name: Prettify Code 🎨
         uses: creyD/prettier_action@v4.2

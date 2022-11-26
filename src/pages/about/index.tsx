@@ -13,6 +13,7 @@ const About: React.FC = () => {
     <CTABand
       primaryText="Want to work together"
       secondaryText="Want to work together"
+      buttonText="Contact Me"
     />
     <CareerTimeline
       timelineEvents={timelineEvents}

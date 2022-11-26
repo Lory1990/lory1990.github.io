@@ -1,28 +1,25 @@
-import { Button, Card, Link, Slide, Typography, useTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import hexRgb from "hex-rgb";
-import useHover from "../hooks/useHover";
+
 import AOSBox from "./AOSBox";
 import EventIcon from '@mui/icons-material/Event';
 import PlaceIcon from '@mui/icons-material/Place';
-import { url } from "inspector";
 
-interface ISingleDataProps{
-  text?:string,
+interface ISingleDataProps {
+  text?: string,
   icon?: JSX.Element
 }
 
-const SingleData : React.FC<ISingleDataProps> = ({icon, text}) => {
-  
-  if(!text) return null;
+const SingleData: React.FC<ISingleDataProps> = ({ icon, text }) => {
+
+  if (!text) return null;
 
   return (<Typography
-     sx={{
+    sx={{
       display: "flex",
       alignItems: "center",
       gap: "5px"
-     }}
+    }}
   >{icon} {text}</Typography>)
 }
 export interface IHeroProps {
@@ -53,7 +50,7 @@ const Hero: React.FC<IHeroProps> = ({
         padding: "1em",
         width: "100%",
         background: "darkgrey",
-        backgroundImage: 'url('+backgroundImage+')',
+        backgroundImage: 'url(' + backgroundImage + ')',
         backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
@@ -72,10 +69,10 @@ const Hero: React.FC<IHeroProps> = ({
         {!hideTitleOnCover &&
           <>
             <AOSBox dataAos="fade-down">
-              <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" }}}>{title}</Typography>
+              <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>{title}</Typography>
             </AOSBox>
             <AOSBox dataAos="fade-down" dataAosDelay="200">
-              {subtitle && <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em"}} >{subtitle}</Typography>}
+              {subtitle && <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em" }} >{subtitle}</Typography>}
             </AOSBox>
           </>
         }
@@ -88,7 +85,7 @@ const Hero: React.FC<IHeroProps> = ({
             sm: "row",
             xs: "column"
           },
-          gap:"0.75em",
+          gap: "0.75em",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
@@ -101,9 +98,9 @@ const Hero: React.FC<IHeroProps> = ({
         />
         <SingleData
           text={place}
-          icon={<PlaceIcon />} 
+          icon={<PlaceIcon />}
         />
-        
+
       </Box>
     </Box>
   );

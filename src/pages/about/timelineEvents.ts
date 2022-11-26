@@ -19,7 +19,7 @@ export const timelineEvents: TimelineEvent[] = [
     },
     {
         position: "Senior Software Developer",
-        company: "Key Technologies S.p.A.",
+        company: "Key Technologies",
         location: "Genova, Italy",
         from: "August 2018",
         to: "October 2020",
@@ -27,7 +27,7 @@ export const timelineEvents: TimelineEvent[] = [
     },
     {
         position: "Quantitative Developer",
-        company: "CryptoForecast S.R.L.",
+        company: "CryptoForecast",
         location: "Remote",
         from: "July 2018",
         to: "May 2020",
@@ -35,7 +35,7 @@ export const timelineEvents: TimelineEvent[] = [
     },
     {
         position: "ILS and Maintenance Engineer",
-        company: "Delfi s.r.l. (a Fincantieri Company)",
+        company: "Delfi (a Fincantieri Company)",
         location: "La Spezia, Italy",
         from: "January 2017",
         to: "August 2018",

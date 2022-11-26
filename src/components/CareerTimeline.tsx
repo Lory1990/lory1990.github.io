@@ -33,9 +33,15 @@ function TimelineEventContent({ timelineEvent, isLeft }: TimelineEventContentPro
         <Typography variant="subtitle2" sx={{ fontWeight: "bold", marginBottom: "0.5rem" }} color={theme.palette.grey[500]}>{`${company} | ${location}`}</Typography>
         <Chip label={`${from} - ${to}`} color="primary" style={{ marginBottom: "1.25rem", fontSize: "0.75rem", fontWeight: "bold" }} />
         <Box sx={{ display: "flex", justifyContent: isLeft ? "end" : "" }}>
-            <Typography variant="body2" sx={{ maxWidth: "50%", fontSize: "0.8rem" }} color={theme.palette.grey[500]}>{description}</Typography>
+            <Typography
+                variant="body2"
+                sx={{
+                    maxWidth: "50%",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                }} color={theme.palette.grey[400]}>{description}</Typography>
         </Box>
-    </TimelineContent>
+    </TimelineContent >
 }
 
 export default function CareerTimeline({ timelineEvents }: TimelineProps) {
