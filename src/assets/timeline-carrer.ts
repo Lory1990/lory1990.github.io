@@ -1,6 +1,6 @@
-import { TimelineEvent } from "../../components/CareerTimeline";
+import { TimelineEvent } from "../components/CareerTimeline";
 
-export const timelineEvents: TimelineEvent[] = [
+const timelineCarrer: TimelineEvent[] = [
     {
         position: "IT Manager",
         company: "Step 4 Business",
@@ -50,3 +50,6 @@ export const timelineEvents: TimelineEvent[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Loremipsum dolor sit amet, consectetur adipisicing elit"
     },
 ]
+
+
+export default timelineCarrer;

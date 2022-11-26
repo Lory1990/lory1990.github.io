@@ -5,7 +5,7 @@
 import CareerTimeline from "../../components/CareerTimeline";
 import CTABand from "../../components/CTABand";
 import Hero from "../../components/Hero";
-import { timelineEvents } from "./timelineEvents";
+import timelineEvents from "../../assets/timeline-carrer";
 
 const About: React.FC = () => {
   return <div>
