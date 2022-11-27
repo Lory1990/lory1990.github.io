@@ -13,7 +13,7 @@ import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
 import TechStackList from "../../components/TechStackList"
 import SectionTitle from "../../components/typography/SectionTitle"
-import { Bounce, Fade, JackInTheBox } from "react-awesome-reveal"
+import { Bounce, Fade } from "react-awesome-reveal"
 
 interface ITechStackBandPros {
     techStack: ITechStack[]
@@ -32,7 +32,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
                 display: "flex",
                 gap: {
                     xs: "0em",
-                    ms: "5em"
+                    md: "5em"
                 },
                 flexDirection: {
                     xs: "column",
