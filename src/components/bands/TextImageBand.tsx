@@ -41,4 +41,3 @@ const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
 }
 
 export default TextImageBand
-
