@@ -75,7 +75,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
 const About: React.FC = () => {
     return (
         <div>
-            <CustomHead title="About me"/>
+            <CustomHead title="About me" />
             <Hero title="Hi, I am Lorenzo" />
             <PageWrapper>
                 <Fade direction="top-left">
