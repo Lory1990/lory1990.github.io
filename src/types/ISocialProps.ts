@@ -6,6 +6,6 @@ export interface ISocialLinks {
 }
 
 export interface ISocialIconProps {
-    link?: string,
+    link?: string
     icon?: JSX.Element
 }

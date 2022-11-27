@@ -16,17 +16,19 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
     const { hoverRef: refTitleHover, isHovered: isTitleHovered } = useHover()
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
     const primaryColorRGB = hexRgb(theme.palette.primary.main)
-    const router = useRouter();
+    const router = useRouter()
 
     const onButtonClick = () => {
         router.push(link)
     }
 
     return (
-        <Box sx={{
-            width: "300px",
-            position: "relative"
-        }}>
+        <Box
+            sx={{
+                width: "300px",
+                position: "relative"
+            }}
+        >
             <Card
                 elevation={0}
                 ref={refCardHover}
@@ -37,14 +39,14 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     backgroundImage: `url(${image})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
+                    backgroundPosition: "center"
                     // transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     // WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     // ...isCardHovered && {
                     //     backgroundSize: "130%"
                     // }
-                }}>
-
+                }}
+            >
                 {/* <Box
                 sx={{
                     position: "absolute",
@@ -82,20 +84,16 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         // ${primaryColorRGB.green},
                         // ${primaryColorRGB.blue},0.5) 100%)`,
                         opacity: 0,
-                        ...(isCardHovered || isTitleHovered) && {
+                        ...((isCardHovered || isTitleHovered) && {
                             opacity: 1
-                        }
-                    }} />
+                        })
+                    }}
+                />
 
                 <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
-                    <Fade in={isCardHovered || isTitleHovered} >
+                    <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
-                            <Button
-
-                                onClick={onButtonClick}
-                                variant="contained"
-                                color="neutral"
-                            >
+                            <Button onClick={onButtonClick} variant="contained" color="neutral">
                                 Read More
                             </Button>
                         </Box>
@@ -112,8 +110,6 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     </CardContent>
                 </Card>
             </Box>
-
-
         </Box>
     )
 }

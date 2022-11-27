@@ -1,11 +1,7 @@
-
-
-export interface ITextImageBandProps{
-    inverted?: boolean;
-
+export interface ITextImageBandProps {
+    inverted?: boolean
 }
-const TextImageBand : React.FC<ITextImageBandProps> = () =>{
-
+const TextImageBand: React.FC<ITextImageBandProps> = () => {
     return <div></div>
 }
 

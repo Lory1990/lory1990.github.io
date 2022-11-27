@@ -3,8 +3,6 @@ name: Code Styling
 
 on:
   push:
-    branches:
-      - '*'
 
 jobs:
   prettier:
@@ -22,5 +20,5 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           # This part is also where you can pass other options, for example:
-          prettier_options: --write **/*.{js,ts,tsx,css,md} --no-semi false
-          only_changed: True
+          prettier_options: --write **/*.{js,ts,tsx,css,md}
+          only_changed: false
