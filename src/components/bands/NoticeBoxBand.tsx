@@ -1,10 +1,5 @@
-
-
-export interface INoticeBoxBandProps{
-
-}
-const NoticeBoxBand : React.FC<INoticeBoxBandProps> = () =>{
-
+export interface INoticeBoxBandProps {}
+const NoticeBoxBand: React.FC<INoticeBoxBandProps> = () => {
     return <div></div>
 }
 

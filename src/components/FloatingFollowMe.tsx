@@ -1,27 +1,23 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, IconButton, Link, Typography, useTheme } from '@mui/material';
-import useHover from '../hooks/useHover';
-import { ISocialIconProps, ISocialLinks } from '../types/ISocialProps';
-
+import GitHubIcon from "@mui/icons-material/GitHub"
+import TwitterIcon from "@mui/icons-material/Twitter"
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import { Box, IconButton, Link, Typography, useTheme } from "@mui/material"
+import useHover from "../hooks/useHover"
+import { ISocialIconProps, ISocialLinks } from "../types/ISocialProps"
 
 const SocialIcon: React.FC<ISocialIconProps> = ({ link, icon }) => {
     const { hoverRef, isHovered } = useHover()
 
-    if (!link) return null;
+    if (!link) return null
 
-    return (<IconButton
-        ref={hoverRef}
-        color={isHovered ? "primary" : "default"}
-        component={Link}
-        href={link} >
-        {icon}
-    </IconButton >)
+    return (
+        <IconButton ref={hoverRef} color={isHovered ? "primary" : "default"} component={Link} href={link}>
+            {icon}
+        </IconButton>
+    )
 }
 const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, facebookLink, githubLink }) => {
-
     const theme = useTheme()
     return (
         <Box
@@ -33,7 +29,8 @@ const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, f
                 alignItems: "center",
                 bottom: "20px",
                 right: "0px"
-            }}>
+            }}
+        >
             <Typography
                 variant="body1"
                 sx={{
@@ -50,8 +47,8 @@ const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, f
                     height: "50px",
                     width: "0.2px",
                     marginBottom: "15px"
-                }}>
-            </Box>
+                }}
+            ></Box>
             <SocialIcon icon={<GitHubIcon />} link={githubLink} />
             <SocialIcon icon={<FacebookOutlinedIcon />} link={facebookLink} />
             <SocialIcon icon={<TwitterIcon />} link={twitterLink} />

@@ -1,10 +1,5 @@
-
-
-export interface ICtaBandProps{
-
-}
-const CtaBand : React.FC<ICtaBandProps> = () =>{
-
+export interface ICtaBandProps {}
+const CtaBand: React.FC<ICtaBandProps> = () => {
     return <div></div>
 }
 

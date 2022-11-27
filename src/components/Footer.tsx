@@ -1,19 +1,18 @@
 import { Box, IconButton, Link, useMediaQuery, Typography, useTheme } from "@mui/material"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { ISocialIconProps, ISocialLinks } from "../types/ISocialProps";
-import { Theme } from "@mui/system";
+import GitHubIcon from "@mui/icons-material/GitHub"
+import TwitterIcon from "@mui/icons-material/Twitter"
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import { ISocialIconProps, ISocialLinks } from "../types/ISocialProps"
+import { Theme } from "@mui/system"
 interface IFooterProps extends ISocialLinks {
     text1?: string
     text2?: string
     text3?: string
 }
 
-
 const SocialCircle: React.FC<ISocialIconProps> = ({ link, icon }) => {
-    if (!link) return null;
+    if (!link) return null
 
     return (
         <Box sx={{ alignItems: "center" }}>
@@ -29,19 +28,20 @@ const SocialCircle: React.FC<ISocialIconProps> = ({ link, icon }) => {
                     "&:hover": {
                         color: "white",
                         backgroundColor: theme.palette.primary.main,
-                        border: `1.5px ${theme.palette.primary.main} solid`,
+                        border: `1.5px ${theme.palette.primary.main} solid`
                     }
                 })}
-                href={link} >
+                href={link}
+            >
                 {icon}
             </IconButton>
-        </Box >)
+        </Box>
+    )
 }
-
 
 export default function Footer({ githubLink, twitterLink, facebookLink, linkedinLink, text1, text2, text3 }: IFooterProps) {
     const theme = useTheme()
-    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"))
 
     return (
         <Box
@@ -55,7 +55,8 @@ export default function Footer({ githubLink, twitterLink, facebookLink, linkedin
                 backgroundColor: theme.palette.grey[900],
                 paddingTop: "20px",
                 paddingBottom: "20px"
-            })}>
+            })}
+        >
             <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
                 {githubLink && <SocialCircle icon={<GitHubIcon />} link={githubLink} />}
                 {facebookLink && <SocialCircle icon={<FacebookOutlinedIcon />} link={facebookLink} />}
@@ -75,7 +76,6 @@ export default function Footer({ githubLink, twitterLink, facebookLink, linkedin
                     </Typography>
                 </Box>
             </Box>
-
         </Box>
     )
 }
