@@ -53,8 +53,8 @@ const projects : IProject[] = [
     {
         "slug": "tongy",
         "title": "Tongy",
-        "description": "Platform to study english for babies",
-        "subtitle": "Platform to study english for babies",
+        "description": "Platform to teach english to babies",
+        "subtitle": "Platform to teach english to babies",
         "link": {
             "web": "https://tongy.it/",
             "linkedin": "https://www.linkedin.com/company/tongybilingual/",

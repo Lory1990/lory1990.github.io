@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-import AOSBox from "./AOSBox";
 import EventIcon from '@mui/icons-material/Event';
 import PlaceIcon from '@mui/icons-material/Place';
 
@@ -67,13 +66,9 @@ const Hero: React.FC<IHeroProps> = ({
         }}
       >
         {!hideTitleOnCover &&
-          <>
-            <AOSBox dataAos="fade-down">
+          <>            
               <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>{title}</Typography>
-            </AOSBox>
-            <AOSBox dataAos="fade-down" dataAosDelay="200">
               {subtitle && <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em" }} >{subtitle}</Typography>}
-            </AOSBox>
           </>
         }
       </Box>

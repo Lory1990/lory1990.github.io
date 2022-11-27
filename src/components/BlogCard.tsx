@@ -102,7 +102,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     </Fade>
                 </Box>
             </Card>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", position: "absolute", width: "100%", top: 350 }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", position: "absolute", width: "100%", top: 350, right: -30 }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold" }}>

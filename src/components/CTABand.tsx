@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, useTheme } from '@mui/material';
+import { Box, Button, Card, CardContent, SxProps, Theme, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image'
 
@@ -7,12 +7,13 @@ interface CTABandProps {
     primaryText?: string
     buttonText?: string
     onClick?: () => void
+    sx?:  SxProps<Theme>;
 }
 
-export default function CTABand({ secondaryText, primaryText, buttonText, onClick }: CTABandProps) {
+export default function CTABand({ secondaryText, primaryText, buttonText, onClick, sx }: CTABandProps) {
     const theme = useTheme()
     return (
-        <Box sx={{ alignContent: "center", display: "flex", justifyContent: "center" }}>
+        <Box sx={{ alignContent: "center", display: "flex", justifyContent: "center", ...sx }}>
             <Card sx={{
                 width: "70%",
                 display: "flex",

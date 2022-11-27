@@ -1,6 +1,5 @@
-import AOS from "aos";
 import "../styles/globals.css";
-import "aos/dist/aos.css";
+import "../styles/icons.css";
 import { useEffect, useState } from "react";
 import Header, { HeaderElement } from "../components/Header";
 import MUIThemeProvider from "../MUIThemeProvider";
@@ -25,9 +24,6 @@ function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()
 
   useEffect(() => {
-    AOS.init({
-      duration: 450,
-    });
 
     fetchPodcastData().then(value=>{
       setPodcastData(value)

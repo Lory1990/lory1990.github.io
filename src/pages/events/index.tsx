@@ -1,18 +1,16 @@
 
-import { Box } from "@mui/material";
+import { DateTime } from "luxon";
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
+import { Fade } from "react-awesome-reveal";
 import events, { IEvent } from "../../assets/events-list";
 import CustomHead from "../../components/CustomHead";
 import EventCard from "../../components/EventCard";
-import Hero from "../../components/Hero";
-import { DateTime } from "luxon";
-import { IListProps } from "../../types/IListProps";
-import Title from "../../components/typography/Title";
-import PageWrapper from "../../components/PageWrapper";
 import FooterContactForm from "../../components/FooterContactForm";
-import { Fade } from "react-awesome-reveal";
-import { useState } from "react";
+import Hero from "../../components/Hero";
 import ListWithShowMore from "../../components/ListWithShowMore";
+import PageWrapper from "../../components/PageWrapper";
+import Title from "../../components/typography/Title";
+import { IListProps } from "../../types/IListProps";
 
 export interface IEventListProps extends IListProps<IEvent> {}
 
