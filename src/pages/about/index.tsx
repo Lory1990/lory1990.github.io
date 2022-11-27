@@ -14,6 +14,7 @@ import PageWrapper from "../../components/PageWrapper"
 import TechStackList from "../../components/TechStackList"
 import SectionTitle from "../../components/typography/SectionTitle"
 import { Bounce, Fade } from "react-awesome-reveal"
+import CustomHead from "../../components/CustomHead"
 
 interface ITechStackBandPros {
     techStack: ITechStack[]
@@ -74,6 +75,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
 const About: React.FC = () => {
     return (
         <div>
+            <CustomHead title="About me"/>
             <Hero title="Hi, I am Lorenzo" />
             <PageWrapper>
                 <Fade direction="top-left">
