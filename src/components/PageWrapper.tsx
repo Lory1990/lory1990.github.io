@@ -11,11 +11,11 @@ export const PageWrapper: React.FC<IPageWrapperProps> = ({ children, sx }) => {
                 marginTop: "1em",
                 marginLeft: {
                     sm: "auto",
-                    xs: "10px"
+                    xs: "1.5em"
                 },
                 marginRight: {
                     sm: "auto",
-                    xs: "10px"
+                    xs: "1.5em"
                 },
                 maxWidth: {
                     sm: "1200px",

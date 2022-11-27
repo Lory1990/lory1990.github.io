@@ -16,7 +16,11 @@ export default function CTABand({ secondaryText, primaryText, buttonText, onClic
         <Box sx={{ alignContent: "center", display: "flex", justifyContent: "center", ...sx }}>
             <Card
                 sx={{
-                    width: "70%",
+                    width: {
+                        xs: "100%",
+                        sm: "100%",
+                        md: "70%"
+                    },
                     display: "flex",
                     justifyContent: "center",
                     backgroundColor: theme.palette.primary.main

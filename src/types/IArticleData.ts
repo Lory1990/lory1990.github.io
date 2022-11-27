@@ -11,6 +11,7 @@ export enum IArticleDataType {
 
 export default interface IArticleData {
     type: IArticleDataType
-    text: string
+    text?: string | React.ReactNode
     image?: string | string[]
+    imageAlt?: string
 }
