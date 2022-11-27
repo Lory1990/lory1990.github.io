@@ -15,6 +15,7 @@ import TechStackList from "../../components/TechStackList"
 import SectionTitle from "../../components/typography/SectionTitle"
 import { Bounce, Fade } from "react-awesome-reveal"
 import CustomHead from "../../components/CustomHead"
+import ImageAndTextBand from "../../components/ImageAndTextBand"
 
 interface ITechStackBandPros {
     techStack: ITechStack[]
@@ -77,7 +78,21 @@ const About: React.FC = () => {
         <div>
             <CustomHead title="About me" />
             <Hero title="Hi, I am Lorenzo" />
-            <PageWrapper>
+            <PageWrapper sx={{marginTop: "2em"}}>
+                <ImageAndTextBand
+                    image="/img/lorenzo-de-francesco.jpeg"
+                    imageAlt="Lorenzo De Francesco"
+                    text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                />
+                <Fade direction="bottom-left">
+                    <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Ambitions</SectionTitle>
+                </Fade>
+                <ImageAndTextBand
+                    image="/img/about/team-building.svg"
+                    imageAlt="Architecture"
+                    inverted={true}
+                    text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                />
                 <Fade direction="top-left">
                     <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
                 </Fade>
