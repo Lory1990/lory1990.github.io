@@ -15,8 +15,8 @@ const ImageAndTextBand: React.FC<IImageAndTextBandProps> = ({ image, text, image
             sx={{
                 display: "flex",
                 flexDirection: {
-                    xs: "column",
-                    sm: "column",
+                    xs: "column-reverse",
+                    sm: "column-reverse",
                     md: inverted ? "row-reverse" : "row"
                 },
                 gap: "5em",
