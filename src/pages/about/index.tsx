@@ -78,7 +78,7 @@ const About: React.FC = () => {
         <div>
             <CustomHead title="About me" />
             <Hero title="Hi, I am Lorenzo" />
-            <PageWrapper sx={{marginTop: "2em"}}>
+            <PageWrapper sx={{ marginTop: "2em" }}>
                 <ImageAndTextBand
                     image="/img/lorenzo-de-francesco.jpeg"
                     imageAlt="Lorenzo De Francesco"

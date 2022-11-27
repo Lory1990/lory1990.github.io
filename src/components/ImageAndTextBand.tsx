@@ -28,7 +28,7 @@ const ImageAndTextBand: React.FC<IImageAndTextBandProps> = ({ image, text, image
             </Fade>
             {image && (
                 <Zoom delay={200}>
-                        <Image src={image} alt={imageAlt || "An image"} width={300} height={300} />
+                    <Image src={image} alt={imageAlt || "An image"} width={300} height={300} />
                 </Zoom>
             )}
         </Box>
