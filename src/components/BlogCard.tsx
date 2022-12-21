@@ -1,7 +1,6 @@
 import { Button, Card, CardContent, Fade, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import useHover from "../hooks/useHover"
 interface BlogCardProps {
@@ -23,16 +22,16 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
     }
 
     return (
-        <Box sx={{
+        < Box sx={{
             width: "300px",
-            position: "relative"
+            position: "relative",
+            height: "450px",
         }}>
             <Card
                 elevation={0}
                 ref={refCardHover}
                 sx={{
                     height: "400px",
-
                     width: "100%",
                     backgroundImage: `url(${image})`,
                     backgroundSize: "cover",
@@ -108,12 +107,11 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold" }}>
                             {title}
                         </Typography>
-                        <Typography variant="body1">{description}</Typography>
+                        <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]} >{description}</Typography>
                     </CardContent>
                 </Card>
             </Box>
 
-
-        </Box>
+        </Box >
     )
 }
