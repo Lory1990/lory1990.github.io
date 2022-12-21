@@ -22,11 +22,13 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
     }
 
     return (
-        < Box sx={{
-            width: "300px",
-            position: "relative",
-            height: "450px",
-        }}>
+        <Box
+            sx={{
+                width: "300px",
+                position: "relative",
+                height: "450px"
+            }}
+        >
             <Card
                 elevation={0}
                 ref={refCardHover}
@@ -103,7 +105,9 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold" }}>
                             {title}
                         </Typography>
-                        <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]} >{description}</Typography>
+                        <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]}>
+                            {description}
+                        </Typography>
                     </CardContent>
                 </Card>
             </Box>
