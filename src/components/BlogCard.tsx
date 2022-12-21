@@ -72,6 +72,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         ${primaryColorRGB.red},
                         ${primaryColorRGB.green},
                         ${primaryColorRGB.blue},0.3)`,
+                        borderRadius: "10px",
                         // background:
                         //     `linear-gradient(0deg, rgba(0,0,0,0.6) 0%,
                         // rgba(

@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import { useRouter } from "next/router"
 import events, { IEvent } from "../assets/events-list"
@@ -26,7 +27,7 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
         <div>
             <CustomHead />
             <Hero
-                title={<></>}
+                title={<Typography variant="h3">CIAO, MI CHIAMO LORENZO E SONO UN DEVELOPER</Typography>}
                 subtitle="CREO APP BELLE, SEMPLICI E COINVOLGENTI IL MIO SCOPO? SEMPLIFICARE LA VITA AGLI UTENTI ED AUMENTARE LE CONVERSIONI"
                 button={{
                     text: "scopri di più",
