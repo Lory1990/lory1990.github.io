@@ -56,10 +56,7 @@ const projects: IProject[] = [
                 text: "asdasd"
             }
         ],
-        stack: [
-            "REACT",
-            "WEB3"
-        ]
+        stack: ["REACT", "WEB3"]
     },
     {
         slug: "tongy",
