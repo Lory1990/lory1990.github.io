@@ -67,21 +67,26 @@ const Hero: React.FC<IHeroProps> = ({ date, place, backgroundImage, title, color
         >
             {!hideTitleOnCover && (
                 <>
-                    {typeof title == "string" && (<Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>
-                        {title}
-                    </Typography>)}
-                    {React.isValidElement(title) && (<Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>
-                        {title}
-                    </Typography>)}
+                    {typeof title == "string" && (
+                        <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>
+                            {title}
+                        </Typography>
+                    )}
+                    {React.isValidElement(title) && (
+                        <Typography variant="h1" sx={{ color, fontWeight: "bold", fontSize: { sm: "6rem", xs: "4em" } }}>
+                            {title}
+                        </Typography>
+                    )}
                     {subtitle && (
                         <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em" }}>
                             {subtitle}
                         </Typography>
                     )}
                     {button && (
-                        <Button onClick={button.onClick} variant="contained">{button.text}</Button>
+                        <Button onClick={button.onClick} variant="contained">
+                            {button.text}
+                        </Button>
                     )}
-
                 </>
             )}
         </Box>
