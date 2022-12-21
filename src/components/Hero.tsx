@@ -31,7 +31,7 @@ interface IHeroButton {
     onClick: () => void
 }
 
-interface IHeroProps {
+export interface IHeroProps {
     title?: string | JSX.Element
     subtitle?: string
     date?: string
