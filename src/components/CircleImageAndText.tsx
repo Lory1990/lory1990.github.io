@@ -3,7 +3,6 @@ import hexToHsl from "hex-to-hsl"
 import React from "react"
 import { Technology } from "../assets/tech-stack"
 
-
 export interface ICircleImageAndTextProps {
     title?: string
     technologies?: Technology[]
@@ -50,7 +49,13 @@ const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, 
                         {title}
                     </Box>
                 )}
-                {technologies.map((technology, index) => <Chip size="small" label={technology.name} sx={{ backgroundColor: technology.color, color: "#fff", margin: "0.2em", fontWeight: "bold", ...index == 0 && { marginLeft: "0em" } }} />)}
+                {technologies.map((technology, index) => (
+                    <Chip
+                        size="small"
+                        label={technology.name}
+                        sx={{ backgroundColor: technology.color, color: "#fff", margin: "0.2em", fontWeight: "bold", ...(index == 0 && { marginLeft: "0em" }) }}
+                    />
+                ))}
                 {description && <Box sx={{ marginTop: "0.5em", fontWeight: "200" }}>{description}</Box>}
             </Box>
         </Box>

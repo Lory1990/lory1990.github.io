@@ -10,9 +10,10 @@ export const ExperienceText: React.FC<IExperienceTextProps> = ({ years, sx }) =>
 
     return (
         <Box sx={{ ...sx, display: "flex" }}>
-
             <Box sx={{ fontWeight: "bold", marginRight: "0.2em" }}>Experience:</Box>
-            <Box>{years} {years > 1 ? " years" : "year"}</Box>
+            <Box>
+                {years} {years > 1 ? " years" : "year"}
+            </Box>
         </Box>
     )
 }
