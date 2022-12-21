@@ -27,7 +27,7 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
         <div>
             <CustomHead />
             <Hero
-                title={<Typography variant="h3">CIAO, MI CHIAMO LORENZO E SONO UN DEVELOPER</Typography>}
+                title={<Typography>CIAO, MI CHIAMO LORENZO E SONO UN DEVELOPER</Typography>}
                 subtitle="CREO APP BELLE, SEMPLICI E COINVOLGENTI IL MIO SCOPO? SEMPLIFICARE LA VITA AGLI UTENTI ED AUMENTARE LE CONVERSIONI"
                 button={{
                     text: "scopri di più",

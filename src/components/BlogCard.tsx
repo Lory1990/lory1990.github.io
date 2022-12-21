@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, Fade, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
+import Link from "next/link"
 import useHover from "../hooks/useHover"
 interface BlogCardProps {
     image: string
@@ -21,14 +22,13 @@ export default function BlogCard({ image, title, description, link, hoverColor }
             sx={{
                 width: "300px",
                 position: "relative",
-                height: "450px"
             }}
         >
             <Card
                 elevation={0}
                 ref={refCardHover}
                 sx={{
-                    height: "400px",
+                    height: "300px",
                     width: "100%",
                     backgroundImage: `url(${image})`,
                     backgroundSize: "100%",
@@ -84,7 +84,7 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                     }}
                 />
 
-                <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
+                <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center", position: "absolute" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
                             <Button variant="contained" color="neutral">
@@ -92,9 +92,9 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                             </Button>
                         </Box>
                     </Fade>
-                </Box>
+                </Box> 
             </Card>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-60px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
+            <Box sx={{zIndex:300, display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
