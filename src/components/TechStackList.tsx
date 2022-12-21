@@ -3,7 +3,6 @@ import { Box, SxProps } from "@mui/system"
 import { ITechStack } from "../assets/tech-stack"
 import CircleImageAndText from "./CircleImageAndText"
 import ExperienceText from "./typography/ExperienceText"
-import { Fade } from "react-awesome-reveal"
 
 export interface ITechStackListProps {
     techStack: ITechStack[]
@@ -30,13 +29,9 @@ const TechStackList: React.FC<ITechStackListProps> = ({ initialDelay = 0, techSt
                 ...sx
             }}
         >
-            {techStack.map((single, index) => {
-                return (
-                    <Fade key={index} delay={initialDelay + index * 200}>
-                        <CircleImageAndText description={<ExperienceText years={single.experience} />} {...single} />
-                    </Fade>
-                )
-            })}
+            {techStack.map((single, index) => (
+                <CircleImageAndText key={`tech-stack-${index}`} description={<ExperienceText years={single.experience} />} {...single} />
+            ))}
         </Box>
     )
 }

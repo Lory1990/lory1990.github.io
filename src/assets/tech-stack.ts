@@ -1,5 +1,11 @@
+export interface Technology {
+    name: string
+    color: string
+}
+
 export interface ITechStack {
     title?: string
+    technologies?: Technology[]
     description?: string
     image?: string
     emphasize?: boolean
@@ -13,7 +19,17 @@ const techStack: ITechStack[] = [
         image: "icon-react",
         experience: 3,
         emphasize: true,
-        category: "FE"
+        category: "FE",
+        technologies: [
+            {
+                name: "React Native",
+                color: "#61dafb"
+            },
+            {
+                name: "SASS",
+                color: "#c69"
+            }
+        ]
     },
     {
         title: "React Native",

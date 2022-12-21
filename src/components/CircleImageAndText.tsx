@@ -1,15 +1,18 @@
-import { Box, useTheme } from "@mui/material"
+import { Box, Chip, useTheme } from "@mui/material"
 import hexToHsl from "hex-to-hsl"
 import React from "react"
+import { Technology } from "../assets/tech-stack"
+
 
 export interface ICircleImageAndTextProps {
     title?: string
+    technologies?: Technology[]
     image?: string
     description?: string | React.ReactNode
     deltaSaturation?: number
 }
 
-const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, description, deltaSaturation = 5 }) => {
+const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, description, technologies = [], deltaSaturation = 5 }) => {
     const theme = useTheme()
     const hslColor = hexToHsl(theme.palette.primary.main)
 
@@ -47,6 +50,7 @@ const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, 
                         {title}
                     </Box>
                 )}
+                {technologies.map((technology, index) => <Chip size="small" label={technology.name} sx={{ backgroundColor: technology.color, color: "#fff", margin: "0.2em", fontWeight: "bold", ...index == 0 && { marginLeft: "0em" } }} />)}
                 {description && <Box sx={{ marginTop: "0.5em", fontWeight: "200" }}>{description}</Box>}
             </Box>
         </Box>

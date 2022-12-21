@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, Fade, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
+import Link from "next/link"
 import useHover from "../hooks/useHover"
 interface BlogCardProps {
     image: string
