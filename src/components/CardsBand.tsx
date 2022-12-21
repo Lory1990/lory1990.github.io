@@ -23,11 +23,6 @@ const CardsBand: React.FC<ICardsBandProps> = ({ children, columns }) => {
                             md: `repeat(${columns}, 1fr)`
                         },
                         justifyItems: "center",
-                        gap: "10px",
-                        columnGap: {
-                            xs: `10px`,
-                            sm: `40px`
-                        },
                         rowGap: {
                             xs: `10px`,
                             sm: `40px`

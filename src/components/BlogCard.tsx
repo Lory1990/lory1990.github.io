@@ -1,28 +1,22 @@
 import { Button, Card, CardContent, Fade, Typography, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 import hexRgb from "hex-rgb"
-import { useRouter } from "next/router"
 import useHover from "../hooks/useHover"
 interface BlogCardProps {
     image: string
     title: string
     description: string
     link: string
+    hoverColor?: string
 }
 
-export default function BlogCard({ image, title, description, link }: BlogCardProps) {
+export default function BlogCard({ image, title, description, link, hoverColor }: BlogCardProps) {
     const theme = useTheme()
     const { hoverRef: refTitleHover, isHovered: isTitleHovered } = useHover()
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
-    const primaryColorRGB = hexRgb(theme.palette.primary.main)
-    const router = useRouter()
+    const primaryColorRGB = hexRgb(hoverColor || theme.palette.primary.main)
 
-    const onButtonClick = () => {
-        router.push(link)
-    }
-
-    return (
-        <Box
+    const child = <Box
             sx={{
                 width: "300px",
                 position: "relative",
@@ -36,14 +30,14 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     height: "400px",
                     width: "100%",
                     backgroundImage: `url(${image})`,
-                    backgroundSize: "cover",
+                    backgroundSize: "100%",
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center"
-                    // transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    // WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    // ...isCardHovered && {
-                    //     backgroundSize: "130%"
-                    // }
+                    backgroundPosition: "center",
+                    transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    ":hover":{
+                        backgroundSize: "130%"
+                    },
                 }}
             >
                 {/* <Box
@@ -63,7 +57,6 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
             /> */}
                 <Box
                     sx={{
-                        position: "absolute",
                         WebkitTransition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         height: "100%",
@@ -93,17 +86,17 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                 <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
-                            <Button onClick={onButtonClick} variant="contained" color="neutral">
+                            <Button variant="contained" color="neutral">
                                 Read More
                             </Button>
                         </Box>
                     </Fade>
                 </Box>
             </Card>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", position: "absolute", width: "100%", top: 350, right: -30 }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-60px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold" }}>
+                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold",fontSize: "1.25rem" }}>
                             {title}
                         </Typography>
                         <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]}>
@@ -113,5 +106,10 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                 </Card>
             </Box>
         </Box>
-    )
+    
+    if(link){
+        return <Link href={link}>{child}</Link>
+    }else{
+        return child;
+    }
 }

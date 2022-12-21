@@ -17,6 +17,7 @@ export interface IProject {
         youtube?: string
         github?: string
         twitter?: string
+        playStore?: string
     }
     githubLink?: string
     image?: string
@@ -35,7 +36,7 @@ const projects: IProject[] = [
     {
         slug: "tryvium",
         title: "Tryvium",
-        description: "Crypto Booking Platform",
+        description: "Booking Platform  you can pay with crypto",
         subtitle: "The best crypto-friendly booking platform",
         link: {
             web: "https://tryvium.io",
@@ -71,7 +72,7 @@ const projects: IProject[] = [
     {
         slug: "autoconnexa",
         title: "Autoconnexa",
-        description: "InsurTech Platform for Cars",
+        description: "Cars InsurTech Platform with veichle tracking",
         link: {
             web: "https://autoconnexa.it/"
         },
@@ -100,20 +101,26 @@ const projects: IProject[] = [
         },
         date: "2022-01-01",
         image: "/img/projects/newo/logo-2.png",
-        background: "/img/projects/spire-energia/cover.jpg",
+        background: "/img/projects/newo/cover.jpg",
         desktopScreenshots: ["/img/projects/newo/desktop-01.svg", "/img/projects/newo/desktop-02.svg", "/img/projects/newo/desktop-03.svg", "/img/projects/newo/desktop-04.svg"]
     },
     {
         slug: "stage-air",
         title: "Stage Air",
         description: "The biggest platform for internships",
+        image: "/img/projects/stage-air/logo.jpg",
+        link: {
+            web: "https://duckinternship.com/",
+            linkedin: "https://www.linkedin.com/company/duckinternship/"
+        },
         date: "2019"
     },
     {
         slug: "the-personal-trainer",
         title: "The Personal Trainer",
-        description: "Fitness tracker",
-        date: "2022-01-01",
+        description: "Fitness tracker full web with metrics",
+        image: "/img/projects/the-personal-trainer/logo.png",
+        date: "2019",
         desktopScreenshots: [
             "/img/projects/the-personal-trainer/desktop-01.jpg",
             "/img/projects/the-personal-trainer/desktop-02.jpg",
@@ -133,12 +140,27 @@ const projects: IProject[] = [
             "/img/projects/the-personal-trainer/mobile-10.gif"
         ],
         link: {
-            instagram: "https://www.instagram.com/appthept/"
-        }
+            instagram: "https://www.instagram.com/appthept/",
+            playStore: "https://play.google.com/store/apps/details?id=it.thept",
+        },
+        article: [
+            {
+                type: IArticleDataType.TEXT,
+                text: "ThePT è una Progressive Web App installabile sul proprio smartphone e anche consultabile online dedicata sia ai personal trainer che agli atleti. Permette ai personal trainers di essere contattati dagli atleti e di fornire delle schede di allenamento direttamente in App e seguire i loro progressi durante la loro consulenza attraverso dati di allenamento e di crescita corporea",
+            },
+            {
+                type: IArticleDataType.TEXT,
+                text: "Come tutte le nostre soluzioni è stato utilizzato il metodo YOBU per abbattere costi e tempi di sviluppo ed arrivare prima sul mercato. La piattaforma è composta da alcuni moduli standard che sono stati portati online in meno di una settimana",
+            },
+            {
+                type: IArticleDataType.TEXT,
+                text: "<ul><li>Login via mail</li><li>Social Login con Facebook, Google e TwitterProfili pubblici per i personal trainersNotifiche PushNotifiche in AppAmministrazione utentiKnowledge CenterIntegrazione con SendInBlueDashboard con metriche per il marketing</li></ul>",
+            }
+        ]
     },
     {
         slug: "comuncazione-per-personal-trainer",
-        title: "Comunicazione Per Personal Trainer",
+        title: "Comunicazione per PT",
         description: "Personal trainer online video portal",
         subtitle: "Personal trainer online video portal",
         background: "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
@@ -152,13 +174,13 @@ const projects: IProject[] = [
             "/img/projects/comunicazione-per-personal-trainer/desktop-5.jpg"
         ]
     },
-    {
-        slug: "yobu",
-        title: "Yobu",
-        subtitle: "A freamework to build apps faster and smarter",
-        description: "A freamework to build apps faster and smarter",
-        date: "2019"
-    },
+    // {
+    //     slug: "yobu",
+    //     title: "Yobu",
+    //     subtitle: "A freamework to build apps faster and smarter",
+    //     description: "A freamework to build apps faster and smarter",
+    //     date: "2019"
+    // },
     {
         slug: "cryptoforecast",
         title: "Cryptoforecast",
@@ -172,6 +194,7 @@ const projects: IProject[] = [
     {
         slug: "navium",
         title: "Navium",
+        description: "Marine tech startup specialized in damaged stability",
         subtitle: "The all in one solution to predict ship damage onboard",
         date: "2014 - 2017",
         image: "/img/projects/navium/card-logo.png",
