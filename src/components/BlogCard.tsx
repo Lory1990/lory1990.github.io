@@ -22,7 +22,7 @@ export default function BlogCard({ image, title, description, link, hoverColor, 
         <Box
             sx={{
                 width: size,
-                position: "relative",
+                position: "relative"
             }}
         >
             <Card
@@ -95,7 +95,7 @@ export default function BlogCard({ image, title, description, link, hoverColor, 
                     </Fade>
                 </Box>
             </Card>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
