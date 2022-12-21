@@ -1,11 +1,11 @@
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
+import { useRouter } from "next/router"
 import events, { IEvent } from "../assets/events-list"
 import podcasts, { IPodcast } from "../assets/podcast-list"
 import projects, { IProject } from "../assets/projects-list"
 import techStack from "../assets/tech-stack"
 import BlogCard from "../components/BlogCard"
 import CardsBand from "../components/CardsBand"
-import CircleImageAndText from "../components/CircleImageAndText"
 import CustomHead from "../components/CustomHead"
 import FloatingFollowMe from "../components/FloatingFollowMe"
 import FooterContactForm from "../components/FooterContactForm"
@@ -21,10 +21,18 @@ export interface IHomeProps {
 }
 
 export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
+    const router = useRouter()
     return (
         <div>
             <CustomHead />
-            <Hero title="This is the home" subtitle="I really do not know what to set" />
+            <Hero
+                title={<></>}
+                subtitle="CREO APP BELLE, SEMPLICI E COINVOLGENTI IL MIO SCOPO? SEMPLIFICARE LA VITA AGLI UTENTI ED AUMENTARE LE CONVERSIONI"
+                button={{
+                    text: "scopri di più",
+                    onClick: () => router.push("/about")
+                }}
+            />
             <FloatingFollowMe githubLink="https://github.com/Lory1990" facebookLink="https://www.facebook.com/lory1990" linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco" />
             <PageWrapper>
                 <SectionTitle>My Tech Stack</SectionTitle>
