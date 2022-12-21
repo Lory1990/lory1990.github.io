@@ -20,16 +20,6 @@ const techStack: ITechStack[] = [
         experience: 3,
         emphasize: true,
         category: "FE",
-        technologies: [
-            {
-                name: "React Native",
-                color: "#61dafb"
-            },
-            {
-                name: "SASS",
-                color: "#c69"
-            }
-        ]
     },
     {
         title: "React Native",
@@ -42,19 +32,17 @@ const techStack: ITechStack[] = [
         image: "icon-java",
         experience: 5,
         emphasize: true,
-        category: "BE"
-    },
-    {
-        title: "Quarkus",
-        image: "icon-java",
-        experience: 1,
-        category: "BE"
-    },
-    {
-        title: "Spring Boot",
-        image: "icon-java",
-        experience: 4,
-        category: "BE"
+        category: "BE",
+        technologies: [
+            {
+                name: "Spring Boot",
+                color: "#61dafb"
+            },
+            {
+                name: "Quarkus",
+                color: "#61dafb"
+            }
+        ]
     },
     {
         title: "Kubernetes",
@@ -63,22 +51,61 @@ const techStack: ITechStack[] = [
         category: "CLOUD"
     },
     {
-        title: "SCSS",
+        title: "CSS",
         image: "icon-sass",
         experience: 3,
-        category: "FE"
+        category: "FE",
+        technologies:[
+            {
+                name: "CSS",
+                color: "#61dafb"
+            },
+            {
+                name: "SASS",
+                color: "#61dafb"
+            },
+            {
+                name: "Styled Components",
+                color: "#61dafb"
+            }
+        ]
     },
     {
-        title: "NodeJS + Express",
+        title: "NodeJS",
         image: "icon-nodejs",
         experience: 5,
-        category: "BE"
+        category: "BE",
+        technologies:[
+            {
+                name: "Express",
+                color: "#61dafb"
+            },
+            {
+                name: "Typescript",
+                color: "#61dafb"
+            }
+        ]
     },
     {
         title: "SQL + NoSQL",
         image: "icon-database",
         experience: 7,
-        category: "BE"
+        category: "BE",
+        emphasize: true,
+        technologies: [
+            {
+                name: "MongoDB",
+                color: "#61dafb"
+            },
+            {
+                name: "MSSQL",
+                color: "#c69"
+            },
+            {
+                name: "MySQL",
+                color: "#c69"
+            }
+        ]
     },
     {
         title: "AWS",
