@@ -21,7 +21,7 @@ export default function BlogCard({ image, title, description, link, hoverColor }
         <Box
             sx={{
                 width: "300px",
-                position: "relative",
+                position: "relative"
             }}
         >
             <Card
@@ -92,9 +92,9 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                             </Button>
                         </Box>
                     </Fade>
-                </Box> 
+                </Box>
             </Card>
-            <Box sx={{zIndex:300, display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
+            <Box sx={{ zIndex: 300, display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
