@@ -9,9 +9,10 @@ interface BlogCardProps {
     description: string
     link: string
     hoverColor?: string
+    size?: string
 }
 
-export default function BlogCard({ image, title, description, link, hoverColor }: BlogCardProps) {
+export default function BlogCard({ image, title, description, link, hoverColor, size = "300px" }: BlogCardProps) {
     const theme = useTheme()
     const { hoverRef: refTitleHover, isHovered: isTitleHovered } = useHover()
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
@@ -20,15 +21,15 @@ export default function BlogCard({ image, title, description, link, hoverColor }
     const child = (
         <Box
             sx={{
-                width: "300px",
-                position: "relative"
+                width: size,
+                position: "relative",
             }}
         >
             <Card
                 elevation={0}
                 ref={refCardHover}
                 sx={{
-                    height: "300px",
+                    height: size,
                     width: "100%",
                     backgroundImage: `url(${image})`,
                     backgroundSize: "100%",
@@ -84,7 +85,7 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                     }}
                 />
 
-                <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center", position: "absolute" }}>
+                <Box sx={{ display: "flex", justifyContent: "center", width: size, height: size, alignItems: "center", top: 0, left: 0, position: "absolute" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
                             <Button variant="contained" color="neutral">
@@ -94,7 +95,7 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                     </Fade>
                 </Box>
             </Card>
-            <Box sx={{ zIndex: 300, display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
