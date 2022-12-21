@@ -17,7 +17,6 @@ const SingleProjectPage: NextPage<IProjectProps> = ({ hideTitleOnCover, article,
         <div>
             <CustomHead title={title} />
             <Hero title={title} backgroundImage={background} subtitle={subtitle} hideTitleOnCover={hideTitleOnCover} {...hero} />
-            {}
             <Article data={article} />
             <PageWrapper>
                 {desktopScreenshots && (

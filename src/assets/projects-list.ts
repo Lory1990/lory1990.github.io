@@ -49,7 +49,17 @@ const projects: IProject[] = [
         },
         date: "2022-01-01",
         image: "/img/projects/tryvium/cover.jpg",
-        background: "/img/projects/tryvium/hero.png"
+        background: "/img/projects/tryvium/hero.png",
+        article: [
+            {
+                type: IArticleDataType.TEXT_IMAGE,
+                text: "asdasd"
+            }
+        ],
+        stack: [
+            "REACT",
+            "WEB3"
+        ]
     },
     {
         slug: "tongy",
