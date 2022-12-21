@@ -19,7 +19,7 @@ const techStack: ITechStack[] = [
         image: "icon-react",
         experience: 3,
         emphasize: true,
-        category: "FE",
+        category: "FE"
     },
     {
         title: "React Native",
@@ -55,7 +55,7 @@ const techStack: ITechStack[] = [
         image: "icon-sass",
         experience: 3,
         category: "FE",
-        technologies:[
+        technologies: [
             {
                 name: "CSS",
                 color: "#61dafb"
@@ -75,7 +75,7 @@ const techStack: ITechStack[] = [
         image: "icon-nodejs",
         experience: 5,
         category: "BE",
-        technologies:[
+        technologies: [
             {
                 name: "Express",
                 color: "#61dafb"
