@@ -16,7 +16,8 @@ export default function BlogCard({ image, title, description, link, hoverColor }
     const { hoverRef: refCardHover, isHovered: isCardHovered } = useHover()
     const primaryColorRGB = hexRgb(hoverColor || theme.palette.primary.main)
 
-    const child = <Box
+    const child = (
+        <Box
             sx={{
                 width: "300px",
                 position: "relative",
@@ -35,9 +36,9 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                     backgroundPosition: "center",
                     transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    ":hover":{
+                    ":hover": {
                         backgroundSize: "130%"
-                    },
+                    }
                 }}
             >
                 {/* <Box
@@ -93,10 +94,10 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                     </Fade>
                 </Box>
             </Card>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-60px", marginLeft: {md: "40px", sm: "20px"}, width: "100%" }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-60px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold",fontSize: "1.25rem" }}>
+                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
                             {title}
                         </Typography>
                         <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]}>
@@ -106,10 +107,11 @@ export default function BlogCard({ image, title, description, link, hoverColor }
                 </Card>
             </Box>
         </Box>
-    
-    if(link){
+    )
+
+    if (link) {
         return <Link href={link}>{child}</Link>
-    }else{
-        return child;
+    } else {
+        return child
     }
 }

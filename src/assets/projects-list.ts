@@ -141,20 +141,20 @@ const projects: IProject[] = [
         ],
         link: {
             instagram: "https://www.instagram.com/appthept/",
-            playStore: "https://play.google.com/store/apps/details?id=it.thept",
+            playStore: "https://play.google.com/store/apps/details?id=it.thept"
         },
         article: [
             {
                 type: IArticleDataType.TEXT,
-                text: "ThePT è una Progressive Web App installabile sul proprio smartphone e anche consultabile online dedicata sia ai personal trainer che agli atleti. Permette ai personal trainers di essere contattati dagli atleti e di fornire delle schede di allenamento direttamente in App e seguire i loro progressi durante la loro consulenza attraverso dati di allenamento e di crescita corporea",
+                text: "ThePT è una Progressive Web App installabile sul proprio smartphone e anche consultabile online dedicata sia ai personal trainer che agli atleti. Permette ai personal trainers di essere contattati dagli atleti e di fornire delle schede di allenamento direttamente in App e seguire i loro progressi durante la loro consulenza attraverso dati di allenamento e di crescita corporea"
             },
             {
                 type: IArticleDataType.TEXT,
-                text: "Come tutte le nostre soluzioni è stato utilizzato il metodo YOBU per abbattere costi e tempi di sviluppo ed arrivare prima sul mercato. La piattaforma è composta da alcuni moduli standard che sono stati portati online in meno di una settimana",
+                text: "Come tutte le nostre soluzioni è stato utilizzato il metodo YOBU per abbattere costi e tempi di sviluppo ed arrivare prima sul mercato. La piattaforma è composta da alcuni moduli standard che sono stati portati online in meno di una settimana"
             },
             {
                 type: IArticleDataType.TEXT,
-                text: "<ul><li>Login via mail</li><li>Social Login con Facebook, Google e TwitterProfili pubblici per i personal trainersNotifiche PushNotifiche in AppAmministrazione utentiKnowledge CenterIntegrazione con SendInBlueDashboard con metriche per il marketing</li></ul>",
+                text: "<ul><li>Login via mail</li><li>Social Login con Facebook, Google e TwitterProfili pubblici per i personal trainersNotifiche PushNotifiche in AppAmministrazione utentiKnowledge CenterIntegrazione con SendInBlueDashboard con metriche per il marketing</li></ul>"
             }
         ]
     },
