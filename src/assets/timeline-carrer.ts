@@ -1,4 +1,4 @@
-import { TimelineEvent } from "../components/CareerTimeline";
+import { TimelineEvent } from "../components/CareerTimeline"
 
 const timelineCarrer: TimelineEvent[] = [
     {
@@ -48,8 +48,7 @@ const timelineCarrer: TimelineEvent[] = [
         from: "January 2015",
         to: "December 2016",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Loremipsum dolor sit amet, consectetur adipisicing elit"
-    },
+    }
 ]
 
-
-export default timelineCarrer;
+export default timelineCarrer

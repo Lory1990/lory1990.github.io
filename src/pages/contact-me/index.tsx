@@ -1,7 +1,6 @@
-import { NextPage } from "next";
+import { NextPage } from "next"
 
-
-const ContactMePage : NextPage = () =>{
+const ContactMePage: NextPage = () => {
     return <div>Contact Me</div>
 }
 

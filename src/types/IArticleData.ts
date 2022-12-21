@@ -1,18 +1,17 @@
-export enum IArticleDataType{
+export enum IArticleDataType {
     TITLE,
     TEXT,
     TEXT_IMAGE,
     IMAGE_TEXT,
-    COUNTERS, 
+    COUNTERS,
     CTA,
     NOTICE_BOX,
     CAROUSEL
 }
 
-export default interface IArticleData{
-    type: IArticleDataType,
-    text: string,
-    image?: string | string[],
-
-
+export default interface IArticleData {
+    type: IArticleDataType
+    text?: string | React.ReactNode
+    image?: string | string[]
+    imageAlt?: string
 }

@@ -619,15 +619,6 @@ ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-aos@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.npmjs.org/aos/-/aos-2.3.4.tgz"
-  integrity sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==
-  dependencies:
-    classlist-polyfill "^1.0.3"
-    lodash.debounce "^4.0.6"
-    lodash.throttle "^4.0.1"
-
 argparse@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz"
@@ -788,11 +779,6 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
-
-classlist-polyfill@^1.0.3:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz"
-  integrity sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ==
 
 client-only@0.0.1:
   version "0.0.1"
@@ -1543,6 +1529,19 @@ hex-rgb@^5.0.0:
   resolved "https://registry.npmjs.org/hex-rgb/-/hex-rgb-5.0.0.tgz"
   integrity sha512-NQO+lgVUCtHxZ792FodgW0zflK+ozS9X9dwGp9XvvmPlH7pyxd588cn24TD3rmPm/N0AIRXF10Otah8yKqGw4w==
 
+hex-to-hsl@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hex-to-hsl/-/hex-to-hsl-1.0.2.tgz#d5c59ece00178444e821c8fc58a430afc09831c2"
+  integrity sha512-7E2WDAXDNb51Ezc+/MyXOt/NbKgk4LPtEHpUBU0McJVF1seFxUhiOQyf9Sv/5NwTQntsEqzevCsv/Y6chOFLvg==
+  dependencies:
+    hex-to-rgb "^1.0.1"
+    rgb-to-hsl "0.0.2"
+
+hex-to-rgb@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hex-to-rgb/-/hex-to-rgb-1.0.1.tgz#100b9df126b32f2762adf8486be68c65ef8ed2a4"
+  integrity sha512-2GsESdjpJIrRL8I7iPOp0r0wczJBk++Q/zFrviNaTRPWMIgk5bPqDmKPUvRHN0SZrYT9N1e+xZU1niYJ6QxzMg==
+
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
@@ -1788,20 +1787,10 @@ lodash-es@^4.17.21:
   resolved "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz"
   integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
-lodash.debounce@^4.0.6:
-  version "4.0.8"
-  resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
-  integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-
-lodash.throttle@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
-  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
 
 lodash@^4.17.21:
   version "4.17.21"
@@ -2285,6 +2274,11 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+
+rgb-to-hsl@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/rgb-to-hsl/-/rgb-to-hsl-0.0.2.tgz#36f9fc286376b90acc457e699005b4cb42d350ec"
+  integrity sha512-92EhT0XUmmC1APQj5NKl3LoNPtZsDBzivTjZAikFuADreIQgqLnJgnnP5gY/mf52UqglAwVDAD/0arY9N35KFg==
 
 rimraf@3.0.2, rimraf@^3.0.2:
   version "3.0.2"

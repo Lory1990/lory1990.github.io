@@ -1,10 +1,5 @@
-
-
-export interface ITitleBandProps{
-
-}
-const TitleBand : React.FC<ITitleBandProps> = () =>{
-
+export interface ITitleBandProps {}
+const TitleBand: React.FC<ITitleBandProps> = () => {
     return <div></div>
 }
 

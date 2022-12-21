@@ -1,3 +1,3 @@
-export interface IListProps<T>{
-    list: T[];
+export interface IListProps<T> {
+    list: T[]
 }
