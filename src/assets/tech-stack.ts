@@ -19,7 +19,7 @@ const techStack: ITechStack[] = [
         image: "icon-react",
         experience: 3,
         emphasize: true,
-        category: "FE",
+        category: "FE"
     },
     {
         title: "React Native",
