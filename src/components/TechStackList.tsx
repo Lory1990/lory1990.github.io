@@ -2,16 +2,15 @@ import { Theme } from "@mui/material"
 import { Box, SxProps } from "@mui/system"
 import { ITechStack } from "../assets/tech-stack"
 import CircleImageAndText from "./CircleImageAndText"
-import ExperienceText from "./typography/ExperienceText"
+import ExperienceText from "./CircleImageAndText/ExperienceText"
 
 export interface ITechStackListProps {
     techStack: ITechStack[]
     columns?: number
     sx?: SxProps<Theme>
-    initialDelay?: number
 }
 
-const TechStackList: React.FC<ITechStackListProps> = ({ initialDelay = 0, techStack, columns = 3, sx }) => {
+const TechStackList: React.FC<ITechStackListProps> = ({ techStack, columns = 3, sx }) => {
     return (
         <Box
             sx={{

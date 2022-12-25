@@ -1,7 +1,7 @@
 import { Box, Chip, Typography, useTheme } from "@mui/material"
 import hexToHsl from "hex-to-hsl"
 import React from "react"
-import { Technology } from "../assets/tech-stack"
+import { Technology } from "../../assets/tech-stack"
 
 export interface ICircleImageAndTextProps {
     title?: string
@@ -45,13 +45,12 @@ const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, 
             )}
             <Box className="media-body">
                 {title && (
-                    <Typography variant="body1" sx={{ fontWeight: "500", fontSize: "1.2em" }} className="media-heading">
+                    <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.4em" }}>
                         {title}
                     </Typography>
                 )}
                 {technologies.map((technology, index) => (
                     <Chip
-                        key={technology.name}
                         size="small"
                         label={technology.name}
                         sx={{ backgroundColor: technology.color, color: "#fff", margin: "0.2em", fontWeight: "bold", ...(index == 0 && { marginLeft: "0em" }) }}

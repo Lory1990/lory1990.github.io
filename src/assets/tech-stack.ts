@@ -19,7 +19,7 @@ const techStack: ITechStack[] = [
         image: "icon-react",
         experience: 3,
         emphasize: true,
-        category: "FE"
+        category: "FE",
     },
     {
         title: "React Native",
@@ -36,11 +36,11 @@ const techStack: ITechStack[] = [
         technologies: [
             {
                 name: "Spring Boot",
-                color: "#61dafb"
+                color: "#67AA3C"
             },
             {
                 name: "Quarkus",
-                color: "#61dafb"
+                color: "#4795EA"
             }
         ]
     },
@@ -48,7 +48,13 @@ const techStack: ITechStack[] = [
         title: "Kubernetes",
         image: "icon-kubernetes",
         experience: 1,
-        category: "CLOUD"
+        category: "CLOUD",
+        technologies: [
+            {
+                name: "Mia-Platform",
+                color: "#29B7E0"
+            }
+        ]
     },
     {
         title: "CSS",
@@ -57,16 +63,12 @@ const techStack: ITechStack[] = [
         category: "FE",
         technologies: [
             {
-                name: "CSS",
-                color: "#61dafb"
-            },
-            {
                 name: "SASS",
-                color: "#61dafb"
+                color: "#C26191"
             },
             {
                 name: "Styled Components",
-                color: "#61dafb"
+                color: "#BD69A1"
             }
         ]
     },
@@ -78,11 +80,11 @@ const techStack: ITechStack[] = [
         technologies: [
             {
                 name: "Express",
-                color: "#61dafb"
+                color: "#010101"
             },
             {
                 name: "Typescript",
-                color: "#61dafb"
+                color: "#3178C6"
             }
         ]
     },

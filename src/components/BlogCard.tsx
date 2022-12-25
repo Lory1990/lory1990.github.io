@@ -98,10 +98,10 @@ export default function BlogCard({ image, title, description, link, hoverColor, 
             <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "-40px", marginLeft: { md: "40px", sm: "20px" }, width: "100%" }}>
                 <Card ref={refTitleHover} elevation={1} sx={{ width: "90%" }}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
+                        <Typography gutterBottom variant="body1" sx={{ fontWeight: "bold", fontSize: "1.25rem" }}>
                             {title}
                         </Typography>
-                        <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]}>
+                        <Typography variant="body1" color={theme.palette.grey[700]}>
                             {description}
                         </Typography>
                     </CardContent>
