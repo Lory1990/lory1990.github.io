@@ -97,15 +97,15 @@ const techStack: ITechStack[] = [
         technologies: [
             {
                 name: "MongoDB",
-                color: "#61dafb"
+                color: "#4FAA41"
             },
             {
                 name: "MSSQL",
-                color: "#c69"
+                color: "#B71C1C"
             },
             {
                 name: "MySQL",
-                color: "#c69"
+                color: "#F29111"
             }
         ]
     },
