@@ -22,7 +22,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
     }
 
     return (
-        <Box sx={{ width: "300px", position: "relative", height: "400px" }} >
+        <Box sx={{ width: "300px", position: "relative", height: "400px" }}>
             <Card
                 elevation={0}
                 ref={refCardHover}
