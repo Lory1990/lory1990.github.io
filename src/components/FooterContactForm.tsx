@@ -96,7 +96,7 @@ const FooterContactForm: React.FC<IFooterContactFormProps> = ({ title, subtitle 
                     }}
                 >
                     {title && <Typography sx={{ textAlign: "center", fontWeight: "bold", fontSize: "1.5em" }}>{title}</Typography>}
-                    {subtitle && <Typography sx={{ textAlign: "center" }} dangerouslySetInnerHTML={{__html:subtitle}}></Typography>}
+                    {subtitle && <Typography sx={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: subtitle }}></Typography>}
                     <Box
                         sx={{
                             display: "flex",

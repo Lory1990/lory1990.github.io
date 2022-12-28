@@ -44,7 +44,8 @@ const projects: IProject[] = [
         title: "Tryvium",
         boxDescription: "Booking Platform  you can pay with crypto",
         subtitle: "The best crypto-friendly booking platform",
-        description: "Tryvium is an online booking platform for hotels and accommodations were you can pay with your favourite crypto. It offers a variety of staying options in various destinations around the world. Users can search and compare hotel rates, read customer reviews, and book their stay directly from the website. Tryvium also offers a loyalty program to reward its most loyal customers with discounts and other benefits.",
+        description:
+            "Tryvium is an online booking platform for hotels and accommodations were you can pay with your favourite crypto. It offers a variety of staying options in various destinations around the world. Users can search and compare hotel rates, read customer reviews, and book their stay directly from the website. Tryvium also offers a loyalty program to reward its most loyal customers with discounts and other benefits.",
         link: {
             web: "https://tryvium.io",
             facebook: "https://www.facebook.com/tryviumtravels",
@@ -58,7 +59,7 @@ const projects: IProject[] = [
         image: "/img/projects/tryvium/cover.jpg",
         background: "/img/projects/tryvium/hero.png",
         category: [CategroyEnum.CRYPTO, CategroyEnum.TRAVEL],
-        stack: [StackEnum.REACT, StackEnum.WEB3, StackEnum.CSS],
+        stack: [StackEnum.REACT, StackEnum.WEB3, StackEnum.CSS]
     },
     {
         slug: "tongy",

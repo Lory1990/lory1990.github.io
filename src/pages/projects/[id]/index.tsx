@@ -14,11 +14,10 @@ import SectionTitle from "../../../components/typography/SectionTitle"
 
 interface IProjectProps extends IProject {}
 
-const SingleProjectPage: NextPage<IProjectProps> = (props) => {
+const SingleProjectPage: NextPage<IProjectProps> = props => {
+    const { hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero } = props
 
-    const { hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero} = props
-
-    const theme = useTheme();
+    const theme = useTheme()
 
     return (
         <div>
@@ -62,7 +61,7 @@ const SingleProjectPage: NextPage<IProjectProps> = (props) => {
                     <TitleBand>Social Links</TitleBand>
                     <SocialLinks {...props} />
                 </PageWrapper>
-                <FooterContactForm 
+                <FooterContactForm
                     title="Did you like this project?"
                     subtitle="Contact me if you want to create a similar one with me. <br /> I am always looking for new opportunities to network and work with creative and motivated people."
                 />
