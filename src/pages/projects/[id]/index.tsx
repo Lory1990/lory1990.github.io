@@ -24,7 +24,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
         <div>
             <CustomHead title={title} />
             <Hero title={title} backgroundImage={background} subtitle={subtitle} hideTitleOnCover={hideTitleOnCover} {...hero} />
-            <PageWrapper>
+            <PageWrapper sx={{marginBottom: "3em"}}>
                 <ProjectDescription {...props} />
             </PageWrapper>
             <Article data={article} />
@@ -59,10 +59,10 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
                     </>
                 )}
                 {props.link && (
-                    <PageWrapper>
+                    <>
                         <Title>Social Links</Title>
                         <SocialLinks {...props} />
-                    </PageWrapper>
+                    </>
                 )}
                 <FooterContactForm
                     title="Did you like this project?"

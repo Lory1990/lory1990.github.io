@@ -9,6 +9,7 @@ enum StackEnum {
     STYLED_COMPONENTS = "Styled Components",
     NODE = "Node",
     AWS = "AWS",
-    AZURE = "Azure"
+    AZURE = "Azure",
+    DOCKER = "Docker"
 }
 export default StackEnum

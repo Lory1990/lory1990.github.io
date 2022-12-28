@@ -1,4 +1,6 @@
+import { type } from "os"
 import { IHeroProps } from "../components/Hero"
+import CategoryEnum from "../enums/CategoryEnum"
 import CategroyEnum from "../enums/CategoryEnum"
 import StackEnum from "../enums/StackEnum"
 import IArticleData, { IArticleDataType } from "../types/IArticleData"
@@ -65,6 +67,7 @@ const projects: IProject[] = [
         slug: "tongy",
         title: "Tongy",
         boxDescription: "Platform to teach english to babies",
+        description: "Tongy is an outstanding web application designed specifically to teach English to very young children in a fun and interactive way. It offers a wide range of online activities and games, each of which has been carefully selected to help children develop their language skills and become familiar with the English language in a natural way. In addition, Tongy offers individual lessons with native English speakers for personalized support. Children can access all of this conveniently from their browser, wherever they are.",
         subtitle: "Platform to teach english to babies",
         link: {
             web: "https://tongy.it/",
@@ -75,6 +78,16 @@ const projects: IProject[] = [
         date: "2022-01-01",
         image: "/img/projects/tongy/logo.png",
         background: "/img/projects/tongy/cover.png",
+        stack: [StackEnum.AWS, StackEnum.REACT, StackEnum.DOCKER, StackEnum.NODE],
+        category: [CategroyEnum.EDUCATIONAL, CategoryEnum.VIDEO_PORTAL],
+        //https://www.digithon.it/startups/1059/tongy
+        article:[
+            {
+                type: IArticleDataType.VIDEO_TEXT,
+                videoUrl: "https://www.youtube.com/watch?v=Eu1MS4FwRqM",
+                text: "The Tongy project was presented at Digital Innovation Tuscany (DigiTON), an event that brings together digital innovation experts from across Tuscany. The project, which offers the opportunity to teach English to very young children in a fun and interactive way, sparked great interest among the experts present at the event. Thanks to its intuitive interface and wide range of online activities and games, Tongy was enthusiastically received as an innovative tool for learning the English language. Tongy therefore received widespread positive feedback during its presentation at DigiTON and is expected to be a great success in the future."
+            }
+        ],
         hero: {
             color: "#1FA79A"
         }

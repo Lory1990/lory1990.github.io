@@ -6,6 +6,7 @@ import CtaBand from "./bands/CtaBand"
 import TextBand from "./bands/TextBand"
 import TextImageBand from "./bands/TextImageBand"
 import TitleBand from "./bands/TitleBand"
+import VideoTextBand from "./bands/VideoTextBand"
 
 export interface IArticleProps {
     data?: IArticleData[]
@@ -37,6 +38,12 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
                         break
                     case IArticleDataType.TITLE:
                         return <TitleBand {...item} key={index} />
+                        break
+                    case IArticleDataType.TEXT_VIDEO:
+                        return <VideoTextBand {...item} key={index} />
+                        break
+                    case IArticleDataType.VIDEO_TEXT:
+                        return <VideoTextBand {...item} key={index} inverted={true}  />
                         break
                     default:
                         return null
