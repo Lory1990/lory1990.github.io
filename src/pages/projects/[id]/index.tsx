@@ -24,7 +24,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
         <div>
             <CustomHead title={title} />
             <Hero title={title} backgroundImage={background} subtitle={subtitle} hideTitleOnCover={hideTitleOnCover} {...hero} />
-            <PageWrapper sx={{marginBottom: "3em"}}>
+            <PageWrapper sx={{ marginBottom: "3em" }}>
                 <ProjectDescription {...props} />
             </PageWrapper>
             <Article data={article} />

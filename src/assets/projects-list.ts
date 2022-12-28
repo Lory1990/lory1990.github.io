@@ -67,7 +67,8 @@ const projects: IProject[] = [
         slug: "tongy",
         title: "Tongy",
         boxDescription: "Platform to teach english to babies",
-        description: "Tongy is an outstanding web application designed specifically to teach English to very young children in a fun and interactive way. It offers a wide range of online activities and games, each of which has been carefully selected to help children develop their language skills and become familiar with the English language in a natural way. In addition, Tongy offers individual lessons with native English speakers for personalized support. Children can access all of this conveniently from their browser, wherever they are.",
+        description:
+            "Tongy is an outstanding web application designed specifically to teach English to very young children in a fun and interactive way. It offers a wide range of online activities and games, each of which has been carefully selected to help children develop their language skills and become familiar with the English language in a natural way. In addition, Tongy offers individual lessons with native English speakers for personalized support. Children can access all of this conveniently from their browser, wherever they are.",
         subtitle: "Platform to teach english to babies",
         link: {
             web: "https://tongy.it/",
@@ -81,7 +82,7 @@ const projects: IProject[] = [
         stack: [StackEnum.AWS, StackEnum.REACT, StackEnum.DOCKER, StackEnum.NODE],
         category: [CategroyEnum.EDUCATIONAL, CategoryEnum.VIDEO_PORTAL],
         //https://www.digithon.it/startups/1059/tongy
-        article:[
+        article: [
             {
                 type: IArticleDataType.VIDEO_TEXT,
                 videoUrl: "https://www.youtube.com/watch?v=Eu1MS4FwRqM",

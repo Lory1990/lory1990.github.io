@@ -32,16 +32,15 @@ const VideoTextBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                     <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
                 </Fade>
                 {videoUrl && typeof window !== "undefined" && (
-                    <Zoom delay={200} style={{ flex: 1, display: "flex", justifyContent: "center", width: "100%"}}>
-                        <Box sx={{
-                            width:{
-                                xs: "100%"
-                            }
-                        }}>
-                            <ReactPlayer
-                                width={"100%"}
-                                url={videoUrl}
-                            />
+                    <Zoom delay={200} style={{ flex: 1, display: "flex", justifyContent: "center", width: "100%" }}>
+                        <Box
+                            sx={{
+                                width: {
+                                    xs: "100%"
+                                }
+                            }}
+                        >
+                            <ReactPlayer width={"100%"} url={videoUrl} />
                         </Box>
                     </Zoom>
                 )}

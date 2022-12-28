@@ -43,7 +43,7 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
                         return <VideoTextBand {...item} key={index} />
                         break
                     case IArticleDataType.VIDEO_TEXT:
-                        return <VideoTextBand {...item} key={index} inverted={true}  />
+                        return <VideoTextBand {...item} key={index} inverted={true} />
                         break
                     default:
                         return null
