@@ -1,5 +1,5 @@
-import { Button, Typography } from "@mui/material"
-import { Box } from "@mui/system"
+import { Button, Theme, Typography } from "@mui/material"
+import { Box, SxProps } from "@mui/system"
 
 import EventIcon from "@mui/icons-material/Event"
 import PlaceIcon from "@mui/icons-material/Place"
@@ -31,7 +31,7 @@ interface IHeroButton {
     onClick: () => void
 }
 
-export interface IHeroProps {
+export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title">{
     title?: string | JSX.Element
     subtitle?: string
     date?: string
@@ -40,9 +40,10 @@ export interface IHeroProps {
     hideTitleOnCover?: boolean
     color?: string
     button?: IHeroButton
+    sx?: SxProps<Theme>;
 }
 
-const Hero: React.FC<IHeroProps> = ({ date, place, backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
+const Hero: React.FC<IHeroProps> = ({children, sx, date, place, backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
     <Box
         sx={{
             minHeight: "100vh",
@@ -52,7 +53,8 @@ const Hero: React.FC<IHeroProps> = ({ date, place, backgroundImage, title, color
             backgroundImage: "url(" + backgroundImage + ")",
             backgroundSize: "cover",
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            ...sx,
         }}
     >
         <Box
@@ -107,6 +109,7 @@ const Hero: React.FC<IHeroProps> = ({ date, place, backgroundImage, title, color
         >
             <SingleData text={date} icon={<EventIcon />} />
             <SingleData text={place} icon={<PlaceIcon />} />
+            {children}
         </Box>
     </Box>
 )

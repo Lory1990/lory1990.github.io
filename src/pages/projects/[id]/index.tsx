@@ -11,6 +11,7 @@ import PageWrapper from "../../../components/PageWrapper"
 import ProjectDescription from "../../../components/ProjectDescrption"
 import SocialLinks from "../../../components/SocialLinks"
 import SectionTitle from "../../../components/typography/SectionTitle"
+import Title from "../../../components/typography/Title"
 
 interface IProjectProps extends IProject {}
 
@@ -58,7 +59,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
                     </>
                 )}
                 <PageWrapper>
-                    <TitleBand>Social Links</TitleBand>
+                    <Title>Social Links</Title>
                     <SocialLinks {...props} />
                 </PageWrapper>
                 <FooterContactForm
