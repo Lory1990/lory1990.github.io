@@ -58,12 +58,12 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
                         </Splide>
                     </>
                 )}
-                {props.link &&
+                {props.link && (
                     <PageWrapper>
                         <Title>Social Links</Title>
                         <SocialLinks {...props} />
                     </PageWrapper>
-                }
+                )}
                 <FooterContactForm
                     title="Did you like this project?"
                     subtitle="Contact me if you want to create a similar one with me. <br /> I am always looking for new opportunities to network and work with creative and motivated people."
