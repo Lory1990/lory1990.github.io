@@ -101,7 +101,9 @@ const projects: IProject[] = [
         link: {
             web: "https://autoconnexa.it/"
         },
-        date: "2022-01-01",
+        stack: [StackEnum.AWS, StackEnum.REACT, StackEnum.DOCKER, StackEnum.NODE, StackEnum.STRIPE],
+        category: [CategoryEnum.INSURTECH],
+        date: "2021-01-01",
         image: "/img/projects/autoconnexa/logo.png",
         background: "/img/projects/autoconnexa/cover.png"
     },

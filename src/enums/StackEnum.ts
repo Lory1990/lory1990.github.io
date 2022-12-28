@@ -4,6 +4,7 @@ enum StackEnum {
     SPRING_BOOT = "Spring Boot",
     QUARKUS = "Quarkus",
     HTML = "HTML",
+    STRIPE="Stripe",
     CSS = "CSS",
     SCSS = "SCSS",
     STYLED_COMPONENTS = "Styled Components",
