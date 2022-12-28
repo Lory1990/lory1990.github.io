@@ -15,7 +15,7 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     xs: "column",
                     sm: "row"
                 },
-                gap: "2rem",
+                gap: "2rem"
             }}
         >
             <Box sx={{ lineHeight: "200%", textAlign: { xs: "center", sm: "left" } }}>

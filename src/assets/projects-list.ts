@@ -105,7 +105,8 @@ const projects: IProject[] = [
         slug: "autoconnexa",
         title: "Autoconnexa",
         boxDescription: "Cars InsurTech Platform with veichle tracking",
-        description: "Autoconnexa offers a mileage-based car insurance project, which offers a customized and convenient solution for drivers. With this type of insurance, the premium is calculated based on the amount of miles that are expected to be traveled during the coverage period. In this way, drivers can save on premiums compared to traditional insurance plans, which tend to be based on the duration of the coverage period. In addition, autoconnexa has a mobile app that allows you to easily manage your insurance plan and receive real-time assistance.",
+        description:
+            "Autoconnexa offers a mileage-based car insurance project, which offers a customized and convenient solution for drivers. With this type of insurance, the premium is calculated based on the amount of miles that are expected to be traveled during the coverage period. In this way, drivers can save on premiums compared to traditional insurance plans, which tend to be based on the duration of the coverage period. In addition, autoconnexa has a mobile app that allows you to easily manage your insurance plan and receive real-time assistance.",
         link: {
             web: "https://autoconnexa.it/"
         },
@@ -145,18 +146,19 @@ const projects: IProject[] = [
         title: "Newo",
         team: "1 - 2 people",
         role: "Head of development",
-        stack: [StackEnum.AWS, StackEnum.DOCKER, StackEnum.KUBERNETES, StackEnum.NODE, StackEnum.REACT, StackEnum.STRIPE ],
+        stack: [StackEnum.AWS, StackEnum.DOCKER, StackEnum.KUBERNETES, StackEnum.NODE, StackEnum.REACT, StackEnum.STRIPE],
         category: [CategoryEnum.FINTECH],
-        
+
         boxDescription: "Web application for invoice advance",
-        description: "Newo is a revolutionary online platform that allows businesses to receive an advance on their outstanding invoices, without having to wait for payment from their clients. With Newo, you can get the cash you need to keep your business running smoothly, without having to resort to traditional loans or credit lines.",
+        description:
+            "Newo is a revolutionary online platform that allows businesses to receive an advance on their outstanding invoices, without having to wait for payment from their clients. With Newo, you can get the cash you need to keep your business running smoothly, without having to resort to traditional loans or credit lines.",
         subtitle: "Web application for invoice advance",
         link: {
             web: "https://newopay.it/"
         },
-        hero:{
+        hero: {
             background: "#FDF8F4",
-            color: "#FF7F3F",
+            color: "#FF7F3F"
         },
         date: "2022-01-01",
         image: "/img/projects/newo/logo-2.png",
@@ -167,7 +169,8 @@ const projects: IProject[] = [
         slug: "duck-internship",
         title: "Duck Internship",
         subtitle: "Firsti internship marketplace",
-        description: "Duck Internship is a web application that offers recent graduates and young professionals the opportunity to gain practical experience in their field. As a Duck Intern, they will have the chance to work on real projects and challenges, collaborating with a team of experts and industry leaders through the platform. They will also have the support and guidance of a mentor, as well as access to a range of training and development resources.",
+        description:
+            "Duck Internship is a web application that offers recent graduates and young professionals the opportunity to gain practical experience in their field. As a Duck Intern, they will have the chance to work on real projects and challenges, collaborating with a team of experts and industry leaders through the platform. They will also have the support and guidance of a mentor, as well as access to a range of training and development resources.",
         team: "1 person",
         role: "Full Stack Developer",
         stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT],
