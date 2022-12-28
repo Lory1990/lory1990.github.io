@@ -8,7 +8,7 @@ import CustomHead from "../../../components/CustomHead"
 import FooterContactForm from "../../../components/FooterContactForm"
 import Hero from "../../../components/Hero"
 import PageWrapper from "../../../components/PageWrapper"
-import ProjectDescription from "../../../components/ProjectDescrption"
+import ProjectDescription from "../../../components/ProjectDescription"
 import SocialLinks from "../../../components/SocialLinks"
 import SectionTitle from "../../../components/typography/SectionTitle"
 import Title from "../../../components/typography/Title"
@@ -24,7 +24,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
         <div>
             <CustomHead title={title} />
             <Hero title={title} backgroundImage={background} subtitle={subtitle} hideTitleOnCover={hideTitleOnCover} {...hero} />
-            <PageWrapper sx={{ marginBottom: "3em" }}>
+            <PageWrapper sx={{ marginBottom: "3em", marginTop: "3em" }}>
                 <ProjectDescription {...props} />
             </PageWrapper>
             <Article data={article} />

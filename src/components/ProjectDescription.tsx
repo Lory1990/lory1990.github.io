@@ -4,7 +4,7 @@ import { DateTime } from "luxon"
 import { IProject } from "../assets/projects-list"
 import Title from "./typography/Title"
 
-const ProjectDescription: React.FC<IProject> = ({ description, title, category, stack, date }) => {
+const ProjectDescription: React.FC<IProject> = ({ description, title, category, stack, date, role, team }) => {
     const theme = useTheme()
 
     return (
@@ -15,12 +15,11 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     xs: "column",
                     sm: "row"
                 },
-                alignItems: "center",
-                gap: "2rem"
+                gap: "2rem",
             }}
         >
             <Box sx={{ lineHeight: "200%", textAlign: { xs: "center", sm: "left" } }}>
-                <Title sx={{ fontSize: "3em" }}>{title}</Title>
+                <Title sx={{ fontSize: "3em", marginBottom: "0.75em" }}>{title}</Title>
                 {description}
             </Box>
             <Box
@@ -41,6 +40,18 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     <Box>
                         <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Category</Typography>
                         {category.map(c => c.toString()).join(", ")}
+                    </Box>
+                )}
+                {role && (
+                    <Box>
+                        <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Role</Typography>
+                        {role}
+                    </Box>
+                )}
+                {team && (
+                    <Box>
+                        <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Team</Typography>
+                        {team}
                     </Box>
                 )}
                 <Box>

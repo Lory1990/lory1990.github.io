@@ -36,6 +36,7 @@ export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title
     subtitle?: string
     date?: string
     place?: string
+    background?:string,
     backgroundImage?: string
     hideTitleOnCover?: boolean
     color?: string
@@ -43,13 +44,13 @@ export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title
     sx?: SxProps<Theme>
 }
 
-const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
+const Hero: React.FC<IHeroProps> = ({ children, sx, date, place,background,  backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
     <Box
         sx={{
             minHeight: "100vh",
             padding: "1em",
             width: "100%",
-            background: "darkgrey",
+            background: background || "darkgrey",
             backgroundImage: "url(" + backgroundImage + ")",
             backgroundSize: "cover",
             display: "flex",

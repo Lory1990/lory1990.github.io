@@ -13,6 +13,8 @@ export interface IProject {
     boxDescription?: string
     description?: string
     date?: string
+    team?: string
+    role?: string
     desktopScreenshots?: string[]
     mobileScreenshots?: string[]
     link?: {
@@ -23,6 +25,7 @@ export interface IProject {
         youtube?: string
         github?: string
         twitter?: string
+        tikTok?: string
         playStore?: string
     }
     githubLink?: string
@@ -45,6 +48,8 @@ const projects: IProject[] = [
         slug: "tryvium",
         title: "Tryvium",
         boxDescription: "Booking Platform  you can pay with crypto",
+        team: "1 - 4 people",
+        role: "Head of Frontend Development",
         subtitle: "The best crypto-friendly booking platform",
         description:
             "Tryvium is an online booking platform for hotels and accommodations were you can pay with your favourite crypto. It offers a variety of staying options in various destinations around the world. Users can search and compare hotel rates, read customer reviews, and book their stay directly from the website. Tryvium also offers a loyalty program to reward its most loyal customers with discounts and other benefits.",
@@ -66,6 +71,8 @@ const projects: IProject[] = [
     {
         slug: "tongy",
         title: "Tongy",
+        team: "2 people",
+        role: "Full Stack Developer",
         boxDescription: "Platform to teach english to babies",
         description:
             "Tongy is an outstanding web application designed specifically to teach English to very young children in a fun and interactive way. It offers a wide range of online activities and games, each of which has been carefully selected to help children develop their language skills and become familiar with the English language in a natural way. In addition, Tongy offers individual lessons with native English speakers for personalized support. Children can access all of this conveniently from their browser, wherever they are.",
@@ -98,11 +105,21 @@ const projects: IProject[] = [
         slug: "autoconnexa",
         title: "Autoconnexa",
         boxDescription: "Cars InsurTech Platform with veichle tracking",
+        description: "Autoconnexa offers a mileage-based car insurance project, which offers a customized and convenient solution for drivers. With this type of insurance, the premium is calculated based on the amount of miles that are expected to be traveled during the coverage period. In this way, drivers can save on premiums compared to traditional insurance plans, which tend to be based on the duration of the coverage period. In addition, autoconnexa has a mobile app that allows you to easily manage your insurance plan and receive real-time assistance.",
         link: {
             web: "https://autoconnexa.it/"
         },
+        article: [
+            {
+                type: IArticleDataType.VIDEO_TEXT,
+                videoUrl: "https://www.youtube.com/watch?v=uBD1PdEJe0M",
+                text: "Want to learn more about autoconnexa and its mileage-based car insurance project? Watch our explanatory video! In just a few minutes you can learn all about the features and benefits of this innovative service."
+            }
+        ],
         stack: [StackEnum.AWS, StackEnum.REACT, StackEnum.DOCKER, StackEnum.NODE, StackEnum.STRIPE],
         category: [CategoryEnum.INSURTECH],
+        team: "1 - 4 people",
+        role: "Team Leader",
         date: "2021-01-01",
         image: "/img/projects/autoconnexa/logo.png",
         background: "/img/projects/autoconnexa/cover.png"
@@ -110,6 +127,10 @@ const projects: IProject[] = [
     {
         slug: "spire-energia",
         title: "Spire Energia",
+        team: "1 person",
+        stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.STRIPE],
+        category: [CategoryEnum.ESG],
+        role: "Full Stack Developer",
         boxDescription: "A platform to monitor buildings consumptions",
         link: {
             web: "https://spire-energia.com/"
@@ -122,10 +143,20 @@ const projects: IProject[] = [
         hilight: true,
         slug: "newo",
         title: "Newo",
+        team: "1 - 2 people",
+        role: "Head of development",
+        stack: [StackEnum.AWS, StackEnum.DOCKER, StackEnum.KUBERNETES, StackEnum.NODE, StackEnum.REACT, StackEnum.STRIPE ],
+        category: [CategoryEnum.FINTECH],
+        
         boxDescription: "Web application for invoice advance",
+        description: "Newo is a revolutionary online platform that allows businesses to receive an advance on their outstanding invoices, without having to wait for payment from their clients. With Newo, you can get the cash you need to keep your business running smoothly, without having to resort to traditional loans or credit lines.",
         subtitle: "Web application for invoice advance",
         link: {
             web: "https://newopay.it/"
+        },
+        hero:{
+            background: "#FDF8F4",
+            color: "#FF7F3F",
         },
         date: "2022-01-01",
         image: "/img/projects/newo/logo-2.png",
@@ -133,13 +164,24 @@ const projects: IProject[] = [
         desktopScreenshots: ["/img/projects/newo/desktop-01.svg", "/img/projects/newo/desktop-02.svg", "/img/projects/newo/desktop-03.svg", "/img/projects/newo/desktop-04.svg"]
     },
     {
-        slug: "stage-air",
-        title: "Stage Air",
+        slug: "duck-internship",
+        title: "Duck Internship",
+        subtitle: "Firsti internship marketplace",
+        description: "Duck Internship is a web application that offers recent graduates and young professionals the opportunity to gain practical experience in their field. As a Duck Intern, they will have the chance to work on real projects and challenges, collaborating with a team of experts and industry leaders through the platform. They will also have the support and guidance of a mentor, as well as access to a range of training and development resources.",
+        team: "1 person",
+        role: "Full Stack Developer",
+        stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT],
+        category: [CategoryEnum.HR],
         boxDescription: "The biggest platform for internships",
         image: "/img/projects/stage-air/logo.jpg",
+        background: "/img/projects/stage-air/cover-2.jpeg",
         link: {
             web: "https://duckinternship.com/",
-            linkedin: "https://www.linkedin.com/company/duckinternship/"
+            linkedin: "https://www.linkedin.com/company/duckinternship/",
+            tikTok: "https://www.tiktok.com/@duckinternship",
+            instagram: "https://www.instagram.com/duck_internship/",
+            facebook: "https://www.facebook.com/DuckInternship",
+            youtube: "https://www.youtube.com/duck%20internship"
         },
         date: "2019"
     },
@@ -148,6 +190,10 @@ const projects: IProject[] = [
         title: "The Personal Trainer",
         boxDescription: "Fitness tracker full web with metrics",
         image: "/img/projects/the-personal-trainer/logo.png",
+        team: "2 people",
+        role: "Head of development",
+        stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
+        category: [CategoryEnum.FITNESS],
         date: "2019",
         desktopScreenshots: [
             "/img/projects/the-personal-trainer/desktop-01.jpg",
@@ -189,11 +235,15 @@ const projects: IProject[] = [
     {
         slug: "comuncazione-per-personal-trainer",
         title: "Comunicazione per PT",
+        team: "2 people",
+        role: "Head of development",
         boxDescription: "Personal trainer online video portal",
         subtitle: "Personal trainer online video portal",
         background: "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
         image: "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
         date: "2018",
+        stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
+        category: [CategoryEnum.FITNESS, CategoryEnum.VIDEO_PORTAL],
         desktopScreenshots: [
             "/img/projects/comunicazione-per-personal-trainer/desktop-1.jpg",
             "/img/projects/comunicazione-per-personal-trainer/desktop-2.jpg",
@@ -212,9 +262,13 @@ const projects: IProject[] = [
     {
         slug: "cryptoforecast",
         title: "Cryptoforecast",
+        team: "2 people",
+        role: "Head of development",
         boxDescription: "Platform to predict the price of all Cryptos",
         subtitle: "The only platform to predict the price af all crypto values",
         date: "2017 - 2019",
+        stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT],
+        category: [CategoryEnum.CRYPTO, CategoryEnum.TRADING],
         background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
         image: "/img/projects/cryptoforecast/cryptoforecast.jpg",
         desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
@@ -222,10 +276,14 @@ const projects: IProject[] = [
     {
         slug: "navium",
         title: "Navium",
+        team: "2 people",
+        role: "Head of development",
         boxDescription: "Marine tech startup specialized in damaged stability",
         subtitle: "The all in one solution to predict ship damage onboard",
         date: "2014 - 2017",
         image: "/img/projects/navium/card-logo.png",
+        stack: [StackEnum.JAVA],
+        category: [CategoryEnum.MARINETECH],
         background: "/img/projects/navium/card-background.png",
         article: [
             {
