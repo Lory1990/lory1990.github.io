@@ -40,10 +40,7 @@ const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
                         return <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
                     })}
                 </CardsBand>
-                <FooterContactForm 
-                    title={"Do like these projects?"} 
-                    subtitle="Contact me! I am here to develop your best project ever!"
-                    />
+                <FooterContactForm title={"Do like these projects?"} subtitle="Contact me! I am here to develop your best project ever!" />
             </PageWrapper>
         </div>
     )

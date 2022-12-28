@@ -64,7 +64,7 @@ export default function Footer({ githubLink, twitterLink, facebookLink, linkedin
                 {linkedinLink && <SocialCircle icon={<LinkedInIcon />} link={linkedinLink} />}
             </Box>
             <Box sx={{ width: matches ? "33%" : "100%", display: "flex", justifyContent: "center" }}>
-                <Box sx={{ width: "fit-content", textAlign: {xs: "center", md: "left"} }}>
+                <Box sx={{ width: "fit-content", textAlign: { xs: "center", md: "left" } }}>
                     <Typography variant="body1" color="white" sx={{ fontWeight: "bold" }}>
                         {text1}
                     </Typography>

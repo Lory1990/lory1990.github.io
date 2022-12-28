@@ -31,7 +31,7 @@ interface IHeroButton {
     onClick: () => void
 }
 
-export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title">{
+export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title"> {
     title?: string | JSX.Element
     subtitle?: string
     date?: string
@@ -40,10 +40,10 @@ export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title
     hideTitleOnCover?: boolean
     color?: string
     button?: IHeroButton
-    sx?: SxProps<Theme>;
+    sx?: SxProps<Theme>
 }
 
-const Hero: React.FC<IHeroProps> = ({children, sx, date, place, backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
+const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, backgroundImage, title, color = "white", subtitle, hideTitleOnCover, button }) => (
     <Box
         sx={{
             minHeight: "100vh",
@@ -54,7 +54,7 @@ const Hero: React.FC<IHeroProps> = ({children, sx, date, place, backgroundImage,
             backgroundSize: "cover",
             display: "flex",
             flexDirection: "column",
-            ...sx,
+            ...sx
         }}
     >
         <Box
