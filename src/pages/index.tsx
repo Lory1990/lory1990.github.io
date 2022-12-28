@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async (context: GetSta
         props: {
             events: events.slice(0, 3),
             podcasts: podcasts.slice(0, 3),
-            projects: projects.slice(0, 3)
+            projects: projects.filter(p=>p.hilight)
         }
     }
 }

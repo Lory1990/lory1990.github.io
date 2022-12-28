@@ -2,6 +2,7 @@ import { IHeroProps } from "../components/Hero"
 import IArticleData, { IArticleDataType } from "../types/IArticleData"
 
 export interface IProject {
+    hilight?: boolean
     slug: string
     title: string
     subtitle?: string
@@ -34,6 +35,7 @@ export interface IProject {
 
 const projects: IProject[] = [
     {
+        hilight: true,
         slug: "tryvium",
         title: "Tryvium",
         description: "Booking Platform  you can pay with crypto",
@@ -77,6 +79,7 @@ const projects: IProject[] = [
         }
     },
     {
+        hilight: true,
         slug: "autoconnexa",
         title: "Autoconnexa",
         description: "Cars InsurTech Platform with veichle tracking",
@@ -99,6 +102,7 @@ const projects: IProject[] = [
         background: "/img/projects/spire-energia/cover.jpg"
     },
     {
+        hilight: true,
         slug: "newo",
         title: "Newo",
         description: "Web application for invoice advance",
