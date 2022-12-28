@@ -23,7 +23,7 @@ const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
                 </Typography>
                 <CardsBand columns={3}>
                     {list.map((project: IProject) => {
-                        return <BlogCard key={project.slug} title={project.title} description={project.description} image={project.image} link={`projects/${project.slug}`} />
+                        return <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
                     })}
                 </CardsBand>
                 <FooterContactForm title={"Do like these projects? Do you need a software developer? Here I am!"} />

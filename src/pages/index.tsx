@@ -41,7 +41,7 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
                 <SectionTitle>My Projects</SectionTitle>
                 <CardsBand columns={3}>
                     {projects.map((project: IProject) => {
-                        return <BlogCard key={project.slug} title={project.title} description={project.description} image={project.image} link={`projects/${project.slug}`} />
+                        return <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
                     })}
                 </CardsBand>
                 <FooterContactForm />

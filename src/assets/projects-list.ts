@@ -1,4 +1,6 @@
 import { IHeroProps } from "../components/Hero"
+import CategroyEnum from "../enums/CategoryEnum"
+import StackEnum from "../enums/StackEnum"
 import IArticleData, { IArticleDataType } from "../types/IArticleData"
 
 export interface IProject {
@@ -6,6 +8,7 @@ export interface IProject {
     slug: string
     title: string
     subtitle?: string
+    boxDescription?: string
     description?: string
     date?: string
     desktopScreenshots?: string[]
@@ -29,7 +32,8 @@ export interface IProject {
         color?: string
     }
     hero?: IHeroProps
-    stack?: string[]
+    stack?: StackEnum[]
+    category?: CategroyEnum[]
     development?: string
 }
 
@@ -38,8 +42,9 @@ const projects: IProject[] = [
         hilight: true,
         slug: "tryvium",
         title: "Tryvium",
-        description: "Booking Platform  you can pay with crypto",
+        boxDescription: "Booking Platform  you can pay with crypto",
         subtitle: "The best crypto-friendly booking platform",
+        description: "Tryvium is an online booking platform for hotels and accommodations were you can pay with your favourite crypto. It offers a variety of staying options in various destinations around the world. Users can search and compare hotel rates, read customer reviews, and book their stay directly from the website. Tryvium also offers a loyalty program to reward its most loyal customers with discounts and other benefits.",
         link: {
             web: "https://tryvium.io",
             facebook: "https://www.facebook.com/tryviumtravels",
@@ -52,18 +57,13 @@ const projects: IProject[] = [
         date: "2022-01-01",
         image: "/img/projects/tryvium/cover.jpg",
         background: "/img/projects/tryvium/hero.png",
-        article: [
-            {
-                type: IArticleDataType.TEXT_IMAGE,
-                text: "asdasd"
-            }
-        ],
-        stack: ["REACT", "WEB3"]
+        category: [CategroyEnum.CRYPTO, CategroyEnum.TRAVEL],
+        stack: [StackEnum.REACT, StackEnum.WEB3, StackEnum.CSS],
     },
     {
         slug: "tongy",
         title: "Tongy",
-        description: "Platform to teach english to babies",
+        boxDescription: "Platform to teach english to babies",
         subtitle: "Platform to teach english to babies",
         link: {
             web: "https://tongy.it/",
@@ -82,7 +82,7 @@ const projects: IProject[] = [
         hilight: true,
         slug: "autoconnexa",
         title: "Autoconnexa",
-        description: "Cars InsurTech Platform with veichle tracking",
+        boxDescription: "Cars InsurTech Platform with veichle tracking",
         link: {
             web: "https://autoconnexa.it/"
         },
@@ -93,7 +93,7 @@ const projects: IProject[] = [
     {
         slug: "spire-energia",
         title: "Spire Energia",
-        description: "A platform to monitor buildings consumptions",
+        boxDescription: "A platform to monitor buildings consumptions",
         link: {
             web: "https://spire-energia.com/"
         },
@@ -105,7 +105,7 @@ const projects: IProject[] = [
         hilight: true,
         slug: "newo",
         title: "Newo",
-        description: "Web application for invoice advance",
+        boxDescription: "Web application for invoice advance",
         subtitle: "Web application for invoice advance",
         link: {
             web: "https://newopay.it/"
@@ -118,7 +118,7 @@ const projects: IProject[] = [
     {
         slug: "stage-air",
         title: "Stage Air",
-        description: "The biggest platform for internships",
+        boxDescription: "The biggest platform for internships",
         image: "/img/projects/stage-air/logo.jpg",
         link: {
             web: "https://duckinternship.com/",
@@ -129,7 +129,7 @@ const projects: IProject[] = [
     {
         slug: "the-personal-trainer",
         title: "The Personal Trainer",
-        description: "Fitness tracker full web with metrics",
+        boxDescription: "Fitness tracker full web with metrics",
         image: "/img/projects/the-personal-trainer/logo.png",
         date: "2019",
         desktopScreenshots: [
@@ -172,7 +172,7 @@ const projects: IProject[] = [
     {
         slug: "comuncazione-per-personal-trainer",
         title: "Comunicazione per PT",
-        description: "Personal trainer online video portal",
+        boxDescription: "Personal trainer online video portal",
         subtitle: "Personal trainer online video portal",
         background: "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
         image: "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
@@ -195,7 +195,7 @@ const projects: IProject[] = [
     {
         slug: "cryptoforecast",
         title: "Cryptoforecast",
-        description: "Platform to predict the price of all Cryptos",
+        boxDescription: "Platform to predict the price of all Cryptos",
         subtitle: "The only platform to predict the price af all crypto values",
         date: "2017 - 2019",
         background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
@@ -205,7 +205,7 @@ const projects: IProject[] = [
     {
         slug: "navium",
         title: "Navium",
-        description: "Marine tech startup specialized in damaged stability",
+        boxDescription: "Marine tech startup specialized in damaged stability",
         subtitle: "The all in one solution to predict ship damage onboard",
         date: "2014 - 2017",
         image: "/img/projects/navium/card-logo.png",
