@@ -10,6 +10,7 @@ enum StackEnum {
     STYLED_COMPONENTS = "Styled Components",
     NODE = "Node",
     AWS = "AWS",
+    PHP = "PHP",
     VPS = "VPS",
     JAVA = "Java",
     KUBERNETES = "Kubernetes",

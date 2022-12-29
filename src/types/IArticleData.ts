@@ -8,7 +8,8 @@ export enum IArticleDataType {
     NOTICE_BOX,
     CAROUSEL,
     TEXT_VIDEO,
-    VIDEO_TEXT
+    VIDEO_TEXT,
+    IMAGE,
 }
 
 export default interface IArticleData {

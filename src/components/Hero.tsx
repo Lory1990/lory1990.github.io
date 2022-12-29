@@ -51,7 +51,7 @@ const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, background, bac
             padding: "1em",
             width: "100%",
             background: background || "darkgrey",
-            backgroundImage: "url(" + backgroundImage + ")",
+            backgroundImage: backgroundImage ? "url(" + backgroundImage + ")" : undefined,
             backgroundSize: "cover",
             display: "flex",
             flexDirection: "column",
