@@ -9,7 +9,7 @@ export enum IArticleDataType {
     CAROUSEL,
     TEXT_VIDEO,
     VIDEO_TEXT,
-    IMAGE,
+    IMAGE
 }
 
 export default interface IArticleData {

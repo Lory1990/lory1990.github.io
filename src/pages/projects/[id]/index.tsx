@@ -60,7 +60,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
                 )}
                 {props.link && (
                     <>
-                        <SectionTitle sx={{marginTop: "1.5em"}}>Social Links</SectionTitle>
+                        <SectionTitle sx={{ marginTop: "1.5em" }}>Social Links</SectionTitle>
                         <SocialLinks {...props} />
                     </>
                 )}

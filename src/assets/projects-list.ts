@@ -133,14 +133,15 @@ const projects: IProject[] = [
         category: [CategoryEnum.ESG],
         role: "Full Stack Developer",
         boxDescription: "A platform to monitor buildings consumptions",
-        description: "Spire Energia is a platform developed in Wordpress that allows condominium administrators to manage the energy consumption of their buildings. This platform is designed to be user-friendly and easy to use, so that administrators can easily track energy usage and make informed decisions about how to reduce energy costs.  In addition, the platform has integrated a database of the latest radiators, giving administrators access to the most up-to-date information on energy-efficient heating options.",
+        description:
+            "Spire Energia is a platform developed in Wordpress that allows condominium administrators to manage the energy consumption of their buildings. This platform is designed to be user-friendly and easy to use, so that administrators can easily track energy usage and make informed decisions about how to reduce energy costs.  In addition, the platform has integrated a database of the latest radiators, giving administrators access to the most up-to-date information on energy-efficient heating options.",
         link: {
             web: "https://spire-energia.com/"
         },
         date: "2022-01-01",
         image: "/img/projects/spire-energia/logo-2.png",
         background: "/img/projects/spire-energia/cover.jpg",
-        article:[
+        article: [
             {
                 type: IArticleDataType.IMAGE,
                 image: "/img/projects/spire-energia/cover-screen.png"
@@ -176,7 +177,8 @@ const projects: IProject[] = [
         slug: "duck-internship",
         title: "Duck Internship",
         subtitle: "Firsti internship marketplace",
-        description: "Duck Internship is a web application that offers recent graduates and young professionals the opportunity to gain practical experience in their field. As a Duck Intern, they will have the chance to work on real projects and challenges, collaborating with a team of experts and industry leaders through the platform. They will also have the support and guidance of a mentor, as well as access to a range of training and development resources.",
+        description:
+            "Duck Internship is a web application that offers recent graduates and young professionals the opportunity to gain practical experience in their field. As a Duck Intern, they will have the chance to work on real projects and challenges, collaborating with a team of experts and industry leaders through the platform. They will also have the support and guidance of a mentor, as well as access to a range of training and development resources.",
         team: "1 person",
         role: "Full Stack Developer",
         stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT],
@@ -198,21 +200,18 @@ const projects: IProject[] = [
         slug: "the-personal-trainer",
         title: "The Personal Trainer",
         boxDescription: "Fitness tracker full web with metrics",
-        description: "ThePT is a Progressive Web App that can be installed on smartphones and also accessed online. It is dedicated to both personal trainers and athletes. It allows personal trainers to be contacted by athletes and provide training schedules directly through the App, and to track their progress during their consultation through training and body growth data. <br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Social Login with Facebook, Google and Twitter</li> <li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul><br /> In addition, specific modules have been implemented:<ul><li>Creation of the workout plan </li><li>Monitoring of workouts</li><li>Monitoring of the athlete's body</li><li>Mechanism to meet personal trainer and athlete</li></ul>",
+        description:
+            "ThePT is a Progressive Web App that can be installed on smartphones and also accessed online. It is dedicated to both personal trainers and athletes. It allows personal trainers to be contacted by athletes and provide training schedules directly through the App, and to track their progress during their consultation through training and body growth data. <br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Social Login with Facebook, Google and Twitter</li> <li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul><br /> In addition, specific modules have been implemented:<ul><li>Creation of the workout plan </li><li>Monitoring of workouts</li><li>Monitoring of the athlete's body</li><li>Mechanism to meet personal trainer and athlete</li></ul>",
         image: "/img/projects/the-personal-trainer/logo.png",
         team: "2 people",
         role: "Head of development",
         stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
         category: [CategoryEnum.FITNESS],
-        hero:{
+        hero: {
             background: "linear-gradient(145deg, rgba(242,159,47,1) 0%, rgba(242,102,47,1) 100%)"
         },
         date: "2019",
-        desktopScreenshots: [
-            "/img/projects/the-personal-trainer/desktop-01.jpg",
-            "/img/projects/the-personal-trainer/desktop-02.jpg",
-            "/img/projects/the-personal-trainer/desktop-03.png",
-        ],
+        desktopScreenshots: ["/img/projects/the-personal-trainer/desktop-01.jpg", "/img/projects/the-personal-trainer/desktop-02.jpg", "/img/projects/the-personal-trainer/desktop-03.png"],
         mobileScreenshots: [
             "/img/projects/the-personal-trainer/mobile-1.jpg",
             "/img/projects/the-personal-trainer/mobile-2.jpg",
@@ -228,7 +227,7 @@ const projects: IProject[] = [
         link: {
             instagram: "https://www.instagram.com/appthept/",
             playStore: "https://play.google.com/store/apps/details?id=it.thept"
-        },
+        }
     },
     {
         slug: "comuncazione-per-personal-trainer",
@@ -236,7 +235,8 @@ const projects: IProject[] = [
         team: "2 people",
         role: "Head of development",
         boxDescription: "Personal trainer online video portal",
-        description: " This platform is designed to provide trainers with a wealth of resources to help them succeed in their careers using video lessons. These videos are uploaded to YouTube for easy upload and can be viewed inside the app.  Payment for access to the portal's resources is handled through PayPal.<br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul>",
+        description:
+            " This platform is designed to provide trainers with a wealth of resources to help them succeed in their careers using video lessons. These videos are uploaded to YouTube for easy upload and can be viewed inside the app.  Payment for access to the portal's resources is handled through PayPal.<br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul>",
         subtitle: "Personal trainer online video portal",
         background: "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
         image: "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
@@ -264,7 +264,8 @@ const projects: IProject[] = [
         team: "2 people",
         role: "Head of development",
         boxDescription: "Platform to predict the price of all Cryptos",
-        description: "The Cryptoforecast platform is a revolutionary integrated system in the crypto field, all useful information for the trader to operate on the markets has been centralized on a single platform. <br /> We developed the following modules: <ul><li>Forecast algorithm based on seasonality</li><li>Modular customizable market indices</li><li>Customizable forecast tools tailored to the needs of each trader</li><li>Categorization of all coins</li><li>Real-time monitoring of all coin values</li><li>Ability to download the history of all pairs of all exchanges</li><li>User and subscription monitoring system</li></ul>",
+        description:
+            "The Cryptoforecast platform is a revolutionary integrated system in the crypto field, all useful information for the trader to operate on the markets has been centralized on a single platform. <br /> We developed the following modules: <ul><li>Forecast algorithm based on seasonality</li><li>Modular customizable market indices</li><li>Customizable forecast tools tailored to the needs of each trader</li><li>Categorization of all coins</li><li>Real-time monitoring of all coin values</li><li>Ability to download the history of all pairs of all exchanges</li><li>User and subscription monitoring system</li></ul>",
         subtitle: "The only platform to predict the price af all crypto values",
         date: "2017",
         stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT, StackEnum.PHP],

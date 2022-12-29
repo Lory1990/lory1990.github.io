@@ -26,7 +26,7 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     minWidth: {
                         xs: "100%",
                         sm: "30vw"
-                    },
+                    }
                 }}
             >
                 <Box

@@ -6,9 +6,10 @@ export interface IImageBandProps {
     imageAlt?: string
 }
 
-export const ImageBand : React.FC<IImageBandProps> = ({image, imageAlt}) =>{
-
-    return <PageWrapper sx={{textAlign:"center"}}>
-        <img src={image as string} alt={imageAlt} style={{width: "100%"}} />
-    </PageWrapper>
+export const ImageBand: React.FC<IImageBandProps> = ({ image, imageAlt }) => {
+    return (
+        <PageWrapper sx={{ textAlign: "center" }}>
+            <img src={image as string} alt={imageAlt} style={{ width: "100%" }} />
+        </PageWrapper>
+    )
 }
