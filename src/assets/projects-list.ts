@@ -280,17 +280,14 @@ const projects: IProject[] = [
         team: "2 people",
         role: "Head of development",
         boxDescription: "Marine tech startup specialized in damaged stability",
+        description: "Navium, a startup founded by two young naval engineering graduates in 2012, developed a complete suite of products for the naval and boating world, including:<ul><li>A basic naval design software called Navium Faber</li><li>A cloud solution for managing ship stability during navigation called Delphi</li><li>An hydrostatic engine that could predict the course of a ship's internal flaw, also called Delphi</li></ul>",
         subtitle: "The all in one solution to predict ship damage onboard",
-        date: "2014 - 2017",
+        date: "2014",
         image: "/img/projects/navium/card-logo.png",
         stack: [StackEnum.JAVA],
         category: [CategoryEnum.MARINETECH],
         background: "/img/projects/navium/card-background.png",
         article: [
-            {
-                type: IArticleDataType.TEXT,
-                text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
-            },
             {
                 type: IArticleDataType.TITLE,
                 text: "Navium Faber"
@@ -298,7 +295,11 @@ const projects: IProject[] = [
             {
                 type: IArticleDataType.TEXT_IMAGE,
                 text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
-            }
+            },
+            {
+                type: IArticleDataType.TITLE,
+                text: "Delphi"
+            },
         ]
     }
 ]

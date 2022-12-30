@@ -1,4 +1,4 @@
-a startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012; la startup ha sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:
+La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012; la startup ha sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:
 
     Un software desktop di progettazione navale di base – Navium Faber
     Una soluzione cloud per la gestione della stabilità della nave durante la navigazione – Delphi
