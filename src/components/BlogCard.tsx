@@ -23,6 +23,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
 
     return (
         <Box sx={{ width: "300px", position: "relative", height: "400px" }}>
+            {/* background image */}
             <Card
                 elevation={0}
                 ref={refCardHover}
@@ -40,20 +41,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     }
                 }}
             >
-                {/* <Box
-                sx={{
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    opacity: 1,
-                    background: "linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.0) 40%)",
-                    WebkitTransition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                    ...isCardHovered && {
-                        opacity: 0
-                    }
-                }}
-            /> */}
+                {/* background color filter*/}
                 <Box
                     sx={{
                         position: "absolute",
@@ -66,16 +54,6 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         ${primaryColorRGB.green},
                         ${primaryColorRGB.blue},0.3)`,
                         borderRadius: "10px",
-                        // background:
-                        //     `linear-gradient(0deg, rgba(0,0,0,0.6) 0%,
-                        // rgba(
-                        // ${primaryColorRGB.red / 2},
-                        // ${primaryColorRGB.green / 2},
-                        // ${primaryColorRGB.blue},0.2) 50%,
-                        // rgba(
-                        // ${primaryColorRGB.red},
-                        // ${primaryColorRGB.green},
-                        // ${primaryColorRGB.blue},0.5) 100%)`,
                         opacity: 0,
                         ...((isCardHovered || isTitleHovered) && {
                             opacity: 1
@@ -83,6 +61,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     }}
                 />
 
+                {/* read more button */}
                 <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
@@ -99,7 +78,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         <Typography gutterBottom variant="body1" sx={{ fontWeight: "bold", fontSize: "1.20em" }}>
                             {title}
                         </Typography>
-                        <Typography variant="body1" sx={{ fontWeight: "" }} color={theme.palette.grey[700]}>
+                        <Typography variant="body1" color={theme.palette.grey[700]}>
                             {description}
                         </Typography>
                     </CardContent>

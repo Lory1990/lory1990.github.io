@@ -28,8 +28,9 @@ export interface TimelineEvent {
 function TimelineEventContent({ timelineEvent, isLeft }: TimelineEventContentProps) {
     const { position, company, location, from, to, description } = timelineEvent
     const theme = useTheme()
+    const mediaQuery = useMediaQuery(theme.breakpoints.down("sm"))
     return (
-        <TimelineContent>
+        <TimelineContent sx={{ paddingTop: "0px", paddingBottom: "0px" }}>
             <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>{position}</Typography>
             <Typography variant="subtitle1" sx={{ fontWeight: "bold", fontSize: "1.1rem" }} gutterBottom color={theme.palette.grey[500]}>{`${company} | ${location}`}</Typography>
             <Chip label={`${from} - ${to}`} color="primary" style={{ marginBottom: "1.25rem", fontSize: "0.85rem", fontWeight: "bold" }} />
@@ -37,10 +38,11 @@ function TimelineEventContent({ timelineEvent, isLeft }: TimelineEventContentPro
                 <Typography
                     variant="body1"
                     sx={{
-                        maxWidth: "60%",
+                        maxWidth: mediaQuery ? "100%" : "60%",
                         fontSize: "0.9rem",
                         fontWeight: "bold"
                     }}
+                    gutterBottom
                     color={theme.palette.grey[400]}
                 >
                     {description}

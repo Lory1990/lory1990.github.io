@@ -1,11 +1,16 @@
-import { Box, Typography, useTheme } from "@mui/material"
+import { Box, Card, CardContent, Chip, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { DateTime } from "luxon"
 import { IProject } from "../assets/projects-list"
 import Title from "./typography/Title"
-
+import CategoryIcon from '@mui/icons-material/Category';
+import GroupsIcon from '@mui/icons-material/Groups';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import CodeIcon from '@mui/icons-material/Code';
+import WorkIcon from '@mui/icons-material/Work';
 const ProjectDescription: React.FC<IProject> = ({ description, title, category, stack, date, role, team }) => {
     const theme = useTheme()
 
+    const mediaQuery = useMediaQuery(theme.breakpoints.down("sm"))
     return (
         <Box
             sx={{
@@ -29,45 +34,64 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     }
                 }}
             >
-                <Box
+
+                <Card
                     sx={{
-                        padding: "2rem",
-                        background: theme.palette.primary.main,
-                        color: theme.palette.neutral.main,
-                        gap: "1.5rem",
+                        padding: "1.5em 0em 0em 1.5em",
                         display: "flex",
-                        flexDirection: "column"
+                        flexDirection: "column",
+                        backgroundSize: mediaQuery ? "25%" : "17.5%",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "bottom right",
+                        backgroundImage: "url(/img/dotsRectangle.svg)"
                     }}
                 >
-                    {category && (
-                        <Box>
-                            <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Category</Typography>
-                            {category.map(c => c.toString()).join(", ")}
-                        </Box>
-                    )}
-                    {role && (
-                        <Box>
-                            <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Role</Typography>
-                            {role}
-                        </Box>
-                    )}
-                    {team && (
-                        <Box>
-                            <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Team</Typography>
-                            {team}
-                        </Box>
-                    )}
-                    <Box>
-                        <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Date</Typography>
-                        {DateTime.fromISO(date).toFormat("yyyy")}
-                    </Box>
-                    {stack && (
-                        <Box>
-                            <Typography sx={{ color: theme.palette.neutral.main, fontWeight: "bolder", fontSize: "1.2em" }}>Tech Stack</Typography>
-                            {stack.map(c => c.toString()).join(", ")}
-                        </Box>
-                    )}
-                </Box>
+                    <CardContent>
+                        {category && (
+                            <div style={{ marginBottom: "1em" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
+                                    <CategoryIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
+                                    <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Category</Typography>
+                                </Box>
+                                {category.map((c, index) => <Chip key={c} sx={{ fontWeight: "bold", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />)}
+                            </div>
+                        )}
+                        {role && (
+                            <div style={{ marginBottom: "1em" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
+                                    <WorkIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
+                                    <Typography sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Role</Typography>
+                                </Box>
+                                {role}
+                            </div>
+                        )}
+                        {team && (
+                            <div style={{ marginBottom: "1em" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
+                                    <GroupsIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
+                                    <Typography sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Team</Typography>
+                                </Box>
+                                {team}
+                            </div>
+                        )}
+                        <div style={{ marginBottom: "1em" }}>
+                            <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
+                                <DateRangeIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
+                                <Typography sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Date</Typography>
+                            </Box>
+                            {DateTime.fromISO(date).toFormat("yyyy")}
+                        </div>
+                        {stack && (
+                            <div style={{ marginBottom: "1em" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
+                                    <CodeIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
+                                    <Typography sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Tech Stack</Typography>
+                                </Box>
+                                {stack.map((c, index) => <Chip key={c} sx={{ fontWeight: "bold", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />)}
+                            </div>
+                        )}
+                    </CardContent>
+                </Card>
             </Box>
         </Box>
     )
