@@ -2,11 +2,11 @@ import { Box, Card, CardContent, Chip, Typography, useMediaQuery, useTheme } fro
 import { DateTime } from "luxon"
 import { IProject } from "../assets/projects-list"
 import Title from "./typography/Title"
-import CategoryIcon from '@mui/icons-material/Category';
-import GroupsIcon from '@mui/icons-material/Groups';
-import DateRangeIcon from '@mui/icons-material/DateRange';
-import CodeIcon from '@mui/icons-material/Code';
-import WorkIcon from '@mui/icons-material/Work';
+import CategoryIcon from "@mui/icons-material/Category"
+import GroupsIcon from "@mui/icons-material/Groups"
+import DateRangeIcon from "@mui/icons-material/DateRange"
+import CodeIcon from "@mui/icons-material/Code"
+import WorkIcon from "@mui/icons-material/Work"
 const ProjectDescription: React.FC<IProject> = ({ description, title, category, stack, date, role, team }) => {
     const theme = useTheme()
 
@@ -34,7 +34,6 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                     }
                 }}
             >
-
                 <Card
                     sx={{
                         padding: "1.5em 0em 0em 1.5em",
@@ -51,9 +50,13 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                             <div style={{ marginBottom: "0.5em" }}>
                                 <Box sx={{ display: "flex", alignItems: "center", marginBottom: "0.3em" }}>
                                     <CategoryIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
-                                    <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Category</Typography>
+                                    <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.4em" }}>
+                                        Category
+                                    </Typography>
                                 </Box>
-                                {category.map((c, index) => <Chip key={c} sx={{ fontWeight: "bold", marginBottom: "0.5em", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />)}
+                                {category.map((c, index) => (
+                                    <Chip key={c} sx={{ fontWeight: "bold", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />
+                                ))}
                             </div>
                         )}
                         {role && (
@@ -87,13 +90,15 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                                     <CodeIcon fontSize="small" sx={{ marginRight: "0.2em", color: "#323450" }} />
                                     <Typography sx={{ fontWeight: "bold", fontSize: "1.4em" }}>Tech Stack</Typography>
                                 </Box>
-                                {stack.map((c, index) => <Chip key={c} sx={{ fontWeight: "bold", marginBottom: "0.5em", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />)}
-                            </div>
+                                {stack.map((c, index) => (
+                                    <Chip key={c} sx={{ fontWeight: "bold", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />
+                                ))}
+                            </div >
                         )}
-                    </CardContent>
-                </Card>
-            </Box>
-        </Box>
+                    </CardContent >
+                </Card >
+            </Box >
+        </Box >
     )
 }
 
