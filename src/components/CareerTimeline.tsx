@@ -4,7 +4,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator"
 import TimelineConnector from "@mui/lab/TimelineConnector"
 import TimelineContent from "@mui/lab/TimelineContent"
 import TimelineDot from "@mui/lab/TimelineDot"
-import { Chip, Typography, useTheme } from "@mui/material"
+import { Chip, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { Box } from "@mui/system"
 
 interface TimelineProps {
@@ -51,21 +51,30 @@ function TimelineEventContent({ timelineEvent, isLeft }: TimelineEventContentPro
 }
 
 export default function CareerTimeline({ timelineEvents }: TimelineProps) {
+    const theme = useTheme()
+    const mediaQuery = useMediaQuery(theme.breakpoints.down("sm"))
     return (
-        <Timeline position="alternate">
-            <TimelineItem>
+        <Timeline position={mediaQuery ? "left" : "alternate"}>
+            {!mediaQuery && <TimelineItem>
                 <TimelineSeparator>
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent />
-            </TimelineItem>
+            </TimelineItem >}
             {timelineEvents.map((timelineEvent, index) => (
-                <TimelineItem key={`${index}-${timelineEvent.position}`}>
+                <TimelineItem key={`${index}-${timelineEvent.position}`}
+                    sx={{
+                        ...mediaQuery && {
+                            ":before": {
+                                display: "none"
+                            }
+                        }
+                    }}>
                     <TimelineSeparator>
                         <TimelineDot variant="outlined" color="primary" />
                         <TimelineConnector />
                     </TimelineSeparator>
-                    <TimelineEventContent isLeft={index % 2 == 0} timelineEvent={timelineEvent} />
+                    <TimelineEventContent isLeft={mediaQuery ? true : index % 2 == 0} timelineEvent={timelineEvent} />
                 </TimelineItem>
             ))}
         </Timeline>
