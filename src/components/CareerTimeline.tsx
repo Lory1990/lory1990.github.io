@@ -55,21 +55,25 @@ export default function CareerTimeline({ timelineEvents }: TimelineProps) {
     const mediaQuery = useMediaQuery(theme.breakpoints.down("sm"))
     return (
         <Timeline position={mediaQuery ? "left" : "alternate"}>
-            {!mediaQuery && <TimelineItem>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent />
-            </TimelineItem >}
+            {!mediaQuery && (
+                <TimelineItem>
+                    <TimelineSeparator>
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent />
+                </TimelineItem>
+            )}
             {timelineEvents.map((timelineEvent, index) => (
-                <TimelineItem key={`${index}-${timelineEvent.position}`}
+                <TimelineItem
+                    key={`${index}-${timelineEvent.position}`}
                     sx={{
-                        ...mediaQuery && {
+                        ...(mediaQuery && {
                             ":before": {
                                 display: "none"
                             }
-                        }
-                    }}>
+                        })
+                    }}
+                >
                     <TimelineSeparator>
                         <TimelineDot variant="outlined" color="primary" />
                         <TimelineConnector />
