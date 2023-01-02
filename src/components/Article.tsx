@@ -3,9 +3,11 @@ import IArticleData, { IArticleDataType } from "../types/IArticleData"
 import CarouselBand from "./bands/CarouselBand"
 import CountersBand from "./bands/CountersBand"
 import CtaBand from "./bands/CtaBand"
+import { ImageBand } from "./bands/ImageBand"
 import TextBand from "./bands/TextBand"
 import TextImageBand from "./bands/TextImageBand"
 import TitleBand from "./bands/TitleBand"
+import VideoTextBand from "./bands/VideoTextBand"
 
 export interface IArticleProps {
     data?: IArticleData[]
@@ -23,6 +25,9 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
                     case IArticleDataType.COUNTERS:
                         return <CountersBand {...item} key={index} />
                         break
+                    case IArticleDataType.IMAGE:
+                        return <ImageBand {...item} key={index} />
+                        break
                     case IArticleDataType.CTA:
                         return <CtaBand {...item} key={index} />
                         break
@@ -37,6 +42,12 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
                         break
                     case IArticleDataType.TITLE:
                         return <TitleBand {...item} key={index} />
+                        break
+                    case IArticleDataType.TEXT_VIDEO:
+                        return <VideoTextBand {...item} key={index} />
+                        break
+                    case IArticleDataType.VIDEO_TEXT:
+                        return <VideoTextBand {...item} key={index} inverted={true} />
                         break
                     default:
                         return null

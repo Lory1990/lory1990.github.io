@@ -66,8 +66,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
                     {image && <Image src={image} height={200} width={300} alt={`Image for ${title}`} />}
                 </Box>
             </Fade>
-
-            <TechStackList sx={{ flex: 1.5 }} columns={2} techStack={techStack} initialDelay={initialDelay + 100} />
+            <TechStackList sx={{ flex: 1.5 }} columns={2} techStack={techStack} />
         </Box>
     )
 }

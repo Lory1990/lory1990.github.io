@@ -1,22 +1,32 @@
+import { Box, useTheme } from "@mui/material"
+import { Splide, SplideSlide } from "@splidejs/react-splide"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import projects, { IProject } from "../../../assets/projects-list"
 import Article from "../../../components/Article"
+import TitleBand from "../../../components/bands/TitleBand"
 import CustomHead from "../../../components/CustomHead"
 import FooterContactForm from "../../../components/FooterContactForm"
 import Hero from "../../../components/Hero"
 import PageWrapper from "../../../components/PageWrapper"
-import { Splide, SplideSlide } from "@splidejs/react-splide"
-import { height } from "@mui/system"
-import { Box, Typography } from "@mui/material"
+import ProjectDescription from "../../../components/ProjectDescription"
+import SocialLinks from "../../../components/SocialLinks"
 import SectionTitle from "../../../components/typography/SectionTitle"
+import Title from "../../../components/typography/Title"
 
 interface IProjectProps extends IProject {}
 
-const SingleProjectPage: NextPage<IProjectProps> = ({ hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero }) => {
+const SingleProjectPage: NextPage<IProjectProps> = props => {
+    const { hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero } = props
+
+    const theme = useTheme()
+
     return (
         <div>
             <CustomHead title={title} />
             <Hero title={title} backgroundImage={background} subtitle={subtitle} hideTitleOnCover={hideTitleOnCover} {...hero} />
+            <PageWrapper sx={{ marginBottom: "3em", marginTop: "3em" }}>
+                <ProjectDescription {...props} />
+            </PageWrapper>
             <Article data={article} />
             <PageWrapper>
                 {desktopScreenshots && (
@@ -48,7 +58,16 @@ const SingleProjectPage: NextPage<IProjectProps> = ({ hideTitleOnCover, article,
                         </Splide>
                     </>
                 )}
-                <FooterContactForm />
+                {props.link && (
+                    <>
+                        <SectionTitle sx={{ marginTop: "1.5em" }}>Social Links</SectionTitle>
+                        <SocialLinks {...props} />
+                    </>
+                )}
+                <FooterContactForm
+                    title="Did you like this project?"
+                    subtitle="Contact me if you want to create a similar one with me. <br /> I am always looking for new opportunities to network and work with creative and motivated people."
+                />
             </PageWrapper>
         </div>
     )

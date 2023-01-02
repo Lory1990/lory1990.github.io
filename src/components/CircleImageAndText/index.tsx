@@ -52,6 +52,7 @@ const CircleImageAndText: React.FC<ICircleImageAndTextProps> = ({ title, image, 
                 {technologies.map((technology, index) => (
                     <Chip
                         size="small"
+                        key={index}
                         label={technology.name}
                         sx={{ backgroundColor: technology.color, color: "#fff", margin: "0.2em", fontWeight: "bold", ...(index == 0 && { marginLeft: "0em" }) }}
                     />
