@@ -58,8 +58,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
                             marginBottom: "0.5em",
                             textAlign: "center",
                             fontSize: "1.5em",
-                            color: theme.palette.primary.main,
-                            fontWeight: "bolder"
+                            fontWeight: "bold"
                         }}
                     >
                         {title}
