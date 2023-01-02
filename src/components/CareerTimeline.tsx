@@ -30,7 +30,9 @@ function TimelineEventContent({ timelineEvent, isLeft }: TimelineEventContentPro
     const theme = useTheme()
     return (
         <TimelineContent>
-            <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>{position}</Typography>
+            <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
+                {position}
+            </Typography>
             <Typography variant="subtitle1" sx={{ fontWeight: "bold", fontSize: "1.1rem" }} gutterBottom color={theme.palette.grey[500]}>{`${company} | ${location}`}</Typography>
             <Chip label={`${from} - ${to}`} color="primary" style={{ marginBottom: "1.25rem", fontSize: "0.85rem", fontWeight: "bold" }} />
             <Box sx={{ display: "flex", justifyContent: isLeft ? "end" : "" }}>
