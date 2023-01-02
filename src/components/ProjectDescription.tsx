@@ -93,12 +93,12 @@ const ProjectDescription: React.FC<IProject> = ({ description, title, category, 
                                 {stack.map((c, index) => (
                                     <Chip key={c} sx={{ fontWeight: "bold", marginRight: "0.5em", marginLeft: index != 0 ? "0.5em" : "0em" }} label={c} />
                                 ))}
-                            </div >
+                            </div>
                         )}
-                    </CardContent >
-                </Card >
-            </Box >
-        </Box >
+                    </CardContent>
+                </Card>
+            </Box>
+        </Box>
     )
 }
 
