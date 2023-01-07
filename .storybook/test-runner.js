@@ -1,50 +1,49 @@
 // .storybook/test-runner.js
-const { toMatchImageSnapshot } = require('jest-image-snapshot');
-const { injectAxe, checkA11y } = require("axe-playwright");
+const { toMatchImageSnapshot } = require("jest-image-snapshot")
+const { injectAxe, checkA11y } = require("axe-playwright")
 
-const customSnapshotsDir = `${process.cwd()}/__snapshots__`;
+const customSnapshotsDir = `${process.cwd()}/__snapshots__`
 
-
-const wait = (timeout = 500) =>{
-  return new Promise(resolve =>
-    setTimeout(() => {
-        resolve()
-    }, 500)
-)
+const wait = (timeout = 500) => {
+    return new Promise(resolve =>
+        setTimeout(() => {
+            resolve()
+        }, 500)
+    )
 }
 
 module.exports = {
     async preRender(page) {
-        await injectAxe(page);
-      },
-  setup() {
-    expect.extend({ toMatchImageSnapshot });
-  },
-  async postRender(page, context) {
-    // If you want to take screenshot of multiple browsers, use
-    // page.context().browser().browserType().name() to get the browser name to prefix the file name
-    
-    await wait(500)
-    const screen = await page.$("#root > *").then(root => root ?? undefined)
-    const image = await screen.screenshot();
+        await injectAxe(page)
+    },
+    setup() {
+        expect.extend({ toMatchImageSnapshot })
+    },
+    async postRender(page, context) {
+        // If you want to take screenshot of multiple browsers, use
+        // page.context().browser().browserType().name() to get the browser name to prefix the file name
 
-    expect(image).toMatchImageSnapshot({
-      customSnapshotsDir,
-      customSnapshotIdentifier: context.id,
-      failureThresholdType: "percent",
-      failureThreshold: 0.10,
-    });
+        await wait(500)
+        const screen = await page.$("#root > *").then(root => root ?? undefined)
+        const image = await screen.screenshot()
 
-    if(process.env.CHECK_ACCESSIBILITY === 'true'){
-      await checkA11y(page, "#root", {
-        detailedReport: true,
-        detailedReportOptions: {
-          html: true,
-        },
-        });
+        expect(image).toMatchImageSnapshot({
+            customSnapshotsDir,
+            customSnapshotIdentifier: context.id,
+            failureThresholdType: "percent",
+            failureThreshold: 0.1
+        })
 
-      const accessibilityTree = await page.accessibility.snapshot();
-      expect(accessibilityTree).toMatchSnapshot();
+        if (process.env.CHECK_ACCESSIBILITY === "true") {
+            await checkA11y(page, "#root", {
+                detailedReport: true,
+                detailedReportOptions: {
+                    html: true
+                }
+            })
+
+            const accessibilityTree = await page.accessibility.snapshot()
+            expect(accessibilityTree).toMatchSnapshot()
+        }
     }
-  },
-};
+}

@@ -25,7 +25,9 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 # Troubleshooting
+
 If storybook dies not run type
+
 ```
 export NODE_OPTIONS=--openssl-legacy-provider
 yarn storybook
