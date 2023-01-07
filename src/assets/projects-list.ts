@@ -280,7 +280,8 @@ const projects: IProject[] = [
         team: "2 people",
         role: "Head of development",
         boxDescription: "Marine tech startup specialized in damaged stability",
-        description: "Navium, a startup founded by two young naval engineering graduates in 2012, developed a complete suite of products for the naval and boating world, including:<ul><li>A basic naval design software called Navium Faber</li><li>A cloud solution for managing ship stability during navigation called Delphi</li><li>An hydrostatic engine that could predict the course of a ship's internal flaw, also called Delphi</li></ul>",
+        description:
+            "Navium, a startup founded by two young naval engineering graduates in 2012, developed a complete suite of products for the naval and boating world, including:<ul><li>A basic naval design software called Navium Faber</li><li>A cloud solution for managing ship stability during navigation called Delphi</li><li>An hydrostatic engine that could predict the course of a ship's internal flaw, also called Delphi</li></ul>",
         subtitle: "The all in one solution to predict ship damage onboard",
         date: "2014",
         image: "/img/projects/navium/card-logo.png",
@@ -299,7 +300,7 @@ const projects: IProject[] = [
             {
                 type: IArticleDataType.TITLE,
                 text: "Delphi"
-            },
+            }
         ]
     }
 ]
