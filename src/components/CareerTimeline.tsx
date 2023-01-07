@@ -67,7 +67,7 @@ export default function CareerTimeline({ timelineEvents }: TimelineProps) {
                     <TimelineContent />
                 </TimelineItem>
             )}
-            {timelineEvents.map((timelineEvent, index) => (
+            {timelineEvents?.map?.((timelineEvent, index) => (
                 <TimelineItem
                     key={`${index}-${timelineEvent.position}`}
                     sx={{

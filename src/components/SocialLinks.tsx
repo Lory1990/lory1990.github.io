@@ -16,8 +16,8 @@ export interface ISingleLinkProps {
 }
 
 const SingleLink: React.FC<ISingleLinkProps> = ({ icon, href }) => {
-    if (!href) return null
     const theme = useTheme()
+    if (!href) return null
 
     return (
         <Box

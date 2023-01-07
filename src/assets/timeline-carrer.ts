@@ -1,4 +1,4 @@
-import { TimelineEvent } from "../pages/about/CareerTimeline"
+import { TimelineEvent } from "../components/CareerTimeline"
 
 const timelineCarrer: TimelineEvent[] = [
     {
