@@ -24,11 +24,23 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Troubleshooting
 
-If storybook dies not run type
+# Storybook
 
+In order to run storybook, type on your terminal:
+
+```bash
+npm run storybook
 ```
+
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
+
+
+## Troubleshooting
+
+If storybook dies not run, type on your terminal:
+
+```bash
 export NODE_OPTIONS=--openssl-legacy-provider
-yarn storybook
+npm run storybook
 ```

@@ -11,7 +11,7 @@ export interface IEvent {
     cover?: string
     video?: string
     article?: IArticleData[]
-    isOnline?: boolean
+    isOnline: boolean
     venue?: string
     hideTitleOnCover?: boolean
 }

@@ -1,5 +1,4 @@
 import { Meta, Story } from "@storybook/react"
-import React, { useEffect, useState } from "react"
 import TechStackList, { ITechStackListProps } from "./TechStackList"
 
 export default {

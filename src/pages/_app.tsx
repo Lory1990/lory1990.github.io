@@ -9,6 +9,7 @@ import PodcastPlayer from "../components/PodcastPlayer/PodcastPlayer"
 import PodcastProvider from "../context/PodcastProvider"
 import { fetchPodcastData } from "../client/PodcastClient"
 import "@splidejs/react-splide/css"
+import { Settings } from "luxon"
 
 const headerElements: HeaderElement[] = [
     { link: "/", label: "Home" },
@@ -21,6 +22,7 @@ const headerElements: HeaderElement[] = [
 
 function PersonalWebsite({ Component, pageProps }) {
     const [podcastData, setPodcastData] = useState<any>()
+    Settings.defaultLocale = "en";
 
     useEffect(() => {
         fetchPodcastData().then(value => {
