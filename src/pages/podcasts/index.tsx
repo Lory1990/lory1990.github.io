@@ -18,13 +18,11 @@ export interface IPodcastProps extends IListProps<IPodcast> {
     title?: string
     description?: string
 }
-const Poadcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
-    const [showOther, setShowOther] = useState<boolean>()
-
+const Podcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
     return (
         <div>
-            <CustomHead title="Poadcast" />
-            <Hero title="Poadcast" />
+            <CustomHead title="Podcast" />
+            <Hero title="Podcast" />
 
             <div>
                 <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82YjZkNmZmOC9wb2RjYXN0L3Jzcw">
@@ -56,4 +54,4 @@ export const getStaticProps: GetStaticProps<IPodcastProps> = async (context: Get
     }
 }
 
-export default Poadcasts
+export default Podcasts

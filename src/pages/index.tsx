@@ -2,10 +2,10 @@ import { Box, Button, Typography, useTheme } from "@mui/material"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
 import events, { IEvent } from "../assets/events-list"
 import podcasts, { IPodcast } from "../assets/podcast-list"
 import projects, { IProject } from "../assets/projects-list"
+import { TextLoop } from "react-text-loop-next"
 import techStack, { ITechStack } from "../assets/tech-stack"
 import TextImageBand from "../components/bands/TextImageBand"
 import BlogCard from "../components/BlogCard"
@@ -25,40 +25,27 @@ export interface IHomeProps {
     techStack?: ITechStack[]
 }
 
-// const TitleTextRoll: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children }) => {
-//     //const theme = useTheme()
-//     return (
-//         <Typography variant="body2" fontSize={"40px"} lineHeight={"50px"}  textTransform="uppercase" fontWeight={700}>
-//             {children}
-//         </Typography>
-//     )
-// }
+const TitleTextRoll: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children }) => {
+    const theme = useTheme()
+    return (
+        <Typography variant="body2" fontSize={"40px"} lineHeight={"50px"} textTransform="uppercase" fontWeight={700} color={theme.palette.primary.main}>
+            {children}
+        </Typography>
+    )
+}
 
 const TextRoll: React.FC = () => {
-    // const [isMounted, setMounted] = useState<boolean>(false)
-    // console.log("isMounted", isMounted)
-    // const theme = useTheme()
+    if (process.env.NODE_ENV === "development") return <span>IT Manager</span>
 
-    // const typeofWindow = typeof window
-
-    // useEffect(() => {
-    //     if (typeofWindow === "undefined") return
-    //     setMounted(true)
-    // }, [typeofWindow])
-
-    return <span>IT Manager</span>
-
-    // return (
-    //     <Typography variant="body2" fontSize={"40px"} lineHeight={"50px"} color={theme.palette.primary.main} textTransform="uppercase" fontWeight={700}>
-    //     <TextLoop>
-    //         <span>IT Manager</span>
-    //         <span>Senior Developer</span>
-    //         <span>Speaker</span>
-    //         <span>Podcaster</span>
-    //         <span>Mentor</span>
-    //     </TextLoop>
-    //     </Typography>
-    // )
+    return (
+        <TextLoop fade={true}>
+            <TitleTextRoll>IT Manager</TitleTextRoll>
+            <TitleTextRoll>Senior Developer</TitleTextRoll>
+            <TitleTextRoll>Speaker</TitleTextRoll>
+            <TitleTextRoll>Podcaster</TitleTextRoll>
+            <TitleTextRoll>Mentor</TitleTextRoll>
+        </TextLoop>
+    )
 }
 
 export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techStack }) => {
