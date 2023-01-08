@@ -1,4 +1,5 @@
 import { Box } from "@mui/material"
+import { SxProps, Theme } from "@mui/system"
 import Image from "next/image"
 import { Fade, Zoom } from "react-awesome-reveal"
 import IArticleData from "../../types/IArticleData"
@@ -7,11 +8,13 @@ import PageWrapper from "../PageWrapper"
 export interface ITextImageBandProps extends Omit<IArticleData, "type"> {
     imageAlt?: string
     inverted?: boolean
+    sx?: SxProps<Theme>
+    id?: string
 }
 
-const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, inverted }) => {
+const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, inverted, sx, id }) => {
     return (
-        <PageWrapper>
+        <PageWrapper id={id}>
             <Box
                 sx={{
                     display: "flex",
@@ -25,7 +28,8 @@ const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                         sm: "1em",
                         md: "5em"
                     },
-                    alignItems: "center"
+                    alignItems: "center",
+                    ...sx
                 }}
             >
                 <Fade direction="up" style={{ flex: 1 }}>

@@ -41,7 +41,7 @@ const Poadcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
                     sliceList={3}
                 />
             </PageWrapper>
-            <FooterContactForm title={"I am available for collaboration"} subtitle={"Wnt to do a podcast with me?"} />
+            <FooterContactForm title={"I am available for collaboration"} subtitle={"Want to do a podcast with me?"} />
         </div>
     )
 }
