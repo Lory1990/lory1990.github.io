@@ -1,6 +1,5 @@
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import { IPodcast } from "../../assets/podcast-list"
-import CustomHead from "../../components/CustomHead"
 import Hero from "../../components/Hero"
 import { IListProps } from "../../types/IListProps"
 import PageWrapper from "../../components/PageWrapper"
@@ -12,6 +11,7 @@ import { useState } from "react"
 import { Box, Button } from "@mui/material"
 import FooterContactForm from "../../components/FooterContactForm"
 import ListWithShowMore from "../../components/ListWithShowMore"
+import CustomHead from "../../components/CustomHead"
 
 const fadeDuration = 500
 
@@ -24,7 +24,7 @@ const Poadcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
 
     return (
         <div>
-            <CustomHead title="Poadcast" />
+            <CustomHeadHead title="Poadcast" />
             <Hero title="Poadcast" />
 
             <div>

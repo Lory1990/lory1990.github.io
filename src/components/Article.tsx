@@ -21,37 +21,26 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
                 switch (item.type) {
                     case IArticleDataType.CAROUSEL:
                         return <CarouselBand {...item} key={index} />
-                        break
                     case IArticleDataType.COUNTERS:
                         return <CountersBand {...item} key={index} />
-                        break
                     case IArticleDataType.IMAGE:
                         return <ImageBand {...item} key={index} />
-                        break
                     case IArticleDataType.CTA:
                         return <CtaBand {...item} key={index} />
-                        break
                     case IArticleDataType.IMAGE_TEXT:
                         return <TextImageBand {...item} key={index} />
-                        break
                     case IArticleDataType.TEXT_IMAGE:
                         return <TextImageBand {...item} key={index} inverted={true} />
-                        break
                     case IArticleDataType.TEXT:
                         return <TextBand {...item} key={index} />
-                        break
                     case IArticleDataType.TITLE:
                         return <TitleBand {...item} key={index} />
-                        break
                     case IArticleDataType.TEXT_VIDEO:
                         return <VideoTextBand {...item} key={index} />
-                        break
                     case IArticleDataType.VIDEO_TEXT:
                         return <VideoTextBand {...item} key={index} inverted={true} />
-                        break
                     default:
                         return null
-                        break
                 }
             })}
         </Box>

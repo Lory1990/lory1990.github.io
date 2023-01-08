@@ -9,7 +9,7 @@
     "start": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "^5.10.12",
+    "@mui/x-date-pickers": "^5.0.13",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@storybook/addon-docs": "^6.5.15",

@@ -2,12 +2,12 @@ import { Box } from "@mui/material"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import events, { IEvent } from "../../../assets/events-list"
 import Article from "../../../components/Article"
-import CustomHead from "../../../components/CustomHead"
 import FooterContactForm from "../../../components/FooterContactForm"
 import Hero from "../../../components/Hero"
 import ReactPlayer from "react-player"
 import PageWrapper from "../../../components/PageWrapper"
 import OtherEventsForYou from "../../../components/OtherEventsForYou"
+import CustomHead from "../../../components/CustomHead"
 
 interface IEventPageProps extends IEvent {}
 
