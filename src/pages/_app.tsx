@@ -22,7 +22,7 @@ const headerElements: HeaderElement[] = [
 
 function PersonalWebsite({ Component, pageProps }) {
     const [podcastData, setPodcastData] = useState<any>()
-    Settings.defaultLocale = "en";
+    Settings.defaultLocale = "en"
 
     useEffect(() => {
         fetchPodcastData().then(value => {

@@ -1,8 +1,6 @@
 import { Meta, Story } from "@storybook/react"
 import EventCard, { IEventCardProps } from "."
 
-
-
 export default {
     title: "components/EventCard",
     component: EventCard
@@ -10,9 +8,7 @@ export default {
 
 const Template: Story<IEventCardProps> = args => <EventCard {...args} />
 
-
 export const Plain: Story<IEventCardProps> = Template.bind({})
-
 
 Plain.args = {
     slug: "creare-una-test-factory-aziendale",

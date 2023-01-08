@@ -24,7 +24,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
 # Storybook
 
 In order to run storybook, type on your terminal:
@@ -34,7 +33,6 @@ npm run storybook
 ```
 
 Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
-
 
 ## Troubleshooting
 
