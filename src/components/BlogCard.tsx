@@ -66,7 +66,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                 <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
-                            <Button onClick={onButtonClick} variant="contained" color="neutral" sx={{ boxShadow: "none", "&:hover": { boxShadow: "none", } }}>
+                            <Button onClick={onButtonClick} variant="contained" color="neutral" sx={{ boxShadow: "none", "&:hover": { boxShadow: "none" } }}>
                                 Read More
                             </Button>
                         </Box>

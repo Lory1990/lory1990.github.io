@@ -40,9 +40,9 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
                 <TechStackList techStack={techStack.filter(ts => ts.emphasize)} />
                 <SectionTitle>My Projects</SectionTitle>
                 <CardsBand columns={3}>
-                    {projects.map((project: IProject) =>
+                    {projects.map((project: IProject) => (
                         <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
-                    )}
+                    ))}
                 </CardsBand>
                 <FooterContactForm />
             </PageWrapper>
