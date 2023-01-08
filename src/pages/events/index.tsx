@@ -11,7 +11,7 @@ import PageWrapper from "../../components/PageWrapper"
 import Title from "../../components/typography/Title"
 import { IListProps } from "../../types/IListProps"
 
-export interface IEventListProps extends IListProps<IEvent> { }
+export interface IEventListProps extends IListProps<IEvent> {}
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
     const nextEvent = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days > 0).reverse()?.[0]

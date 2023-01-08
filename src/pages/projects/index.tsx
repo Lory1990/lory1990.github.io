@@ -10,7 +10,7 @@ import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
 import { IListProps } from "../../types/IListProps"
 
-export interface IProjectListProps extends IListProps<IProject> { }
+export interface IProjectListProps extends IListProps<IProject> {}
 
 const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
     const theme = useTheme()
