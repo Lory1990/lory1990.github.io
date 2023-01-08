@@ -29,7 +29,7 @@ const TechStackList: React.FC<ITechStackListProps> = ({ techStack, columns = 3, 
             }}
         >
             {techStack.map((single, index) => (
-                <CircleImageAndText key={`tech-stack-${index}`} description={<ExperienceText years={single.experience} />} {...single} />
+                <CircleImageAndText key={`tech-stack-${index}`} description={single.experience && <ExperienceText years={single.experience} />} {...single} />
             ))}
         </Box>
     )
