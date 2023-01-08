@@ -7,7 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
 
-export interface IEventCardProps extends IEvent { }
+export interface IEventCardProps extends IEvent {}
 
 const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, description }) => {
     const theme = useTheme()

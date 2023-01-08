@@ -70,6 +70,7 @@ const projects: IProject[] = [
     },
     {
         slug: "tongy",
+        hilight: true,
         title: "Tongy",
         team: "2 people",
         role: "Full Stack Developer",
@@ -174,6 +175,7 @@ const projects: IProject[] = [
         desktopScreenshots: ["/img/projects/newo/desktop-01.svg", "/img/projects/newo/desktop-02.svg", "/img/projects/newo/desktop-03.svg", "/img/projects/newo/desktop-04.svg"]
     },
     {
+        hilight: true,
         slug: "duck-internship",
         title: "Duck Internship",
         subtitle: "Firsti internship marketplace",
@@ -197,6 +199,7 @@ const projects: IProject[] = [
         date: "2019"
     },
     {
+        hilight: true,
         slug: "the-personal-trainer",
         title: "The Personal Trainer",
         boxDescription: "Fitness tracker full web with metrics",

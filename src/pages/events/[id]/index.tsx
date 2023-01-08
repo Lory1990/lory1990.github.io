@@ -9,7 +9,7 @@ import PageWrapper from "../../../components/PageWrapper"
 import OtherEventsForYou from "../../../components/OtherEventsForYou"
 import CustomHead from "../../../components/CustomHead"
 
-interface IEventPageProps extends IEvent { }
+interface IEventPageProps extends IEvent {}
 
 const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover }) => {
     return (
