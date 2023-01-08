@@ -29,6 +29,7 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects }) => {
             <Hero
                 title={<Typography>CIAO, MI CHIAMO LORENZO E SONO UN DEVELOPER</Typography>}
                 subtitle="CREO APP BELLE, SEMPLICI E COINVOLGENTI IL MIO SCOPO? SEMPLIFICARE LA VITA AGLI UTENTI ED AUMENTARE LE CONVERSIONI"
+                backgroundImage="/img/home-hero.jpeg"
                 button={{
                     text: "scopri di più",
                     onClick: () => router.push("/about")
