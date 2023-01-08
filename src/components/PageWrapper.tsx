@@ -4,9 +4,10 @@ export interface IPageWrapperProps extends React.HTMLAttributes<HTMLDivElement> 
     sx?: SxProps<Theme>
 }
 
-export const PageWrapper: React.FC<IPageWrapperProps> = ({ children, sx }) => {
+export const PageWrapper: React.FC<IPageWrapperProps> = ({ children, sx, id }) => {
     return (
         <Box
+            id={id}
             sx={{
                 marginTop: "1em",
                 marginLeft: {

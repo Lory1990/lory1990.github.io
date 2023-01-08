@@ -33,7 +33,7 @@ interface IHeroButton {
 
 export interface IHeroProps extends Omit<React.HTMLProps<HTMLDivElement>, "title"> {
     title?: string | JSX.Element
-    subtitle?: string
+    subtitle?: string | JSX.Element
     date?: string
     place?: string
     background?: string
@@ -60,6 +60,7 @@ const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, background, bac
     >
         <Box
             sx={{
+                zIndex: 10,
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
@@ -81,9 +82,15 @@ const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, background, bac
                         </Typography>
                     )}
                     {subtitle && (
-                        <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em" }}>
-                            {subtitle}
-                        </Typography>
+                        <>
+                            {typeof subtitle == "string" ? (
+                                <Typography variant="subtitle1" sx={{ color, fontSize: "1.5em" }}>
+                                    {subtitle}
+                                </Typography>
+                            ) : (
+                                subtitle
+                            )}
+                        </>
                     )}
                     {button && (
                         <Button onClick={button.onClick} variant="contained">
