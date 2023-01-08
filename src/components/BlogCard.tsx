@@ -37,7 +37,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                     transition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     WebkitTransition: "background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     ":hover": {
-                        backgroundSize: "130%"
+                        backgroundSize: "120%"
                     }
                 }}
             >
@@ -52,7 +52,8 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                         background: `rgba(
                         ${primaryColorRGB.red},
                         ${primaryColorRGB.green},
-                        ${primaryColorRGB.blue},0.3)`,
+                        ${primaryColorRGB.blue},0.1)`,
+                        // backdropFilter: "blur(1px)",
                         borderRadius: "10px",
                         opacity: 0,
                         ...((isCardHovered || isTitleHovered) && {
@@ -65,7 +66,7 @@ export default function BlogCard({ image, title, description, link }: BlogCardPr
                 <Box sx={{ display: "flex", justifyContent: "center", width: "100%", height: "100%", alignItems: "center" }}>
                     <Fade in={isCardHovered || isTitleHovered}>
                         <Box>
-                            <Button onClick={onButtonClick} variant="contained" color="neutral">
+                            <Button onClick={onButtonClick} variant="contained" color="neutral" sx={{ boxShadow: "none", "&:hover": { boxShadow: "none", } }}>
                                 Read More
                             </Button>
                         </Box>

@@ -28,7 +28,8 @@ const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, f
                 flexDirection: "column",
                 alignItems: "center",
                 bottom: "20px",
-                right: "0px"
+                right: "0px",
+                zIndex: "10"
             }}
         >
             <Typography

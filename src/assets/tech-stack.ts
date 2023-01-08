@@ -51,8 +51,12 @@ const techStack: ITechStack[] = [
         category: "CLOUD",
         technologies: [
             {
-                name: "Mia-Platform",
+                name: "Mia Platform",
                 color: "#29B7E0"
+            },
+            {
+                name: "Docker",
+                color: "#0DB7ED"
             }
         ]
     },
