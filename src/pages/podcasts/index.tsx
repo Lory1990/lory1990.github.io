@@ -8,7 +8,6 @@ import Image from "next/image"
 import { fetchPodcastData } from "../../client/PodcastClient"
 import { Fade } from "react-awesome-reveal"
 import { useState } from "react"
-import { Box, Button } from "@mui/material"
 import FooterContactForm from "../../components/FooterContactForm"
 import ListWithShowMore from "../../components/ListWithShowMore"
 import CustomHead from "../../components/CustomHead"
@@ -24,7 +23,7 @@ const Poadcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
 
     return (
         <div>
-            <CustomHeadHead title="Poadcast" />
+            <CustomHead title="Poadcast" />
             <Hero title="Poadcast" />
 
             <div>
