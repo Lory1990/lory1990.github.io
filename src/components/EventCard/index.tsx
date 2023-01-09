@@ -1,17 +1,20 @@
 import { BroadcastOnHome, Person, VideoCameraFront } from "@mui/icons-material"
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, Chip } from "@mui/material"
 import Typography from "@mui/material/Typography"
-import { useTheme } from "@mui/system"
+import { SxProps, useTheme } from "@mui/system"
 import { DateTime } from "luxon"
 import Image from "next/image"
 import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
-export interface IEventCardProps extends IEvent { }
+import { Theme } from "@emotion/react"
+export interface IEventCardProps extends IEvent {
+    hilight?: boolean
+}
 
-const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
+const EventCard: React.FC<IEventCardProps> = ({ hilight, slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
     const theme = useTheme()
+
     return (
         <Link href={`/events/${slug}`}>
             <Card elevation={1} sx={{ height: "175px", display: "flex" }}>

@@ -1,4 +1,5 @@
 import { Description } from "@mui/icons-material"
+import { IHeroProps } from "../components/Hero"
 import IArticleData from "../types/IArticleData"
 
 export interface IEvent {
@@ -16,6 +17,7 @@ export interface IEvent {
     isOnline: boolean
     venue?: string
     hideTitleOnCover?: boolean
+    hero?: IHeroProps
 }
 
 const events: IEvent[] = [
@@ -47,7 +49,10 @@ const events: IEvent[] = [
         date: "2023-01-13",
         image: "/img/events/2022-gdg-triveneto/badge.webp",
         isOnline: false,
-        venue: "Google DevFest Alps 2023"
+        venue: "Google DevFest Alps 2023",
+        hero: {
+            background: "linear-gradient(145deg, rgba(5,51,113,1) 0%, rgba(45,116,205,1) 100%);"
+        }
     },
     {
         slug: "how-to-handle-a-multicountry-enterprise-platform",
@@ -58,7 +63,10 @@ const events: IEvent[] = [
         date: "2022-10-22",
         image: "/img/events/2022-gdg-triveneto/badge.webp",
         isOnline: false,
-        venue: "Google DevFest Triveneto 2022"
+        venue: "Google DevFest Triveneto 2022",
+        hero: {
+            background: "linear-gradient(145deg, rgba(5,51,113,1) 0%, rgba(45,116,205,1) 100%);"
+        }
     },
     {
         slug: "tutored-il-tuo-primo-giorno-di-lavoro-la-to-do-list-per-lonboarding-in-azienda",
@@ -76,7 +84,7 @@ const events: IEvent[] = [
     {
         slug: "guida-pratica-alla-gestione-di-un-prodotto-it",
         title: "Guida pratica alla gestione di un prodotto IT",
-        shortDescription: "The practcal guide to handle a IT SaaS",
+        shortDescription: "The practical guide to handle a IT SaaS",
         description:
             "What should an IT manager do to effectively manage an IT product and the development team? There are many aspects to consider and many non-technical stakeholders. In this talk, I share a practical guide to not make mistakes!",
         venue: "Crafted Software",
@@ -84,7 +92,10 @@ const events: IEvent[] = [
         date: "2022-09-20",
         image: "/img/events/2022-guida-pratica-prodotto-it/logo.jpeg",
         video: "https://www.youtube.com/watch?v=fQKdGDU5bf8",
-        isOnline: false
+        isOnline: false,
+        hero: {
+            background: "linear-gradient(145deg, rgba(239,93,94,1) 0%, rgba(125,36,36,1) 100%)"
+        }
     },
     {
         slug: "come-creare-un-frontend-scalabile-robusto-e-coerente",
