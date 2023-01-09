@@ -76,7 +76,7 @@ const events: IEvent[] = [
     {
         slug: "guida-pratica-alla-gestione-di-un-prodotto-it",
         title: "Guida pratica alla gestione di un prodotto IT",
-        shortDescription: "The practcal guide to handle a IT SaaS",
+        shortDescription: "The practical guide to handle a IT SaaS",
         description:
             "What should an IT manager do to effectively manage an IT product and the development team? There are many aspects to consider and many non-technical stakeholders. In this talk, I share a practical guide to not make mistakes!",
         venue: "Crafted Software",

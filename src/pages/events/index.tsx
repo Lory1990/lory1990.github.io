@@ -1,5 +1,7 @@
+import { Box } from "@mui/material"
 import { DateTime } from "luxon"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
+import Image from "next/image"
 import { Fade } from "react-awesome-reveal"
 import events, { IEvent } from "../../assets/events-list"
 import CustomHead from "../../components/CustomHead"
@@ -20,13 +22,24 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
     return (
         <div>
             <CustomHead title={"Events"} />
-            <Hero title={"Events"} />
+            <Hero
+                title={"Events"}
+                sx={{
+                    backgroundImage: undefined,
+                    position: "relative",
+                    background: "linear-gradient(135deg, #00401BCC 20%, #95CD7D 100%)"
+                }}
+            >
+                <Box sx={{ position: "absolute", right: "10px", bottom: "20px" }}>
+                    <Image src="/img/events.png" alt="Projects" width={657} height={435} />
+                </Box>
+            </Hero>
             <PageWrapper>
                 {nextEvent && (
                     <>
                         <Title>Next Event</Title>
-                        <EventCard {...nextEvent} />
-                        <Title sx={{ marginTop: "15px" }}>Past Events</Title>
+                        <EventCard {...nextEvent} hilight={true} />
+                        <Title sx={{ marginTop: "3em" }}>Past Events</Title>
                     </>
                 )}
 
