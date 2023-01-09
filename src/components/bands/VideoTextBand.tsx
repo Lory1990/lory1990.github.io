@@ -28,7 +28,7 @@ const VideoTextBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                     alignItems: "center"
                 }}
             >
-                <Fade direction="up" style={{ flex: 1 }}>
+                <Fade direction="up" style={{ flex: 1 }} triggerOnce={true}>
                     <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
                 </Fade>
                 {videoUrl && typeof window !== "undefined" && (

@@ -32,7 +32,7 @@ const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                     ...sx
                 }}
             >
-                <Fade direction="up" style={{ flex: 1 }}>
+                <Fade direction="up" style={{ flex: 1 }} triggerOnce={true}>
                     <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
                 </Fade>
                 {image && (

@@ -8,7 +8,7 @@ import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
-export interface IEventCardProps extends IEvent { }
+export interface IEventCardProps extends IEvent {}
 
 const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
     const theme = useTheme()
@@ -56,9 +56,8 @@ const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnli
                 <Box>{isOnline ? <VideoCameraFront /> : <Person />}</Box>
                 <Box sx={{ textAlign: { sm: "right", xs: "center" }, fontWeight: "bold", color: "blue" }}>{DateTime.fromISO(date).toFormat("dd MMM yy")}</Box> */}
                 </CardActionArea>
-
-            </Card >
-        </Link >
+            </Card>
+        </Link>
     )
 }
 

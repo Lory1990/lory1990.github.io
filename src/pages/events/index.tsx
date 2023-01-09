@@ -32,7 +32,7 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
 
                 <ListWithShowMore
                     animationComponent={Fade}
-                    animationComponentProps={{ duration: 750, cascade: true, direction: "left" }}
+                    animationComponentProps={{ duration: 750, cascade: true, direction: "left", triggerOnce: true }}
                     list={pastEvents}
                     singleElementComponent={EventCard}
                     sliceList={3}
