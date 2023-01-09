@@ -40,16 +40,9 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
                     buttonText="See on partner website"
                 />
             )}
+
             <Article data={article} />
-            <PageWrapper>
-                {link && (
-                    <Box sx={{ textAlign: "center" }}>
-                        <a href={link} target="_blank" rel="noreferrer">
-                            See the event on the partner site
-                        </a>
-                    </Box>
-                )}
-            </PageWrapper>
+
             <OtherEventsForYou />
             <FooterContactForm title="Shall we do a webinar together?" subtitle="Drop me a message 💬, i love partecipating to events!" />
         </div>
