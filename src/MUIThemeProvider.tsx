@@ -52,7 +52,7 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: "20px",
-                    boxShadow: "none",
+                    boxShadow: "none"
                 }
             }
             //     variants: [

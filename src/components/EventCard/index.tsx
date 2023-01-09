@@ -6,11 +6,11 @@ import { DateTime } from "luxon"
 import Image from "next/image"
 import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LocationOnIcon from "@mui/icons-material/LocationOn"
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 export interface IEventCardProps extends IEvent { }
 
-const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, description, subtitle }) => {
+const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
     const theme = useTheme()
     return (
         <Link href={`/events/${slug}`}>
@@ -21,7 +21,7 @@ const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnli
 
                         <CardContent sx={{ display: "flex", flexDirection: "column", justifyItems: "left", paddingLeft: "30px", width: "100%" }}>
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                                <div style={{ display: "flex", alignItems: "baseline" }} >
+                                <div style={{ display: "flex", alignItems: "baseline" }}>
                                     <Typography variant="subtitle2" sx={{ fontWeight: "bold" }} color={theme.palette.grey[500]}>
                                         {DateTime.fromFormat(date, "yyyy-mm-dd").toLocaleString(DateTime.DATE_MED)}
                                     </Typography>
@@ -31,11 +31,12 @@ const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnli
                             <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                                 {title}
                             </Typography>
-                            {subtitle &&
-                                <Typography variant="subtitle2" sx={{ fontWeight: "bold" }} >
+                            {subtitle && (
+                                <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
                                     {subtitle}
-                                </Typography>}
-                            <div style={{ display: "flex", alignItems: "center" }} >
+                                </Typography>
+                            )}
+                            <div style={{ display: "flex", alignItems: "center" }}>
                                 <LocationOnIcon fontSize="small" sx={{ color: theme.palette.grey[500], marginLeft: "-0.4rem", marginRight: "0.2rem" }} />
                                 <Typography variant="subtitle2" sx={{ fontSize: "0.8rem" }} color={theme.palette.grey[500]}>
                                     {venue}
@@ -47,7 +48,6 @@ const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnli
                             </Typography>
                         </CardContent>
                     </div>
-
 
                     {/*<Box sx={{ display: "flex", flexDirection: "column" }}>
                     <Box sx={{ fontWeight: "bold" }}>{title}</Box>
