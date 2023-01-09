@@ -8,6 +8,8 @@ import ReactPlayer from "react-player"
 import PageWrapper from "../../../components/PageWrapper"
 import OtherEventsForYou from "../../../components/OtherEventsForYou"
 import CustomHead from "../../../components/CustomHead"
+import VideoTextBand from "../../../components/bands/VideoTextBand"
+import CTABand from "../../../components/CTABand"
 
 interface IEventPageProps extends IEvent {}
 
@@ -17,18 +19,27 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
             <CustomHead title={title} />
             <Hero title={title} date={date} backgroundImage={cover} subtitle={subtitle} place={venue} hideTitleOnCover={hideTitleOnCover} />
 
-            {(description || video) && (
-                <PageWrapper>
-                    {description && <Box sx={{ textAlign: "center", marginBottom: "1em" }}>{description}</Box>}
+            {description && video && <VideoTextBand videoUrl={video} text={description} />}
+            {description && link && <PageWrapper>DA FARE</PageWrapper>}
 
+            {!description && video && (
+                <>
                     {video && typeof window !== "undefined" && (
                         <Box sx={{ display: "flex", alignContent: "center", justifyContent: "center" }}>
-                            <ReactPlayer url={video} controls={true} />
+                            <ReactPlayer url={video} controls={true} width={"100%"} height={"50vh"} />
                         </Box>
                     )}
-                </PageWrapper>
+                </>
             )}
 
+            {!description && link && (
+                <CTABand
+                    onClick={() => {
+                        window.open(link, "_blank")
+                    }}
+                    buttonText="See on partner website"
+                />
+            )}
             <Article data={article} />
             <PageWrapper>
                 {link && (
@@ -40,7 +51,7 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
                 )}
             </PageWrapper>
             <OtherEventsForYou />
-            <FooterContactForm />
+            <FooterContactForm title="Shall we do a webinar together?" subtitle="Drop me a message 💬, i love partecipating to events!" />
         </div>
     )
 }

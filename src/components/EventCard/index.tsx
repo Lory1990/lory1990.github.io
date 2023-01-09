@@ -10,7 +10,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 export interface IEventCardProps extends IEvent {}
 
-const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, description, subtitle }) => {
+const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
     const theme = useTheme()
     return (
         <Link href={`/events/${slug}`}>
