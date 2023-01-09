@@ -13,11 +13,11 @@ import CTABand from "../../../components/CTABand"
 
 interface IEventPageProps extends IEvent {}
 
-const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover }) => {
+const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover, hero }) => {
     return (
         <div>
             <CustomHead title={title} />
-            <Hero title={title} date={date} backgroundImage={cover} subtitle={subtitle} place={venue} hideTitleOnCover={hideTitleOnCover} />
+            <Hero title={title} date={date} backgroundImage={cover} subtitle={subtitle} place={venue} hideTitleOnCover={hideTitleOnCover} {...hero} />
 
             {description && video && <VideoTextBand videoUrl={video} text={description} />}
             {description && link && <PageWrapper>DA FARE</PageWrapper>}
