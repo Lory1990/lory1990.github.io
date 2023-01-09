@@ -44,7 +44,7 @@ const theme = createTheme({
         fontFamily: `"Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
         button: {
             textTransform: "none",
-            fontWeight: "bold",
+            fontWeight: "bold"
         }
     },
     components: {
@@ -52,7 +52,7 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: "20px",
-                    boxShadow: "none",
+                    boxShadow: "none"
                 }
             }
             //     variants: [

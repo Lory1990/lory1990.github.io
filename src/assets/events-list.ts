@@ -4,6 +4,7 @@ export interface IEvent {
     slug: string
     title: string
     subtitle?: string
+    shortDescription?: string
     description?: string
     link?: string
     date?: string
@@ -19,8 +20,9 @@ export interface IEvent {
 const events: IEvent[] = [
     {
         title: "Colloquio tecnico per neolaureati, tips&tricks",
-        slug: "colloquio-tecnico-per-neolaureati-tipsandtricks",
+        slug: "colloquio-tecnico-per-neolaureati-tips-and-tricks",
         date: "2022-06-21",
+        venue: "YouTube",
         isOnline: true,
         image: "/img/opinno.jpeg"
     },
@@ -35,7 +37,7 @@ const events: IEvent[] = [
     {
         slug: "creare-una-test-factory-aziendale",
         title: "Creare una Test Factory Aziendale",
-        description:
+        shortDescription:
             "In this presentation I want to tell how I handle day by day the development and the monitoring of an enterprise application. We will go deep in the architecture decision strategy and the tools we are using to ensure safety, reliability and scalability of the platform",
         link: "https://gdg.community.dev/events/details/google-gdg-valle-daosta-presents-devfest-alps-2022/",
         date: "2023-01-13",
@@ -46,7 +48,7 @@ const events: IEvent[] = [
     {
         slug: "how-to-handle-a-multicountry-enterprise-platform",
         title: "How to handle a multicountry enterprise platform",
-        description:
+        shortDescription:
             "In this presentation I want to tell how I handle day by day the development and the monitoring of an enterprise application. We will go deep in the architecture decision strategy and the tools we are using to ensure safety, reliability and scalability of the platform",
         link: "https://www.devfest-triveneto.it/speakers/lorenzo-francesco/",
         date: "2022-10-22",
@@ -68,7 +70,7 @@ const events: IEvent[] = [
     {
         slug: "guida-pratica-alla-gestione-di-un-prodotto-it",
         title: "Guida pratica alla gestione di un prodotto IT",
-        description:
+        shortDescription:
             "Cosa deve fare un IT manager per gestire efficacemente un prodotto IT e il team di sviluppo? Ci sono tantissimi aspetti di cui tenere conto e tanti interlocutori non tecnici. In questo talk condivido una guida pratica per non sbagliare!",
         venue: "Crafted Software",
         link: "https://www.meetup.com/it-IT/crafted-software/events/288348561/",
@@ -80,7 +82,7 @@ const events: IEvent[] = [
     {
         slug: "come-creare-un-frontend-scalabile-robusto-e-coerente",
         title: "Come creare un Frontend scalabile, robusto e coerente",
-        subtitle: "Con l'atiuto di storybook e del sedign system",
+        subtitle: "Con l'aiuto di Storybook e del Design System",
         image: "/img/events/2022-frontend-scalabile/logo.png",
         venue: "React JS Milano",
         link: "https://www.meetup.com/it-IT/react-js-milano/events/282339759/",
@@ -93,7 +95,7 @@ const events: IEvent[] = [
         slug: "deploy-in-ambienti-critici-quando-nulla-puo-andare-storto",
         image: "/img/youtube-live.png",
         venue: "YouTube",
-        link: "https://www.youtube.com/watch?v=loQ54XKbKCw",
+        video: "https://www.youtube.com/watch?v=loQ54XKbKCw",
         date: "2021-11-18",
         isOnline: true
     },
@@ -148,8 +150,12 @@ const events: IEvent[] = [
         isOnline: true
     },
     {
-        title: "Lavoro da posti incredibili e sono felice",
         slug: "lavoro-da-posti-incredibili-e-sono-felice",
+        title: "Lavoro da posti incredibili e sono felice",
+        subtitle: "Feat Christian Cannata",
+        shortDescription: "In this webinar me and Christian will talk about the being a Digital Nomad and work from where you want and when you want.",
+        description:
+            "On this webinar, we will be discussing the concept of digital nomadism and the freedom it offers to work whenever and wherever you want. In addition we will give some advices on how to start your own journey as a digital nomad.",
         video: "https://www.youtube.com/watch?v=-Rk9v_hwa8k",
         image: "/img/youtube-live.png",
         cover: "/img/events/lavoro-da-posto-incredibili-e-sono-felice.png",
@@ -190,6 +196,9 @@ const events: IEvent[] = [
     },
     {
         slug: "come-si-supera-il-colloquio-tecnico-domande-esercizi-e-best-practice",
+        shortDescription: "In a technical interview what is the best way to answer the interviewer? how can I be the best? I will answer to all questions in this webinar",
+        description:
+            "The selection process includes a moment in which the candidate's technical skills are assessed. The technical interview, therefore, is a crucial moment because it offers the possibility to put into practice the skills learned during the course of study or in previous work experiences in front of a company manager.<br />  This webinar is focused on the analysis of some real cases, starting from the exercises and questions submitted to a candidate to continue on what are the best ways to respond. <br /> Furthermore, there will be a focus on what a recruiter looks at before the interview (github, social contributions, etc.) and the importance of tech communities.",
         date: "2022-01-31",
         title: "Come si supera il colloquio tecnico?",
         subtitle: "Domande, esercizi e best practice",
