@@ -43,7 +43,7 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
                 }
             }}
         >
-            <Fade direction={inverted ? "right" : "left"} delay={initialDelay}>
+            <Fade direction={inverted ? "right" : "left"} delay={initialDelay} triggerOnce={true}>
                 <Box
                     sx={{
                         flex: 0.5,
@@ -82,7 +82,7 @@ const About: React.FC = () => {
                     imageAlt="Lorenzo De Francesco"
                     text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 />
-                <Fade direction="bottom-left">
+                <Fade direction="bottom-left" triggerOnce={true}>
                     <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Ambitions</SectionTitle>
                 </Fade>
                 <TextImageBand
@@ -91,7 +91,7 @@ const About: React.FC = () => {
                     inverted={true}
                     text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 />
-                <Fade direction="top-left">
+                <Fade direction="top-left" triggerOnce={true}>
                     <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
                 </Fade>
                 <Box

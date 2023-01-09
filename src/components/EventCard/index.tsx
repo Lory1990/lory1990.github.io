@@ -56,9 +56,8 @@ const EventCard: React.FC<IEventCardProps> = ({ slug, date, image, title, isOnli
                 <Box>{isOnline ? <VideoCameraFront /> : <Person />}</Box>
                 <Box sx={{ textAlign: { sm: "right", xs: "center" }, fontWeight: "bold", color: "blue" }}>{DateTime.fromISO(date).toFormat("dd MMM yy")}</Box> */}
                 </CardActionArea>
-
-            </Card >
-        </Link >
+            </Card>
+        </Link>
     )
 }
 
