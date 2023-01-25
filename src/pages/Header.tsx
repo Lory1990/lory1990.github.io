@@ -3,7 +3,7 @@ import { Box, Theme } from "@mui/system"
 import MenuIcon from "@mui/icons-material/Menu"
 import React, { useState } from "react"
 import useHover from "../hooks/useHover"
-import { useRouter } from "next/router"
+import { Router, useRouter } from "next/router"
 import Link from "next/link"
 import { outlinedColor } from "../utils"
 import CloseIcon from "@mui/icons-material/Close"
@@ -19,11 +19,17 @@ interface HeaderProps {
     headerElements: HeaderElement[]
 }
 
+
+
+
+
 function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
     const theme = useTheme()
     const { hoverRef, isHovered } = useHover()
+    const { pathname } = useRouter();
 
-    const router = useRouter()
+
+
     return (
         <Link
             href={link}
@@ -48,7 +54,7 @@ function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
                     marginRight: "15px",
                     flexDirection: "column",
                     justifyContent: "center",
-                    color: router.pathname == link || isHovered ? theme.palette.primary.main : "#313450",
+                    color: pathname.startsWith(link) || isHovered ? theme.palette.primary.main : "#313450",
                     transition: "color 300ms linear"
                 }}
             >
@@ -60,7 +66,7 @@ function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
                         height: "1px",
                         bottom: type == "vertical" ? "-3px" : "10px",
                         right: isHovered ? "unset" : 0,
-                        width: router.pathname == link ? "100%" : isHovered ? "100%" : "0%",
+                        width: pathname.startsWith(link) ? "100%" : isHovered ? "100%" : "0%",
                         borderBottom: `${theme.palette.primary.main} 3px solid`,
                         transition: "width 500ms ease"
                     }}
@@ -81,13 +87,13 @@ export default function Header({ headerElements }: HeaderProps) {
 
     const toolbarStyle = matches
         ? {
-              minHeight: "64px",
-              paddingLeft: "24px",
-              paddingRight: "24px"
-          }
+            minHeight: "64px",
+            paddingLeft: "24px",
+            paddingRight: "24px"
+        }
         : {
-              minHeight: "48px"
-          }
+            minHeight: "48px"
+        }
 
     return (
         <>

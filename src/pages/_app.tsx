@@ -1,7 +1,7 @@
 import "../styles/globals.css"
 import "../styles/icons.css"
 import { useEffect, useState } from "react"
-import Header, { HeaderElement } from "../components/Header"
+import Header, { HeaderElement } from "./Header"
 import MUIThemeProvider from "../MUIThemeProvider"
 import Footer from "../components/Footer"
 import { Box } from "@mui/material"
@@ -12,7 +12,6 @@ import "@splidejs/react-splide/css"
 import { Settings } from "luxon"
 
 const headerElements: HeaderElement[] = [
-    { link: "/", label: "Home" },
     { link: "/about", label: "About" },
     { link: "/projects", label: "Projects" },
     { link: "/events", label: "Events" },
