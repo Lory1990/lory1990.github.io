@@ -19,16 +19,10 @@ interface HeaderProps {
     headerElements: HeaderElement[]
 }
 
-
-
-
-
 function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
     const theme = useTheme()
     const { hoverRef, isHovered } = useHover()
-    const { pathname } = useRouter();
-
-
+    const { pathname } = useRouter()
 
     return (
         <Link
@@ -87,13 +81,13 @@ export default function Header({ headerElements }: HeaderProps) {
 
     const toolbarStyle = matches
         ? {
-            minHeight: "64px",
-            paddingLeft: "24px",
-            paddingRight: "24px"
-        }
+              minHeight: "64px",
+              paddingLeft: "24px",
+              paddingRight: "24px"
+          }
         : {
-            minHeight: "48px"
-        }
+              minHeight: "48px"
+          }
 
     return (
         <>
