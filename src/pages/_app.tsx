@@ -15,9 +15,9 @@ const headerElements: HeaderElement[] = [
     { link: "/", label: "Home" },
     { link: "/about", label: "About" },
     { link: "/projects", label: "Projects" },
-    { link: "/events", label: "Events" },
-    { link: "/podcasts", label: "Podcasts" },
-    { link: "/contact-me", label: "Contact" }
+    { link: "/events", label: "Events" }
+    // { link: "/podcasts", label: "Podcasts" },
+    // { link: "/contact-me", label: "Contact" }
 ]
 
 function PersonalWebsite({ Component, pageProps }) {
