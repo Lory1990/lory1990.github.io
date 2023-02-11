@@ -1,6 +1,6 @@
 export interface ICountersBandProps {}
 const CountersBand: React.FC<ICountersBandProps> = () => {
-    return <div></div>
+  return <div></div>
 }
 
 export default CountersBand
