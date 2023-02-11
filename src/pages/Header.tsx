@@ -3,7 +3,7 @@ import { Box, Theme } from "@mui/system"
 import MenuIcon from "@mui/icons-material/Menu"
 import React, { useState } from "react"
 import useHover from "../hooks/useHover"
-import { Router, useRouter } from "next/router"
+import { useRouter } from "next/router"
 import Link from "next/link"
 import { outlinedColor } from "../utils"
 import CloseIcon from "@mui/icons-material/Close"
@@ -81,13 +81,13 @@ export default function Header({ headerElements }: HeaderProps) {
 
     const toolbarStyle = matches
         ? {
-              minHeight: "64px",
-              paddingLeft: "24px",
-              paddingRight: "24px"
-          }
+            minHeight: "64px",
+            paddingLeft: "24px",
+            paddingRight: "24px"
+        }
         : {
-              minHeight: "48px"
-          }
+            minHeight: "48px"
+        }
 
     return (
         <>

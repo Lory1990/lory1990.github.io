@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export interface IPodcastContextType {
+export interface IPodcastContext {
     state?: StateEnum
     open?: boolean
     playingSong?: number
@@ -16,7 +16,7 @@ export enum StateEnum {
     PAUSE
 }
 
-export const PodcastContext = React.createContext<IPodcastContextType>({})
+export const PodcastContext = React.createContext<IPodcastContext>({})
 
 const PodcastProvider: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children }) => {
     const [state, setState] = useState<StateEnum>(StateEnum.STOP)
