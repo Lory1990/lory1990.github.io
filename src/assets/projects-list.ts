@@ -239,7 +239,7 @@ const projects: IProject[] = [
     image: "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
     date: "2018",
     stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
-    category: [CategoryEnum.FITNESS, CategoryEnum.VIDEO_PORTAL],
+    category: [CategoryEnum.FITNESS, CategoryEnum.VIDEO_PORTAL]
     // desktopScreenshots: [
     //   "/img/projects/comunicazione-per-personal-trainer/desktop-1.jpg",
     //   "/img/projects/comunicazione-per-personal-trainer/desktop-2.jpg",
@@ -268,7 +268,7 @@ const projects: IProject[] = [
     stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT, StackEnum.PHP],
     category: [CategoryEnum.CRYPTO, CategoryEnum.TRADING],
     background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
-    image: "/img/projects/cryptoforecast/cryptoforecast.jpg",
+    image: "/img/projects/cryptoforecast/cryptoforecast.jpg"
     // desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
   },
   {
@@ -284,20 +284,20 @@ const projects: IProject[] = [
     image: "/img/projects/navium/card-logo.png",
     stack: [StackEnum.JAVA],
     category: [CategoryEnum.MARINETECH],
-    background: "/img/projects/navium/card-background.png",
+    background: "/img/projects/navium/card-background.png"
     // article: [
-      // {
-      //   type: IArticleDataType.TITLE,
-      //   text: "Navium Faber"
-      // },
-      // {
-      //   type: IArticleDataType.TEXT_IMAGE,
-      //   text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
-      // },
-      // {
-      //   type: IArticleDataType.TITLE,
-      //   text: "Delphi"
-      // }
+    // {
+    //   type: IArticleDataType.TITLE,
+    //   text: "Navium Faber"
+    // },
+    // {
+    //   type: IArticleDataType.TEXT_IMAGE,
+    //   text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
+    // },
+    // {
+    //   type: IArticleDataType.TITLE,
+    //   text: "Delphi"
+    // }
     // ]
   }
 ]
