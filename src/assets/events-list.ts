@@ -133,7 +133,7 @@ const events: IEvent[] = [
     date: "2021-11-18",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -148,7 +148,7 @@ const events: IEvent[] = [
     venue: "YouTube",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -163,7 +163,7 @@ const events: IEvent[] = [
     date: "2021-11-24",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -177,7 +177,7 @@ const events: IEvent[] = [
     video: "https://youtu.be/0nf1SQNDckY",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -193,7 +193,7 @@ const events: IEvent[] = [
     date: "2021-10-13",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -209,7 +209,7 @@ const events: IEvent[] = [
     date: "2021-10-06",
     isOnline: true,
     hero: {
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
@@ -224,23 +224,24 @@ const events: IEvent[] = [
     venue: "YouTube",
     date: "2021-12-01",
     isOnline: true,
-    hero:{
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
     title: "Il team leader cosa fa?",
     subtitle: "Feat Vincenzo Raimondo",
     shortDescription: "A brief story of a typical team leader day feat Vincenzo",
-    description: "In this video, we will delve into the crucial role that an IT Team Leader plays within a company. <br /> As the head of the IT team, the IT Team Leader is responsible for managing and supervising the team to ensure that projects are completed efficiently and effectively. They also play a key role in setting goals and objectives for the team, as well as in the planning and coordination of resources. <br /> During the webinar, we will cover the various responsibilities and duties of an IT Team Leader",
+    description:
+      "In this video, we will delve into the crucial role that an IT Team Leader plays within a company. <br /> As the head of the IT team, the IT Team Leader is responsible for managing and supervising the team to ensure that projects are completed efficiently and effectively. They also play a key role in setting goals and objectives for the team, as well as in the planning and coordination of resources. <br /> During the webinar, we will cover the various responsibilities and duties of an IT Team Leader",
     slug: "il-team-leader-cosa-fa",
     video: "https://www.youtube.com/watch?v=esVxIrfWdIY",
     date: "2021-12-22",
     image: "/img/youtube-live.png",
     venue: "YouTube",
     isOnline: true,
-    hero:{
-      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);"
     }
   },
   {
