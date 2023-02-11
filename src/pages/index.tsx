@@ -148,10 +148,10 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
 export const getStaticProps: GetStaticProps<IHomeProps> = async (context: GetStaticPropsContext) => {
   return {
     props: {
-      techStack: techStack.filter(ts => ts.hilight),
+      techStack: techStack.filter(ts => ts.highlight),
       events: events.slice(0, 3),
       podcasts: podcasts.slice(0, 3),
-      projects: projects.filter(p => p.hilight)
+      projects: projects.filter(p => p.highlight)
     }
   }
 }

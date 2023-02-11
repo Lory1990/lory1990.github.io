@@ -1,26 +1,25 @@
 import { BroadcastOnHome, Person, VideoCameraFront } from "@mui/icons-material"
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, Chip } from "@mui/material"
+import { Box, Button, Card, CardActionArea, CardActions, CardContent, Chip, Theme, useMediaQuery } from "@mui/material"
 import Typography from "@mui/material/Typography"
-import { SxProps, useTheme } from "@mui/system"
+import { useTheme } from "@mui/system"
 import { DateTime } from "luxon"
 import Image from "next/image"
 import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
-import { Theme } from "@emotion/react"
-export interface IEventCardProps extends IEvent {
-  hilight?: boolean
-}
 
-const EventCard: React.FC<IEventCardProps> = ({ hilight, slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
+
+const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
   const theme = useTheme()
+  const matches = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"))
+
 
   return (
     <Link href={`/events/${slug}`}>
-      <Card elevation={1} sx={{ height: "175px", display: "flex" }}>
+      <Card elevation={1} sx={{ height: matches ? "unset" : "175px", display: "flex" }}>
         <CardActionArea>
-          <div style={{ display: "flex" }}>
-            <Image src={image} style={{ objectFit: "contain" }} alt={`Image for ${title}}`} width="175" height="175" />
+          <div style={{ display: "flex", flexDirection: matches ? "column" : "row", alignItems: matches ? "center" : "unset", marginTop: matches ? "1em" : "unset" }}>
+            <Image src={image} style={{ objectFit: "contain", borderRadius: matches ? "10%" : "unset" }} alt={`Image for ${title}}`} width="175" height="175" />
 
             <CardContent sx={{ display: "flex", flexDirection: "column", justifyItems: "left", paddingLeft: "30px", width: "100%" }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -39,7 +38,7 @@ const EventCard: React.FC<IEventCardProps> = ({ hilight, slug, date, image, titl
                   {subtitle}
                 </Typography>
               )}
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div style={{ display: "flex", alignItems: "center", marginTop: matches ? "0.5em" : "unset" }}>
                 <LocationOnIcon fontSize="small" sx={{ color: theme.palette.grey[500], marginLeft: "-0.4rem", marginRight: "0.2rem" }} />
                 <Typography variant="subtitle2" sx={{ fontSize: "0.8rem" }} color={theme.palette.grey[500]}>
                   {venue}

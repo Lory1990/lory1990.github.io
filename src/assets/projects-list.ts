@@ -6,7 +6,6 @@ import StackEnum from "../enums/StackEnum"
 import IArticleData, { IArticleDataType } from "../types/IArticleData"
 
 export interface IProject {
-  hilight?: boolean
   slug: string
   title: string
   subtitle?: string
@@ -44,7 +43,6 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
-    hilight: true,
     slug: "tryvium",
     title: "Tryvium",
     boxDescription: "Booking Platform  you can pay with crypto",
@@ -70,7 +68,7 @@ const projects: IProject[] = [
   },
   {
     slug: "tongy",
-    hilight: true,
+
     title: "Tongy",
     team: "2 people",
     role: "Full Stack Developer",
@@ -102,7 +100,7 @@ const projects: IProject[] = [
     }
   },
   {
-    hilight: true,
+
     slug: "autoconnexa",
     title: "Autoconnexa",
     boxDescription: "Cars InsurTech Platform with veichle tracking",
@@ -150,7 +148,7 @@ const projects: IProject[] = [
     ]
   },
   {
-    hilight: true,
+
     slug: "newo",
     title: "Newo",
     team: "1 - 2 people",
@@ -175,7 +173,7 @@ const projects: IProject[] = [
     desktopScreenshots: ["/img/projects/newo/desktop-01.svg", "/img/projects/newo/desktop-02.svg", "/img/projects/newo/desktop-03.svg", "/img/projects/newo/desktop-04.svg"]
   },
   {
-    hilight: true,
+
     slug: "duck-internship",
     title: "Duck Internship",
     subtitle: "Firsti internship marketplace",
@@ -199,7 +197,7 @@ const projects: IProject[] = [
     date: "2019"
   },
   {
-    hilight: true,
+
     slug: "the-personal-trainer",
     title: "The Personal Trainer",
     boxDescription: "Fitness tracker full web with metrics",

@@ -8,7 +8,7 @@ export interface ITechStack {
   technologies?: Technology[]
   description?: string
   image?: string
-  hilight?: boolean
+  highlight?: boolean
   experience?: number
   category?: "FE" | "BE" | "CLOUD"
 }
@@ -18,7 +18,7 @@ const techStack: ITechStack[] = [
     title: "React",
     image: "icon-react",
     experience: 3,
-    hilight: true,
+
     category: "FE"
   },
   {
@@ -31,7 +31,7 @@ const techStack: ITechStack[] = [
     title: "Java",
     image: "icon-java",
     experience: 5,
-    hilight: true,
+
     category: "BE",
     technologies: [
       {
@@ -47,7 +47,7 @@ const techStack: ITechStack[] = [
   {
     title: "Kubernetes",
     image: "icon-kubernetes",
-    hilight: true,
+
     experience: 1,
     category: "CLOUD",
     technologies: [
@@ -64,7 +64,7 @@ const techStack: ITechStack[] = [
   {
     title: "CSS",
     image: "icon-sass",
-    hilight: true,
+
     experience: 3,
     category: "FE",
     technologies: [
@@ -81,7 +81,7 @@ const techStack: ITechStack[] = [
   {
     title: "NodeJS",
     image: "icon-nodejs",
-    hilight: true,
+
     experience: 5,
     category: "BE",
     technologies: [
@@ -100,7 +100,7 @@ const techStack: ITechStack[] = [
     image: "icon-database",
     experience: 7,
     category: "BE",
-    hilight: true,
+
     technologies: [
       {
         name: "MongoDB",
