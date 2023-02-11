@@ -11,7 +11,7 @@ import CustomHead from "../../../components/CustomHead"
 import VideoTextBand from "../../../components/bands/VideoTextBand"
 import CTABand from "../../../components/CTABand"
 
-interface IEventPageProps extends IEvent { }
+interface IEventPageProps extends IEvent {}
 
 const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover, hero }) => {
   return (
