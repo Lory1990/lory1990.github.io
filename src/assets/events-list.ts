@@ -3,6 +3,7 @@ import IArticleData from "../types/IArticleData"
 
 export interface IEvent {
   slug: string
+  highlight?: boolean
   title: string
   subtitle?: string
   shortDescription?: string

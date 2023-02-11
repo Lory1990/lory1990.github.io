@@ -1,14 +1,15 @@
 import { Meta, Story } from "@storybook/react"
-import EventCard, { IEventCardProps } from "."
+import EventCard from "."
+import { IEvent } from "../../assets/events-list"
 
 export default {
   title: "components/EventCard",
   component: EventCard
 } as Meta
 
-const Template: Story<IEventCardProps> = args => <EventCard {...args} />
+const Template: Story<IEvent> = args => <EventCard {...args} />
 
-export const Plain: Story<IEventCardProps> = Template.bind({})
+export const Plain: Story<IEvent> = Template.bind({})
 
 Plain.args = {
   slug: "creare-una-test-factory-aziendale",

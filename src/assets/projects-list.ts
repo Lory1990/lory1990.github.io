@@ -7,6 +7,7 @@ import IArticleData, { IArticleDataType } from "../types/IArticleData"
 export interface IProject {
   slug: string
   title: string
+  highlight?: boolean
   subtitle?: string
   boxDescription?: string
   description?: string
