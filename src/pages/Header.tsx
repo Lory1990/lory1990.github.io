@@ -141,7 +141,7 @@ export default function Header({ headerElements }: HeaderProps) {
                     }
                 }}
             >
-                {headerElements.map(({ label, link }) => (
+                {headerElements?.map?.(({ label, link }) => (
                     <HeaderElementComponent key={label} link={link} label={label} onClick={() => setDrawerOpen(false)} type={"vertical"} />
                 ))}
             </Drawer>

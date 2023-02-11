@@ -1,7 +1,6 @@
 import { Box } from "@mui/material"
 import { SxProps, Theme } from "@mui/system"
 import Image from "next/image"
-import { Fade, Zoom } from "react-awesome-reveal"
 import IArticleData from "../../types/IArticleData"
 import PageWrapper from "../PageWrapper"
 
@@ -32,15 +31,11 @@ const TextImageBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                     ...sx
                 }}
             >
-                <Fade direction="up" style={{ flex: 1 }} triggerOnce={true}>
-                    <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
-                </Fade>
+                <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
                 {image && (
-                    <Zoom delay={200} style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-                        <Box>
-                            <Image style={{ margin: "auto" }} src={Array.isArray(image) ? image[0] : image} alt={imageAlt || "An image"} width={300} height={300} />
-                        </Box>
-                    </Zoom>
+                    <Box>
+                        <Image style={{ margin: "auto" }} src={Array.isArray(image) ? image[0] : image} alt={imageAlt || "An image"} width={300} height={300} />
+                    </Box>
                 )}
             </Box>
         </PageWrapper>
