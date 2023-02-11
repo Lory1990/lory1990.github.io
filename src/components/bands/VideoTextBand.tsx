@@ -32,7 +32,8 @@ const VideoTextBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
           <Box
             sx={{
               width: {
-                xs: "100%"
+                xs: "100%",
+                sm: "50%"
               }
             }}
           >
