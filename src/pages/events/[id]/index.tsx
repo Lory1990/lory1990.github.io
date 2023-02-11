@@ -49,6 +49,17 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
         </PageWrapper>
       )}
 
+      {description && video && !link && (
+        <VideoTextBand
+        videoUrl={video}
+        text={
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1em" }}>
+            <span dangerouslySetInnerHTML={{ __html: description }} />
+          </Box>
+        }
+      />
+      )}
+
       {!description && video && (
         <>
           {video && typeof window !== "undefined" && (

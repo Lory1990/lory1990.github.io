@@ -1,4 +1,3 @@
-import { Description } from "@mui/icons-material"
 import { IHeroProps } from "../components/Hero"
 import IArticleData from "../types/IArticleData"
 
@@ -24,11 +23,14 @@ const events: IEvent[] = [
   {
     title: "Colloquio tecnico per neolaureati, tips&tricks",
     slug: "colloquio-tecnico-per-neolaureati-tips-and-tricks",
-    description: "In this webinar with TUTORED i will give some Tips and tricks to Junior developers to have a great performance at job interview",
+    description: "In this webinar with opinno i will give some Tips and tricks to Junior developers to have a great performance at job interview",
     date: "2022-06-21",
     venue: "YouTube",
     isOnline: true,
-    image: "/img/opinno.jpeg"
+    image: "/img/opinno.jpeg",
+    hero: {
+      background: "linear-gradient(to right top, #67a75c, #5eb255, #52bd4e, #41c847, #20d33e);"
+    }
   },
   {
     title: "Colmare il debito tecnico",
@@ -38,7 +40,10 @@ const events: IEvent[] = [
     date: "2022-06-23",
     image: "/img/youtube-live.png",
     venue: "YouTube",
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);"
+    }
   },
   {
     slug: "creare-una-test-factory-aziendale",
@@ -61,6 +66,7 @@ const events: IEvent[] = [
     description:
       "In this presentation I want to tell how I handle day by day the development and the monitoring of an enterprise application. We will go deep in the architecture decision strategy and the tools we are using to ensure safety, reliability and scalability of the platform",
     link: "https://www.devfest-triveneto.it/speakers/lorenzo-francesco/",
+    video: "https://www.youtube.com/watch?v=zEbEeWKwfsQ",
     date: "2022-10-22",
     image: "/img/events/2022-gdg-triveneto/badge.webp",
     isOnline: false,
@@ -74,8 +80,9 @@ const events: IEvent[] = [
     title: "Il tuo primo giorno di lavoro",
     subtitle: "the “to do list” for your onboarding in a company",
     description:
-      "In this webonar we will see together what are the first steps as a new employee in a company. I will share the ToDo List of all stuff to do in order to start the right way your new Job!",
+      "In this webinar we will see together what are the first steps as a new employee in a company. I will share the ToDo List of all stuff to do in order to start the right way your new Job!",
     link: "https://www.tutored.me/it/experiences/16361/",
+    video: "https://www.youtube.com/watch?v=of2erri5oCk",
     date: "2022-09-21",
     venue: "Tutored",
     image: "/img/tutored-logo.png",
@@ -108,11 +115,14 @@ const events: IEvent[] = [
     venue: "React JS Milano",
     link: "https://www.meetup.com/it-IT/react-js-milano/events/282339759/",
     date: "2021-12-14",
-    isOnline: false
+    isOnline: false,
+    hero: {
+      background: "linear-gradient(145deg, rgba(239,93,94,1) 0%, rgba(125,36,36,1) 100%)"
+    }
   },
   {
     title: "Deploy in ambienti critici",
-    subtitle: "Feat Vincenzo Raimondi",
+    subtitle: "Feat Vincenzo Raimondo",
     slug: "deploy-in-ambienti-critici-quando-nulla-puo-andare-storto",
     shortDescription: "When nothing can go wrong",
     description:
@@ -121,7 +131,10 @@ const events: IEvent[] = [
     venue: "YouTube",
     video: "https://www.youtube.com/watch?v=loQ54XKbKCw",
     date: "2021-11-18",
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     title: "TeclaSystem dove si creano software per palinsesti TV",
@@ -130,26 +143,28 @@ const events: IEvent[] = [
     slug: "teclasystem-dove-si-creano-software-per-palinsesti-tv",
     subtitle: "Feat Emanuiele Gurini",
     video: "https://www.youtube.com/watch?v=n9CfAbduFAk",
-    cover: "/img/events/meet-the-company-tecla-system.png",
     image: "/img/youtube-live.png",
     date: "2021-10-28",
     venue: "YouTube",
     isOnline: true,
-    hideTitleOnCover: true
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     title: "Con le architetture disaccoppiate è meglio!",
     slug: "con-le-architetture-disaccoppiate-e-meglio",
-    cover: "/img/con-le-architetture-disaccoppiate-e-meglio.png",
     subtitle: "Feat Simone Checcoli",
     shortDescription: "A practical demonstration of how microservices should interact",
     description: "A practical demonstration of how microservices should interact using PubSub events to share data",
     image: "/img/youtube-live.png",
     venue: "YouTube",
-    hideTitleOnCover: true,
     video: "https://www.youtube.com/watch?v=rZ5TFCeWXXQ",
     date: "2021-11-24",
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     title: "Chat With UX/UI",
@@ -160,7 +175,10 @@ const events: IEvent[] = [
     date: "2021-11-10",
     venue: "YouTube",
     video: "https://youtu.be/0nf1SQNDckY",
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     slug: "bastano-200-euro-giorno-per-un-freelance",
@@ -171,11 +189,12 @@ const events: IEvent[] = [
     title: "Bastano 200€/giorno per un freelance?",
     video: "https://www.youtube.com/watch?v=wNi01GiTH50",
     image: "/img/youtube-live.png",
-    cover: "/img/events/200euro-giorno-sono-abbastanza-per-un-freelance.png",
     venue: "YouTube",
     date: "2021-10-13",
-    hideTitleOnCover: true,
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     slug: "chat-with-uxui-laura-brand-identity-e-design-system",
@@ -189,7 +208,9 @@ const events: IEvent[] = [
     venue: "YouTube",
     date: "2021-10-06",
     isOnline: true,
-    hideTitleOnCover: true
+    hero: {
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     slug: "lavoro-da-posti-incredibili-e-sono-felice",
@@ -200,26 +221,33 @@ const events: IEvent[] = [
       "On this webinar, we will be discussing the concept of digital nomadism and the freedom it offers to work whenever and wherever you want. In addition we will give some advices on how to start your own journey as a digital nomad.",
     video: "https://www.youtube.com/watch?v=-Rk9v_hwa8k",
     image: "/img/youtube-live.png",
-    cover: "/img/events/lavoro-da-posto-incredibili-e-sono-felice.png",
     venue: "YouTube",
     date: "2021-12-01",
     isOnline: true,
-    hideTitleOnCover: true
+    hero:{
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     title: "Il team leader cosa fa?",
     subtitle: "Feat Vincenzo Raimondo",
+    shortDescription: "A brief story of a typical team leader day feat Vincenzo",
+    description: "In this video, we will delve into the crucial role that an IT Team Leader plays within a company. <br /> As the head of the IT team, the IT Team Leader is responsible for managing and supervising the team to ensure that projects are completed efficiently and effectively. They also play a key role in setting goals and objectives for the team, as well as in the planning and coordination of resources. <br /> During the webinar, we will cover the various responsibilities and duties of an IT Team Leader",
     slug: "il-team-leader-cosa-fa",
     video: "https://www.youtube.com/watch?v=esVxIrfWdIY",
-    cover: "/img/il-team-leader-cosa-fa.png",
-    hideTitleOnCover: true,
     date: "2021-12-22",
     image: "/img/youtube-live.png",
     venue: "YouTube",
-    isOnline: true
+    isOnline: true,
+    hero:{
+      background: "linear-gradient(to right top, #fb0801, #fb5800, #f78000, #f2a200, #ebc012);",
+    }
   },
   {
     slug: "simulazione-di-colloquio-per-back-end-developer",
+    video: "https://www.youtube.com/watch?v=BsvwJi1seoQ",
+    shortDescription: "In this webinar, we will be discussing some tips and tricks for acing the technical interview for a Junior Backend Developer.",
+    description: "In this webinar, we will be discussing some tips and tricks for acing the technical interview for a Junior Backend Developer.",
     date: "2022-05-16",
     venue: "Tutored",
     title: "Simulazione di colloquio per Back-end Developer",
@@ -235,7 +263,10 @@ const events: IEvent[] = [
     date: "2022-09-05",
     image: "/img/youtube-live.png",
     venue: "YouTube",
-    isOnline: true
+    isOnline: true,
+    hero: {
+      background: "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);"
+    }
   },
   {
     slug: "come-si-supera-il-colloquio-tecnico-domande-esercizi-e-best-practice",
@@ -244,6 +275,7 @@ const events: IEvent[] = [
       "The selection process includes a moment in which the candidate's technical skills are assessed. The technical interview, therefore, is a crucial moment because it offers the possibility to put into practice the skills learned during the course of study or in previous work experiences in front of a company manager.<br />  This webinar is focused on the analysis of some real cases, starting from the exercises and questions submitted to a candidate to continue on what are the best ways to respond. <br /> Furthermore, there will be a focus on what a recruiter looks at before the interview (github, social contributions, etc.) and the importance of tech communities.",
     date: "2022-01-31",
     title: "Come si supera il colloquio tecnico?",
+    video: "https://www.youtube.com/watch?v=g66h9TUEKAk",
     subtitle: "Domande, esercizi e best practice",
     link: "https://www.tutored.me/it/experiences/15090",
     image: "/img/tutored-logo.png",
