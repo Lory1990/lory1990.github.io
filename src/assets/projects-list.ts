@@ -100,7 +100,6 @@ const projects: IProject[] = [
     }
   },
   {
-
     slug: "autoconnexa",
     title: "Autoconnexa",
     boxDescription: "Cars InsurTech Platform with veichle tracking",
@@ -148,7 +147,6 @@ const projects: IProject[] = [
     ]
   },
   {
-
     slug: "newo",
     title: "Newo",
     team: "1 - 2 people",
@@ -173,7 +171,6 @@ const projects: IProject[] = [
     desktopScreenshots: ["/img/projects/newo/desktop-01.svg", "/img/projects/newo/desktop-02.svg", "/img/projects/newo/desktop-03.svg", "/img/projects/newo/desktop-04.svg"]
   },
   {
-
     slug: "duck-internship",
     title: "Duck Internship",
     subtitle: "Firsti internship marketplace",
@@ -197,7 +194,6 @@ const projects: IProject[] = [
     date: "2019"
   },
   {
-
     slug: "the-personal-trainer",
     title: "The Personal Trainer",
     boxDescription: "Fitness tracker full web with metrics",

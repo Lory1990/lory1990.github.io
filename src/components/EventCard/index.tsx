@@ -8,11 +8,9 @@ import Link from "next/link"
 import { IEvent } from "../../assets/events-list"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
 
-
 const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue, shortDescription: description, subtitle }) => {
   const theme = useTheme()
   const matches = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"))
-
 
   return (
     <Link href={`/events/${slug}`}>
