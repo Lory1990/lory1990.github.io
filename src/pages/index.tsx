@@ -96,11 +96,10 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
                 }}
                 image="/img/lorenzo-de-francesco.jpeg"
                 imageAlt="Lorenzo De Francesco"
-                text="Ciao, io sono Lorenzo e da quando avevo 15 anni mi occupo di sviluppo web a 360 gradi.
-
-                    Il mio punto forte è lo sviluppo frontend mobile first. Ho lavorato in Costa Crociere e adesso sono in Fabrick (Banca Sella).
-                    
-                    Sono uno sviluppare in grado di creare App e WebApp da zero e di integrare API e servizi terzi senza problemi. Il real-time è la mia quotidiantà, non è possibile farne a meno nel 2021."
+                text={<>I am Lorenzo, a highly skilled and passionate IT manager, with more than 10 years of experience in the fintech industry software development. I am currently working at <a href="https://step4business.com" target="_blank" rel="noreferrer" >Step4Business</a> to create the best marketplace for entrepreneur 2.0<br />
+                I have developed a broad knowledge of cloud technologies and know how to successfully implement them an enterprise application made of microservices.
+                In addition to my work commitment, I am also an active member of the IT community, constantly participating in events and conferences to stay up-to-date and share my knowledge with others.
+                </>}
             />
             <PageWrapper>
                 <SectionTitle sx={{ marginTop: "3em", marginBottom: "1em" }}>My Projects</SectionTitle>
