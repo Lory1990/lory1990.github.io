@@ -13,7 +13,7 @@ import { ThemeContext } from "../../context/ThemeProvider"
 import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IProjectListProps extends IListProps<IProject> { }
+export interface IProjectListProps extends IListProps<IProject> {}
 
 const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
   const theme = useTheme()

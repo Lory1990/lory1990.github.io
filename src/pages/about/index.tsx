@@ -17,7 +17,7 @@ import CustomHead from "../../components/CustomHead"
 import TextImageBand from "../../components/bands/TextImageBand"
 import Link from "next/link"
 
-import GooglePodcastBadge from '/img/podcast-badges/google.png'
+import GooglePodcastBadge from "/img/podcast-badges/google.png"
 
 interface ITechStackBandPros {
   techStack: ITechStack[]

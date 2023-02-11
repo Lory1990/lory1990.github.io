@@ -8,9 +8,10 @@ export interface IThemeContext {
 
 const defaultThemeContext = {
   headerColor: HeaderColor.WHITE,
-  setHeaderColor: () => { console.log("setHeaderNotDefined") }
+  setHeaderColor: () => {
+    console.log("setHeaderNotDefined")
+  }
 }
-
 
 export const ThemeContext = React.createContext<IThemeContext>(defaultThemeContext)
 
