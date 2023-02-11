@@ -82,10 +82,13 @@ const About: React.FC = () => {
           imageAlt="Lorenzo De Francesco"
           text={
             <>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-              was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+              I am Lorenzo, a highly skilled and passionate IT manager, with more than 10 years of experience in the fintech industry software development. I am currently working at{" "}
+              <a href="https://step4business.com" target="_blank" rel="noreferrer">
+                Step4Business
+              </a>{" "}
+              to create the best marketplace for entrepreneur 2.0
+              <br />I have developed a broad knowledge of cloud technologies and know how to successfully implement them an enterprise application made of microservices. In addition to my work
+              commitment, I am also an active member of the IT community, constantly participating in events and conferences to stay up-to-date and share my knowledge with others.
             </>
           }
         />
@@ -96,7 +99,10 @@ const About: React.FC = () => {
           inverted={true}
           text={
             <>
-              My ambition is to create the best microservices software architecture on the cloud using Kubernetes as the orchestration platform. <br />
+              My ambition is to create the best microservices software architecture on the cloud using Kubernetes as the orchestration platform to scale up my microservices in case of high demand.
+              <br />
+              For me a great architecture must be resililient to cybersecurity attacks. To prevent them I always protect my infrastructure with a strict system of grants, groups and permissions using
+              open source technologies or custom made microservices.
             </>
           }
         />
@@ -158,7 +164,7 @@ const About: React.FC = () => {
           <SectionTitle>My carrer</SectionTitle>
         </Zoom>
         <CareerTimeline timelineEvents={timelineEvents} />
-        <FooterContactForm />
+        <FooterContactForm title="Are you interested in software development?" subtitle="Let's have a chat together!" />
       </PageWrapper>
     </div>
   )
