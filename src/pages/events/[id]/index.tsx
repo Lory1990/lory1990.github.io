@@ -19,27 +19,35 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
       <CustomHead title={title} />
       <Hero title={title} date={date} backgroundImage={cover} subtitle={subtitle} place={venue} hideTitleOnCover={hideTitleOnCover} {...hero} />
 
-      {description && video && link && <VideoTextBand videoUrl={video} text={<Box sx={{display:"flex", flexDirection: "column", gap: "1em"}}>
-          <span dangerouslySetInnerHTML={{__html:description}} />
-          <Box sx={{textAlign: "center"}}>
-            <Button color="primary" variant="contained" href={link} target="_blank" rel="noreferrer">
-            Go to the event
-            </Button>
-          </Box>
-          </Box>}
-      />}
-      {description && !video && link && <PageWrapper  sx={{textAlign: "center"}}>
-        <Box sx={{marginBottom: "1em"}}>
-        <span dangerouslySetInnerHTML={{__html:description}} />
-        </Box>
-            <CTABand
-          onClick={() => {
-            window.open(link, "_blank")
-          }}
-          primaryText="Do you want to know more?"
-          buttonText="Go to the event"
+      {description && video && link && (
+        <VideoTextBand
+          videoUrl={video}
+          text={
+            <Box sx={{ display: "flex", flexDirection: "column", gap: "1em" }}>
+              <span dangerouslySetInnerHTML={{ __html: description }} />
+              <Box sx={{ textAlign: "center" }}>
+                <Button color="primary" variant="contained" href={link} target="_blank" rel="noreferrer">
+                  Go to the event
+                </Button>
+              </Box>
+            </Box>
+          }
         />
-        </PageWrapper>} 
+      )}
+      {description && !video && link && (
+        <PageWrapper sx={{ textAlign: "center" }}>
+          <Box sx={{ marginBottom: "1em" }}>
+            <span dangerouslySetInnerHTML={{ __html: description }} />
+          </Box>
+          <CTABand
+            onClick={() => {
+              window.open(link, "_blank")
+            }}
+            primaryText="Do you want to know more?"
+            buttonText="Go to the event"
+          />
+        </PageWrapper>
+      )}
 
       {!description && video && (
         <>

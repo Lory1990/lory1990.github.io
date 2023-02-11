@@ -26,7 +26,6 @@ interface ITechStackBandPros {
 }
 
 const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, title, image, initialDelay = 0 }) => {
-
   return (
     <Box
       sx={{
