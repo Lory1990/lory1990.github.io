@@ -2,7 +2,6 @@ import { Box } from "@mui/material"
 import { DateTime } from "luxon"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import Image from "next/image"
-import { Fade } from "react-awesome-reveal"
 import events, { IEvent } from "../../assets/events-list"
 import CustomHead from "../../components/CustomHead"
 import EventCard from "../../components/EventCard"
@@ -43,13 +42,7 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
                     </>
                 )}
 
-                <ListWithShowMore
-                    animationComponent={Fade}
-                    animationComponentProps={{ duration: 750, cascade: true, direction: "left", triggerOnce: true }}
-                    list={pastEvents}
-                    singleElementComponent={EventCard}
-                    sliceList={3}
-                />
+                <ListWithShowMore list={pastEvents} singleElementComponent={EventCard} sliceList={3} />
 
                 <FooterContactForm title="I am available for talks" subtitle="Do you need a techinical speaker? Drop a message 👇" />
             </PageWrapper>

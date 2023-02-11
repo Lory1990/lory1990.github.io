@@ -1,6 +1,4 @@
 import { Box } from "@mui/material"
-import Image from "next/image"
-import { Fade, Zoom } from "react-awesome-reveal"
 import IArticleData from "../../types/IArticleData"
 import PageWrapper from "../PageWrapper"
 import ReactPlayer from "react-player"
@@ -28,21 +26,18 @@ const VideoTextBand: React.FC<ITextImageBandProps> = ({ image, text, imageAlt, i
                     alignItems: "center"
                 }}
             >
-                <Fade direction="up" style={{ flex: 1 }} triggerOnce={true}>
-                    <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
-                </Fade>
+                <Box sx={{ lineHeight: "2", flex: 1, textAlign: "justify" }}>{text}</Box>
+
                 {videoUrl && typeof window !== "undefined" && (
-                    <Zoom delay={200} style={{ flex: 1, display: "flex", justifyContent: "center", width: "100%" }}>
-                        <Box
-                            sx={{
-                                width: {
-                                    xs: "100%"
-                                }
-                            }}
-                        >
-                            <ReactPlayer width={"100%"} url={videoUrl} />
-                        </Box>
-                    </Zoom>
+                    <Box
+                        sx={{
+                            width: {
+                                xs: "100%"
+                            }
+                        }}
+                    >
+                        <ReactPlayer width={"100%"} url={videoUrl} />
+                    </Box>
                 )}
             </Box>
         </PageWrapper>

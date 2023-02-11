@@ -81,13 +81,13 @@ export default function Header({ headerElements }: HeaderProps) {
 
     const toolbarStyle = matches
         ? {
-            minHeight: "64px",
-            paddingLeft: "24px",
-            paddingRight: "24px"
-        }
+              minHeight: "64px",
+              paddingLeft: "24px",
+              paddingRight: "24px"
+          }
         : {
-            minHeight: "48px"
-        }
+              minHeight: "48px"
+          }
 
     return (
         <>
@@ -141,7 +141,7 @@ export default function Header({ headerElements }: HeaderProps) {
                     }
                 }}
             >
-                {headerElements.map(({ label, link }) => (
+                {headerElements?.map?.(({ label, link }) => (
                     <HeaderElementComponent key={label} link={link} label={label} onClick={() => setDrawerOpen(false)} type={"vertical"} />
                 ))}
             </Drawer>

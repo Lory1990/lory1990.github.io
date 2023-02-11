@@ -4,7 +4,7 @@ import { useState } from "react"
 export interface IListWithShowMore {
     list: unknown[]
     sliceList: number
-    animationComponent: any
+    animationComponent?: any
     animationComponentProps?: any
     singleElementComponent: any
     singleElementComponentProps?: any
@@ -16,6 +16,34 @@ const ListWithShowMore: React.FC<IListWithShowMore> = ({ list, animationComponen
     const AnimationComponent = animationComponent
     const SingleElementComponent = singleElementComponent
 
+    const payload = (
+        <>
+            {list?.slice?.(0, sliceList)?.map?.((data: any, index: number) => (
+                <SingleElementComponent key={data.slug} {...data} index={index} />
+            ))}
+            {!showOther && (
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}
+                >
+                    <Button onClick={() => setShowOther(true)} color="primary" variant="contained">
+                        Show more
+                    </Button>
+                </Box>
+            )}
+        </>
+    )
+
+    const payloadMore = (
+        <>
+            {list?.slice?.(sliceList)?.map?.((data: any, index: number) => (
+                <SingleElementComponent key={data.slug} {...data} index={index} />
+            ))}
+        </>
+    )
     return (
         <Box
             sx={{
@@ -25,31 +53,8 @@ const ListWithShowMore: React.FC<IListWithShowMore> = ({ list, animationComponen
                 marginBottom: "15px"
             }}
         >
-            <AnimationComponent {...animationComponentProps}>
-                {list?.slice?.(0, sliceList)?.map?.((data: any, index: number) => (
-                    <SingleElementComponent key={data.slug} {...data} index={index} />
-                ))}
-                {!showOther && (
-                    <Box
-                        sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center"
-                        }}
-                    >
-                        <Button onClick={() => setShowOther(true)} color="primary" variant="contained">
-                            Show more
-                        </Button>
-                    </Box>
-                )}
-            </AnimationComponent>
-            {showOther && (
-                <AnimationComponent {...animationComponentProps}>
-                    {list?.slice?.(sliceList)?.map?.((data: any, index: number) => (
-                        <SingleElementComponent key={data.slug} {...data} index={index} />
-                    ))}
-                </AnimationComponent>
-            )}
+            {AnimationComponent ? <AnimationComponent {...animationComponentProps}>{payload}</AnimationComponent> : <>{payload}</>}
+            {showOther && <>{AnimationComponent ? <AnimationComponent {...animationComponentProps}>{payloadMore}</AnimationComponent> : <>{payloadMore}</>}</>}
         </Box>
     )
 }

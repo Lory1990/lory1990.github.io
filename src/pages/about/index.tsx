@@ -13,7 +13,6 @@ import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
 import TechStackList from "../../components/TechStackList"
 import SectionTitle from "../../components/typography/SectionTitle"
-import { Bounce, Fade } from "react-awesome-reveal"
 import CustomHead from "../../components/CustomHead"
 import TextImageBand from "../../components/bands/TextImageBand"
 
@@ -43,29 +42,27 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
                 }
             }}
         >
-            <Fade direction={inverted ? "right" : "left"} delay={initialDelay} triggerOnce={true}>
+            <Box
+                sx={{
+                    flex: 0.5,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignContent: "center",
+                    alignItems: "center"
+                }}
+            >
                 <Box
                     sx={{
-                        flex: 0.5,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignContent: "center",
-                        alignItems: "center"
+                        marginBottom: "0.5em",
+                        textAlign: "center",
+                        fontSize: "1.5em",
+                        fontWeight: "bold"
                     }}
                 >
-                    <Box
-                        sx={{
-                            marginBottom: "0.5em",
-                            textAlign: "center",
-                            fontSize: "1.5em",
-                            fontWeight: "bold"
-                        }}
-                    >
-                        {title}
-                    </Box>
-                    {image && <Image src={image} height={200} width={300} alt={`Image for ${title}`} />}
+                    {title}
                 </Box>
-            </Fade>
+                {image && <Image src={image} height={200} width={300} alt={`Image for ${title}`} />}
+            </Box>
             <TechStackList sx={{ flex: 1.5 }} columns={2} techStack={techStack} />
         </Box>
     )
@@ -82,18 +79,14 @@ const About: React.FC = () => {
                     imageAlt="Lorenzo De Francesco"
                     text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 />
-                <Fade direction="bottom-left" triggerOnce={true}>
-                    <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Ambitions</SectionTitle>
-                </Fade>
+                <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Ambitions</SectionTitle>
                 <TextImageBand
                     image="/img/about/team-building.svg"
                     imageAlt="Architecture"
                     inverted={true}
                     text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 />
-                <Fade direction="top-left" triggerOnce={true}>
-                    <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
-                </Fade>
+                <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
                 <Box
                     sx={{
                         display: "flex",
@@ -105,9 +98,7 @@ const About: React.FC = () => {
                     <TechStackBand inverted={true} image={"/img/about/backend.svg"} title="Backend" techStack={techStack.filter(ts => ts.category == "BE")} initialDelay={0} />
                     <TechStackBand inverted={false} image={"/img/about/cloud.svg"} title="Cloud" techStack={techStack.filter(ts => ts.category == "CLOUD")} />
                 </Box>
-                <Bounce>
-                    <CTABand sx={{ marginTop: "2em", marginBottom: "2em" }} primaryText="Want to work together" secondaryText="Want to work together" buttonText="Contact Me" />
-                </Bounce>
+                <CTABand sx={{ marginTop: "2em", marginBottom: "2em" }} primaryText="Want to work together" secondaryText="Want to work together" buttonText="Contact Me" />
                 <Zoom>
                     <SectionTitle>My carrer</SectionTitle>
                 </Zoom>
