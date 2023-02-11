@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 import { DateTime } from "luxon"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import Image from "next/image"
+import { useContext, useEffect } from "react"
 import events, { IEvent } from "../../assets/events-list"
 import CustomHead from "../../components/CustomHead"
 import EventCard from "../../components/EventCard"
@@ -10,11 +11,16 @@ import Hero from "../../components/Hero"
 import ListWithShowMore from "../../components/ListWithShowMore"
 import PageWrapper from "../../components/PageWrapper"
 import Title from "../../components/typography/Title"
+import { ThemeContext } from "../../context/ThemeProvider"
+import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IEventListProps extends IListProps<IEvent> {}
+export interface IEventListProps extends IListProps<IEvent> { }
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
+    const themeContext = useContext(ThemeContext)
+
+    useEffect(() => { console.log("EVENT:setHeaderColor to White"); themeContext.setHeaderColor(HeaderColor.WHITE) }, [])
     const nextEvent = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days > 0).reverse()?.[0]
     const pastEvents = list.filter(event => DateTime.fromISO(event.date).diffNow("day").days < 0)
 

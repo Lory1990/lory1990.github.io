@@ -1,12 +1,14 @@
 import { AppBar, IconButton, Drawer, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material"
 import { Box, Theme } from "@mui/system"
 import MenuIcon from "@mui/icons-material/Menu"
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import useHover from "../hooks/useHover"
 import { useRouter } from "next/router"
 import Link from "next/link"
 import { outlinedColor } from "../utils"
 import CloseIcon from "@mui/icons-material/Close"
+import { ThemeContext } from "../context/ThemeProvider"
+import { HeaderColor } from "../types/HeaderColor"
 
 export interface HeaderElement {
     label: string
@@ -73,7 +75,7 @@ function HeaderElementComponent({ label, link, type, onClick }: HeaderElement) {
 export default function Header({ headerElements }: HeaderProps) {
     const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"))
     const [drawerOpen, setDrawerOpen] = useState(false)
-
+    const themeContext = useContext(ThemeContext)
     const trigger = useScrollTrigger({
         disableHysteresis: true,
         threshold: 0
@@ -81,13 +83,13 @@ export default function Header({ headerElements }: HeaderProps) {
 
     const toolbarStyle = matches
         ? {
-              minHeight: "64px",
-              paddingLeft: "24px",
-              paddingRight: "24px"
-          }
+            minHeight: "64px",
+            paddingLeft: "24px",
+            paddingRight: "24px"
+        }
         : {
-              minHeight: "48px"
-          }
+            minHeight: "48px"
+        }
 
     return (
         <>
@@ -96,9 +98,9 @@ export default function Header({ headerElements }: HeaderProps) {
                 position="fixed"
                 sx={{
                     zIndex: 1201,
-                    backgroundColor: matches ? (trigger ? "white" : "transparent") : "transparent",
+                    backgroundColor: matches ? (trigger ? "white" : themeContext.headerColor) : "transparent",
                     transition: "background 200ms linear",
-                    borderBottom: matches ? (trigger ? `2px solid ${outlinedColor}` : "unset") : "unset",
+                    borderBottom: (!matches || themeContext.headerColor === HeaderColor.TRANSPARENT) ? "unset" : `2px solid ${outlinedColor}`,//matches ? (trigger ? `2px solid ${outlinedColor}` : "unset") : "unset",
                     ...toolbarStyle
                 }}
             >
