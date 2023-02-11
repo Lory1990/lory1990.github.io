@@ -1,4 +1,3 @@
-import { type } from "os"
 import { IHeroProps } from "../components/Hero"
 import CategoryEnum from "../enums/CategoryEnum"
 import CategroyEnum from "../enums/CategoryEnum"
@@ -199,7 +198,7 @@ const projects: IProject[] = [
     boxDescription: "Fitness tracker full web with metrics",
     description:
       "ThePT is a Progressive Web App that can be installed on smartphones and also accessed online. It is dedicated to both personal trainers and athletes. It allows personal trainers to be contacted by athletes and provide training schedules directly through the App, and to track their progress during their consultation through training and body growth data. <br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Social Login with Facebook, Google and Twitter</li> <li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul><br /> In addition, specific modules have been implemented:<ul><li>Creation of the workout plan </li><li>Monitoring of workouts</li><li>Monitoring of the athlete's body</li><li>Mechanism to meet personal trainer and athlete</li></ul>",
-    image: "/img/projects/the-personal-trainer/logo.png",
+    image: "/img/projects/the-personal-trainer/logo-square.png",
     team: "2 people",
     role: "Head of development",
     stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
@@ -236,7 +235,7 @@ const projects: IProject[] = [
       " This platform is designed to provide trainers with a wealth of resources to help them succeed in their careers using video lessons. These videos are uploaded to YouTube for easy upload and can be viewed inside the app.  Payment for access to the portal's resources is handled through PayPal.<br /> The platform consists of some standard modules that were brought online in less than a week. <ul><li>Login using mail</li><li>Push Notifications</li><li>In App notifications</li><li>User administration </li><li>Knowledge Center</li><li> SendInBlue integration</li><li>Dashboard with marktìeting metrics</li></ul>",
     subtitle: "Personal trainer online video portal",
     background: "/img/projects/comunicazione-per-personal-trainer/hero-background.png",
-    image: "/img/projects/comunicazione-per-personal-trainer/image-background.jpg",
+    image: "/img/projects/comunicazione-per-personal-trainer/square.jpg",
     date: "2018",
     stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
     category: [CategoryEnum.FITNESS, CategoryEnum.VIDEO_PORTAL]
@@ -268,7 +267,7 @@ const projects: IProject[] = [
     stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT, StackEnum.PHP],
     category: [CategoryEnum.CRYPTO, CategoryEnum.TRADING],
     background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
-    image: "/img/projects/cryptoforecast/cryptoforecast.jpg"
+    image: "/img/projects/cryptoforecast/square-cryptoforecast-2.jpg",
     // desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
   },
   {
