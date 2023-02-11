@@ -59,19 +59,18 @@ function PersonalWebsite({ Component, pageProps }) {
 }
 
 function WrapperComponent({ pageProps, Component }) {
-  const router = useRouter();
-
+  const router = useRouter()
 
   useEffect(() => {
-    router.events.on('routeChangeStart', () => themeContext.setHeaderColor(HeaderColor.TRANSPARENT))
+    router.events.on("routeChangeStart", () => themeContext.setHeaderColor(HeaderColor.TRANSPARENT))
     return () => {
-      router.events.off('routeChangeStart', () => themeContext.setHeaderColor(HeaderColor.TRANSPARENT))
+      router.events.off("routeChangeStart", () => themeContext.setHeaderColor(HeaderColor.TRANSPARENT))
     }
-  }, []);
+  }, [])
 
   const themeContext = useContext(ThemeContext)
 
-  return <Component  {...pageProps} />
+  return <Component {...pageProps} />
 }
 
 export default PersonalWebsite
