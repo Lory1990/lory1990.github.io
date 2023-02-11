@@ -18,7 +18,10 @@ const SingleData: React.FC<ISingleDataProps> = ({ icon, text }) => {
       sx={{
         display: "flex",
         alignItems: "center",
-        gap: "5px"
+        gap: "5px",
+        backgroundColor: "white",
+        padding: "5px 10px",
+        borderRadius: "500px"
       }}
     >
       {icon} {text}
