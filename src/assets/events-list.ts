@@ -48,6 +48,7 @@ const events: IEvent[] = [
         link: "https://gdg.community.dev/events/details/google-gdg-valle-daosta-presents-devfest-alps-2022/",
         date: "2023-01-13",
         image: "/img/events/2022-gdg-triveneto/badge.webp",
+        video: "https://www.youtube.com/watch?v=fLaKcao4mnk",
         isOnline: false,
         venue: "Google DevFest Alps 2023",
         hero: {
