@@ -208,19 +208,19 @@ const projects: IProject[] = [
       background: "linear-gradient(145deg, rgba(242,159,47,1) 0%, rgba(242,102,47,1) 100%)"
     },
     date: "2019",
-    desktopScreenshots: ["/img/projects/the-personal-trainer/desktop-01.jpg", "/img/projects/the-personal-trainer/desktop-02.jpg", "/img/projects/the-personal-trainer/desktop-03.png"],
-    mobileScreenshots: [
-      "/img/projects/the-personal-trainer/mobile-1.jpg",
-      "/img/projects/the-personal-trainer/mobile-2.jpg",
-      "/img/projects/the-personal-trainer/mobile-3.jpg",
-      "/img/projects/the-personal-trainer/mobile-4.jpg",
-      "/img/projects/the-personal-trainer/mobile-5.jpg",
-      "/img/projects/the-personal-trainer/mobile-6.jpg",
-      "/img/projects/the-personal-trainer/mobile-7.jpg",
-      "/img/projects/the-personal-trainer/mobile-8.jpg",
-      "/img/projects/the-personal-trainer/mobile-9.gif",
-      "/img/projects/the-personal-trainer/mobile-10.gif"
-    ],
+    // desktopScreenshots: ["/img/projects/the-personal-trainer/desktop-01.jpg", "/img/projects/the-personal-trainer/desktop-02.jpg", "/img/projects/the-personal-trainer/desktop-03.png"],
+    // mobileScreenshots: [
+    //   "/img/projects/the-personal-trainer/mobile-1.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-2.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-3.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-4.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-5.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-6.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-7.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-8.jpg",
+    //   "/img/projects/the-personal-trainer/mobile-9.gif",
+    //   "/img/projects/the-personal-trainer/mobile-10.gif"
+    // ],
     link: {
       instagram: "https://www.instagram.com/appthept/",
       playStore: "https://play.google.com/store/apps/details?id=it.thept"
@@ -240,13 +240,13 @@ const projects: IProject[] = [
     date: "2018",
     stack: [StackEnum.VPS, StackEnum.DOCKER, StackEnum.NODE, StackEnum.REACT],
     category: [CategoryEnum.FITNESS, CategoryEnum.VIDEO_PORTAL],
-    desktopScreenshots: [
-      "/img/projects/comunicazione-per-personal-trainer/desktop-1.jpg",
-      "/img/projects/comunicazione-per-personal-trainer/desktop-2.jpg",
-      "/img/projects/comunicazione-per-personal-trainer/desktop-3.jpg",
-      "/img/projects/comunicazione-per-personal-trainer/desktop-4.jpg",
-      "/img/projects/comunicazione-per-personal-trainer/desktop-5.jpg"
-    ]
+    // desktopScreenshots: [
+    //   "/img/projects/comunicazione-per-personal-trainer/desktop-1.jpg",
+    //   "/img/projects/comunicazione-per-personal-trainer/desktop-2.jpg",
+    //   "/img/projects/comunicazione-per-personal-trainer/desktop-3.jpg",
+    //   "/img/projects/comunicazione-per-personal-trainer/desktop-4.jpg",
+    //   "/img/projects/comunicazione-per-personal-trainer/desktop-5.jpg"
+    // ]
   },
   // {
   //     slug: "yobu",
@@ -269,7 +269,7 @@ const projects: IProject[] = [
     category: [CategoryEnum.CRYPTO, CategoryEnum.TRADING],
     background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
     image: "/img/projects/cryptoforecast/cryptoforecast.jpg",
-    desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
+    // desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
   },
   {
     slug: "navium",
@@ -285,20 +285,20 @@ const projects: IProject[] = [
     stack: [StackEnum.JAVA],
     category: [CategoryEnum.MARINETECH],
     background: "/img/projects/navium/card-background.png",
-    article: [
-      {
-        type: IArticleDataType.TITLE,
-        text: "Navium Faber"
-      },
-      {
-        type: IArticleDataType.TEXT_IMAGE,
-        text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
-      },
-      {
-        type: IArticleDataType.TITLE,
-        text: "Delphi"
-      }
-    ]
+    // article: [
+      // {
+      //   type: IArticleDataType.TITLE,
+      //   text: "Navium Faber"
+      // },
+      // {
+      //   type: IArticleDataType.TEXT_IMAGE,
+      //   text: 'La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012. Avevano sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:\n\n<ul>\n    <li>Un software desktop di progettazione navale di base - <a href="#navium-faber">Navium Faber</a></li>\n    <li>Una soluzione cloud per la gestione della stabilità della nave durante la navigazione - <a href="#delphi">Delphi</a></li>\n    <li>Un motore idrostatiche che permetteva di prevedere l\'andamento di una falla all\'interno della nave - <a href="#delphi">Delphi</a></li>\n</ul>\n\n<h2><a id="navium-faber"></a>'
+      // },
+      // {
+      //   type: IArticleDataType.TITLE,
+      //   text: "Delphi"
+      // }
+    // ]
   }
 ]
 
