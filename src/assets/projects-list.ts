@@ -267,7 +267,7 @@ const projects: IProject[] = [
     stack: [StackEnum.VPS, StackEnum.NODE, StackEnum.REACT, StackEnum.PHP],
     category: [CategoryEnum.CRYPTO, CategoryEnum.TRADING],
     background: "/img/projects/cryptoforecast/cryptoforecast.jpg",
-    image: "/img/projects/cryptoforecast/square-cryptoforecast-2.jpg",
+    image: "/img/projects/cryptoforecast/square-cryptoforecast-2.jpg"
     // desktopScreenshots: ["/img/projects/cryptoforecast/desktop-01.jpeg", "/img/projects/cryptoforecast/desktop-02.png", "/img/projects/cryptoforecast/desktop-03.jpg"]
   },
   {
