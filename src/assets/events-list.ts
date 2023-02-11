@@ -92,6 +92,7 @@ const events: IEvent[] = [
   {
     slug: "guida-pratica-alla-gestione-di-un-prodotto-it",
     title: "Guida pratica alla gestione di un prodotto IT",
+    subtitle: "Because there is no manual to be a great IT manager",
     shortDescription: "The practical guide to handle a IT SaaS",
     description:
       "What should an IT manager do to effectively manage an IT product and the development team? There are many aspects to consider and many non-technical stakeholders. In this talk, I share a practical guide to not make mistakes!",
@@ -169,6 +170,7 @@ const events: IEvent[] = [
   {
     title: "Chat With UX/UI",
     slug: "chat-with-uxui-filomena-sepe",
+    shortDescription: "Carrer path of a UX/UI designer",
     subtitle: "Feat Filomena Sepe",
     description: "Carrer path of a UX/UI designer and how to interact with developers.",
     image: "/img/youtube-live.png",
@@ -246,6 +248,7 @@ const events: IEvent[] = [
   },
   {
     slug: "simulazione-di-colloquio-per-back-end-developer",
+    subtitle: "Questions, exercises and best practices",
     video: "https://www.youtube.com/watch?v=BsvwJi1seoQ",
     shortDescription: "In this webinar, we will be discussing some tips and tricks for acing the technical interview for a Junior Backend Developer.",
     description: "In this webinar, we will be discussing some tips and tricks for acing the technical interview for a Junior Backend Developer.",
@@ -277,7 +280,7 @@ const events: IEvent[] = [
     date: "2022-01-31",
     title: "Come si supera il colloquio tecnico?",
     video: "https://www.youtube.com/watch?v=g66h9TUEKAk",
-    subtitle: "Domande, esercizi e best practice",
+    subtitle: "Questions, exercises and best practices",
     link: "https://www.tutored.me/it/experiences/15090",
     image: "/img/tutored-logo.png",
     cover: "/img/events/tutored-background.svg",
