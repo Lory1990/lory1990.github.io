@@ -1,7 +1,7 @@
 export interface IOtherEventsForYouProps {}
 
 const OtherEventsForYou: React.FC<IOtherEventsForYouProps> = () => {
-    return <div></div>
+  return <div></div>
 }
 
 export default OtherEventsForYou
