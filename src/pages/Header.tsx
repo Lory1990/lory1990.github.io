@@ -100,7 +100,7 @@ export default function Header({ headerElements }: HeaderProps) {
           zIndex: 1201,
           backgroundColor: matches ? (trigger ? "white" : themeContext.headerColor) : "transparent",
           transition: "background 200ms linear",
-          borderBottom: (!matches || themeContext.headerColor === HeaderColor.TRANSPARENT) && !trigger ? "unset" : `2px solid ${outlinedColor}`, //matches ? (trigger ? `2px solid ${outlinedColor}` : "unset") : "unset",
+          borderBottom: (themeContext.headerColor === HeaderColor.TRANSPARENT && !trigger) || !matches ? "unset" : `2px solid ${outlinedColor}`, //matches ? (trigger ? `2px solid ${outlinedColor}` : "unset") : "unset",
           ...toolbarStyle
         }}
       >
