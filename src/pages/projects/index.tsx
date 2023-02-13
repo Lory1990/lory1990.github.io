@@ -12,7 +12,7 @@ import { ThemeContext } from "../../context/ThemeProvider"
 import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IProjectListProps extends IListProps<IProject> { }
+export interface IProjectListProps extends IListProps<IProject> {}
 
 const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
   const theme = useTheme()
@@ -47,7 +47,6 @@ const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
             return <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
           })}
         </CardsBand>
-
       </PageWrapper>
     </div>
   )

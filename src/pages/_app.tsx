@@ -28,7 +28,7 @@ const contactFormRules: ContactFormRule[] = [
     route: "/",
     exact: true,
     title: "Are you interested in software development?",
-    subtitle: "Let's have a chat together!",
+    subtitle: "Let's have a chat together!"
   },
   {
     route: "/projects/[id]",
@@ -39,7 +39,7 @@ const contactFormRules: ContactFormRule[] = [
     route: "/projects",
     exact: true,
     title: "Do like these projects?",
-    subtitle: "Contact me 📩 I am here to develop your best project ever!",
+    subtitle: "Contact me 📩 I am here to develop your best project ever!"
   },
   {
     route: "/events",
@@ -53,7 +53,6 @@ const contactFormRules: ContactFormRule[] = [
     subtitle: "Drop me a message 💬, I love partecipating to events!"
   }
   // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
-
 ]
 function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()

@@ -14,7 +14,7 @@ import { ThemeContext } from "../../context/ThemeProvider"
 import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IEventListProps extends IListProps<IEvent> { }
+export interface IEventListProps extends IListProps<IEvent> {}
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
   const themeContext = useContext(ThemeContext)
@@ -50,8 +50,6 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
         )}
 
         <ListWithShowMore list={pastEvents} singleElementComponent={EventCard} sliceList={3} />
-
-
       </PageWrapper>
     </div>
   )

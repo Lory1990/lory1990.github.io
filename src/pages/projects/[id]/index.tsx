@@ -10,7 +10,7 @@ import ProjectDescription from "../../../components/ProjectDescription"
 import SocialLinks from "../../../components/SocialLinks"
 import SectionTitle from "../../../components/typography/SectionTitle"
 
-interface IProjectProps extends IProject { }
+interface IProjectProps extends IProject {}
 
 const SingleProjectPage: NextPage<IProjectProps> = props => {
   const { hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero } = props
@@ -59,7 +59,6 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
             <SocialLinks {...props} />
           </>
         )}
-
       </PageWrapper>
     </div>
   )

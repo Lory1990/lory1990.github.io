@@ -18,13 +18,7 @@ const CustomContactForm: React.FC = () => {
 
   return (
     <>
-      <TextField
-        variant="outlined"
-        value={context.values.email}
-        onChange={e => context.setFieldValue("email", e.target.value)}
-        error={Boolean(context.errors.email)}
-        label="Your email address"
-      />
+      <TextField variant="outlined" value={context.values.email} onChange={e => context.setFieldValue("email", e.target.value)} error={Boolean(context.errors.email)} label="Your email address" />
       <TextField
         variant="outlined"
         multiline={true}
@@ -65,7 +59,7 @@ interface IContactFormProps {
 
 const ContactForm: React.FC<IContactFormProps> = ({ rules }) => {
   const router = useRouter()
-  const chosenRoute = rules.find(({ route, exact }) => exact ? route === router.pathname : router.pathname.startsWith(route))
+  const chosenRoute = rules.find(({ route, exact }) => (exact ? route === router.pathname : router.pathname.startsWith(route)))
 
   const onSubmit = async (value: IFormatData, formikProps: FormikProps<IFormatData>) => {
     try {
