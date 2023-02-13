@@ -4,14 +4,13 @@ import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import projects, { IProject } from "../../../assets/projects-list"
 import Article from "../../../components/Article"
 import CustomHead from "../../../components/CustomHead"
-import FooterContactForm from "../../../components/FooterContactForm"
 import Hero from "../../../components/Hero"
 import PageWrapper from "../../../components/PageWrapper"
 import ProjectDescription from "../../../components/ProjectDescription"
 import SocialLinks from "../../../components/SocialLinks"
 import SectionTitle from "../../../components/typography/SectionTitle"
 
-interface IProjectProps extends IProject {}
+interface IProjectProps extends IProject { }
 
 const SingleProjectPage: NextPage<IProjectProps> = props => {
   const { hideTitleOnCover, article, background, subtitle, title, desktopScreenshots, mobileScreenshots, hero } = props
@@ -60,10 +59,7 @@ const SingleProjectPage: NextPage<IProjectProps> = props => {
             <SocialLinks {...props} />
           </>
         )}
-        <FooterContactForm
-          title="Did you like this project?"
-          subtitle="Contact me if you want to create a similar one with me. <br /> I am always looking for new opportunities to network and work with creative and motivated people."
-        />
+
       </PageWrapper>
     </div>
   )

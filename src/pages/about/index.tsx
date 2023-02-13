@@ -8,7 +8,6 @@ import techStack, { ITechStack } from "../../assets/tech-stack"
 import timelineEvents from "../../assets/timeline-carrer"
 import CareerTimeline from "../../components/CareerTimeline"
 import CTABand from "../../components/CTABand"
-import FooterContactForm from "../../components/FooterContactForm"
 import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
 import TechStackList from "../../components/TechStackList"
@@ -160,7 +159,6 @@ const About: React.FC = () => {
           <SectionTitle>My carrer</SectionTitle>
         </Zoom>
         <CareerTimeline timelineEvents={timelineEvents} />
-        <FooterContactForm title="Are you interested in software development?" subtitle="Let's have a chat together!" />
       </PageWrapper>
     </div>
   )

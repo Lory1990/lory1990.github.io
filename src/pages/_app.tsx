@@ -13,6 +13,7 @@ import { Settings } from "luxon"
 import ThemeProvider, { ThemeContext } from "../context/ThemeProvider"
 import { useRouter } from "next/router"
 import { HeaderColor } from "../types/HeaderColor"
+import ContactForm, { ContactFormRule } from "../components/ContactForm"
 
 const headerElements: HeaderElement[] = [
   { link: "/about", label: "About" },
@@ -22,6 +23,38 @@ const headerElements: HeaderElement[] = [
   // { link: "/contact-me", label: "Contact" }
 ]
 
+const contactFormRules: ContactFormRule[] = [
+  {
+    route: "/",
+    exact: true,
+    title: "Are you interested in software development?",
+    subtitle: "Let's have a chat together!",
+  },
+  {
+    route: "/projects/[id]",
+    title: "Did you like this project?",
+    subtitle: "Contact me if you want to create a similar one with me. <br /> I am always looking for new opportunities to network and work with creative and motivated people."
+  },
+  {
+    route: "/projects",
+    exact: true,
+    title: "Do like these projects?",
+    subtitle: "Contact me 📩 I am here to develop your best project ever!",
+  },
+  {
+    route: "/events",
+    exact: true,
+    title: "I am available for talks",
+    subtitle: "Do you need a techinical speaker? Drop a message 👇"
+  },
+  {
+    route: "/events/[id]",
+    title: "Shall we do a webinar together?",
+    subtitle: "Drop me a message 💬, I love partecipating to events!"
+  }
+  // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
+
+]
 function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()
   Settings.defaultLocale = "en"
@@ -42,6 +75,7 @@ function PersonalWebsite({ Component, pageProps }) {
               <WrapperComponent Component={Component} pageProps={pageProps} />
               {/* <Component  {...pageProps} /> */}
             </Box>
+            <ContactForm rules={contactFormRules} />
             <Footer
               githubLink="https://github.com/Lory1990"
               facebookLink="https://www.facebook.com/lory1990"

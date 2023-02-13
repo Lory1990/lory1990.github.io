@@ -1,4 +1,4 @@
 export enum HeaderColor {
   WHITE = "white",
-  TRANSPARENT = "transparent"
+  TRANSPARENT = "unset"
 }

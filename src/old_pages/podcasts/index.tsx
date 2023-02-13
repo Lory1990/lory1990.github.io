@@ -6,7 +6,6 @@ import PageWrapper from "../../components/PageWrapper"
 import PodcastCard from "../../components/PodcastCard"
 import Image from "next/image"
 import { fetchPodcastData } from "../../client/PodcastClient"
-import FooterContactForm from "../../components/FooterContactForm"
 import ListWithShowMore from "../../components/ListWithShowMore"
 import CustomHead from "../../components/CustomHead"
 
@@ -30,7 +29,6 @@ const Podcasts: NextPage<IPodcastProps> = ({ list, description, title }) => {
       <PageWrapper sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         <ListWithShowMore list={list} singleElementComponent={PodcastCard} sliceList={3} />
       </PageWrapper>
-      <FooterContactForm title={"I am available for collaboration"} subtitle={"Want to do a podcast with me?"} />
     </div>
   )
 }

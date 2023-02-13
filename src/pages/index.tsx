@@ -12,7 +12,6 @@ import BlogCard from "../components/BlogCard"
 import CardsBand from "../components/CardsBand"
 import CustomHead from "../components/CustomHead"
 import FloatingFollowMe from "../components/FloatingFollowMe"
-import FooterContactForm from "../components/FooterContactForm"
 import Hero from "../components/Hero"
 import PageWrapper from "../components/PageWrapper"
 import TechStackList from "../components/TechStackList"
@@ -139,7 +138,6 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
             <Button variant="contained">Discover more</Button>
           </Link>
         </Box>
-        <FooterContactForm title="Do you want to work together?" subtitle="Contact me 📩 I am here to develop your best project ever!" />
       </PageWrapper>
     </div>
   )

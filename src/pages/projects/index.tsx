@@ -6,14 +6,13 @@ import projects, { IProject } from "../../assets/projects-list"
 import BlogCard from "../../components/BlogCard"
 import CardsBand from "../../components/CardsBand"
 import CustomHead from "../../components/CustomHead"
-import FooterContactForm from "../../components/FooterContactForm"
 import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
 import { ThemeContext } from "../../context/ThemeProvider"
 import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IProjectListProps extends IListProps<IProject> {}
+export interface IProjectListProps extends IListProps<IProject> { }
 
 const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
   const theme = useTheme()
@@ -48,7 +47,7 @@ const ProjectListPage: NextPage<IProjectListProps> = ({ list }) => {
             return <BlogCard key={project.slug} title={project.title} description={project.boxDescription} image={project.image} link={`projects/${project.slug}`} />
           })}
         </CardsBand>
-        <FooterContactForm title={"Do like these projects?"} subtitle="Contact me 📩 I am here to develop your best project ever!" />
+
       </PageWrapper>
     </div>
   )

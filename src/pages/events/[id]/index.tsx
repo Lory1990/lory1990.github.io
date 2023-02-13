@@ -2,7 +2,6 @@ import { Box, Button } from "@mui/material"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import events, { IEvent } from "../../../assets/events-list"
 import Article from "../../../components/Article"
-import FooterContactForm from "../../../components/FooterContactForm"
 import Hero from "../../../components/Hero"
 import ReactPlayer from "react-player"
 import PageWrapper from "../../../components/PageWrapper"
@@ -11,7 +10,7 @@ import CustomHead from "../../../components/CustomHead"
 import VideoTextBand from "../../../components/bands/VideoTextBand"
 import CTABand from "../../../components/CTABand"
 
-interface IEventPageProps extends IEvent {}
+interface IEventPageProps extends IEvent { }
 
 const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover, hero }) => {
   return (
@@ -82,7 +81,7 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
       <Article data={article} />
 
       <OtherEventsForYou />
-      <FooterContactForm title="Shall we do a webinar together?" subtitle="Drop me a message 💬, i love partecipating to events!" />
+
     </div>
   )
 }

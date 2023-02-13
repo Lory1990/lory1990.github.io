@@ -6,7 +6,6 @@ import { useContext, useEffect } from "react"
 import events, { IEvent } from "../../assets/events-list"
 import CustomHead from "../../components/CustomHead"
 import EventCard from "../../components/EventCard"
-import FooterContactForm from "../../components/FooterContactForm"
 import Hero from "../../components/Hero"
 import ListWithShowMore from "../../components/ListWithShowMore"
 import PageWrapper from "../../components/PageWrapper"
@@ -15,7 +14,7 @@ import { ThemeContext } from "../../context/ThemeProvider"
 import { HeaderColor } from "../../types/HeaderColor"
 import { IListProps } from "../../types/IListProps"
 
-export interface IEventListProps extends IListProps<IEvent> {}
+export interface IEventListProps extends IListProps<IEvent> { }
 
 const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
   const themeContext = useContext(ThemeContext)
@@ -52,7 +51,7 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
 
         <ListWithShowMore list={pastEvents} singleElementComponent={EventCard} sliceList={3} />
 
-        <FooterContactForm title="I am available for talks" subtitle="Do you need a techinical speaker? Drop a message 👇" />
+
       </PageWrapper>
     </div>
   )

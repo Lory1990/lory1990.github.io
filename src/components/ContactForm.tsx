@@ -13,12 +13,18 @@ export interface IFormatData {
   email: string
 }
 
-const ContactForm: React.FC = () => {
+const CustomContactForm: React.FC = () => {
   const context = useFormikContext<IFormatData>()
 
   return (
     <>
-      <TextField variant="outlined" value={context.values.email} onChange={e => context.setFieldValue("email", e.target.value)} error={Boolean(context.errors.email)} label="Your email address" />
+      <TextField
+        variant="outlined"
+        value={context.values.email}
+        onChange={e => context.setFieldValue("email", e.target.value)}
+        error={Boolean(context.errors.email)}
+        label="Your email address"
+      />
       <TextField
         variant="outlined"
         multiline={true}
@@ -47,13 +53,19 @@ const ContactForm: React.FC = () => {
   )
 }
 
-export interface IFooterContactFormProps {
+export interface ContactFormRule {
+  route: string
   title?: string
   subtitle?: string
+  exact?: boolean
+}
+interface IContactFormProps {
+  rules: ContactFormRule[]
 }
 
-const FooterContactForm: React.FC<IFooterContactFormProps> = ({ title, subtitle }) => {
+const ContactForm: React.FC<IContactFormProps> = ({ rules }) => {
   const router = useRouter()
+  const chosenRoute = rules.find(({ route, exact }) => exact ? route === router.pathname : router.pathname.startsWith(route))
 
   const onSubmit = async (value: IFormatData, formikProps: FormikProps<IFormatData>) => {
     try {
@@ -69,41 +81,43 @@ const FooterContactForm: React.FC<IFooterContactFormProps> = ({ title, subtitle 
     }
   }
 
-  return (
-    <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "40px 0"
-        }}
-      >
-        <Form
-          style={{
+  if (!chosenRoute) return <></>
+  else
+    return (
+      <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            maxWidth: "500px",
-            width: "100%",
-            gap: "20px",
-            marginBottom: "30px"
+            alignItems: "center",
+            margin: "40px 0"
           }}
         >
-          {title && <Typography sx={{ textAlign: "center", fontWeight: "bold", fontSize: "1.5em" }}>{title}</Typography>}
-          {subtitle && <Typography sx={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: subtitle }}></Typography>}
-          <Box
-            sx={{
+          <Form
+            style={{
               display: "flex",
               flexDirection: "column",
-              gap: "20px"
+              maxWidth: "500px",
+              width: "100%",
+              gap: "20px",
+              marginBottom: "30px"
             }}
           >
-            <ContactForm />
-          </Box>
-        </Form>
-      </Box>
-    </Formik>
-  )
+            {chosenRoute?.title && <Typography sx={{ textAlign: "center", fontWeight: "bold", fontSize: "1.5em" }}>{chosenRoute.title}</Typography>}
+            {chosenRoute?.subtitle && <Typography sx={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: chosenRoute.subtitle }}></Typography>}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px"
+              }}
+            >
+              <CustomContactForm />
+            </Box>
+          </Form>
+        </Box>
+      </Formik>
+    )
 }
 
-export default FooterContactForm
+export default ContactForm
