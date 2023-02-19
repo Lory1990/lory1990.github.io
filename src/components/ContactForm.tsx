@@ -75,25 +75,15 @@ const ContactForm: React.FC<IContactFormProps> = ({ rules }) => {
     }
   }
 
-
-
-
   if (!chosenRoute) return <></>
   else
     return (
-      <Formik
-        validateOnBlur={false}
-        validateOnChange={false}
-        validationSchema={validationSchema}
-        initialValues={{ email: "", text: "" }}
-        onSubmit={onSubmit}
-      >
-
+      <Formik validateOnBlur={false} validateOnChange={false} validationSchema={validationSchema} initialValues={{ email: "", text: "" }} onSubmit={onSubmit}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <Form

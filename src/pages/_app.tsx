@@ -16,8 +16,6 @@ import { HeaderColor } from "../types/HeaderColor"
 import ContactForm, { ContactFormRule } from "../components/ContactForm"
 import Contact from "./Contact"
 
-
-
 const headerElements: HeaderElement[] = [
   { link: "/about", label: "About" },
   { link: "/projects", label: "Projects" },
@@ -58,20 +56,19 @@ const contactFormRules: ContactFormRule[] = [
   // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
 ]
 
-
-
 function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()
   Settings.defaultLocale = "en"
 
-  useEffect(() => { fetchPodcastData().then(value => setPodcastData(value)) }, [])
+  useEffect(() => {
+    fetchPodcastData().then(value => setPodcastData(value))
+  }, [])
 
   return (
     <PodcastProvider>
       <MUIThemeProvider>
         <ThemeProvider>
           <Box id="main-page" sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-
             <Header headerElements={headerElements} />
             <Box id="main-content" sx={{ flex: 1 }}>
               <WrapperComponent Component={Component} pageProps={pageProps} />
@@ -91,7 +88,7 @@ function PersonalWebsite({ Component, pageProps }) {
           {podcastData && <PodcastPlayer list={podcastData.item} />}
         </ThemeProvider>
       </MUIThemeProvider>
-    </PodcastProvider >
+    </PodcastProvider>
   )
 }
 

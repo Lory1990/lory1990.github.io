@@ -1,9 +1,8 @@
 import ContactForm from "../components/ContactForm"
 import GoogleMap from "../components/GoogleMap"
-import { Wrapper as GoogleMapsWrapper, Status } from "@googlemaps/react-wrapper";
-import { useState } from "react";
-import { Theme, useMediaQuery } from "@mui/material";
-
+import { Wrapper as GoogleMapsWrapper, Status } from "@googlemaps/react-wrapper"
+import { useState } from "react"
+import { Theme, useMediaQuery } from "@mui/material"
 
 function Contact({ contactFormRules }) {
   const [mapsStatus, setMapsStatus] = useState<Status>(Status.LOADING)
@@ -14,15 +13,15 @@ function Contact({ contactFormRules }) {
         <ContactForm rules={contactFormRules} />
       </div>
 
-      {matches && <GoogleMapsWrapper
-        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}
-        callback={(status, loader) => setMapsStatus(status)}>
-        {mapsStatus === Status.SUCCESS &&
-          <div style={{ width: "30%" }}>
-            <GoogleMap />
-          </div>
-        }
-      </GoogleMapsWrapper>}
+      {matches && (
+        <GoogleMapsWrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY} callback={(status, loader) => setMapsStatus(status)}>
+          {mapsStatus === Status.SUCCESS && (
+            <div style={{ width: "30%" }}>
+              <GoogleMap />
+            </div>
+          )}
+        </GoogleMapsWrapper>
+      )}
     </div>
   )
 }

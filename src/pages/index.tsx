@@ -48,7 +48,6 @@ const TextRoll: React.FC = () => {
 }
 
 export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techStack }) => {
-
   return (
     <div>
       <CustomHead />
