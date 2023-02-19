@@ -1,6 +1,6 @@
 import "../styles/globals.css"
 import "../styles/icons.css"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import Header, { HeaderElement } from "./Header"
 import MUIThemeProvider from "../MUIThemeProvider"
 import Footer from "../components/Footer"
@@ -14,6 +14,9 @@ import ThemeProvider, { ThemeContext } from "../context/ThemeProvider"
 import { useRouter } from "next/router"
 import { HeaderColor } from "../types/HeaderColor"
 import ContactForm, { ContactFormRule } from "../components/ContactForm"
+
+import { Wrapper as GoogleMapsWrapper, Status } from "@googlemaps/react-wrapper";
+import GoogleMap from "./GoogleMap"
 
 const headerElements: HeaderElement[] = [
   { link: "/about", label: "About" },
@@ -54,14 +57,21 @@ const contactFormRules: ContactFormRule[] = [
   }
   // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
 ]
+
+
+
 function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()
+  const [mapsStatus, setMapsStatus] = useState<Status>(Status.LOADING)
+
   Settings.defaultLocale = "en"
+
 
   useEffect(() => {
     fetchPodcastData().then(value => {
       setPodcastData(value)
     })
+
   }, [])
 
   return (
@@ -69,12 +79,26 @@ function PersonalWebsite({ Component, pageProps }) {
       <MUIThemeProvider>
         <ThemeProvider>
           <Box id="main-page" sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+
             <Header headerElements={headerElements} />
             <Box id="main-content" sx={{ flex: 1 }}>
               <WrapperComponent Component={Component} pageProps={pageProps} />
               {/* <Component  {...pageProps} /> */}
             </Box>
-            <ContactForm rules={contactFormRules} />
+
+            <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+              <div style={{ width: "40%" }}>
+                <ContactForm rules={contactFormRules} />
+              </div>
+              <div style={{ width: "30%" }}>
+
+                <GoogleMapsWrapper
+                  apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}
+                  callback={(status, loader) => setMapsStatus(status)}>
+                  <GoogleMap />
+                </GoogleMapsWrapper>
+              </div>
+            </div>
             <Footer
               githubLink="https://github.com/Lory1990"
               facebookLink="https://www.facebook.com/lory1990"
@@ -87,7 +111,7 @@ function PersonalWebsite({ Component, pageProps }) {
           {podcastData && <PodcastPlayer list={podcastData.item} />}
         </ThemeProvider>
       </MUIThemeProvider>
-    </PodcastProvider>
+    </PodcastProvider >
   )
 }
 
