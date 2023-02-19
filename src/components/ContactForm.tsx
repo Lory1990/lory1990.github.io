@@ -94,15 +94,13 @@ const ContactForm: React.FC<IContactFormProps> = ({ rules }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            margin: "40px 0"
           }}
         >
           <Form
             style={{
               display: "flex",
               flexDirection: "column",
-              maxWidth: "500px",
-              width: "100%",
+
               gap: "20px",
               marginBottom: "30px"
             }}

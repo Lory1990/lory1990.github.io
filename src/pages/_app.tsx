@@ -1,7 +1,7 @@
 import "../styles/globals.css"
 import "../styles/icons.css"
 import { useContext, useEffect, useRef, useState } from "react"
-import Header, { HeaderElement } from "./Header"
+import Header, { HeaderElement } from "../components/Header"
 import MUIThemeProvider from "../MUIThemeProvider"
 import Footer from "../components/Footer"
 import { Box } from "@mui/material"
@@ -14,9 +14,9 @@ import ThemeProvider, { ThemeContext } from "../context/ThemeProvider"
 import { useRouter } from "next/router"
 import { HeaderColor } from "../types/HeaderColor"
 import ContactForm, { ContactFormRule } from "../components/ContactForm"
+import Contact from "./Contact"
 
-import { Wrapper as GoogleMapsWrapper, Status } from "@googlemaps/react-wrapper";
-import GoogleMap from "./GoogleMap"
+
 
 const headerElements: HeaderElement[] = [
   { link: "/about", label: "About" },
@@ -62,17 +62,9 @@ const contactFormRules: ContactFormRule[] = [
 
 function PersonalWebsite({ Component, pageProps }) {
   const [podcastData, setPodcastData] = useState<any>()
-  const [mapsStatus, setMapsStatus] = useState<Status>(Status.LOADING)
-
   Settings.defaultLocale = "en"
 
-
-  useEffect(() => {
-    fetchPodcastData().then(value => {
-      setPodcastData(value)
-    })
-
-  }, [])
+  useEffect(() => { fetchPodcastData().then(value => setPodcastData(value)) }, [])
 
   return (
     <PodcastProvider>
@@ -85,20 +77,8 @@ function PersonalWebsite({ Component, pageProps }) {
               <WrapperComponent Component={Component} pageProps={pageProps} />
               {/* <Component  {...pageProps} /> */}
             </Box>
+            <Contact contactFormRules={contactFormRules} />
 
-            <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
-              <div style={{ width: "40%" }}>
-                <ContactForm rules={contactFormRules} />
-              </div>
-              <div style={{ width: "30%" }}>
-
-                <GoogleMapsWrapper
-                  apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}
-                  callback={(status, loader) => setMapsStatus(status)}>
-                  <GoogleMap />
-                </GoogleMapsWrapper>
-              </div>
-            </div>
             <Footer
               githubLink="https://github.com/Lory1990"
               facebookLink="https://www.facebook.com/lory1990"
