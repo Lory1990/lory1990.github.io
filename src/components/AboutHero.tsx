@@ -107,11 +107,11 @@ const AboutHero: React.FC = () => {
             />{" "}
           </Box>
         </Box>
-        <Box sx={{  maxWidth: {xs: "100vw", sm:"45vw"}, textAlign: "center" }}>
+        <Box sx={{ maxWidth: { xs: "100vw", sm: "45vw" }, textAlign: "center" }}>
           <Image src="/img/about-hero.webp" width={40} height={40} alt="Lorenzo De Francesco" style={{ height: "auto", width: "auto", maxWidth: "90%" }} />
         </Box>
       </Box>
-      <Box sx={{marginBottom: {xs: "1em", sm: "1em"}, justifyContent:"center", display: "flex"}}>
+      <Box sx={{ marginBottom: { xs: "1em", sm: "1em" }, justifyContent: "center", display: "flex" }}>
         <ScrollIcon />
       </Box>
     </Box>

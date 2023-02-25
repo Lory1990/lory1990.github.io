@@ -9,7 +9,7 @@ function Contact({ contactFormRules }) {
   const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"))
   return (
     <div style={{ display: "flex", justifyContent: "center", width: "100%", margin: "40px 0px", gap: "2em" }}>
-      <Box sx={{maxWidth: { xs: "100vw", sm: "30vw" }, width: matches ? "50%" : "90%" }}>
+      <Box sx={{ maxWidth: { xs: "100vw", sm: "30vw" }, width: matches ? "50%" : "90%" }}>
         <ContactForm rules={contactFormRules} />
       </Box>
 
