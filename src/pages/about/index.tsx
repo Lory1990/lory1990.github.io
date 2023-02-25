@@ -134,11 +134,10 @@ const About: React.FC = () => {
                   <Image src="/img/podcast-badges/google.png" width={330} height={80} alt="Listen on google podcast" style={{ height: 40, width: "auto" }} />
                 </a>
                 <a href="https://open.spotify.com/show/0kfHlz3PUtYdQMsUQvWSWv" target="_blank" rel="noreferrer">
-                <Image src="/img/podcast-badges/spotify.webp" width={330} height={80} alt="Listen on spotify podcast" style={{ height: 40, width: "auto" }} />
+                  <Image src="/img/podcast-badges/spotify.webp" width={330} height={80} alt="Listen on spotify podcast" style={{ height: 40, width: "auto" }} />
                 </a>
                 <a href="https://podcasts.apple.com/us/podcast/il-frontendista-imbruttito/id1588309592" target="_blank" rel="noreferrer">
-                <Image src="/img/podcast-badges/apple.svg" width={330} height={80} alt="Listen on apple podcast" style={{ height: 40, width: "auto" }} />
-                  
+                  <Image src="/img/podcast-badges/apple.svg" width={330} height={80} alt="Listen on apple podcast" style={{ height: 40, width: "auto" }} />
                 </a>
               </Box>
             </>
