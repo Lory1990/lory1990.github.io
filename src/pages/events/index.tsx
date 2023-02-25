@@ -37,7 +37,7 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
         }}
       >
         <Box sx={{ position: "absolute", right: "10px", bottom: "20px" }}>
-          <Image src="/img/events.png" alt="Projects" width={657} height={435} />
+          <Image src="/img/events.png" alt="Projects" width={450} height={298} />
         </Box>
       </Hero>
       <PageWrapper>
