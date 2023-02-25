@@ -14,7 +14,7 @@ import ThemeProvider, { ThemeContext } from "../context/ThemeProvider"
 import { useRouter } from "next/router"
 import { HeaderColor } from "../types/HeaderColor"
 import ContactForm, { ContactFormRule } from "../components/ContactForm"
-import Contact from "./Contact"
+import Contact from "../components/Contact"
 
 const headerElements: HeaderElement[] = [
   { link: "/about", label: "About" },

@@ -1,5 +1,5 @@
-import ContactForm from "../components/ContactForm"
-import GoogleMap from "../components/GoogleMap"
+import ContactForm from "./ContactForm"
+import GoogleMap from "./GoogleMap"
 import { Wrapper as GoogleMapsWrapper, Status } from "@googlemaps/react-wrapper"
 import { useState } from "react"
 import { Box, Theme, useMediaQuery } from "@mui/material"
