@@ -52,6 +52,11 @@ const contactFormRules: ContactFormRule[] = [
     route: "/events/[id]",
     title: "Shall we do a webinar together?",
     subtitle: "Drop me a message 💬, I love partecipating to events!"
+  },
+  {
+    route: "/about",
+    title: "Do you need a IT Manager?",
+    subtitle: "Contact me 📩 to start a new collaboration"
   }
   // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
 ]
