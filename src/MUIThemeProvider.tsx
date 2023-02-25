@@ -32,11 +32,11 @@ declare module "@mui/material/Button" {
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#754ef9"
+      main: "#0858B7"
     },
     neutral: {
       main: "#fff",
-      contrastText: "#754ef9",
+      contrastText: "#0858B7",
       dark: "#d6d6d6"
     }
   },

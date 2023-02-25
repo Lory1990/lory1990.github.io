@@ -16,7 +16,7 @@ const UpperIcon: React.FC<ISocialIconProps> = ({ link, icon }) => {
         sx={theme => ({
           borderRadius: "10px",
           transition: "all 200ms linear",
-          background: "black",
+          background: "#36454F",
           color: "white",
           "&:hover": {
             color: "white",
@@ -74,7 +74,7 @@ const AboutHero: React.FC = () => {
           <Typography fontWeight="bolder" variant="h1" sx={theme => ({ fontSize: { xs: "4em", sm: "5.5em" }, color: theme.palette.primary.main })}>
             <Box sx={{ display: { xs: "none", sm: "inline" } }}>Hi,</Box> I am Lorenzo
           </Typography>
-          <Typography fontWeight="bold" sx={{ fontSize: { xs: "2em", sm: "2em" } }}>
+          <Typography fontWeight="bold" sx={{ fontSize: { xs: "2em", sm: "2em" } }} color="#36454F">
             IT Manager
           </Typography>
           <Box sx={theme => ({ margin: "1em 0 1em 0", fontSize: "1.5em", fontStyle: "italic", color: theme.palette.primary.main })}>IT Governance is my kingdom</Box>
