@@ -43,6 +43,7 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    highlight: true,
     slug: "tryvium",
     title: "Tryvium",
     boxDescription: "Booking Platform  you can pay with crypto",
@@ -67,8 +68,8 @@ const projects: IProject[] = [
     stack: [StackEnum.REACT, StackEnum.WEB3, StackEnum.CSS]
   },
   {
+    highlight: true,
     slug: "tongy",
-
     title: "Tongy",
     team: "2 people",
     role: "Full Stack Developer",
@@ -100,6 +101,7 @@ const projects: IProject[] = [
     }
   },
   {
+    highlight: true,
     slug: "autoconnexa",
     title: "Autoconnexa",
     boxDescription: "Cars InsurTech Platform with veichle tracking",

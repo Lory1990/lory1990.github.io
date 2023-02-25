@@ -15,6 +15,7 @@ export interface ITechStack {
 
 const techStack: ITechStack[] = [
   {
+    highlight: true,
     title: "React",
     image: "icon-react",
     experience: 3,
@@ -28,6 +29,7 @@ const techStack: ITechStack[] = [
     category: "FE"
   },
   {
+    highlight: true,
     title: "Java",
     image: "icon-java",
     experience: 5,
@@ -79,6 +81,7 @@ const techStack: ITechStack[] = [
     ]
   },
   {
+    highlight: true,
     title: "NodeJS",
     image: "icon-nodejs",
 
@@ -96,6 +99,7 @@ const techStack: ITechStack[] = [
     ]
   },
   {
+    highlight: true,
     title: "SQL + NoSQL",
     image: "icon-database",
     experience: 7,
@@ -117,6 +121,7 @@ const techStack: ITechStack[] = [
     ]
   },
   {
+    highlight: true,
     title: "AWS",
     image: "icon-aws",
     experience: 1,
@@ -124,6 +129,7 @@ const techStack: ITechStack[] = [
   },
   ,
   {
+    highlight: true,
     title: "Azure",
     image: "icon-azure",
     experience: 3,
