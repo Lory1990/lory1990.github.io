@@ -15,6 +15,7 @@ import SectionTitle from "../../components/typography/SectionTitle"
 import CustomHead from "../../components/CustomHead"
 import TextImageBand from "../../components/bands/TextImageBand"
 import Link from "next/link"
+import AboutHero from "../../components/AboutHero"
 
 interface ITechStackBandPros {
   techStack: ITechStack[]
@@ -69,8 +70,8 @@ const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, titl
 const About: React.FC = () => {
   return (
     <div>
-      <CustomHead title="About me" />
-      <Hero title="Hi, I am Lorenzo" />
+      <CustomHead title="About" />
+      <AboutHero />
       <PageWrapper sx={{ marginTop: "2em" }}>
         <TextImageBand
           image="/img/lorenzo-de-francesco.jpeg"

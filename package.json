@@ -20,6 +20,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "^5.10.12",
+    "@mui/styles": "^5.11.9",
     "@mui/x-date-pickers": "^5.0.13",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",

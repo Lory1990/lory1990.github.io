@@ -32,6 +32,7 @@ const SocialCircle: React.FC<ISocialIconProps> = ({ link, icon }) => {
           }
         })}
         href={link}
+        target="_blank"
       >
         {icon}
       </IconButton>
