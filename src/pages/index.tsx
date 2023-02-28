@@ -16,6 +16,7 @@ import Hero from "../components/Hero"
 import PageWrapper from "../components/PageWrapper"
 import TechStackList from "../components/TechStackList"
 import SectionTitle from "../components/typography/SectionTitle"
+import PodcastList from "../components/PodcastList"
 
 export interface IHomeProps {
   events?: IEvent[]
@@ -72,9 +73,12 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
           </Typography>
         }
         subtitle={
-          <Typography variant="subtitle1" marginBottom={"38px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
+          <Box sx={{marginBottom: "20px"}}>
+          <Typography variant="subtitle1" marginBottom={"20px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
             I manage teams to create the best user experience <br /> My goal? Reduce IT costs while increasing profits and conversions
           </Typography>
+          <PodcastList />
+          </Box>
         }
         backgroundImage="/img/home-hero.jpeg"
         button={{

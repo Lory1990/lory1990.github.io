@@ -1,71 +1,20 @@
 //https://dev.to/jameswallis/animating-next-js-page-transitions-with-framer-motion-1g9j
 //https://letsbuildui.dev/articles/animated-page-transitions-in-nextjs
 
-import { useTheme, Zoom } from "@mui/material"
+import { Zoom } from "@mui/material"
 import { Box } from "@mui/system"
-import Image from "next/image"
-import techStack, { ITechStack } from "../../assets/tech-stack"
+import techStack from "../../assets/tech-stack"
 import timelineEvents from "../../assets/timeline-carrer"
 import CareerTimeline from "../../components/CareerTimeline"
 import CTABand from "../../components/CTABand"
-import Hero from "../../components/Hero"
 import PageWrapper from "../../components/PageWrapper"
-import TechStackList from "../../components/TechStackList"
 import SectionTitle from "../../components/typography/SectionTitle"
 import CustomHead from "../../components/CustomHead"
 import TextImageBand from "../../components/bands/TextImageBand"
 import Link from "next/link"
 import AboutHero from "../../components/AboutHero"
-
-interface ITechStackBandPros {
-  techStack: ITechStack[]
-  title: string
-  inverted: boolean
-  image?: string
-  initialDelay?: number
-}
-
-const TechStackBand: React.FC<ITechStackBandPros> = ({ inverted, techStack, title, image, initialDelay = 0 }) => {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        gap: {
-          xs: "0em",
-          md: "5em"
-        },
-        flexDirection: {
-          xs: "column",
-          sm: "column",
-          md: inverted ? "row-reverse" : "row"
-        }
-      }}
-    >
-      <Box
-        sx={{
-          flex: 0.5,
-          display: "flex",
-          flexDirection: "column",
-          alignContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <Box
-          sx={{
-            marginBottom: "0.5em",
-            textAlign: "center",
-            fontSize: "1.5em",
-            fontWeight: "bold"
-          }}
-        >
-          {title}
-        </Box>
-        {image && <Image src={image} height={200} width={300} alt={`Image for ${title}`} />}
-      </Box>
-      <TechStackList sx={{ flex: 1.5 }} columns={2} techStack={techStack} />
-    </Box>
-  )
-}
+import TechStackBand from "../../components/TechStackBand"
+import PodcastList from "../../components/PodcastList"
 
 const About: React.FC = () => {
   return (
@@ -119,30 +68,8 @@ const About: React.FC = () => {
             where I post every day some tips about Software development and IT Governance. <br />
             Moreover I participate as guarst or speaker to online and offline community events such as Google Developer Fests, Tech Meetups and Cloud Native Speech, you can see all my events to the{" "}
             <Link href="/events">dedicated page</Link>. <br />
-            Last but not least I have also host my own podcast where I delve with cloud software architecture, microservices and frontend development, start listening using the bottom links. <br />
-            <Box
-              sx={{
-                marginTop: "1em",
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                flexDirection: {
-                  md: "row",
-                  xs: "column"
-                },
-                gap: "0.5em"
-              }}
-            >
-              <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82YjZkNmZmOC9wb2RjYXN0L3Jzcw==" target="_blank" rel="noreferrer">
-                <Image src="/img/podcast-badges/google.png" width={330} height={80} alt="Listen on google podcast" style={{ height: 40, width: "auto" }} />
-              </a>
-              <a href="https://open.spotify.com/show/0kfHlz3PUtYdQMsUQvWSWv" target="_blank" rel="noreferrer">
-                <Image src="/img/podcast-badges/spotify.webp" width={330} height={80} alt="Listen on spotify podcast" style={{ height: 40, width: "auto" }} />
-              </a>
-              <a href="https://podcasts.apple.com/us/podcast/il-frontendista-imbruttito/id1588309592" target="_blank" rel="noreferrer">
-                <Image src="/img/podcast-badges/apple.svg" width={330} height={80} alt="Listen on apple podcast" style={{ height: 40, width: "auto" }} />
-              </a>
-            </Box>
+            Last but not least host my own podcast where I delve with cloud software architecture, microservices and frontend development, start listening using the bottom links. <br />
+            <PodcastList />
           </>
         }
       />
