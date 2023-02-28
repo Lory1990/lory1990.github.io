@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+sitemap*
+robots.txt
+.DS_Store
+next-sitemap.config.js
+.env.*

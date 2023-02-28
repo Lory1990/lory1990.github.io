@@ -1,0 +1,25 @@
+# https://github.com/marketplace/actions/prettier-action
+name: Code Styling
+
+on:
+  push:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          # This is important to fetch the changes to the previous commit
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Prettify Code 🎨
+        uses: creyD/prettier_action@v4.3
+        with:
+          # This part is also where you can pass other options, for example:
+          prettier_options: --write **/*.{js,ts,tsx,css,md}
+          # only_changed: false
+          same_commit: false

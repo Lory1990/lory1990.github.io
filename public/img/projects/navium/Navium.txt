@@ -1,0 +1,41 @@
+La startup Navium nasce da due giovani ingegneri neolaureati in ingegneria navale nel 2012; la startup ha sviluppato un suite completa ed integrata di prodotti orientati al mondo navale e nautico che comprende:
+
+    Un software desktop di progettazione navale di base – Navium Faber
+    Una soluzione cloud per la gestione della stabilità della nave durante la navigazione – Delphi
+    Un motore idrostatiche che permetteva di prevedere l’andamento di una falla all’interno della nave – Delphi
+
+Navium Faber
+
+Questa suite di progettazione navale integrata è composta da una serie di sottomoduli orientati sia al design che al calcolo:
+
+    Progettazione scafo 3D con integrata importazione da Rhino
+    Design 3D compartimentazione interna
+    Distinta pesi all’interno della nave
+    Disegno dei piano generali della nave
+    Calcoli della stabilità della nave integra e allagata
+    Calcolo del Trim and stability booklet a nave integra e allagata
+    Moduli di calcolo della resistenza e propulsione con stima dei consumi della nave
+    Manovrabilità con simulazione di virate all’interno del porto
+    Calcolo resistenza delle strutte dello scafo
+    Calcolo del posizionamento dinamico della nave
+
+Dimensionamento motori per il posizionamento dinamico della nave
+
+Dimensionamento motori per il posizionamento dinamico della nave
+
+ 
+Delphi
+
+Il software di calcolo della stabilità Delphi è stato pensato progetto e realizzato per essere usato a bordo delle navi da crociera.
+
+Le caratteristiche che contraddistinguono questo software dagli altri sono:
+
+    Condivisione in tempo reale di tutti i dati della nave con i Fleet Operation Center da terra
+    Possibilità di fare simulazioni e confrontarle con la situazione attuale attraverso un innovativo sistema di calcolo del rischio descritto da in questo articolo scientifico
+    Sistema di gestione della stabilità di bordo multiutente
+
+    Questo progetto è stato inserito all’interno del progetto Horizon 2020 ricevendo un finanziamento da 300.000€ ed attuamente è sviluppato da Seastema (gruppo Fincantieri)
+
+Loading computer
+
+Sistema di gestione del rischio
