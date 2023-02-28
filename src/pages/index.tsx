@@ -73,11 +73,11 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
           </Typography>
         }
         subtitle={
-          <Box sx={{marginBottom: "20px"}}>
-          <Typography variant="subtitle1" marginBottom={"20px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
-            I manage teams to create the best user experience <br /> My goal? Reduce IT costs while increasing profits and conversions
-          </Typography>
-          <PodcastList />
+          <Box sx={{ marginBottom: "20px" }}>
+            <Typography variant="subtitle1" marginBottom={"20px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
+              I manage teams to create the best user experience <br /> My goal? Reduce IT costs while increasing profits and conversions
+            </Typography>
+            <PodcastList />
           </Box>
         }
         backgroundImage="/img/home-hero.jpeg"
