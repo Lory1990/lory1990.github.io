@@ -22,7 +22,10 @@ const FloatingFollowMe: React.FC<ISocialLinks> = ({ twitterLink, linkedinLink, f
   return (
     <Box
       sx={{
-        position: "fixed",
+        position: {
+          sx: "none",
+          sm: "fixed",
+        },
         width: "fit-content",
         display: "flex",
         flexDirection: "column",

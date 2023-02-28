@@ -36,7 +36,9 @@ const TitleTextRoll: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ childre
 const TextRoll: React.FC = () => {
   if (process.env.NODE_ENV === "development") return <span>IT Manager</span>
 
-  return (
+  return <TitleTextRoll>IT Manager</TitleTextRoll>
+
+  /*return (
     <TextLoop fade={true}>
       <TitleTextRoll>IT Manager</TitleTextRoll>
       <TitleTextRoll>Senior Developer</TitleTextRoll>
@@ -44,7 +46,7 @@ const TextRoll: React.FC = () => {
       <TitleTextRoll>Podcaster</TitleTextRoll>
       <TitleTextRoll>Mentor</TitleTextRoll>
     </TextLoop>
-  )
+  )*/
 }
 
 export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techStack }) => {

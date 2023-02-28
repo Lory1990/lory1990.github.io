@@ -36,8 +36,8 @@ const EventsListPage: NextPage<IEventListProps> = ({ list }) => {
           background: "linear-gradient(135deg, #00401BCC 20%, #95CD7D 100%)"
         }}
       >
-        <Box sx={{ position: "absolute", right: "10px", bottom: "20px" }}>
-          <Image src="/img/events.png" alt="Projects" width={450} height={298} />
+        <Box sx={{ position: "absolute", right: "10px", bottom: "20px", overflowX: "hidden" }}>
+          <Image src="/img/events.png" alt="Projects" width={1020} height={697} style={{height: "270px", width: "auto", marginRight: "-1em"}} />
         </Box>
       </Hero>
       <PageWrapper>
