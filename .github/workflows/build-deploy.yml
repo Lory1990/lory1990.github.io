@@ -10,6 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      NEXT_PUBLIC_EMAILJS_APIKEY: '${{ secrets.NEXT_PUBLIC_EMAILJS_APIKEY }}'
+      NEXT_PUBLIC_EMAILJS_SERVICEID: '${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICEID }}'
+      NEXT_PUBLIC_EMAILJS_TEMPLATE: '${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}'
+      NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: '${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}'
+      NEXT_PUBLIC_GOOGLE_MAPS_KEY: '${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_KEY }}'
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
@@ -50,7 +57,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
