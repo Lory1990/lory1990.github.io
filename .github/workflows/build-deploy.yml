@@ -10,12 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      NEXT_PUBLIC_EMAILJS_APIKEY: '${{ secrets.NEXT_PUBLIC_EMAILJS_APIKEY }}'
-      NEXT_PUBLIC_EMAILJS_SERVICEID: '${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICEID }}'
-      NEXT_PUBLIC_EMAILJS_TEMPLATE: '${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}'
-      NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: '${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}'
-      NEXT_PUBLIC_GOOGLE_MAPS_KEY: '${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_KEY }}'
+
+    
 
     steps:
       - name: Checkout 🛎️
@@ -35,7 +31,16 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.json') }}
 
       - run: yarn install
-      - run: yarn build
+      
+      - name: Build
+        env:
+          NEXT_PUBLIC_EMAILJS_APIKEY: '${{ secrets.NEXT_PUBLIC_EMAILJS_APIKEY }}'
+          NEXT_PUBLIC_EMAILJS_SERVICEID: '${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICEID }}'
+          NEXT_PUBLIC_EMAILJS_TEMPLATE: '${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}'
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: '${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}'
+          NEXT_PUBLIC_GOOGLE_MAPS_KEY: '${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_KEY }}'
+        run: yarn build
+      
       - run: yarn export
 
       - name: Upload artifact
