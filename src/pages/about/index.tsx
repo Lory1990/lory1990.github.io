@@ -147,30 +147,30 @@ const About: React.FC = () => {
         }
       />
       <PageWrapper>
-      <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1em"
-        }}
-      >
-        <TechStackBand inverted={false} image={"/img/about/frontend.svg"} title="Frontend" techStack={techStack.filter(ts => ts.category == "FE")} initialDelay={200} />
-        <TechStackBand inverted={true} image={"/img/about/backend.svg"} title="Backend" techStack={techStack.filter(ts => ts.category == "BE")} initialDelay={0} />
-        <TechStackBand inverted={false} image={"/img/about/cloud.svg"} title="Cloud" techStack={techStack.filter(ts => ts.category == "CLOUD")} />
-      </Box>
-      <CTABand
-        sx={{ marginTop: "2em", marginBottom: "2em" }}
-        primaryText="Want to work together"
-        buttonText="Contact Me"
-        onClick={() => {
-          window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })
-        }}
-      />
-      <Zoom>
-        <SectionTitle>My carrer</SectionTitle>
-      </Zoom>
-      <CareerTimeline timelineEvents={timelineEvents} />
+        <SectionTitle sx={{ marginBottom: "1em", marginTop: "1em" }}>My Stack</SectionTitle>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1em"
+          }}
+        >
+          <TechStackBand inverted={false} image={"/img/about/frontend.svg"} title="Frontend" techStack={techStack.filter(ts => ts.category == "FE")} initialDelay={200} />
+          <TechStackBand inverted={true} image={"/img/about/backend.svg"} title="Backend" techStack={techStack.filter(ts => ts.category == "BE")} initialDelay={0} />
+          <TechStackBand inverted={false} image={"/img/about/cloud.svg"} title="Cloud" techStack={techStack.filter(ts => ts.category == "CLOUD")} />
+        </Box>
+        <CTABand
+          sx={{ marginTop: "2em", marginBottom: "2em" }}
+          primaryText="Want to work together"
+          buttonText="Contact Me"
+          onClick={() => {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })
+          }}
+        />
+        <Zoom>
+          <SectionTitle>My carrer</SectionTitle>
+        </Zoom>
+        <CareerTimeline timelineEvents={timelineEvents} />
       </PageWrapper>
     </div>
   )
