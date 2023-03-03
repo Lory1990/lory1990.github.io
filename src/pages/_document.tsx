@@ -9,8 +9,8 @@ export default function Document() {
       <body>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
           <>
-            <Script async src={"https://www.googletagmanager.com/gtag/js?id=" + process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}></Script>
-            <Script id="google-analytics-script">
+            <Script async src={"https://www.googletagmanager.com/gtag/js?id=" + process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} strategy="afterInteractive"></Script>
+            <Script id="google-analytics-script" strategy="afterInteractive">
               {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
