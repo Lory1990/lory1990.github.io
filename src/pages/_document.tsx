@@ -3,7 +3,6 @@ import { Html, Head, Main, NextScript } from "next/document"
 
 //GA SCRIPT FROM - https://nextjs.org/docs/messages/next-script-for-ga
 export default function Document() {
-
   console.log("process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID)
   return (
     <Html>
