@@ -23,7 +23,7 @@ const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "baseline" }}>
                   <Typography variant="subtitle2" sx={{ fontWeight: "bold" }} color={theme.palette.grey[500]}>
-                    {DateTime.fromFormat(date, "yyyy-mm-dd").toLocaleString(DateTime.DATE_MED)}
+                    {DateTime.fromFormat(date, "YYYY-MM-DD").toLocaleString(DateTime.DATE_MED)}
                   </Typography>
                 </div>
                 <Chip sx={{ fontWeight: "bold" }} label={isOnline ? "Online" : "In Presence"} />
