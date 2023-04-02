@@ -36,14 +36,14 @@ const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue
                   {subtitle}
                 </Typography>
               )}
-              {venue &&
+              {venue && (
                 <div style={{ display: "flex", alignItems: "center", marginTop: matches ? "0.5em" : "unset" }}>
                   <LocationOnIcon fontSize="small" sx={{ color: theme.palette.grey[500], marginLeft: "-0.4rem", marginRight: "0.2rem" }} />
                   <Typography variant="subtitle2" sx={{ fontSize: "0.8rem" }} color={theme.palette.grey[500]}>
                     {venue}
                   </Typography>
                 </div>
-              }
+              )}
 
               <Typography variant="subtitle2" sx={{ marginTop: "1em" }} color={theme.palette.grey[700]}>
                 {description}

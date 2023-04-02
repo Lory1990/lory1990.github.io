@@ -32,13 +32,14 @@ const events: IEvent[] = [
   //   isOnline: true,
   //   hero: {
   //     background: "linear-gradient(145deg, rgba(239,93,94,1) 0%, rgba(125,36,36,1) 100%)"
-  //   },  
+  //   },
   // },
   {
     title: "Un Tool zero-config per monitorare le attività degli utenti",
     //subtitle: "Per non avere più problemi in produzione",
     shortDescription: "No more fires in production with DataDog",
-    description: "Are you still using Google Analytics to monitor your site? Did you know that there is a zero-config tool that allows you to incorporate Hotjar, Analytics and many other monitoring tools? <br /> What if I told you that this tool is also able to monitor frontend and backend errors in order to make it easier for those who support production users? <br /> In this talk we will talk about DataDog, the ultimate tool for monitoring your application and obtaining metrics that allow you to create a data-based development and maintenance process for your application.",
+    description:
+      "Are you still using Google Analytics to monitor your site? Did you know that there is a zero-config tool that allows you to incorporate Hotjar, Analytics and many other monitoring tools? <br /> What if I told you that this tool is also able to monitor frontend and backend errors in order to make it easier for those who support production users? <br /> In this talk we will talk about DataDog, the ultimate tool for monitoring your application and obtaining metrics that allow you to create a data-based development and maintenance process for your application.",
     slug: "un-tool-zero-config-per-monitorare-le-attivita-degli-utenti",
     video: "https://www.youtube.com/watch?v=9m0VBf1swsk",
     venue: "React JS Milano",
@@ -48,7 +49,7 @@ const events: IEvent[] = [
     isOnline: false,
     hero: {
       background: "linear-gradient(135deg, hsla(267, 58%, 41%, 1) 0%, hsla(266, 58%, 72%, 1) 100%)"
-    },  
+    }
   },
   {
     slug: "come-creare-un-frontend-scalabile-robusto-e-coerente",
