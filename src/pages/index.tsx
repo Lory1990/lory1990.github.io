@@ -75,7 +75,7 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
             <Typography variant="subtitle1" marginBottom={"20px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
               I manage teams to create the best user experience <br /> My goal? Reduce IT costs while increasing profits and conversions
             </Typography>
-            <PodcastList 
+            <PodcastList
               apple="https://podcasts.apple.com/us/podcast/il-frontendista-imbruttito/id1588309592"
               google="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82YjZkNmZmOC9wb2RjYXN0L3Jzcw=="
               spotify="https://open.spotify.com/show/0kfHlz3PUtYdQMsUQvWSWv"
