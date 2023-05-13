@@ -18,7 +18,7 @@ export interface IEvent {
   isOnline: boolean
   venue?: string
   hideTitleOnCover?: boolean
-  hero?: IHeroProps,
+  hero?: IHeroProps
   podcast?: IPodcastList
 }
 
@@ -39,8 +39,9 @@ const events: IEvent[] = [
   {
     title: "WANNABE MANAGER IN ICT",
     slug: "wanna-be-manager-in-ict",
-    subtitle:"Tool e metodologie per gestire un team IT in maniera efficace",
-    description: "In this webinar i will discuss about tools and methodologies in project management. Specifically, he covers task management, one-to-one meetings, change management, management tools such as Excel, Jira, and Notion, work tools such as Git and SonarQube, and maintaining a project-oriented mindset on a daily basis.",
+    subtitle: "Tool e metodologie per gestire un team IT in maniera efficace",
+    description:
+      "In this webinar i will discuss about tools and methodologies in project management. Specifically, he covers task management, one-to-one meetings, change management, management tools such as Excel, Jira, and Notion, work tools such as Git and SonarQube, and maintaining a project-oriented mindset on a daily basis.",
     shortDescription: "Tool e metodologie per gestire un team IT in maniera efficace",
     date: "2023-04-19",
     image: "/img/events/lavoro_digitale_italia.jpeg",
@@ -54,7 +55,8 @@ const events: IEvent[] = [
   {
     title: "Da ingegnere navale a CTO",
     slug: "da-ingegnere-navale-a-cto",
-    description: "I was interviewed by the Pointer Podcast about my incredible career. During the interview, we discussed why I chose managerial roles and the challenges I faced along the way. Towards the end, we delved into the role of the IT Manager and the characteristics that an IT department should have to be effective. Finally, we discussed how to create a development factory in a company.",
+    description:
+      "I was interviewed by the Pointer Podcast about my incredible career. During the interview, we discussed why I chose managerial roles and the challenges I faced along the way. Towards the end, we delved into the role of the IT Manager and the characteristics that an IT department should have to be effective. Finally, we discussed how to create a development factory in a company.",
     date: "2023-05-11",
     image: "/img/events/pointer_podcast.jpeg",
     isOnline: true,
@@ -62,8 +64,9 @@ const events: IEvent[] = [
     link: "https://pointerpodcast.it/p/pointer152-da-ingegnere-navale-a-cto-con-lorenzo-de-francesco/",
     podcast: {
       apple: "https://podcasts.apple.com/it/podcast/pointer-152-da-ingegnere-navale-a-cto-con-lorenzo/id1465505870?i=1000612629961",
-      google: "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2ludGVycG9kY2FzdC5pdC9pbmRleC54bWw/episode/aHR0cHM6Ly9wb2ludGVycG9kY2FzdC5pdC9wL3BvaW50ZXIxNTItZGEtaW5nZWduZXJlLW5hdmFsZS1hLWN0by1jb24tbG9yZW56by1kZS1mcmFuY2VzY28v?sa=X&ved=0CAUQkfYCahcKEwiw2ZfjgPL-AhUAAAAAHQAAAAAQAQ",
-      spotify: "https://open.spotify.com/episode/3poBp7zyODFFekfVxu4GJQ",
+      google:
+        "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2ludGVycG9kY2FzdC5pdC9pbmRleC54bWw/episode/aHR0cHM6Ly9wb2ludGVycG9kY2FzdC5pdC9wL3BvaW50ZXIxNTItZGEtaW5nZWduZXJlLW5hdmFsZS1hLWN0by1jb24tbG9yZW56by1kZS1mcmFuY2VzY28v?sa=X&ved=0CAUQkfYCahcKEwiw2ZfjgPL-AhUAAAAAHQAAAAAQAQ",
+      spotify: "https://open.spotify.com/episode/3poBp7zyODFFekfVxu4GJQ"
     },
     hero: {
       background: "linear-gradient(to right top, #F7297F, #000000, #04DFE4);"
