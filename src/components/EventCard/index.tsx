@@ -17,13 +17,13 @@ const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue
       <Card elevation={1} sx={{ height: matches ? "unset" : "175px", display: "flex" }}>
         <CardActionArea>
           <div style={{ display: "flex", flexDirection: matches ? "column" : "row", alignItems: matches ? "center" : "unset", marginTop: matches ? "1em" : "unset" }}>
-            <Image src={image} style={{ objectFit: "contain", borderRadius: matches ? "10%" : "unset" }} alt={`Image for ${title}}`} width="175" height="175" />
+            <Image src={image} style={{ objectFit: "contain", borderRadius: matches ? "10%" : "unset" }} alt={`Image for ${title}`} width="175" height="175" />
 
             <CardContent sx={{ display: "flex", flexDirection: "column", justifyItems: "left", paddingLeft: "30px", width: "100%" }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "baseline" }}>
                   <Typography variant="subtitle2" sx={{ fontWeight: "bold" }} color={theme.palette.grey[500]}>
-                    {DateTime.fromFormat(date, "yyyy-mm-dd").toLocaleString(DateTime.DATE_MED)}
+                    {DateTime.fromFormat(date, "yyyy-MM-dd").toLocaleString(DateTime.DATE_FULL)}
                   </Typography>
                 </div>
                 <Chip sx={{ fontWeight: "bold" }} label={isOnline ? "Online" : "In Presence"} />
@@ -36,12 +36,14 @@ const EventCard: React.FC<IEvent> = ({ slug, date, image, title, isOnline, venue
                   {subtitle}
                 </Typography>
               )}
-              <div style={{ display: "flex", alignItems: "center", marginTop: matches ? "0.5em" : "unset" }}>
-                <LocationOnIcon fontSize="small" sx={{ color: theme.palette.grey[500], marginLeft: "-0.4rem", marginRight: "0.2rem" }} />
-                <Typography variant="subtitle2" sx={{ fontSize: "0.8rem" }} color={theme.palette.grey[500]}>
-                  {venue}
-                </Typography>
-              </div>
+              {venue && (
+                <div style={{ display: "flex", alignItems: "center", marginTop: matches ? "0.5em" : "unset" }}>
+                  <LocationOnIcon fontSize="small" sx={{ color: theme.palette.grey[500], marginLeft: "-0.4rem", marginRight: "0.2rem" }} />
+                  <Typography variant="subtitle2" sx={{ fontSize: "0.8rem" }} color={theme.palette.grey[500]}>
+                    {venue}
+                  </Typography>
+                </div>
+              )}
 
               <Typography variant="subtitle2" sx={{ marginTop: "1em" }} color={theme.palette.grey[700]}>
                 {description}

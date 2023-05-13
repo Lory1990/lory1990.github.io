@@ -10,9 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
           persist-credentials: false
 
@@ -22,13 +25,22 @@ jobs:
           node-version: 16
 
       - name: Cache Next 💾
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.json') }}
 
       - run: yarn install
-      - run: yarn build
+
+      - name: Build
+        env:
+          NEXT_PUBLIC_EMAILJS_APIKEY: '${{ secrets.NEXT_PUBLIC_EMAILJS_APIKEY }}'
+          NEXT_PUBLIC_EMAILJS_SERVICEID: '${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICEID }}'
+          NEXT_PUBLIC_EMAILJS_TEMPLATE: '${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}'
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: '${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}'
+          NEXT_PUBLIC_GOOGLE_MAPS_KEY: '${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_KEY }}'
+        run: yarn build
+      
       - run: yarn export
 
       - name: Upload artifact
@@ -50,7 +62,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
