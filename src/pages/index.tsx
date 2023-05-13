@@ -1,11 +1,9 @@
 import { Box, Button, Typography, useTheme } from "@mui/material"
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next"
 import Link from "next/link"
-import { useRouter } from "next/router"
 import events, { IEvent } from "../assets/events-list"
 import podcasts, { IPodcast } from "../assets/podcast-list"
 import projects, { IProject } from "../assets/projects-list"
-import { TextLoop } from "react-text-loop-next"
 import techStack, { ITechStack } from "../assets/tech-stack"
 import TextImageBand from "../components/bands/TextImageBand"
 import BlogCard from "../components/BlogCard"
@@ -77,7 +75,11 @@ export const Home: NextPage<IHomeProps> = ({ events, podcasts, projects, techSta
             <Typography variant="subtitle1" marginBottom={"20px"} marginTop={"25px"} fontSize={"18px"} lineHeight={"27px"} color={"#666"} fontWeight={300} textTransform="uppercase">
               I manage teams to create the best user experience <br /> My goal? Reduce IT costs while increasing profits and conversions
             </Typography>
-            <PodcastList />
+            <PodcastList 
+              apple="https://podcasts.apple.com/us/podcast/il-frontendista-imbruttito/id1588309592"
+              google="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82YjZkNmZmOC9wb2RjYXN0L3Jzcw=="
+              spotify="https://open.spotify.com/show/0kfHlz3PUtYdQMsUQvWSWv"
+            />
           </Box>
         }
         backgroundImage="/img/home-hero.jpeg"

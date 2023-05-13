@@ -9,10 +9,11 @@ import OtherEventsForYou from "../../../components/OtherEventsForYou"
 import CustomHead from "../../../components/CustomHead"
 import VideoTextBand from "../../../components/bands/VideoTextBand"
 import CTABand from "../../../components/CTABand"
+import PodcastList from "../../../components/PodcastList"
 
 interface IEventPageProps extends IEvent {}
 
-const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover, hero }) => {
+const Events: NextPage<IEventPageProps> = ({podcast, hideTitleOnCover, article, date, venue, subtitle, link, description, title, video, cover, hero }) => {
   return (
     <div>
       <CustomHead title={title} />
@@ -34,11 +35,13 @@ const Events: NextPage<IEventPageProps> = ({ hideTitleOnCover, article, date, ve
         />
       )}
       {description && !video && link && (
-        <PageWrapper sx={{ textAlign: "center" }}>
-          <Box sx={{ marginBottom: "1em" }}>
+        <PageWrapper sx={{ textAlign: "center", display: "flex", gap: "15px", alignItems: 'center', flexDirection: {xs: "column", sm: "row"} }}>
+          <Box sx={{ marginBottom: "1em", flex: 1 }}>
             <span dangerouslySetInnerHTML={{ __html: description }} />
+            {podcast && <PodcastList {...podcast} />}
           </Box>
           <CTABand
+           sx={{flex: 1}}
             onClick={() => {
               window.open(link, "_blank")
             }}
