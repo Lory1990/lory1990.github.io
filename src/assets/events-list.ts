@@ -37,6 +37,22 @@ const events: IEvent[] = [
   //   }
   // },
   {
+    title: "Un Tool zero-config per monitorare le attività degli utenti",
+    //subtitle: "Per non avere più problemi in produzione",
+    shortDescription: "No more fires in production with DataDog",
+    description: "Are you still using Google Analytics to monitor your site? Did you know that there is a zero-config tool that allows you to incorporate Hotjar, Analytics and many other monitoring tools? <br /> What if I told you that this tool is also able to monitor frontend and backend errors in order to make it easier for those who support production users? <br /> In this talk we will talk about DataDog, the ultimate tool for monitoring your application and obtaining metrics that allow you to create a data-based development and maintenance process for your application.",
+    slug: "un-tool-zero-config-per-monitorare-le-attivita-degli-utenti",
+    video: "https://www.youtube.com/watch?v=9m0VBf1swsk",
+    venue: "React JS Milano",
+    link: "https://www.meetup.com/it-IT/react-js-milano/events/292297518/",
+    date: "2023-03-31",
+    image: "/img/events/2022-frontend-scalabile/logo.png",
+    isOnline: false,
+    hero: {
+      background: "linear-gradient(135deg, hsla(267, 58%, 41%, 1) 0%, hsla(266, 58%, 72%, 1) 100%)"
+    },  
+  },
+  {
     title: "WANNABE MANAGER IN ICT",
     slug: "wanna-be-manager-in-ict",
     subtitle: "Tool e metodologie per gestire un team IT in maniera efficace",
