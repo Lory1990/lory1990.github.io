@@ -54,6 +54,21 @@ const events: IEvent[] = [
     }
   },
   {
+    slug: "come-creare-un-frontend-scalabile-robusto-e-coerente",
+    title: "Come creare un Frontend scalabile, robusto e coerente",
+    subtitle: "Con l'aiuto di Storybook e del Design System",
+    shortDescription: "Sotrybook is your best friend if you need a scalable frontend",
+    description: "In this webinar we will see how to use Stroybook to creare a coherent frontend with reusable components.",
+    image: "/img/events/2022-frontend-scalabile/logo.png",
+    venue: "React JS Milano",
+    link: "https://www.meetup.com/it-IT/react-js-milano/events/282339759/",
+    date: "2021-12-14",
+    isOnline: false,
+    hero: {
+      background: "linear-gradient(145deg, rgba(239,93,94,1) 0%, rgba(125,36,36,1) 100%)"
+    }
+  },
+  {
     title: "WANNABE MANAGER IN ICT",
     slug: "wanna-be-manager-in-ict",
     subtitle: "Tool e metodologie per gestire un team IT in maniera efficace",
