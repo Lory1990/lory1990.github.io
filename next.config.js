@@ -9,12 +9,12 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
-        source: '/portfolio/:slug',
-        destination: '/projects/:slug',
-        permanent: true,
-      },
-    ];
-  },
+        source: "/portfolio/:slug",
+        destination: "/projects/:slug",
+        permanent: true
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
