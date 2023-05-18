@@ -29,7 +29,8 @@ const events: IEvent[] = [
     subtitle: "La mia esperienza dopo un anno di management",
     date: "2023-05-17",
     image: "/img/events/cto_mastermind.png",
-    description: "Come può un IT Manager costruire e poi sviluppare un reparto IT performante? E come fare a costruire da zero il miglior marketplace per gli imprenditori 2.0 creando al contempo il miglior ambiente di lavoro per tutti gli sviluppatori?",
+    description:
+      "Come può un IT Manager costruire e poi sviluppare un reparto IT performante? E come fare a costruire da zero il miglior marketplace per gli imprenditori 2.0 creando al contempo il miglior ambiente di lavoro per tutti gli sviluppatori?",
     isOnline: true,
     video: "https://www.youtube.com/watch?v=9zg1QeWjfUQ",
     venue: "CTO Mastermind",
