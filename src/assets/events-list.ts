@@ -23,22 +23,28 @@ export interface IEvent {
 }
 
 const events: IEvent[] = [
-  // {
-  //   title: "",
-  //   slug: "",
-  //   date: "2023-05-17",
-  //   image: "/img/cto_mastermind.png",
-  //   isOnline: true,
-  //   link: "https://www.ctomastermind.it/blog/cloud-approccio-devops-e-platformization-cto-show-100-roberto-previtera-eni/",
-  //   podcast: {
-  //     apple: "",
-  //     google: "",
-  //     spotify: "",
-  //   }
-  // },
+  {
+    title: "Come sviluppare un reparto IT performante",
+    slug: "come-sviluppare-un-reparto-it-performante",
+    subtitle: "La mia esperienza dopo un anno di management",
+    date: "2023-05-17",
+    image: "/img/events/cto_mastermind.png",
+    description: "Come può un IT Manager costruire e poi sviluppare un reparto IT performante? E come fare a costruire da zero il miglior marketplace per gli imprenditori 2.0 creando al contempo il miglior ambiente di lavoro per tutti gli sviluppatori?",
+    isOnline: true,
+    video: "https://www.youtube.com/watch?v=9zg1QeWjfUQ",
+    venue: "CTO Mastermind",
+    podcast: {
+      apple: "https://podcasts.apple.com/it/podcast/come-sviluppare-un-reparto-it-performante-cto-show/id1241632035?i=1000613325812",
+      google:
+        "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vdGhlLWN0by1wb2RjYXN0Lw/episode/NmZmZjNlNTktMDUxMi00MWFkLWFlOGQtNmQ4ZDQ1Y2RlMmIx?sa=X&ved=0CAUQkfYCahcKEwiwxrmEmf7-AhUAAAAAHQAAAAAQAQ",
+      spotify: "https://open.spotify.com/episode/4aQwGIaz8kERMiPZTtloMe"
+    },
+    hero: {
+      background: "linear-gradient(157deg, rgba(87,160,237,1) 30%, rgba(124,29,230,1) 100%)"
+    }
+  },
   {
     title: "Un Tool zero-config per monitorare le attività degli utenti",
-    //subtitle: "Per non avere più problemi in produzione",
     shortDescription: "No more fires in production with DataDog",
     description:
       "Are you still using Google Analytics to monitor your site? Did you know that there is a zero-config tool that allows you to incorporate Hotjar, Analytics and many other monitoring tools? <br /> What if I told you that this tool is also able to monitor frontend and backend errors in order to make it easier for those who support production users? <br /> In this talk we will talk about DataDog, the ultimate tool for monitoring your application and obtaining metrics that allow you to create a data-based development and maintenance process for your application.",
