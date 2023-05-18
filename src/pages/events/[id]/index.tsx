@@ -57,6 +57,7 @@ const Events: NextPage<IEventPageProps> = ({ podcast, hideTitleOnCover, article,
           text={
             <Box sx={{ display: "flex", flexDirection: "column", gap: "1em" }}>
               <span dangerouslySetInnerHTML={{ __html: description }} />
+              {podcast && <PodcastList {...podcast} />}
             </Box>
           }
         />
