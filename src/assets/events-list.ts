@@ -30,7 +30,8 @@ const events: IEvent[] = [
     isOnline: false,
     venue: "Fiera del Credito",
     date: "2023-05-23",
-    description: "Le istituzioni finanziari e gli operatori del credito sono tenuti a trattare i dati personali dei clienti in linea con i dettami della normativa sulla privacy. Con i relatori del panel indagheremo quali sono gli obblighi, le opportunità e le criticità del GDPR per chi lavora nel settore del credito, anche alla luce del rapido sviluppo digitale e dei rischi informatici connessi.",
+    description:
+      "Le istituzioni finanziari e gli operatori del credito sono tenuti a trattare i dati personali dei clienti in linea con i dettami della normativa sulla privacy. Con i relatori del panel indagheremo quali sono gli obblighi, le opportunità e le criticità del GDPR per chi lavora nel settore del credito, anche alla luce del rapido sviluppo digitale e dei rischi informatici connessi.",
     hero: {
       background: "linear-gradient(145deg, rgba(37,55,71,1) 6%, rgba(52,142,184,1) 42%, rgba(187,176,58,1) 80%, rgba(149,86,59,1) 100%)"
     },
@@ -42,7 +43,7 @@ const events: IEvent[] = [
         imageHeight: 450,
         image: "/img/events/2023-credit-week-cyber-security.jpeg",
         text: "Panel dedicated to data protection and cybersecurity, to investigate the obligations, opportunities, and challenges of GDPR for professionals working in the credit sector, also in light of rapid digital development and associated cyber risks."
-      } 
+      }
     ]
   },
   // {
@@ -64,7 +65,7 @@ const events: IEvent[] = [
   //       imageHeight: 500,
   //       image: "/img/events/2023-italia-fintech-cyber-security/cover.jpeg",
   //       text: "During the meeting, the best strategies and most effective digital defense and security tools for companies and public administration will be discussed, aiming to transition from outdated defense strategies to a proactive approach towards threats within a digital ecosystem."
-  //     } 
+  //     }
   //   ]
   // },
   {
