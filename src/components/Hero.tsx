@@ -4,6 +4,7 @@ import { Box, SxProps } from "@mui/system"
 import EventIcon from "@mui/icons-material/Event"
 import PlaceIcon from "@mui/icons-material/Place"
 import React from "react"
+import { DateTime } from "luxon"
 
 interface ISingleDataProps {
   text?: string
@@ -118,8 +119,8 @@ const Hero: React.FC<IHeroProps> = ({ children, sx, date, place, background, bac
         flex: "none"
       }}
     >
-      <SingleData text={date} icon={<EventIcon />} />
-      <SingleData text={place} icon={<PlaceIcon />} />
+      {date && <SingleData text={DateTime.fromISO(date).toFormat("dd MMM yyyy")} icon={<EventIcon />} />}
+      {place && <SingleData text={place} icon={<PlaceIcon />} />}
       {children}
     </Box>
   </Box>

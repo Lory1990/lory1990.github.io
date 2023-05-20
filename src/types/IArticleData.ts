@@ -17,5 +17,8 @@ export default interface IArticleData {
   videoUrl?: string
   text?: string | React.ReactNode
   image?: string | string[]
-  imageAlt?: string
+  imageAlt?: string,
+  imageWidth?: number
+  imageHeight?: number
+
 }

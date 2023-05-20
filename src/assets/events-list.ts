@@ -1,6 +1,6 @@
 import { IHeroProps } from "../components/Hero"
 import { IPodcastList } from "../components/PodcastList"
-import IArticleData from "../types/IArticleData"
+import IArticleData, { IArticleDataType } from "../types/IArticleData"
 
 export interface IEvent {
   slug: string
@@ -23,6 +23,50 @@ export interface IEvent {
 }
 
 const events: IEvent[] = [
+  {
+    title: "Data protection e Cyber Security: la tutela della privacy nella filiera del credito",
+    slug: "data-protection-e-cyber-security-la-tutela-della-privacy-nella-filiera-del-credito",
+    image: "/img/events/fiera-del-credito.png",
+    isOnline: false,
+    venue: "Fiera del Credito",
+    date: "2023-05-23",
+    description: "Le istituzioni finanziari e gli operatori del credito sono tenuti a trattare i dati personali dei clienti in linea con i dettami della normativa sulla privacy. Con i relatori del panel indagheremo quali sono gli obblighi, le opportunità e le criticità del GDPR per chi lavora nel settore del credito, anche alla luce del rapido sviluppo digitale e dei rischi informatici connessi.",
+    hero: {
+      background: "linear-gradient(145deg, rgba(37,55,71,1) 6%, rgba(52,142,184,1) 42%, rgba(187,176,58,1) 80%, rgba(149,86,59,1) 100%)"
+    },
+    article: [
+      {
+        type: IArticleDataType.TEXT_IMAGE,
+        imageAlt: "Data protection e Cyber Security: la tutela della privacy nella filiera del credito",
+        imageWidth: 800,
+        imageHeight: 450,
+        image: "/img/events/2023-credit-week-cyber-security.jpeg",
+        text: "Panel dedicated to data protection and cybersecurity, to investigate the obligations, opportunities, and challenges of GDPR for professionals working in the credit sector, also in light of rapid digital development and associated cyber risks."
+      } 
+    ]
+  },
+  // {
+  //   title: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
+  //   slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
+  //   subtitle: "I più efficaci strumenti di difesa e sicurezza digitale",
+  //   isOnline: true,
+  //   venue: "ClassCnbc (Sky 507)",
+  //   image: "/img/events/italia-fintech.png",
+  //   date: "2023-05-22",
+  //   hero: {
+  //     background: "linear-gradient(157deg, rgba(87,160,237,1) 30%, rgba(124,29,230,1) 100%)"
+  //   },
+  //   article: [
+  //     {
+  //       type: IArticleDataType.TEXT_IMAGE,
+  //       imageAlt: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
+  //       imageWidth: 500,
+  //       imageHeight: 500,
+  //       image: "/img/events/2023-italia-fintech-cyber-security/cover.jpeg",
+  //       text: "During the meeting, the best strategies and most effective digital defense and security tools for companies and public administration will be discussed, aiming to transition from outdated defense strategies to a proactive approach towards threats within a digital ecosystem."
+  //     } 
+  //   ]
+  // },
   {
     title: "Come sviluppare un reparto IT performante",
     slug: "come-sviluppare-un-reparto-it-performante",
