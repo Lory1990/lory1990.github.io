@@ -5,7 +5,6 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 import { useContext, useState } from "react"
 import { PodcastContext } from "../context/PodcastProvider"
 import { DateTime } from "luxon"
-import { minWidth } from "@mui/system"
 import Button from "../components/PodcastPlayer/Button"
 export interface IPodcastCardProps extends IPodcast {
   index: number

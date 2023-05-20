@@ -28,9 +28,9 @@ const Article: React.FC<IArticleProps> = ({ data }) => {
           case IArticleDataType.CTA:
             return <CtaBand {...item} key={index} />
           case IArticleDataType.IMAGE_TEXT:
-            return <TextImageBand {...item} key={index} />
+            return <TextImageBand {...item} key={index} inverted={true}/>
           case IArticleDataType.TEXT_IMAGE:
-            return <TextImageBand {...item} key={index} inverted={true} />
+            return <TextImageBand {...item} key={index}  />
           case IArticleDataType.TEXT:
             return <TextBand {...item} key={index} />
           case IArticleDataType.TITLE:
