@@ -46,28 +46,28 @@ const events: IEvent[] = [
       }
     ]
   },
-  // {
-  //   title: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
-  //   slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
-  //   subtitle: "I più efficaci strumenti di difesa e sicurezza digitale",
-  //   isOnline: true,
-  //   venue: "ClassCnbc (Sky 507)",
-  //   image: "/img/events/italia-fintech.png",
-  //   date: "2023-05-22",
-  //   hero: {
-  //     background: "linear-gradient(157deg, rgba(87,160,237,1) 30%, rgba(124,29,230,1) 100%)"
-  //   },
-  //   article: [
-  //     {
-  //       type: IArticleDataType.TEXT_IMAGE,
-  //       imageAlt: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
-  //       imageWidth: 500,
-  //       imageHeight: 500,
-  //       image: "/img/events/2023-italia-fintech-cyber-security/cover.jpeg",
-  //       text: "During the meeting, the best strategies and most effective digital defense and security tools for companies and public administration will be discussed, aiming to transition from outdated defense strategies to a proactive approach towards threats within a digital ecosystem."
-  //     }
-  //   ]
-  // },
+  {
+    title: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
+    slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
+    subtitle: "I più efficaci strumenti di difesa e sicurezza digitale",
+    isOnline: true,
+    venue: "ClassCnbc (Sky 507)",
+    image: "/img/events/italia-fintech.png",
+    date: "2023-05-22",
+    hero: {
+      background: "linear-gradient(157deg, rgba(87,160,237,1) 30%, rgba(124,29,230,1) 100%)"
+    },
+    article: [
+      {
+        type: IArticleDataType.TEXT_IMAGE,
+        imageAlt: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
+        imageWidth: 500,
+        imageHeight: 500,
+        image: "/img/events/2023-italia-fintech-cyber-security/cover.jpeg",
+        text: "During the meeting, the best strategies and most effective digital defense and security tools for companies and public administration will be discussed, aiming to transition from outdated defense strategies to a proactive approach towards threats within a digital ecosystem."
+      }
+    ]
+  },
   {
     title: "Come sviluppare un reparto IT performante",
     slug: "come-sviluppare-un-reparto-it-performante",
