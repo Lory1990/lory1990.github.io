@@ -33,7 +33,7 @@ const events: IEvent[] = [
     description: "Tutti parlano e vorrebbero fare TDD, ma come si fa? In questo workshop svilupperemo insieme una web app in React partendo dalla definizione dei test E2E scritti con Cypress.",
     hero: {
       background: "linear-gradient(145deg, rgba(46,47,54,1) 6%, rgba(106,107,116,1) 64%, rgba(92,177,104,1) 85%, rgba(77,247,91,1) 100%)"
-    },
+    }
   },
   {
     title: "Data protection e Cyber Security: la tutela della privacy nella filiera del credito",
