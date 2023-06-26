@@ -24,6 +24,18 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "Sviluppiamo una web app in TDD con Cypress",
+    slug: "sviluppiamo-una-web-app-in-tdd-con-cypress",
+    image: "/img/events/working-software.png",
+    isOnline: false,
+    venue: "MotorK",
+    date: "2023-06-30",
+    description: "Tutti parlano e vorrebbero fare TDD, ma come si fa? In questo workshop svilupperemo insieme una web app in React partendo dalla definizione dei test E2E scritti con Cypress.",
+    hero: {
+      background: "linear-gradient(145deg, rgba(46,47,54,1) 6%, rgba(106,107,116,1) 64%, rgba(92,177,104,1) 85%, rgba(77,247,91,1) 100%)"
+    },
+  }
+  {
     title: "Data protection e Cyber Security: la tutela della privacy nella filiera del credito",
     slug: "data-protection-e-cyber-security-la-tutela-della-privacy-nella-filiera-del-credito",
     image: "/img/events/fiera-del-credito.png",
