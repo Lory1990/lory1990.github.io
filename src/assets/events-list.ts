@@ -26,11 +26,13 @@ const events: IEvent[] = [
   {
     title: "Sviluppiamo una web app in TDD con Cypress",
     slug: "sviluppiamo-una-web-app-in-tdd-con-cypress",
-    image: "/img/events/working-software.png",
+    image: "/img/events/working-software.PNG",
     isOnline: false,
     venue: "MotorK",
     date: "2023-06-30",
-    description: "Tutti parlano e vorrebbero fare TDD, ma come si fa? In questo workshop svilupperemo insieme una web app in React partendo dalla definizione dei test E2E scritti con Cypress.",
+    shortDescription: "All talk about and would like to do TDD, but how do we do it? In this workshop, we will develop a web app in React together, starting from the definition of E2E tests written with Cypress.",
+    description: "All talk about and would like to do TDD, but how do we do it? In this workshop, we will develop a web app in React together, starting from the definition of E2E tests written with Cypress.",
+    link: "https://www.agilemovement.it/workingsoftware/",
     hero: {
       background: "linear-gradient(145deg, rgba(46,47,54,1) 6%, rgba(106,107,116,1) 64%, rgba(92,177,104,1) 85%, rgba(77,247,91,1) 100%)"
     }
