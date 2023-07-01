@@ -26,7 +26,7 @@ const events: IEvent[] = [
   {
     title: "Sviluppiamo una web app in TDD con Cypress",
     slug: "sviluppiamo-una-web-app-in-tdd-con-cypress",
-    image: "/img/events/working-software.PNG",
+    image: "/img/events/working-software.png",
     isOnline: false,
     venue: "MotorK",
     date: "2023-06-30",
