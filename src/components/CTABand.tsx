@@ -58,7 +58,7 @@ export default function CTABand({ secondaryText, primaryText, buttonText, onClic
               justifyContent: "center"
             }}
           >
-            <Typography variant="h4" color="white" align="center" sx={{ fontWeight: "Bold"}}>
+            <Typography variant="h4" color="white" align="center" sx={{ fontWeight: "Bold" }}>
               {primaryText}
             </Typography>
 
@@ -66,7 +66,7 @@ export default function CTABand({ secondaryText, primaryText, buttonText, onClic
               {secondaryText}
             </Typography>
             <Box sx={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
-              <Button variant="contained" color="neutral" disableElevation onClick={onClick} sx={{fontSize: "1.25em", paddingLeft: "5em", paddingRight:"5em"}}>
+              <Button variant="contained" color="neutral" disableElevation onClick={onClick} sx={{ fontSize: "1.25em", paddingLeft: "5em", paddingRight: "5em" }}>
                 {buttonText}
               </Button>
             </Box>
