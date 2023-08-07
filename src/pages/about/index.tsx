@@ -88,7 +88,7 @@ const About: React.FC = () => {
         </Box>
         <CTABand
           sx={{ marginTop: "2em", marginBottom: "2em" }}
-          primaryText="Want to work together"
+          primaryText="Want to work together?"
           buttonText="Contact Me"
           onClick={() => {
             window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })
