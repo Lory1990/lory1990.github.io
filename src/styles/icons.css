@@ -1,7 +1,10 @@
 @font-face {
   font-family: "icons";
   src: url("/fonts/icons.eot?zhtkdw");
-  src: url("/fonts/icons.eot?zhtkdw#iefix") format("embedded-opentype"), url("/fonts/icons.ttf?zhtkdw") format("truetype"), url("/fonts/icons.woff?zhtkdw") format("woff"),
+  src:
+    url("/fonts/icons.eot?zhtkdw#iefix") format("embedded-opentype"),
+    url("/fonts/icons.ttf?zhtkdw") format("truetype"),
+    url("/fonts/icons.woff?zhtkdw") format("woff"),
     url("/fonts/icons.svg?zhtkdw#icons") format("svg");
   font-weight: normal;
   font-style: normal;

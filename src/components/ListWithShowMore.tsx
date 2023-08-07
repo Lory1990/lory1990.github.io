@@ -18,9 +18,7 @@ const ListWithShowMore: React.FC<IListWithShowMore> = ({ list, animationComponen
 
   const payload = (
     <>
-      {list?.slice?.(0, sliceList)?.map?.((data: any, index: number) => (
-        <SingleElementComponent key={data.slug} {...data} index={index} />
-      ))}
+      {list?.slice?.(0, sliceList)?.map?.((data: any, index: number) => <SingleElementComponent key={data.slug} {...data} index={index} />)}
       {!showOther && (
         <Box
           sx={{
@@ -37,13 +35,7 @@ const ListWithShowMore: React.FC<IListWithShowMore> = ({ list, animationComponen
     </>
   )
 
-  const payloadMore = (
-    <>
-      {list?.slice?.(sliceList)?.map?.((data: any, index: number) => (
-        <SingleElementComponent key={data.slug} {...data} index={index} />
-      ))}
-    </>
-  )
+  const payloadMore = <>{list?.slice?.(sliceList)?.map?.((data: any, index: number) => <SingleElementComponent key={data.slug} {...data} index={index} />)}</>
   return (
     <Box
       sx={{
