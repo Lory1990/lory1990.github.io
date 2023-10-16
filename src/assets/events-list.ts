@@ -40,7 +40,7 @@ const events: IEvent[] = [
     date: "2023-11-11",
     image: "/img/events/2022-gdg-triveneto/badge.webp",
     link: "https://gdg.community.dev/events/details/google-gdg-trento-presents-devfest-trento-2023/"
-  },  
+  },
   {
     title: "Come fare il grande passo: da sviluppatore a manager",
     slug: "come-fare-il-grande-passo-da-sviluppatore-a-manager",
@@ -48,8 +48,10 @@ const events: IEvent[] = [
     venue: "GDG Cloud",
     date: "2023-10-31",
     image: "/img/gdg-cloud-milano.webp",
-    description: "If you want to transform your career from a developer to a manager, increase your salary, and lead teams of people collaborating to create a product, this talk is for you! Becoming a technical manager is a job that no one teaches you. At some point, you just dive in and hope for the best... soon you'll encounter issues like overly technical language, financial matters, limited resources, and the challenge of balancing numerous requests. Wouldn't it be better to have a guide? A concise summary to start off on the right foot? Well, this session is a complete tutorial on how to be the best IT manager ever!",
-    shortDescription: "Transform your career from developer to manager, increase salary, and lead collaborative teams. This session offers essential guidance on becoming the best IT manager, addressing technical challenges and resource constraints.",
+    description:
+      "If you want to transform your career from a developer to a manager, increase your salary, and lead teams of people collaborating to create a product, this talk is for you! Becoming a technical manager is a job that no one teaches you. At some point, you just dive in and hope for the best... soon you'll encounter issues like overly technical language, financial matters, limited resources, and the challenge of balancing numerous requests. Wouldn't it be better to have a guide? A concise summary to start off on the right foot? Well, this session is a complete tutorial on how to be the best IT manager ever!",
+    shortDescription:
+      "Transform your career from developer to manager, increase salary, and lead collaborative teams. This session offers essential guidance on becoming the best IT manager, addressing technical challenges and resource constraints.",
     link: "https://gdg.community.dev/gdg-cloud-milano/",
     hero: {
       background: "linear-gradient(145deg, rgba(5,51,113,1) 0%, rgba(45,116,205,1) 100%);"
