@@ -24,8 +24,8 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
-    title: "I passi giusti per creare una piattaforma solida e scalabile",
-    slug: "i-passi-giusti-per-creare-una-piattaforma-solida-e-scalabile",
+    title: "Prendere in gestione un software scritto da altri",
+    slug: "prendere-in-gestione-un-software-scritto-da-altri",
     isOnline: false,
     venue: "Dev Fest Alps 2023",
     date: "2023-12-02",
@@ -100,6 +100,7 @@ const events: IEvent[] = [
     title: "Resilienza e proattività per la sicurezza dell’ecosistema aziendale",
     slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
     subtitle: "I più efficaci strumenti di difesa e sicurezza digitale",
+    link: "https://video.milanofinanza.it/video/evoluzione-delle-strategie-di-protezione-dal-cybercrime-nei-mercati-finanziari-IrYPAMXyFIoY",
     isOnline: true,
     venue: "ClassCnbc (Sky 507)",
     image: "/img/events/italia-fintech.png",
