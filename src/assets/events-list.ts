@@ -46,7 +46,7 @@ const events: IEvent[] = [
     title: "Come fare il grande passo: da sviluppatore a manager",
     slug: "come-fare-il-grande-passo-da-sviluppatore-a-manager",
     isOnline: false,
-    venue: "GDG Cloud",
+    venue: "GDG Cloud Milano",
     date: "2023-10-31",
     image: "/img/gdg-cloud-milano.webp",
     description:
