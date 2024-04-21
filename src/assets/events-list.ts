@@ -30,7 +30,8 @@ const events: IEvent[] = [
     venue: "Microsoft House Milano",
     date: "2024-04-18",
     link: "https://www.azuremeetupmilano.it/e/sessione/3444/Come-hostare-la-tua-startup-100-su-Azure-non-solo-l-app",
-    description: "Pensiamo sempre al cloud per creare piattaforme web ma Azure ci offre molto di più e legarci a questo ambiente ha molti vantaggi. Su Azure è possibile creare un azienda full remote, collegare tutte persone, le risorse e gli applicativi web insieme, per essere sempre connessi, sicuri e autenticati in SSO. Sarà un talk che ripercorre un anno di lavoro in azienda: partiremo dall'identificazione dei dipendenti e dei loro PC con Azure Entra ID per arrivare allo sviluppo delle piattaforme web distribuite su cloud Azure passando per tutti gli strumenti no-code che velocizzano tutto il processo.",
+    description:
+      "Pensiamo sempre al cloud per creare piattaforme web ma Azure ci offre molto di più e legarci a questo ambiente ha molti vantaggi. Su Azure è possibile creare un azienda full remote, collegare tutte persone, le risorse e gli applicativi web insieme, per essere sempre connessi, sicuri e autenticati in SSO. Sarà un talk che ripercorre un anno di lavoro in azienda: partiremo dall'identificazione dei dipendenti e dei loro PC con Azure Entra ID per arrivare allo sviluppo delle piattaforme web distribuite su cloud Azure passando per tutti gli strumenti no-code che velocizzano tutto il processo."
   },
   {
     title: "Come parlano i software?",
@@ -39,7 +40,8 @@ const events: IEvent[] = [
     venue: "Milano Luiss Hub",
     date: "2024-04-16",
     video: "https://www.youtube.com/watch?v=-aVbE0pEkIo",
-    description: "Ti sei mai chiesto come i software possano 'parlare' tra loro? Bene, preparati a immergerti nel mondo affascinante delle comunicazioni tra software. In questo Talk ti guiderò attraverso un viaggio nel modo in cui i software comunicano, esplorando le molteplici strade che essi percorrono per scambiarsi informazioni e dati. Pronti a scoprire come REST API, Websockets, Server Sent Events, codice e TCP si intrecciano per creare una rete di connessioni che sostiene il tessuto digitale del nostro mondo moderno?",
+    description:
+      "Ti sei mai chiesto come i software possano 'parlare' tra loro? Bene, preparati a immergerti nel mondo affascinante delle comunicazioni tra software. In questo Talk ti guiderò attraverso un viaggio nel modo in cui i software comunicano, esplorando le molteplici strade che essi percorrono per scambiarsi informazioni e dati. Pronti a scoprire come REST API, Websockets, Server Sent Events, codice e TCP si intrecciano per creare una rete di connessioni che sostiene il tessuto digitale del nostro mondo moderno?"
   },
   {
     title: "Prendere in gestione un software scritto da altri",
