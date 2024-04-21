@@ -26,7 +26,7 @@ const events: IEvent[] = [
   {
     title: "Come hostare la tua startup 100% su Azure, non solo l'app!",
     slug: "come-hostare-la-tua-startup-100-su-azure-non-solo-lapp",
-    onOnline: false,
+    isOnline: false,
     venue: "Microsoft House Milano",
     date: "2024-04-18",
     link: "https://www.azuremeetupmilano.it/e/sessione/3444/Come-hostare-la-tua-startup-100-su-Azure-non-solo-l-app",
@@ -36,7 +36,7 @@ const events: IEvent[] = [
   {
     title: "Come parlano i software?",
     slug: "come-parlano-i-software",
-    onOnline: false,
+    isOnline: false,
     venue: "Milano Luiss Hub",
     date: "2024-04-16",
     video: "https://www.youtube.com/watch?v=-aVbE0pEkIo",
