@@ -24,6 +24,18 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "Azimut Marketplace: The Path to a Platform Company",
+    slug: "azimut-marketplace-the-path-to-a-platform-company",
+    image: "/img/mia-platform.png",
+    shortDescription: "Our journey form Excel to a platform company",
+    isOnline: false,
+    venue: "Platmosphere - Talent Garden Calabiana",
+    date: "2024-05-14",
+    link: "https://platmosphere.com/",
+    description:
+      "Azimut Marketplace is a fintech ecosystem that simplifies financial services access to small and medium-sized businesses. This testimonial will present the company's progressive journey towards platform transformation. Discover how it embraced incremental steps to achieve greater governance and foster a reuse-oriented approach across its multi-country IT organization."
+  },
+  {
     title: "Come hostare la tua startup 100% su Azure, non solo l'app!",
     slug: "come-hostare-la-tua-startup-100-su-azure-non-solo-lapp",
     image: "/img/global-azure-logo.png",
@@ -40,6 +52,7 @@ const events: IEvent[] = [
     slug: "come-parlano-i-software",
     isOnline: false,
     image: "/img/coding-bunker-logo.png",
+    shortDescription: "Ti sei mai chiesto come i software possano 'parlare' tra loro? Se API, Code e TCP sono parole sconoscuite allora questo talk è per te",
     venue: "Milano Luiss Hub",
     date: "2024-04-16",
     video: "https://www.youtube.com/watch?v=-aVbE0pEkIo",
