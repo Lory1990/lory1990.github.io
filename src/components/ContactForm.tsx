@@ -18,12 +18,20 @@ const CustomContactForm: React.FC = () => {
 
   return (
     <>
-      <TextField variant="outlined" value={context.values.email} onChange={e => context.setFieldValue("email", e.target.value)} error={Boolean(context.errors.email)} label="Your email address" />
+      <TextField
+        variant="outlined"
+        disabled={context.isSubmitting}
+        value={context.values.email}
+        onChange={e => context.setFieldValue("email", e.target.value)}
+        error={Boolean(context.errors.email)}
+        label="Your email address"
+      />
       <TextField
         variant="outlined"
         multiline={true}
         label="Your messsage"
         onChange={e => context.setFieldValue("text", e.target.value)}
+        disabled={context.isSubmitting}
         rows={5}
         value={context.values.text}
         error={Boolean(context.errors.text)}
