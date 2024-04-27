@@ -1,14 +1,9 @@
 import { Box } from "@mui/system"
 import Link from "next/link"
 import { IProject } from "../assets/projects-list"
-import LanguageIcon from "@mui/icons-material/Language"
 import { useTheme } from "@mui/material"
 import { ReactNode } from "react"
-import FacebookIcon from "@mui/icons-material/Facebook"
-import InstagramIcon from "@mui/icons-material/Instagram"
-import LinkedInIcon from "@mui/icons-material/LinkedIn"
-import TwitterIcon from "@mui/icons-material/Twitter"
-import YouTubeIcon from "@mui/icons-material/YouTube"
+import { Language as LanguageIcon, Facebook as FacebookIcon, Instagram as InstagramIcon, LinkedIn as LinkedInIcon, Twitter as TwitterIcon, YouTube as YouTubeIcon } from "@mui/icons-material"
 
 export interface ISingleLinkProps {
   icon: ReactNode

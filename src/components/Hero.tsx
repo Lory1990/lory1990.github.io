@@ -1,8 +1,7 @@
 import { Button, Theme, Typography } from "@mui/material"
 import { Box, SxProps } from "@mui/system"
 
-import EventIcon from "@mui/icons-material/Event"
-import PlaceIcon from "@mui/icons-material/Place"
+import { Event as EventIcon, Place as PlaceIcon } from "@mui/icons-material"
 import React from "react"
 import { DateTime } from "luxon"
 
