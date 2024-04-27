@@ -10,7 +10,8 @@
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -49,7 +50,7 @@
     "@babel/core": "^7.20.12",
     "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.15",
-    "@storybook/addon-docs": "^6.5.15",
+    "@storybook/addon-docs": "^6.5.15",    
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
     "@storybook/builder-vite": "^0.2.6",
@@ -63,6 +64,7 @@
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.2.7",
+    "lint-staged": "^15.1.0",
     "babel-loader": "^8.3.0",
     "eslint": "^9.1.1",
     "eslint-config-airbnb": "^19.0.4",
@@ -70,5 +72,11 @@
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "vite": "^5.2.10"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
   }
 }
