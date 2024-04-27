@@ -3,17 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
+  output: "export",
   images: {
     unoptimized: true
-  },
-  redirects: async () => {
-    return [
-      {
-        source: "/portfolio/:slug",
-        destination: "/projects/:slug",
-        permanent: true
-      }
-    ]
   }
 }
 
