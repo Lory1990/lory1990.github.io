@@ -18,7 +18,7 @@ const techStack: ITechStack[] = [
     highlight: true,
     title: "React",
     image: "icon-react",
-    experience: 3,
+    experience: 4,
 
     category: "FE"
   },
@@ -32,7 +32,7 @@ const techStack: ITechStack[] = [
     highlight: true,
     title: "Java",
     image: "icon-java",
-    experience: 5,
+    experience: 7,
 
     category: "BE",
     technologies: [
@@ -50,7 +50,7 @@ const techStack: ITechStack[] = [
     title: "Kubernetes",
     image: "icon-kubernetes",
 
-    experience: 1,
+    experience: 2,
     category: "CLOUD",
     technologies: [
       {
@@ -67,7 +67,7 @@ const techStack: ITechStack[] = [
     title: "CSS",
     image: "icon-sass",
 
-    experience: 3,
+    experience: 4,
     category: "FE",
     technologies: [
       {
@@ -102,7 +102,7 @@ const techStack: ITechStack[] = [
     highlight: true,
     title: "SQL + NoSQL",
     image: "icon-database",
-    experience: 7,
+    experience: 8,
     category: "BE",
 
     technologies: [
@@ -127,12 +127,11 @@ const techStack: ITechStack[] = [
     experience: 1,
     category: "CLOUD"
   },
-  ,
   {
     highlight: true,
     title: "Azure",
     image: "icon-azure",
-    experience: 3,
+    experience: 4,
     category: "CLOUD"
   }
 ]
