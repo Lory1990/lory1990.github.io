@@ -26,6 +26,8 @@ const events: IEvent[] = [
   {
     title: "Come hostare la tua startup 100% su Azure, non solo l'app!",
     slug: "come-hostare-la-tua-startup-100-su-azure-non-solo-lapp",
+    image: "/img/events/global-azure-logo.png",
+    shortDescription: "Su Azure è possibile creare un azienda full remote e questo talk vi spiega come fare",
     isOnline: false,
     venue: "Microsoft House Milano",
     date: "2024-04-18",
@@ -37,6 +39,7 @@ const events: IEvent[] = [
     title: "Come parlano i software?",
     slug: "come-parlano-i-software",
     isOnline: false,
+    image: "/img/events/coding-bunker-logo.png",
     venue: "Milano Luiss Hub",
     date: "2024-04-16",
     video: "https://www.youtube.com/watch?v=-aVbE0pEkIo",
