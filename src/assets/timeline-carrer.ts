@@ -2,8 +2,8 @@ import { TimelineEvent } from "../components/CareerTimeline"
 
 const timelineCarrer: TimelineEvent[] = [
   {
-    position: "IT Manager",
-    company: "Step 4 Business & Azimut Marketplace",
+    position: "CTO",
+    company: "Azimut Marketplace",
     location: "Milan, Italy",
     from: "May 2022",
     to: "Today",
