@@ -65,6 +65,7 @@ const events: IEvent[] = [
     isOnline: false,
     venue: "Dev Fest Alps 2023",
     date: "2023-12-02",
+    video: "https://www.youtube.com/live/SkM0rXwO3Pw?si=1uqiYMq5mjvJTjch&t=23422",
     image: "/img/events/2022-gdg-triveneto/badge.webp",
     link: "https://gdg.community.dev/events/details/google-gdg-torino-presents-devfest-alps-2023/"
   },
@@ -81,7 +82,7 @@ const events: IEvent[] = [
     title: "Come fare il grande passo: da sviluppatore a manager",
     slug: "come-fare-il-grande-passo-da-sviluppatore-a-manager",
     isOnline: false,
-    venue: "GDG Cloud",
+    venue: "GDG Cloud Milano",
     date: "2023-10-31",
     image: "/img/gdg-cloud-milano.webp",
     description:

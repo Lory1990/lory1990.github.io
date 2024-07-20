@@ -26,9 +26,9 @@ const About: React.FC = () => {
         imageAlt="Lorenzo De Francesco"
         text={
           <>
-            I am Lorenzo, a highly skilled and passionate IT manager, with more than 10 years of experience in the fintech industry software development. I am currently working at{" "}
-            <a href="https://step4business.com" target="_blank" rel="noreferrer">
-              Step4Business
+            I am Lorenzo, a highly skilled and passionate CTO, with more than 10 years of experience in the fintech industry software development. I am currently working at{" "}
+            <a href="https://azimutmarketplace.it" target="_blank" rel="noreferrer">
+              Azimut Marketplace
             </a>{" "}
             to create the best marketplace for entrepreneur 2.0
             <br />I have developed a broad knowledge of cloud technologies and know how to successfully implement them an enterprise application made of microservices. In addition to my work

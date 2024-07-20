@@ -73,7 +73,7 @@ const AboutHero: React.FC = () => {
             <Box sx={{ display: { xs: "none", sm: "inline" } }}>Hi,</Box> I am Lorenzo
           </Typography>
           <Typography fontWeight="bold" sx={{ fontSize: { xs: "2em", sm: "2em" } }} color="#36454F">
-            IT Manager
+            CTO
           </Typography>
           <Box sx={theme => ({ margin: "1em 0 1em 0", fontSize: "1.5em", fontStyle: "italic", color: theme.palette.primary.main })}>IT Governance is my kingdom</Box>
           <Box

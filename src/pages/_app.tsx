@@ -55,7 +55,7 @@ const contactFormRules: ContactFormRule[] = [
   },
   {
     route: "/about",
-    title: "Do you need a IT Manager?",
+    title: "Do you need a CTO?",
     subtitle: "Contact me 📩 to start a new collaboration"
   }
   // title:"I am available for collaboration" subtitle:"Want to do a podcast with me?"
@@ -86,7 +86,7 @@ function PersonalWebsite({ Component, pageProps }) {
               facebookLink="https://www.facebook.com/lory1990"
               linkedinLink="https://www.linkedin.com/in/lorenzodefrancesco"
               text1="Lorenzo De Francesco"
-              text2="IT Manager"
+              text2="CTO"
               text3="Milano (MI)"
             />
           </Box>
