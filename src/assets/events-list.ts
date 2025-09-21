@@ -46,7 +46,7 @@ const events: IEvent[] = [
     date: "2024-11-16",
     image: "/img/2024-dev-fest-venezia.png",
     description: `Sono finiti i tempi in cui bastava un database e un server PHP per avere un applicazione funzionante; adesso la situazione è molto più complessa, le componenti sono tante e devono essere correttamente create ed orchestrate. Possiamo farlo a mano, ma perché non creare uno script che si occupi di creare e tenere questa infrastruttura? Così sarà facile tenere traccia nel tempo delle modifiche e casomai migrare da una parte all'altra. Ecco terraform fa esattamente questo e in questo talk vedremo come si può usare in un ambiente locale per orchestrare container ed in uno cloud per creare tutte le risorse di cui abbiamo bisogno. Se anche tu non vuoi più passare le ore a creare le infrastrutture cloud non puoi perderti questo talk!`,
-    shortDescription: "Terraform aplpicato ad azure"
+    shortDescription: "Terraform applicato ad azure cloud"
   },
   {
     title: "IT Governance con Lorenzo De Francesco",
