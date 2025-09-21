@@ -28,7 +28,7 @@ const events: IEvent[] = [
     slug: "cto-connect-codemotion",
     date: "2025-10-14",
     isOnline: false,
-    image: "/img/codemotion.png",
+    image: "/img/codemotion.png"
   },
   {
     title: "Oracolo del Test - Leadership talk e tavola rotonda",
