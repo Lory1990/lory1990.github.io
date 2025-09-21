@@ -1,8 +1,5 @@
 import { Box, IconButton, Link, useMediaQuery, Typography, useTheme } from "@mui/material"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import TwitterIcon from "@mui/icons-material/Twitter"
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
-import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import { GitHub as GitHubIcon, Twitter as TwitterIcon, FacebookOutlined as FacebookOutlinedIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material"
 import { ISocialIconProps, ISocialLinks } from "../types/ISocialProps"
 import { Theme } from "@mui/system"
 interface IFooterProps extends ISocialLinks {

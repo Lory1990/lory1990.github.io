@@ -1,12 +1,11 @@
 import { AppBar, IconButton, Drawer, Typography, useMediaQuery, useScrollTrigger, useTheme } from "@mui/material"
 import { Box, Theme } from "@mui/system"
-import MenuIcon from "@mui/icons-material/Menu"
+import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material"
 import React, { useContext, useState } from "react"
 import useHover from "../hooks/useHover"
 import { useRouter } from "next/router"
 import Link from "next/link"
 import { outlinedColor } from "../utils"
-import CloseIcon from "@mui/icons-material/Close"
 import { ThemeContext } from "../context/ThemeProvider"
 import { HeaderColor } from "../types/HeaderColor"
 

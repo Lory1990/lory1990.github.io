@@ -6,3 +6,6 @@ robots.txt
 .DS_Store
 next-sitemap.config.js
 .env.*
+*.tsbuildinfo
+# Sentry Config File
+.sentryclirc

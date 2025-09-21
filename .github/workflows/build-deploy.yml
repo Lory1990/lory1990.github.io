@@ -15,14 +15,14 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
       - name: Setup Node 🐍
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
 
       - name: Cache Next 💾
         uses: actions/cache@v3
@@ -39,12 +39,11 @@ jobs:
           NEXT_PUBLIC_EMAILJS_TEMPLATE: '${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}'
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: '${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}'
           NEXT_PUBLIC_GOOGLE_MAPS_KEY: '${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_KEY }}'
+          SENTRY_AUTH_TOKEN: '${{ secrets.SENTRY_AUTH_TOKEN }}'
         run: yarn build
-      
-      - run: yarn export
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./out
 
@@ -66,4 +65,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

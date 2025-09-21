@@ -2,11 +2,8 @@ import { Box, Card, CardContent, Chip, Typography, useMediaQuery, useTheme } fro
 import { DateTime } from "luxon"
 import { IProject } from "../assets/projects-list"
 import Title from "./typography/Title"
-import CategoryIcon from "@mui/icons-material/Category"
-import GroupsIcon from "@mui/icons-material/Groups"
-import DateRangeIcon from "@mui/icons-material/DateRange"
-import CodeIcon from "@mui/icons-material/Code"
-import WorkIcon from "@mui/icons-material/Work"
+
+import { Category as CategoryIcon, Groups as GroupsIcon, DateRange as DateRangeIcon, Code as CodeIcon, Work as WorkIcon } from "@mui/icons-material"
 const ProjectDescription: React.FC<IProject> = ({ description, title, category, stack, date, role, team }) => {
   const theme = useTheme()
 
