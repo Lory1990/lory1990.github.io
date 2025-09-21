@@ -24,6 +24,75 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "CTO Connext @ Codemotion",
+    slug: "cto-connect-codemotion",
+    date: "2025-10-14",
+    isOnline: false,
+    image: "/img/codemotion.png"
+  },
+  {
+    title: "Oracolo del Test - Leadership talk e tavola rotonda",
+    slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
+    date: "2025-02-25",
+    image: "/img/oracolo-del-test.jpg",
+    isOnline: false
+  },
+  {
+    title: "Anche le infrastrutture cloud possono essere scriptate",
+    slug: "anche-le-infrastrutture-cloud-possono-essere-scriptate",
+    link: "https://devfest24.gdgvenezia.it/",
+    isOnline: false,
+    venue: "Campus Scientifico Università Ca' Foscari",
+    date: "2024-11-16",
+    image: "/img/2024-dev-fest-venezia.png",
+    description: `Sono finiti i tempi in cui bastava un database e un server PHP per avere un applicazione funzionante; adesso la situazione è molto più complessa, le componenti sono tante e devono essere correttamente create ed orchestrate. Possiamo farlo a mano, ma perché non creare uno script che si occupi di creare e tenere questa infrastruttura? Così sarà facile tenere traccia nel tempo delle modifiche e casomai migrare da una parte all'altra. Ecco terraform fa esattamente questo e in questo talk vedremo come si può usare in un ambiente locale per orchestrare container ed in uno cloud per creare tutte le risorse di cui abbiamo bisogno. Se anche tu non vuoi più passare le ore a creare le infrastrutture cloud non puoi perderti questo talk!`,
+    shortDescription: "Terraform aplpicato ad azure"
+  },
+  {
+    title: "IT Governance con Lorenzo De Francesco",
+    slug: "it-governance-con-lorenzo-de-francesco",
+    link: "https://open.spotify.com/episode/2ushjt8QXbhXiYNplzxEeH",
+    isOnline: true,
+    venue: "Azure Italia Podcast",
+    date: "2024-07-08",
+    description:
+      "In questa puntata ospitiamo Lorenzo De Francesco, CTO di Azimut Marketplace, che ci parla di come organizzare l'IT in azienda, ovviamente su Azure e delle sue esperienze con qualche consiglio pratico",
+    image: "/img/azure-italia-podcast.jpeg"
+  },
+  {
+    title: "Guida pratica alla gestione delle eccezioni",
+    slug: "guida-pratica-alla-gestione-delle-eccezioni",
+    link: "https://devfestmilano.it/",
+    isOnline: false,
+    venue: "Dev Fest Milano 2025",
+    date: "2025-10-11",
+    description:
+      "Nella maggior parte dei software, la gestione delle eccezioni è spesso trascurata o trattata superficialmente. Ignorare le eccezioni può portare a problemi significativi, sia per gli utenti finali che per il team di sviluppo. Le eccezioni non dovrebbero solo essere gestite internamente ma anche comunicate in modo chiaro all'utente; inoltre i messaggi di errore devono essere user friendly per evitare di creare confusione o frustrazione. Parallelamente, è essenziale che le eccezioni vengano loggate nei sistemi di monitoraggio, in modo da fornire al team di sviluppo tutte le informazioni necessarie per risolvere i problemi rapidamente. In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio. Impareremo insieme a trasformare un potenziale problema in un'opportunità per migliorare l'esperienza utente e la qualità del software.",
+    shortDescription:
+      "In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio",
+    image: "/img/dev-fest-2025.webp"
+  },
+  {
+    title: "Cybersecurity: solo adempimenti normativi o vera sicurezza?",
+    slug: "cybersecurity-solo-adempimenti-normativi-o-vera-sicurezza",
+    isOnline: false,
+    venue: "Strategic Management Partners",
+    date: "2025-09-26",
+    image: "/img/strategic-partners.png"
+  },
+  {
+    title: "Come costruire una cultura IT partendo dal disordine totale",
+    slug: "come-costruire-una-cultura-it-partendo-dal-disordine-totale",
+    isOnline: false,
+    venue: "Ordine degli Ingegneri - Verona",
+    date: "2025-10-03",
+    link: "https://usecaseconf.tech/",
+    image: "/img/events/2023-use-case-conf.png",
+    description:
+      "Quando sono arrivato, nessuno sapeva nemmeno quanto costasse davvero l’infrastruttura IT. E tutti si fidavano ciecamente dei fornitori. Sono arrivato io e in tre anni di lavoro ho abbattuto 700k€ di costi ricorrenti, creato una cultura IT sana e creato due leader tecnologici. Come ho fatto? In mille modi diversi, facendo un grande lavoro di evangelizzazione e di miglioramento tecnologico. Te li racconto tutti in questo talk. È la storia vera di come si può ricostruire un reparto IT, partendo dal caos – e portando cultura, controllo e autonomia.",
+    shortDescription: "È la storia vera di come si può ricostruire un reparto IT, partendo dal caos – e portando cultura, controllo e autonomia."
+  },
+  {
     title: "Azimut Marketplace: The Path to a Platform Company",
     slug: "azimut-marketplace-the-path-to-a-platform-company",
     image: "/img/mia-platform.png",
