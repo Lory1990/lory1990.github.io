@@ -24,6 +24,13 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "CTO Connext @ Codemotion",
+    slug: "cto-connect-codemotion",
+    date: "2025-10-14",
+    isOnline: false,
+    image: "/img/codemotion.png",
+  },
+  {
     title: "Oracolo del Test - Leadership talk e tavola rotonda",
     slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
     date: "2025-02-25",
