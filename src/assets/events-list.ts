@@ -24,6 +24,17 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "Come costruire una cultura IT partendo dal disordine totale",
+    slug: "come-costruire-una-cultura-it-partendo-dal-disordine-totale",
+    isOnline: false,
+    venue: "Ordine degli Ingegneri - Verona",
+    date: "2025-10-03",
+    link: "https://usecaseconf.tech/",
+    image: "/img/events/2023-use-case-conf.png",
+    description: "Quando sono arrivato, nessuno sapeva nemmeno quanto costasse davvero l’infrastruttura IT. E tutti si fidavano ciecamente dei fornitori. Sono arrivato io e in tre anni di lavoro ho abbattuto 700k€ di costi ricorrenti, creato una cultura IT sana e creato due leader tecnologici. Come ho fatto? In mille modi diversi, facendo un grande lavoro di evangelizzazione e di miglioramento tecnologico. Te li racconto tutti in questo talk. È la storia vera di come si può ricostruire un reparto IT, partendo dal caos – e portando cultura, controllo e autonomia.",
+    shortDescription: "È la storia vera di come si può ricostruire un reparto IT, partendo dal caos – e portando cultura, controllo e autonomia."
+  },
+  {
     title: "Prendere in gestione un software scritto da altri",
     slug: "prendere-in-gestione-un-software-scritto-da-altri",
     isOnline: false,
