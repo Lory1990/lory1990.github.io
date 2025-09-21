@@ -24,9 +24,9 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
-    "title": "Anche le infrastrutture cloud possono essere scriptate",
+    title: "Anche le infrastrutture cloud possono essere scriptate",
     slug: "anche-le-infrastrutture-cloud-possono-essere-scriptate",
-    link:"https://devfest24.gdgvenezia.it/",
+    link: "https://devfest24.gdgvenezia.it/",
     isOnline: false,
     venue: "Campus Scientifico Università Ca' Foscari",
     date: "2024-11-16",
