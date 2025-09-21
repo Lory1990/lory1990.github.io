@@ -24,6 +24,13 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    title: "Oracolo del Test - Leadership talk e tavola rotonda",
+    slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
+    date: "2025-02-25",
+    image: "/img/oracolo-del-test.jpg",
+    isOnline: false,
+  },
+  {
     title: "Anche le infrastrutture cloud possono essere scriptate",
     slug: "anche-le-infrastrutture-cloud-possono-essere-scriptate",
     link: "https://devfest24.gdgvenezia.it/",
