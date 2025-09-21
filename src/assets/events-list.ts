@@ -28,7 +28,7 @@ const events: IEvent[] = [
     slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
     date: "2025-02-25",
     image: "/img/oracolo-del-test.jpg",
-    isOnline: false,
+    isOnline: false
   },
   {
     title: "Anche le infrastrutture cloud possono essere scriptate",
