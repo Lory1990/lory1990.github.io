@@ -30,13 +30,15 @@ const events: IEvent[] = [
     isOnline: false,
     venue: "Dev Fest Milano 2025",
     date: "2025-10-11",
-    description: "Nella maggior parte dei software, la gestione delle eccezioni è spesso trascurata o trattata superficialmente. Ignorare le eccezioni può portare a problemi significativi, sia per gli utenti finali che per il team di sviluppo. Le eccezioni non dovrebbero solo essere gestite internamente ma anche comunicate in modo chiaro all'utente; inoltre i messaggi di errore devono essere user friendly per evitare di creare confusione o frustrazione. Parallelamente, è essenziale che le eccezioni vengano loggate nei sistemi di monitoraggio, in modo da fornire al team di sviluppo tutte le informazioni necessarie per risolvere i problemi rapidamente. In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio. Impareremo insieme a trasformare un potenziale problema in un'opportunità per migliorare l'esperienza utente e la qualità del software.",
-    shortDescription: "In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio",
+    description:
+      "Nella maggior parte dei software, la gestione delle eccezioni è spesso trascurata o trattata superficialmente. Ignorare le eccezioni può portare a problemi significativi, sia per gli utenti finali che per il team di sviluppo. Le eccezioni non dovrebbero solo essere gestite internamente ma anche comunicate in modo chiaro all'utente; inoltre i messaggi di errore devono essere user friendly per evitare di creare confusione o frustrazione. Parallelamente, è essenziale che le eccezioni vengano loggate nei sistemi di monitoraggio, in modo da fornire al team di sviluppo tutte le informazioni necessarie per risolvere i problemi rapidamente. In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio. Impareremo insieme a trasformare un potenziale problema in un'opportunità per migliorare l'esperienza utente e la qualità del software.",
+    shortDescription:
+      "In questo talk, esploreremo come gestire le eccezioni a 360 gradi: dalla loro cattura, alla creazione di messaggi di errore user friendly, fino alla loro registrazione nei sistemi di monitoraggio",
     image: "/img/dev-fest-2025.webp"
   },
   {
-    "title": "Cybersecurity: solo adempimenti normativi o vera sicurezza?",
-    "slug": "cybersecurity-solo-adempimenti-normativi-o-vera-sicurezza",
+    title: "Cybersecurity: solo adempimenti normativi o vera sicurezza?",
+    slug: "cybersecurity-solo-adempimenti-normativi-o-vera-sicurezza",
     isOnline: false,
     venue: "Strategic Management Partners",
     date: "2025-09-26",
