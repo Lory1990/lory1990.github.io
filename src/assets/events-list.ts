@@ -24,6 +24,16 @@ export interface IEvent {
 
 const events: IEvent[] = [
   {
+    "title": "IT Governance con Lorenzo De Francesco",
+    slug: "it-governance-con-lorenzo-de-francesco",
+    "link": "https://open.spotify.com/episode/2ushjt8QXbhXiYNplzxEeH",
+    isOnline: true,
+    venue: "Azure Italia Podcast",
+    date: "2024-07-08",
+    description: "In questa puntata ospitiamo Lorenzo De Francesco, CTO di Azimut Marketplace, che ci parla di come organizzare l'IT in azienda, ovviamente su Azure e delle sue esperienze con qualche consiglio pratico",
+    image: "/img/azure-italia-podcast.jpeg"
+  },
+  {
     title: "Guida pratica alla gestione delle eccezioni",
     slug: "guida-pratica-alla-gestione-delle-eccezioni",
     link: "https://devfestmilano.it/",
