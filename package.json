@@ -29,7 +29,7 @@
     "@tanstack/react-query": "^5.32.0",
     "axios": "^1.6.8",
     "emailjs": "^4.0.3",
-    "fast-xml-parser": "^4.3.6",
+    "fast-xml-parser": "^4.4.1",
     "formik": "^2.4.6",
     "hex-rgb": "^5.0.0",
     "hex-to-hsl": "^1.0.2",
