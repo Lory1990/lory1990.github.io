@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* === Icon Font === */
+@font-face {
+  font-family: "icons";
+  src: url("/fonts/icons.eot?zhtkdw");
+  src: url("/fonts/icons.eot?zhtkdw#iefix") format("embedded-opentype"),
+    url("/fonts/icons.ttf?zhtkdw") format("truetype"),
+    url("/fonts/icons.woff?zhtkdw") format("woff"),
+    url("/fonts/icons.svg?zhtkdw#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mongodb:before { content: "\e913"; }
+.icon-docker:before { content: "\e90f"; }
+.icon-kubernetes:before { content: "\e910"; }
+.icon-redis:before { content: "\e911"; }
+.icon-vps:before { content: "\e912"; }
+.icon-github:before { content: "\e914"; }
+.icon-gitlab:before { content: "\e915"; }
+.icon-storybook:before { content: "\e916"; }
+.icon-react:before { content: "\e90b"; }
+.icon-javascript:before { content: "\e900"; }
+.icon-csharp:before { content: "\e901"; }
+.icon-java:before { content: "\e902"; }
+.icon-css3:before { content: "\e903"; }
+.icon-html5:before { content: "\e904"; }
+.icon-sass:before { content: "\e905"; }
+.icon-iphone:before { content: "\e906"; }
+.icon-database:before { content: "\e907"; }
+.icon-elasticsearch:before { content: "\e908"; }
+.icon-azure:before { content: "\e909"; }
+.icon-aws:before { content: "\e90a"; }
+.icon-php:before { content: "\e90c"; }
+.icon-nodejs:before { content: "\e90d"; }
+.icon-angularjs:before { content: "\e90e"; }
+
+/* === Tailwind v4 Theme === */
+@theme {
+  /* Palette: coolors.co/000000-cf5c36-eee5e9-7c7c7c-efc88b */
+  --color-background: #000000;
+  --color-surface: #0A0A0A;
+  --color-surface-elevated: #141414;
+  --color-border: #1E1E1E;
+  --color-border-subtle: #2A2A2A;
+
+  --color-gold: #CF5C36;
+  --color-gold-light: #D97550;
+  --color-gold-dark: #B84E2D;
+
+  --color-accent: #EFC88B;
+  --color-accent-light: #F3D6A4;
+
+  --color-navy: #000000;
+  --color-navy-light: #0A0A0A;
+
+  --color-text-primary: #EEE5E9;
+  --color-text-secondary: #B0A8AC;
+  --color-text-muted: #7C7C7C;
+
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* === Base === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-gold) 20%, transparent);
+    color: var(--color-gold-light);
+  }
+}
