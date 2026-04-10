@@ -6,17 +6,48 @@ import SectionTitle from "@/components/ui/SectionTitle"
 import TechStackGrid from "@/components/sections/TechStackGrid"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import techStack from "@/data/tech-stack"
 
 export const metadata: Metadata = {
   title: "Tech Skills",
   description:
     "Full stack expertise: React, Java, Node.js, Kubernetes, AWS, Azure, and more. 10+ years of hands-on development experience.",
+  alternates: {
+    canonical: `${siteConfig.url}/about/tech`,
+  },
 }
 
 export default function TechSkillsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "About",
+              item: `${siteConfig.url}/about`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Tech Skills",
+              item: `${siteConfig.url}/about/tech`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />

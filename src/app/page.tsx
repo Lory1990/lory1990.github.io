@@ -14,6 +14,8 @@ import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
 import ProjectCard from "@/components/ui/ProjectCard"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import projects from "@/data/projects"
 
 const highlightedProjects = projects.filter((p) => p.highlight)
@@ -59,6 +61,50 @@ const stats = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: siteConfig.name,
+          url: siteConfig.url,
+          image: `${siteConfig.url}${siteConfig.image}`,
+          jobTitle: siteConfig.title,
+          worksFor: {
+            "@type": "Organization",
+            name: siteConfig.company,
+          },
+          description: siteConfig.description,
+          knowsAbout: [
+            "Fintech",
+            "Cloud Architecture",
+            "IT Governance",
+            "Software Development",
+            "React",
+            "Java",
+            "Node.js",
+            "Kubernetes",
+            "Azure",
+            "AWS",
+          ],
+          memberOf: [
+            {
+              "@type": "Organization",
+              name: "Google Developer Group Milano",
+              url: "https://gdg.community.dev/gdg-milano/",
+            },
+            {
+              "@type": "EducationalOrganization",
+              name: "start2impact",
+              url: "https://www.start2impact.it/",
+            },
+          ],
+          sameAs: [
+            siteConfig.social.github,
+            siteConfig.social.linkedin,
+            siteConfig.social.facebook,
+          ],
+        }}
+      />
       <HeroSection />
 
       {/* Stats bar */}
@@ -221,6 +267,87 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
       </PageWrapper>
+
+      {/* Community */}
+      <div className="border-t border-border bg-surface/50 py-24">
+        <PageWrapper>
+          <ScrollReveal>
+            <SectionTitle>Community &amp; Education</SectionTitle>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            <ScrollReveal>
+              <a
+                href="https://gdg.community.dev/gdg-milano/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface no-underline transition-all hover:border-gold/30"
+              >
+                <div className="flex items-center justify-center rounded-t-lg bg-white px-8 py-6">
+                  <Image
+                    src="/img/gdg-logo.svg"
+                    alt="Google Developer Group"
+                    width={220}
+                    height={48}
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="flex items-center gap-3">
+                    <h3 className="font-heading text-xl text-text-primary">
+                      GDG Milano Organizer
+                    </h3>
+                    <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
+                      Organizer
+                    </span>
+                  </div>
+                  <p className="mt-4 leading-relaxed text-text-secondary">
+                    I help organize events, meetups, and workshops for the
+                    Milano developer community, connecting engineers and
+                    fostering knowledge sharing across the Google ecosystem.
+                  </p>
+                </div>
+              </a>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <a
+                href="https://www.start2impact.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface no-underline transition-all hover:border-gold/30"
+              >
+                <div className="flex items-center justify-center rounded-t-lg bg-white px-8 py-6">
+                  <Image
+                    src="/img/start2impact-logo.png"
+                    alt="start2impact"
+                    width={200}
+                    height={42}
+                    className="h-10 w-auto"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="flex items-center gap-3">
+                    <h3 className="font-heading text-xl text-text-primary">
+                      Scientific Coordinator
+                    </h3>
+                    <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
+                      Education
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-text-muted">
+                    Master in Full Stack Development &amp; AI
+                  </p>
+                  <p className="mt-4 leading-relaxed text-text-secondary">
+                    I design the curriculum and oversee the academic quality
+                    of the Master program, shaping the next generation of
+                    full stack developers with a focus on AI integration and
+                    real-world project experience.
+                  </p>
+                </div>
+              </a>
+            </ScrollReveal>
+          </div>
+        </PageWrapper>
+      </div>
 
       <ContactSection />
     </>

@@ -6,6 +6,8 @@ import Badge from "@/components/ui/Badge"
 import ArticleRenderer from "@/components/content/ArticleRenderer"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ContactSection from "@/components/sections/ContactSection"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import projects from "@/data/projects"
 import { notFound } from "next/navigation"
 
@@ -24,6 +26,15 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.boxDescription || project.description?.slice(0, 160),
+    alternates: {
+      canonical: `${siteConfig.url}/projects/${id}`,
+    },
+    openGraph: {
+      title: `${project.title} | ${siteConfig.name}`,
+      description: project.boxDescription || project.description?.slice(0, 160),
+      url: `${siteConfig.url}/projects/${id}`,
+      ...(project.image && { images: [project.image] }),
+    },
   }
 }
 
@@ -49,6 +60,52 @@ export default async function ProjectDetailPage({
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: project.title,
+          description:
+            project.boxDescription || project.description?.slice(0, 160),
+          url: `${siteConfig.url}/projects/${project.slug}`,
+          ...(project.image && {
+            image: `${siteConfig.url}${project.image}`,
+          }),
+          author: {
+            "@type": "Person",
+            name: siteConfig.name,
+            url: siteConfig.url,
+          },
+          ...(project.date && { dateCreated: project.date }),
+          ...(project.category && { keywords: project.category.join(", ") }),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Projects",
+              item: `${siteConfig.url}/projects`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: project.title,
+              item: `${siteConfig.url}/projects/${project.slug}`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
         {project.background && (

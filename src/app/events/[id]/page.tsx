@@ -7,6 +7,8 @@ import Badge from "@/components/ui/Badge"
 import ArticleRenderer from "@/components/content/ArticleRenderer"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import events from "@/data/events"
 import { notFound } from "next/navigation"
 
@@ -26,6 +28,15 @@ export async function generateMetadata({
     title: event.title,
     description:
       event.shortDescription || event.description?.slice(0, 160),
+    alternates: {
+      canonical: `${siteConfig.url}/events/${id}`,
+    },
+    openGraph: {
+      title: `${event.title} | ${siteConfig.name}`,
+      description: event.shortDescription || event.description?.slice(0, 160),
+      url: `${siteConfig.url}/events/${id}`,
+      images: [event.image],
+    },
   }
 }
 
@@ -72,6 +83,71 @@ export default async function EventDetailPage({
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: event.title,
+          description:
+            event.shortDescription || event.description?.slice(0, 160) || event.title,
+          ...(event.date && { startDate: event.date }),
+          eventAttendanceMode: event.isOnline
+            ? "https://schema.org/OnlineEventAttendanceMode"
+            : "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          image: `${siteConfig.url}${event.image}`,
+          url: `${siteConfig.url}/events/${event.slug}`,
+          ...(event.venue && {
+            location: event.isOnline
+              ? {
+                  "@type": "VirtualLocation",
+                  name: event.venue,
+                  ...(event.link && { url: event.link }),
+                }
+              : {
+                  "@type": "Place",
+                  name: event.venue,
+                },
+          }),
+          performer: {
+            "@type": "Person",
+            name: siteConfig.name,
+            url: siteConfig.url,
+          },
+          organizer: event.venue
+            ? {
+                "@type": "Organization",
+                name: event.venue,
+              }
+            : undefined,
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Events",
+              item: `${siteConfig.url}/events`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: event.title,
+              item: `${siteConfig.url}/events/${event.slug}`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
         {event.cover && (

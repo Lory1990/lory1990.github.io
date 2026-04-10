@@ -2,6 +2,77 @@ import { IEvent, ArticleDataType } from "@/types"
 
 const events: IEvent[] = [
   {
+    title: "BacaroLive EP 10 - Carriera e Micro Mondi",
+    slug: "bacarolive-ep10-carriera-e-micro-mondi",
+    date: "2026-03-12",
+    isOnline: true,
+    venue: "BacaroTech",
+    link: "https://www.youtube.com/watch?v=4yucOO2SZxQ",
+    video: "https://www.youtube.com/watch?v=4yucOO2SZxQ",
+    image: "/img/bacarotech-ep10.jpg",
+    shortDescription:
+      "Episodio 10 di BacaroLive con BacaroTech: parliamo di carriera nel tech e micro mondi (microfrontend).",
+  },
+  {
+    title: "Creare una Test Factory Aziendale",
+    slug: "creare-una-test-factory-aziendale-winter-tech",
+    date: "2026-02-07",
+    isOnline: false,
+    venue: "Winter Tech",
+    link: "https://wintertech.it/",
+    image: "/img/winter-tech.png",
+    shortDescription:
+      "Talk sulla creazione di una Test Factory aziendale alla seconda edizione della fiera tecnologica valdostana.",
+  },
+  {
+    title: "Orchestrare Microfrontend Like a Pro",
+    slug: "orchestrare-microfrontend-like-a-pro-devfest-alps",
+    date: "2025-11-22",
+    isOnline: false,
+    venue: "DevFest Alps 2025",
+    link: "https://gdg.community.dev/events/details/google-gdg-torino-presents-devfest-alps-2025/",
+    image: "/img/devfest-alps-2025.png",
+    shortDescription:
+      "Talk sull'orchestrazione di microfrontend alla DevFest Alps 2025 a Torino.",
+  },
+  {
+    title: "Orchestrare Microfrontend Like a Pro",
+    slug: "orchestrare-microfrontend-like-a-pro-reggio-emilia",
+    date: "2025-11-18",
+    isOnline: false,
+    venue: "Reggio Emilia Full Stack Meetup",
+    link: "https://www.meetup.com/it-it/reggio-emilia-full-stack/events/311961620/",
+    image: "/img/reggio-emilia-fullstack-meetup.jpeg",
+    shortDescription:
+      "Talk sull'orchestrazione di microfrontend: deployment, routing, ambienti, DevOps e CI/CD per piattaforme scalabili.",
+  },
+  {
+    title: "Mille modi di orchestrare Microfrontend",
+    slug: "mille-modi-orchestrare-microfrontend-devfest-roma",
+    date: "2025-10-25",
+    isOnline: false,
+    venue: "DevFest Roma",
+    link: "https://gdgromacitta.github.io/devFest/",
+    image: "/img/dev-fest-2025.webp",
+    description:
+      "Quando un frontend si ingrandisce diventa pesante e toccare un pezzo di codice da una parte potrebbe far rompere qualcosa dalla parte opposta. Sarebbe bello evitarlo e al contempo mantenere sempre la stessa velocita' di sviluppo evitando regressioni e segregando parti di codice? Benvenuti nel mondo dei microfrontend! In questo talk faremo un viaggio che ti mostrera' tutti i passaggi per creare un progetto strutturato a microfrontend con React, Vite Module Federation e Lerna su un monorepo. Ma non basta! Spesso ci troviamo nella situazione in cui dobbiamo condividere questi microfrontend tra diversi progetti, e qui entrano in gioco i Web Components distribuiti su singoli repo, il nostro alleato segreto per superare queste sfide. E per finire vedremo anche qualche tips per mettere in produzione in maniera sicura i vostri microfrontend.",
+    shortDescription:
+      "Viaggio nel mondo dei microfrontend: React, Vite Module Federation, Lerna, Web Components e tips per il deploy in produzione.",
+  },
+  {
+    title: "Creare Agenti con Langflow",
+    slug: "creare-agenti-con-langflow-ai-day",
+    date: "2025-10-24",
+    isOnline: false,
+    venue: "AI Day Conf 2025 Reloaded",
+    link: "https://aiday.dotnetcode.it/ai-day-conf-2025-reloaded/agenda",
+    image: "/img/ai-day-2025.png",
+    description:
+      "Per anni ho cercato di capire come creare un agente AI \"serio\", che non fosse solo un giocattolo da demo. Tutti parlavano di RAG, agenti, orchestrazione... ma alla prova dei fatti, era sempre la solita storia: mille librerie, documentazioni sparse, ambienti da configurare, codice da scrivere ovunque — e risultati fragili. Sembrava che costruire agenti fosse un privilegio per chi lavora in OpenAI o ha un team di ingegneri ML a disposizione.\n\nPoi ho scoperto Langflow, e le cose sono cambiate, mi ero sbloccato! Langflow permette di costruire agenti AI con interfaccia low-code che implementa flussi modulari e componenti riutilizzabili, senza dover scrivere codice. E quando ti serve la potenza del codice lo puoi integrare utilizzando Python.\n\nE quindi se vuoi anche tu creare un agent AI completo di RAG e tools questo e' il talk giusto per te!",
+    shortDescription:
+      "Come costruire agenti AI completi di RAG e tools con Langflow, piattaforma low-code per flussi modulari.",
+  },
+  {
     title: "CTO Connext @ Codemotion",
     slug: "cto-connect-codemotion",
     date: "2025-10-14",

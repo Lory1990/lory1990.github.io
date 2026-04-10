@@ -1,16 +1,22 @@
 import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
 import { Github, ExternalLink, Zap } from "lucide-react"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
-import ProjectCard from "@/components/ui/ProjectCard"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import projects from "@/data/projects"
 
 export const metadata: Metadata = {
   title: "Projects",
   description:
     "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
+  alternates: {
+    canonical: `${siteConfig.url}/projects`,
+  },
 }
 
 const openSourceProjects = [
@@ -31,11 +37,66 @@ const openSourceProjects = [
     github: "https://github.com/mfe-orchestrator",
     version: "v0.8.5",
   },
+  {
+    name: "Swagger Aggregator",
+    tagline: "Auto-discover and merge all your Swagger docs in Kubernetes",
+    description:
+      "A Kubernetes-native service that automatically discovers Ingress resources, retrieves associated services and pods, and aggregates their Swagger API definitions into a unified interface. Deploy with Helm and let it do the rest.",
+    features: [
+      "Auto-discovery of Ingress resources",
+      "Active pod validation",
+      "Swagger definition merging",
+      "Redis caching support",
+      "Helm chart deployment",
+      "Namespace filtering",
+    ],
+    github: "https://github.com/Lory1990/swagger-aggregator",
+    version: "v13",
+  },
 ]
 
 export default function ProjectsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Projects",
+          description:
+            "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
+          url: `${siteConfig.url}/projects`,
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: projects.map((project, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: project.title,
+              url: `${siteConfig.url}/projects/${project.slug}`,
+            })),
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Projects",
+              item: `${siteConfig.url}/projects`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
@@ -62,6 +123,7 @@ export default function ProjectsPage() {
             <SectionTitle>Open Source</SectionTitle>
           </ScrollReveal>
 
+          <div className="space-y-6">
           {openSourceProjects.map((project) => (
             <ScrollReveal key={project.name}>
               <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
@@ -103,15 +165,17 @@ export default function ProjectsPage() {
 
                     {/* Links */}
                     <div className="mt-8 flex flex-wrap gap-3">
-                      <a
-                        href={project.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-navy no-underline transition-colors hover:bg-gold-light"
-                      >
-                        <ExternalLink size={16} />
-                        Visit Website
-                      </a>
+                      {"website" in project && project.website && (
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-navy no-underline transition-colors hover:bg-gold-light"
+                        >
+                          <ExternalLink size={16} />
+                          Visit Website
+                        </a>
+                      )}
                       <a
                         href={project.github}
                         target="_blank"
@@ -127,6 +191,7 @@ export default function ProjectsPage() {
               </div>
             </ScrollReveal>
           ))}
+          </div>
         </PageWrapper>
       </div>
 
@@ -135,10 +200,32 @@ export default function ProjectsPage() {
         <ScrollReveal>
           <SectionTitle>Client &amp; Side Projects</SectionTitle>
         </ScrollReveal>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ScrollReveal key={project.slug}>
-              <ProjectCard project={project} />
+              <Link
+                href={`/projects/${project.slug}`}
+                className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 no-underline transition-all hover:border-gold/30"
+              >
+                {project.image && (
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border-subtle">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="min-w-0">
+                  <h3 className="truncate font-heading text-sm text-text-primary">
+                    {project.title}
+                  </h3>
+                  <p className="mt-0.5 truncate text-xs text-text-muted">
+                    {project.boxDescription}
+                  </p>
+                </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

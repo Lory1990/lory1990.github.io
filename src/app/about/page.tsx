@@ -7,6 +7,7 @@ import SectionTitle from "@/components/ui/SectionTitle"
 import ExperienceTimeline from "@/components/sections/ExperienceTimeline"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
 import career from "@/data/career"
 
@@ -14,6 +15,16 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms.",
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
+  openGraph: {
+    title: `About | ${siteConfig.name}`,
+    description:
+      "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms.",
+    url: `${siteConfig.url}/about`,
+    type: "profile",
+  },
 }
 
 const socialLinks = [
@@ -32,6 +43,73 @@ const highlights = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          mainEntity: {
+            "@type": "Person",
+            name: siteConfig.name,
+            url: siteConfig.url,
+            image: `${siteConfig.url}${siteConfig.image}`,
+            jobTitle: siteConfig.title,
+            worksFor: {
+              "@type": "Organization",
+              name: siteConfig.company,
+            },
+            alumniOf: [
+              { "@type": "Organization", name: "Fabrik" },
+              { "@type": "Organization", name: "Costa Crociere" },
+              { "@type": "Organization", name: "Fincantieri" },
+              { "@type": "Organization", name: "Navium" },
+            ],
+            knowsAbout: [
+              "Fintech",
+              "Cloud Architecture",
+              "IT Governance",
+              "Team Leadership",
+              "Cost Optimization",
+            ],
+            memberOf: [
+              {
+                "@type": "Organization",
+                name: "Google Developer Group Milano",
+                url: "https://gdg.community.dev/gdg-milano/",
+              },
+              {
+                "@type": "EducationalOrganization",
+                name: "start2impact",
+                url: "https://www.start2impact.it/",
+              },
+            ],
+            sameAs: [
+              siteConfig.social.github,
+              siteConfig.social.linkedin,
+              siteConfig.social.facebook,
+            ],
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "About",
+              item: `${siteConfig.url}/about`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-24 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
@@ -161,8 +239,20 @@ export default function AboutPage() {
               <p className="mt-4 leading-relaxed text-text-secondary">
                 I actively share my experience through 40+ conference talks,
                 panels, and podcasts. Topics range from IT governance and
-                cybersecurity to cloud architecture and team leadership. I
-                believe in giving back to the community that shaped my career.
+                cybersecurity to cloud architecture and team leadership. I am
+                also one of the organizers of the Google Developer Group
+                Milano and Scientific Coordinator of the Master in Full Stack
+                Development &amp; AI at{" "}
+                <a
+                  href="https://www.start2impact.it/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light"
+                >
+                  start2impact
+                </a>
+                . I believe in giving back to the community that shaped my
+                career.
               </p>
             </div>
           </ScrollReveal>

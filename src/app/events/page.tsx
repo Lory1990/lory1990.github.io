@@ -5,12 +5,17 @@ import SectionTitle from "@/components/ui/SectionTitle"
 import EventCard from "@/components/ui/EventCard"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import JsonLd from "@/components/seo/JsonLd"
+import { siteConfig } from "@/data/site"
 import events from "@/data/events"
 
 export const metadata: Metadata = {
   title: "Events",
   description:
     "Speaking engagements, conference talks, panels, and webinars on fintech, cloud, and IT management.",
+  alternates: {
+    canonical: `${siteConfig.url}/events`,
+  },
 }
 
 // Group events by year
@@ -58,6 +63,45 @@ const stats = [
 export default function EventsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Events & Talks",
+          description:
+            "Speaking engagements, conference talks, panels, and webinars on fintech, cloud, and IT management.",
+          url: `${siteConfig.url}/events`,
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: events.map((event, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: event.title,
+              url: `${siteConfig.url}/events/${event.slug}`,
+            })),
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Events",
+              item: `${siteConfig.url}/events`,
+            },
+          ],
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
