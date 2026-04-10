@@ -375,8 +375,8 @@ export default function HomePage() {
                     src="/img/start2impact-logo.png"
                     alt="start2impact"
                     width={200}
-                    height={42}
-                    className="h-10 w-auto"
+                    height={48}
+                    className="h-12 w-auto"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-8">

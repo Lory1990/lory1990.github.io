@@ -33,9 +33,8 @@ export default function HeroSection() {
 
         <ScrollReveal delay={0.2}>
           <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-hero-muted">
-            Leading technology at Azimut Marketplace. 10+ years building
-            enterprise platforms in fintech, cloud architecture, and
-            microservices.
+            Currently Leading technology at Azimut Marketplace. <br /> 10+ years building scalable
+            enterprise platforms in fintech using cloud architecture and microservices.
           </p>
         </ScrollReveal>
 
