@@ -2,6 +2,17 @@ import { IEvent, ArticleDataType } from "@/types"
 
 const events: IEvent[] = [
   {
+    title: "Il Kubernetes per Frontend esiste, ed e' open source",
+    slug: "kubernetes-per-frontend-devfest-modena",
+    date: "2025-10-04",
+    isOnline: false,
+    venue: "DevFest Modena 2025",
+    link: "https://devfest.modena.it/2025/sessions/lightning-talk/",
+    image: "/img/devfest-modena-2025.webp",
+    shortDescription:
+      "Lightning talk su MFE Orchestrator, la piattaforma open source per orchestrare microfrontend come Kubernetes fa per i container.",
+  },
+  {
     title: "BacaroLive EP 10 - Carriera e Micro Mondi",
     slug: "bacarolive-ep10-carriera-e-micro-mondi",
     date: "2026-03-12",
@@ -74,6 +85,7 @@ const events: IEvent[] = [
   },
   {
     title: "CTO Connext @ Codemotion",
+    venue: "Codemotion 2025",
     slug: "cto-connect-codemotion",
     date: "2025-10-14",
     isOnline: false,
@@ -564,4 +576,10 @@ const events: IEvent[] = [
   },
 ]
 
-export default events
+const sortedEvents = [...events].sort((a, b) => {
+  if (!a.date) return 1
+  if (!b.date) return -1
+  return new Date(b.date).getTime() - new Date(a.date).getTime()
+})
+
+export default sortedEvents

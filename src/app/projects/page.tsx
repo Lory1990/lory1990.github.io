@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { Github, ExternalLink, Zap } from "lucide-react"
+import { ExternalLink, Zap } from "lucide-react"
+import { GithubIcon } from "@/components/icons/SocialIcons"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
 import ContactSection from "@/components/sections/ContactSection"
@@ -182,7 +183,7 @@ export default function ProjectsPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-secondary no-underline transition-all hover:border-gold hover:text-gold"
                       >
-                        <Github size={16} />
+                        <GithubIcon size={16} />
                         GitHub
                       </a>
                     </div>

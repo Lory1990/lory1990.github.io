@@ -9,7 +9,6 @@ export const siteConfig = {
   social: {
     github: "https://github.com/Lory1990",
     linkedin: "https://www.linkedin.com/in/lorenzodefrancesco",
-    facebook: "https://www.facebook.com/lory1990",
   },
   nav: [
     { label: "About", href: "/about" },

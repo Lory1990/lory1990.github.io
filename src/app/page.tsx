@@ -101,7 +101,6 @@ export default function HomePage() {
           sameAs: [
             siteConfig.social.github,
             siteConfig.social.linkedin,
-            siteConfig.social.facebook,
           ],
         }}
       />

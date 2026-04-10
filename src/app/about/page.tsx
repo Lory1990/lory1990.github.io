@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Facebook, Code } from "lucide-react"
+import { Code } from "lucide-react"
+import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
 import ExperienceTimeline from "@/components/sections/ExperienceTimeline"
@@ -28,9 +29,8 @@ export const metadata: Metadata = {
 }
 
 const socialLinks = [
-  { icon: Github, href: siteConfig.social.github, label: "GitHub" },
-  { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
-  { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
+  { icon: GithubIcon, href: siteConfig.social.github, label: "GitHub" },
+  { icon: LinkedinIcon, href: siteConfig.social.linkedin, label: "LinkedIn" },
 ]
 
 const highlights = [
@@ -85,7 +85,6 @@ export default function AboutPage() {
             sameAs: [
               siteConfig.social.github,
               siteConfig.social.linkedin,
-              siteConfig.social.facebook,
             ],
           },
         }}

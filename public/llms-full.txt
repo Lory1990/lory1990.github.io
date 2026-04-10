@@ -13,7 +13,6 @@
 - **Website:** https://lory1990.github.io
 - **LinkedIn:** https://www.linkedin.com/in/lorenzodefrancesco
 - **GitHub:** https://github.com/Lory1990
-- **Facebook:** https://www.facebook.com/lory1990
 
 ---
 
@@ -72,7 +71,7 @@ Trieste, Italy. Co-founder of a startup developing decision support products for
 - **2 tech leaders** mentored from junior developers
 - **100% IT governance** established (security policies, GDPR, SSO, monitoring)
 - **5+ countries** served with multi-country fintech platform
-- **40+ talks** at conferences and events
+- **45+ talks** at conferences and events
 - **15+ projects** delivered
 
 ---
@@ -143,8 +142,9 @@ Marine tech startup specialized in damaged stability prediction and naval design
 - **Orchestrare Microfrontend Like a Pro** (November 18, 2025) — Reggio Emilia Full Stack Meetup
 - **Mille modi di orchestrare Microfrontend** (October 25, 2025) — DevFest Roma. React, Vite Module Federation, Lerna, Web Components.
 - **Creare Agenti con Langflow** (October 24, 2025) — AI Day Conf 2025 Reloaded, Microsoft Italia Roma. Building AI agents with RAG and tools using Langflow.
-- **CTO Connext @ Codemotion** (October 14, 2025) — Codemotion
+- **CTO Connext @ Codemotion** (October 14, 2025) — Codemotion 2025
 - **Guida pratica alla gestione delle eccezioni** (October 11, 2025) — Dev Fest Milano 2025. Exception handling end to end.
+- **Il Kubernetes per Frontend esiste, ed e' open source** (October 4, 2025) — DevFest Modena 2025. Lightning talk on MFE Orchestrator.
 - **Come costruire una cultura IT partendo dal disordine totale** (October 3, 2025) — Ordine degli Ingegneri, Verona
 - **Cybersecurity: solo adempimenti normativi o vera sicurezza?** (September 26, 2025) — Strategic Management Partners
 - **Oracolo del Test - Leadership talk e tavola rotonda** (February 25, 2025)

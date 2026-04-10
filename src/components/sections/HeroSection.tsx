@@ -1,11 +1,10 @@
-import { Github, Linkedin, Facebook } from "lucide-react"
 import { siteConfig } from "@/data/site"
+import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 const socialLinks = [
-  { icon: Github, href: siteConfig.social.github, label: "GitHub" },
-  { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
-  { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
+  { icon: GithubIcon, href: siteConfig.social.github, label: "GitHub" },
+  { icon: LinkedinIcon, href: siteConfig.social.linkedin, label: "LinkedIn" },
 ]
 
 export default function HeroSection() {
