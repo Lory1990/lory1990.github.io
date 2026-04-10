@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Github, ExternalLink, Zap } from "lucide-react"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
 import ProjectCard from "@/components/ui/ProjectCard"
@@ -9,8 +10,28 @@ import projects from "@/data/projects"
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "A selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
+    "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
 }
+
+const openSourceProjects = [
+  {
+    name: "MFE Orchestrator",
+    tagline: "Like Kubernetes... but for frontend",
+    description:
+      "A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments. Ship and manage microfrontends in minutes, not hours.",
+    features: [
+      "Multi-environment (DEV, UAT, PROD)",
+      "Multi-cloud (AWS, Azure, GCP)",
+      "Canary deployments",
+      "CI/CD integration",
+      "Version management & rollback",
+      "Drag-and-drop configuration",
+    ],
+    website: "https://mfe-orchestrator.dev/",
+    github: "https://github.com/mfe-orchestrator",
+    version: "v0.8.5",
+  },
+]
 
 export default function ProjectsPage() {
   return (
@@ -27,15 +48,93 @@ export default function ProjectsPage() {
               Projects
             </h1>
             <p className="mt-4 max-w-xl text-text-secondary">
-              A selection of projects I have led and developed across fintech,
-              insurtech, crypto, and enterprise software.
+              Open source tools and a selection of projects I have led across
+              fintech, insurtech, crypto, and enterprise software.
             </p>
           </ScrollReveal>
         </PageWrapper>
       </section>
 
-      {/* Project Grid */}
-      <PageWrapper className="pb-24">
+      {/* Open Source */}
+      <div className="border-t border-border bg-surface/50 py-24">
+        <PageWrapper>
+          <ScrollReveal>
+            <SectionTitle>Open Source</SectionTitle>
+          </ScrollReveal>
+
+          {openSourceProjects.map((project) => (
+            <ScrollReveal key={project.name}>
+              <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
+                <div className="flex flex-col gap-8 md:flex-row md:items-start">
+                  {/* Icon */}
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-gold/20 bg-gold/5">
+                    <Zap size={32} className="text-gold" />
+                  </div>
+
+                  <div className="flex-1">
+                    {/* Header */}
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="font-heading text-2xl text-text-primary md:text-3xl">
+                        {project.name}
+                      </h3>
+                      <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
+                        {project.version}
+                      </span>
+                    </div>
+                    <p className="mt-1 font-heading text-lg italic text-text-muted">
+                      {project.tagline}
+                    </p>
+                    <p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">
+                      {project.description}
+                    </p>
+
+                    {/* Features grid */}
+                    <div className="mt-6 grid grid-cols-2 gap-2 md:grid-cols-3">
+                      {project.features.map((feature) => (
+                        <div
+                          key={feature}
+                          className="flex items-center gap-2 text-sm text-text-secondary"
+                        >
+                          <span className="h-1 w-1 shrink-0 rounded-full bg-gold" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Links */}
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-navy no-underline transition-colors hover:bg-gold-light"
+                      >
+                        <ExternalLink size={16} />
+                        Visit Website
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-secondary no-underline transition-all hover:border-gold hover:text-gold"
+                      >
+                        <Github size={16} />
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </PageWrapper>
+      </div>
+
+      {/* All Projects */}
+      <PageWrapper className="py-24">
+        <ScrollReveal>
+          <SectionTitle>Client &amp; Side Projects</SectionTitle>
+        </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ScrollReveal key={project.slug}>
