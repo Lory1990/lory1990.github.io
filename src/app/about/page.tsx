@@ -130,7 +130,7 @@ export default function AboutPage() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-text-muted transition-all hover:border-gold hover:text-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-hero-muted transition-all hover:border-gold hover:text-gold"
                     aria-label={label}
                   >
                     <Icon size={18} />
@@ -144,14 +144,14 @@ export default function AboutPage() {
                 <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
                   About
                 </p>
-                <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
+                <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
                   Lorenzo De Francesco
                 </h1>
-                <p className="mt-2 text-lg text-text-muted">
+                <p className="mt-2 text-lg text-hero-muted">
                   Chief Technology Officer at Azimut Marketplace
                 </p>
 
-                <div className="mt-8 space-y-4 leading-relaxed text-text-secondary">
+                <div className="mt-8 space-y-4 leading-relaxed text-hero-muted">
                   <p>
                     I am a CTO with a clear mission: transform IT from a cost
                     center into a strategic asset. At Azimut Marketplace, I

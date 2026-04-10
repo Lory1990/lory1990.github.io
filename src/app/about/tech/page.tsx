@@ -55,7 +55,7 @@ export default function TechSkillsPage() {
           <ScrollReveal>
             <Link
               href="/about"
-              className="mb-6 inline-flex items-center gap-2 text-sm text-text-muted no-underline transition-colors hover:text-gold"
+              className="mb-6 inline-flex items-center gap-2 text-sm text-hero-muted no-underline transition-colors hover:text-gold"
             >
               <ArrowLeft size={16} />
               Back to About
@@ -63,10 +63,10 @@ export default function TechSkillsPage() {
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
               Technical Profile
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
               Tech Skills
             </h1>
-            <p className="mt-4 max-w-xl text-text-secondary">
+            <p className="mt-4 max-w-xl text-hero-muted">
               While my day-to-day is focused on leadership and strategy, I
               maintain deep technical skills across the full stack. Here&apos;s
               what I work with.

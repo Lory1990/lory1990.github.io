@@ -67,10 +67,35 @@
   --text-primary: #141C26;
   --text-secondary: #637288;
   --text-muted: #8A95A5;
+  --hero-text: #E4ECF4;
+  --hero-muted: #BFCFE0;
+  --hero-border: rgba(255,255,255,0.15);
+}
+
+/* Dark mode: explicit class OR system preference when no class set */
+:root.dark {
+  --bg: #0E1520;
+  --surface: #152030;
+  --surface-elevated: #1A2840;
+  --border: #1E2D42;
+  --border-subtle: #253548;
+  --gold: #E8702A;
+  --gold-light: #F08040;
+  --gold-dark: #D4580F;
+  --accent: #BFCFE0;
+  --accent-light: #D0DDE8;
+  --navy: #0E1520;
+  --navy-light: #152030;
+  --text-primary: #E4ECF4;
+  --text-secondary: #7A9AB8;
+  --text-muted: #5A7A98;
+  --hero-text: #E4ECF4;
+  --hero-muted: #7A9AB8;
+  --hero-border: rgba(255,255,255,0.1);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --bg: #0E1520;
     --surface: #152030;
     --surface-elevated: #1A2840;
@@ -86,6 +111,9 @@
     --text-primary: #E4ECF4;
     --text-secondary: #7A9AB8;
     --text-muted: #5A7A98;
+    --hero-text: #E4ECF4;
+    --hero-muted: #7A9AB8;
+    --hero-border: rgba(255,255,255,0.1);
   }
 }
 
@@ -110,6 +138,10 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
+
+  --color-hero-text: var(--hero-text);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-border: var(--hero-border);
 
   --font-heading: "Outfit", system-ui, -apple-system, sans-serif;
   --font-body: "Nunito", system-ui, -apple-system, sans-serif;

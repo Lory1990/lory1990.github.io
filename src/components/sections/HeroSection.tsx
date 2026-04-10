@@ -24,7 +24,7 @@ export default function HeroSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h1 className="font-heading text-5xl font-normal leading-tight text-text-primary md:text-7xl lg:text-8xl">
+          <h1 className="font-heading text-5xl font-semibold leading-tight text-hero-text md:text-7xl lg:text-8xl">
             Lorenzo
             <br />
             De Francesco
@@ -32,7 +32,7 @@ export default function HeroSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-hero-muted">
             Leading technology at Azimut Marketplace. 10+ years building
             enterprise platforms in fintech, cloud architecture, and
             microservices.
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-muted transition-all hover:border-gold hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-hero-border text-hero-muted transition-all hover:border-gold hover:text-gold"
                 aria-label={label}
               >
                 <Icon size={18} />
@@ -59,7 +59,7 @@ export default function HeroSection() {
         {/* Scroll indicator */}
         <ScrollReveal delay={0.5}>
           <div className="mt-20 flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-widest text-text-muted">
+            <span className="text-xs uppercase tracking-widest text-hero-muted">
               Scroll
             </span>
             <div className="h-8 w-px animate-pulse bg-gradient-to-b from-gold/50 to-transparent" />

@@ -106,10 +106,10 @@ export default function ProjectsPage() {
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
               Portfolio
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
               Projects
             </h1>
-            <p className="mt-4 max-w-xl text-text-secondary">
+            <p className="mt-4 max-w-xl text-hero-muted">
               Open source tools and a selection of projects I have led across
               fintech, insurtech, crypto, and enterprise software.
             </p>

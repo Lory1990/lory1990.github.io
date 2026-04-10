@@ -132,11 +132,11 @@ export default async function ProjectDetailPage({
                 ))}
               </div>
             )}
-            <h1 className="font-heading text-4xl text-text-primary md:text-5xl">
+            <h1 className="font-heading text-4xl text-hero-text md:text-5xl">
               {project.title}
             </h1>
             {project.subtitle && (
-              <p className="mt-3 text-lg text-text-secondary">
+              <p className="mt-3 text-lg text-hero-muted">
                 {project.subtitle}
               </p>
             )}

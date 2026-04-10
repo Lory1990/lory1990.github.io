@@ -110,10 +110,10 @@ export default function EventsPage() {
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
               Speaking
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
               Events &amp; Talks
             </h1>
-            <p className="mt-4 max-w-xl text-text-secondary">
+            <p className="mt-4 max-w-xl text-hero-muted">
               Conference talks, panels, webinars, and podcasts on fintech,
               cloud architecture, IT management, and software engineering.
             </p>
