@@ -19,8 +19,8 @@ export const siteConfig = {
     {
       route: "/",
       exact: true,
-      title: "Are you interested in software development?",
-      subtitle: "Let's have a chat together!",
+      title: "Do you need a CTO?",
+      subtitle: "Contact me to start a new collaboration.",
     },
     {
       route: "/projects/",

@@ -351,12 +351,9 @@ export default function HomePage() {
                     <h3 className="font-heading text-xl text-text-primary">
                       GDG Milano Organizer
                     </h3>
-                    <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
-                      Organizer
-                    </span>
                   </div>
                   <p className="mt-4 leading-relaxed text-text-secondary">
-                    I help organize events, meetups, and workshops for the
+                    I organize events, meetups, and workshops for the
                     Milano developer community, connecting engineers and
                     fostering knowledge sharing across the Google ecosystem.
                   </p>
@@ -384,9 +381,6 @@ export default function HomePage() {
                     <h3 className="font-heading text-xl text-text-primary">
                       Scientific Coordinator
                     </h3>
-                    <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
-                      Education
-                    </span>
                   </div>
                   <p className="mt-2 text-sm font-medium text-text-muted">
                     Master in Full Stack Development &amp; AI
