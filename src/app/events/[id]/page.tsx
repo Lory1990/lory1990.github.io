@@ -158,11 +158,11 @@ export default async function EventDetailPage({
               fill
               className="object-cover opacity-10"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-navy/80 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-light/30 to-background" />
           </>
         )}
         {!event.cover && (
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
         )}
 
         <PageWrapper className="relative z-10">
@@ -170,16 +170,16 @@ export default async function EventDetailPage({
             <div className="mb-4 flex flex-wrap gap-2">
               <Badge>{event.isOnline ? "Online" : "In Person"}</Badge>
             </div>
-            <h1 className="font-heading text-3xl text-hero-text md:text-5xl">
+            <h1 className="font-heading text-3xl text-text-primary md:text-5xl">
               {event.title}
             </h1>
             {event.subtitle && (
-              <p className="mt-3 text-lg text-hero-muted">
+              <p className="mt-3 text-lg text-text-secondary">
                 {event.subtitle}
               </p>
             )}
 
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-hero-muted">
+            <div className="mt-6 flex flex-wrap items-center gap-6 text-text-muted">
               {formattedDate && (
                 <span className="flex items-center gap-2">
                   <Calendar size={16} className="text-gold" />

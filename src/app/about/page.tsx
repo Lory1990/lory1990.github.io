@@ -109,13 +109,13 @@ export default function AboutPage() {
           ],
         }}
       />
-      {/* Hero */}
-      <section className="relative overflow-hidden pb-24 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
+      {/* Hero — photo + name */}
+      <section className="relative overflow-hidden pb-10 pt-32">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
         <PageWrapper className="relative z-10">
-          <div className="flex flex-col items-center gap-12 md:flex-row md:items-start">
-            <ScrollReveal>
-              <div className="relative h-80 w-80 shrink-0 overflow-hidden rounded-2xl border border-border">
+          <ScrollReveal>
+            <div className="flex flex-col items-center gap-8 md:flex-row md:items-center">
+              <div className="relative h-40 w-40 shrink-0 overflow-hidden">
                 <Image
                   src="/img/lorenzo-de-francesco.jpeg"
                   alt="Lorenzo De Francesco"
@@ -123,59 +123,62 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="mt-6 flex justify-center gap-3">
-                {socialLinks.map(({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-hero-muted transition-all hover:border-gold hover:text-gold"
-                    aria-label={label}
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
                   About
                 </p>
-                <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
+                <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
                   Lorenzo De Francesco
                 </h1>
-                <p className="mt-2 text-lg text-hero-muted">
-                  Chief Technology Officer at Azimut Marketplace
+                <p className="mt-2 text-lg text-text-secondary">
+                  Chief Technology Officer at Azimut Marketplace &mdash; 5+
+                  years in Fintech
                 </p>
-
-                <div className="mt-8 space-y-4 leading-relaxed text-hero-muted">
-                  <p>
-                    I am a CTO with a clear mission: transform IT from a cost
-                    center into a strategic asset. At Azimut Marketplace, I
-                    reduced infrastructure costs by over 70% while building a
-                    robust, scalable architecture that serves multiple countries.
-                  </p>
-                  <p>
-                    My approach combines technical depth with business acumen. I
-                    don&apos;t just write code &mdash; I build teams, define
-                    processes, and create a culture where engineering excellence
-                    drives business results.
-                  </p>
-                  <p>
-                    Before stepping into management, I spent years as a hands-on
-                    developer and architect, giving me the foundation to make
-                    informed decisions and mentor the next generation of tech
-                    leaders.
-                  </p>
+                <div className="mt-4 flex gap-3">
+                  {socialLinks.map(({ icon: Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-text-secondary transition-all hover:border-gold hover:text-gold"
+                      aria-label={label}
+                    >
+                      <Icon size={16} />
+                    </a>
+                  ))}
                 </div>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
         </PageWrapper>
       </section>
+
+      {/* Bio */}
+      <PageWrapper className="py-8">
+        <ScrollReveal>
+          <div className="max-w-3xl space-y-4 leading-relaxed text-text-secondary">
+            <p>
+              I am a CTO with a clear mission: transform IT from a cost
+              center into a strategic asset. At Azimut Marketplace, I
+              reduced infrastructure costs by over 70% while building a
+              robust, scalable architecture that serves multiple countries.
+            </p>
+            <p>
+              My approach combines technical depth with business acumen. I
+              don&apos;t just write code &mdash; I build teams, define
+              processes, and create a culture where engineering excellence
+              drives business results.
+            </p>
+            <p>
+              Before stepping into management, I spent years as a hands-on
+              developer and architect, giving me the foundation to make
+              informed decisions and mentor the next generation of tech
+              leaders.
+            </p>
+          </div>
+        </ScrollReveal>
+      </PageWrapper>
 
       {/* Key Numbers */}
       <div className="border-t border-border bg-surface/50 py-16">
@@ -289,7 +292,7 @@ export default function AboutPage() {
                 className="mt-8 inline-flex items-center gap-3 rounded-lg bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-wider text-navy no-underline transition-colors hover:bg-gold-light"
               >
                 <Code size={20} />
-                Scopri le mie skills tech
+                Discover my tech skills
               </Link>
             </div>
           </ScrollReveal>

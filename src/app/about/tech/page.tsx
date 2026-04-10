@@ -50,12 +50,12 @@ export default function TechSkillsPage() {
       />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
         <PageWrapper className="relative z-10">
           <ScrollReveal>
             <Link
               href="/about"
-              className="mb-6 inline-flex items-center gap-2 text-sm text-hero-muted no-underline transition-colors hover:text-gold"
+              className="mb-6 inline-flex items-center gap-2 text-sm text-text-muted no-underline transition-colors hover:text-gold"
             >
               <ArrowLeft size={16} />
               Back to About
@@ -63,10 +63,10 @@ export default function TechSkillsPage() {
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
               Technical Profile
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
               Tech Skills
             </h1>
-            <p className="mt-4 max-w-xl text-hero-muted">
+            <p className="mt-4 max-w-xl text-text-secondary">
               While my day-to-day is focused on leadership and strategy, I
               maintain deep technical skills across the full stack. Here&apos;s
               what I work with.

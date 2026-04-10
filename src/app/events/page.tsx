@@ -104,16 +104,16 @@ export default function EventsPage() {
       />
       {/* Hero */}
       <section className="relative overflow-hidden pb-16 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
         <PageWrapper className="relative z-10">
           <ScrollReveal>
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
               Speaking
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
               Events &amp; Talks
             </h1>
-            <p className="mt-4 max-w-xl text-hero-muted">
+            <p className="mt-4 max-w-xl text-text-secondary">
               Conference talks, panels, webinars, and podcasts on fintech,
               cloud architecture, IT management, and software engineering.
             </p>

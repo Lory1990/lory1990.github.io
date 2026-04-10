@@ -116,11 +116,11 @@ export default async function ProjectDetailPage({
               fill
               className="object-cover opacity-15"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/90 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-light/30 via-navy-light/20 to-background" />
           </>
         )}
         {!project.background && (
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-light to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
         )}
 
         <PageWrapper className="relative z-10">
@@ -132,11 +132,11 @@ export default async function ProjectDetailPage({
                 ))}
               </div>
             )}
-            <h1 className="font-heading text-4xl text-hero-text md:text-5xl">
+            <h1 className="font-heading text-4xl text-text-primary md:text-5xl">
               {project.title}
             </h1>
             {project.subtitle && (
-              <p className="mt-3 text-lg text-hero-muted">
+              <p className="mt-3 text-lg text-text-secondary">
                 {project.subtitle}
               </p>
             )}
