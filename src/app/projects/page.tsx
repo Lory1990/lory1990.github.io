@@ -36,7 +36,7 @@ const openSourceProjects = [
     ],
     website: "https://mfe-orchestrator.dev/",
     github: "https://github.com/mfe-orchestrator",
-    version: "v0.8.5",
+    version: "v1.0.0",
   },
   {
     name: "Swagger Aggregator",
@@ -52,7 +52,7 @@ const openSourceProjects = [
       "Namespace filtering",
     ],
     github: "https://github.com/Lory1990/swagger-aggregator",
-    version: "v13",
+    version: "v0.0.13",
   },
 ]
 
@@ -199,7 +199,7 @@ export default function ProjectsPage() {
       {/* All Projects */}
       <PageWrapper className="py-24">
         <ScrollReveal>
-          <SectionTitle>Client &amp; Side Projects</SectionTitle>
+          <SectionTitle>Project Portfolio</SectionTitle>
         </ScrollReveal>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
