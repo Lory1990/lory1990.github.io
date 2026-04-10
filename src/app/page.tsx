@@ -7,18 +7,35 @@ import {
   Globe,
   Mic,
   Code,
+  ExternalLink,
+  Zap,
 } from "lucide-react"
 import HeroSection from "@/components/sections/HeroSection"
 import ContactSection from "@/components/sections/ContactSection"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
-import ProjectCard from "@/components/ui/ProjectCard"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
+import { GithubIcon } from "@/components/icons/SocialIcons"
 import { siteConfig } from "@/data/site"
-import projects from "@/data/projects"
 
-const highlightedProjects = projects.filter((p) => p.highlight)
+const openSourceProjects = [
+  {
+    name: "MFE Orchestrator",
+    tagline: "Like Kubernetes... but for frontend",
+    description:
+      "A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments.",
+    website: "https://mfe-orchestrator.dev/",
+    github: "https://github.com/mfe-orchestrator",
+  },
+  {
+    name: "Swagger Aggregator",
+    tagline: "Auto-discover and merge all your Swagger docs in Kubernetes",
+    description:
+      "A Kubernetes-native service that auto-discovers Ingress resources and aggregates their Swagger API definitions into a unified interface.",
+    github: "https://github.com/Lory1990/swagger-aggregator",
+  },
+]
 
 const managerialQualities = [
   {
@@ -243,15 +260,54 @@ export default function HomePage() {
         </PageWrapper>
       </div>
 
-      {/* Selected Projects */}
+      {/* Open Source */}
       <PageWrapper className="py-24">
         <ScrollReveal>
-          <SectionTitle>Selected Work</SectionTitle>
+          <SectionTitle>Open Source</SectionTitle>
         </ScrollReveal>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {highlightedProjects.map((project) => (
-            <ScrollReveal key={project.slug}>
-              <ProjectCard project={project} />
+        <div className="grid gap-6 md:grid-cols-2">
+          {openSourceProjects.map((project) => (
+            <ScrollReveal key={project.name}>
+              <div className="group rounded-lg border border-border bg-surface p-8 transition-all hover:border-gold/30">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-background text-gold transition-colors group-hover:border-gold/30">
+                    <Zap size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl text-text-primary">
+                      {project.name}
+                    </h3>
+                    <p className="mt-1 text-sm italic text-text-muted">
+                      {project.tagline}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 leading-relaxed text-text-secondary">
+                  {project.description}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {"website" in project && project.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-navy no-underline transition-colors hover:bg-gold-light"
+                    >
+                      <ExternalLink size={14} />
+                      Website
+                    </a>
+                  )}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-text-secondary no-underline transition-all hover:border-gold hover:text-gold"
+                  >
+                    <GithubIcon size={14} />
+                    GitHub
+                  </a>
+                </div>
+              </div>
             </ScrollReveal>
           ))}
         </div>
