@@ -25,14 +25,14 @@ export default function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "bg-navy/95 backdrop-blur-md border-b border-border"
+            ? "bg-navy/95 backdrop-blur-md border-b border-hero-border"
             : "bg-transparent"
         )}
       >
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="font-heading text-lg tracking-wide text-text-primary no-underline hover:text-gold transition-colors"
+            className="font-heading text-lg tracking-wide text-hero-text no-underline hover:text-gold transition-colors"
           >
             {siteConfig.name}
           </Link>
@@ -47,7 +47,7 @@ export default function Header() {
                   "relative text-sm font-medium uppercase tracking-widest no-underline transition-colors",
                   pathname.startsWith(item.href)
                     ? "text-gold"
-                    : "text-text-secondary hover:text-text-primary"
+                    : "text-hero-muted hover:text-hero-text"
                 )}
               >
                 {item.label}
@@ -63,7 +63,7 @@ export default function Header() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="text-text-primary md:hidden"
+              className="text-hero-text md:hidden"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,7 +84,7 @@ export default function Header() {
                 "font-heading text-2xl no-underline transition-colors",
                 pathname.startsWith(item.href)
                   ? "text-gold"
-                  : "text-text-secondary hover:text-text-primary"
+                  : "text-hero-muted hover:text-hero-text"
               )}
             >
               {item.label}

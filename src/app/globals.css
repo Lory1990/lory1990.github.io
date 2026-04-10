@@ -62,14 +62,14 @@
   --gold-dark: #B84E2D;
   --accent: #2E4A68;
   --accent-light: #3D5F82;
-  --navy: #2E4A68;
-  --navy-light: #3A5A7C;
+  --navy: #141C26;
+  --navy-light: #1E2E42;
   --text-primary: #141C26;
   --text-secondary: #637288;
   --text-muted: #8A95A5;
-  --hero-text: #E4ECF4;
+  --hero-text: #F4F5F7;
   --hero-muted: #BFCFE0;
-  --hero-border: rgba(255,255,255,0.15);
+  --hero-border: rgba(255,255,255,0.2);
 }
 
 /* Dark mode: explicit class OR system preference when no class set */
