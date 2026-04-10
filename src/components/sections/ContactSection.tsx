@@ -1,13 +1,15 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { usePathname } from "next/navigation"
 import { Send, Loader2, CheckCircle } from "lucide-react"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import emailjs from "@emailjs/browser"
 import { siteConfig } from "@/data/site"
 
 export default function ContactSection() {
   const pathname = usePathname()
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
@@ -19,29 +21,42 @@ export default function ContactSection() {
     return ruleAny.exact ? ruleAny.route === pathname : pathname.startsWith(ruleAny.route)
   })
 
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault()
+      if (!email || !message) return
+
+      setLoading(true)
+      setError("")
+
+      try {
+        let recaptchaToken = ""
+        if (executeRecaptcha) {
+          recaptchaToken = await executeRecaptcha("contact_form")
+        }
+
+        await emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICEID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE!,
+          {
+            email,
+            text: message,
+            path: pathname,
+            "g-recaptcha-response": recaptchaToken,
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_APIKEY!
+        )
+        setSent(true)
+      } catch {
+        setError("Something went wrong. Please try again.")
+      } finally {
+        setLoading(false)
+      }
+    },
+    [email, message, pathname, executeRecaptcha]
+  )
+
   if (!rule) return null
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email || !message) return
-
-    setLoading(true)
-    setError("")
-
-    try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICEID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE!,
-        { email, text: message, path: pathname },
-        process.env.NEXT_PUBLIC_EMAILJS_APIKEY!
-      )
-      setSent(true)
-    } catch {
-      setError("Something went wrong. Please try again.")
-    } finally {
-      setLoading(false)
-    }
-  }
 
   return (
     <section className="border-t border-border bg-surface py-24">

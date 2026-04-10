@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import JsonLd from "@/components/seo/JsonLd"
+import RecaptchaProvider from "@/components/providers/RecaptchaProvider"
 import "./globals.css"
 
 const outfit = Outfit({
@@ -122,11 +123,13 @@ gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`,
         )}
       </head>
       <body>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <RecaptchaProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </RecaptchaProvider>
       </body>
     </html>
   )
