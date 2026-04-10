@@ -1,26 +1,32 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Github, Linkedin, Facebook } from "lucide-react"
+import Link from "next/link"
+import { Github, Linkedin, Facebook, Code } from "lucide-react"
 import PageWrapper from "@/components/layout/PageWrapper"
 import SectionTitle from "@/components/ui/SectionTitle"
-import TechStackGrid from "@/components/sections/TechStackGrid"
 import ExperienceTimeline from "@/components/sections/ExperienceTimeline"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import { siteConfig } from "@/data/site"
-import techStack from "@/data/tech-stack"
 import career from "@/data/career"
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "CTO with 10+ years of experience in fintech, cloud architecture, and enterprise software development.",
+    "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms.",
 }
 
 const socialLinks = [
   { icon: Github, href: siteConfig.social.github, label: "GitHub" },
   { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
   { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
+]
+
+const highlights = [
+  { value: "10+", label: "Years of Experience" },
+  { value: "700k", label: "IT Costs Reduced" },
+  { value: "40+", label: "Talks & Events" },
+  { value: "5+", label: "Countries Served" },
 ]
 
 export default function AboutPage() {
@@ -68,20 +74,24 @@ export default function AboutPage() {
                   Chief Technology Officer at Azimut Marketplace
                 </p>
 
-                <div className="mt-8 space-y-4 text-text-secondary leading-relaxed">
+                <div className="mt-8 space-y-4 leading-relaxed text-text-secondary">
                   <p>
-                    I am a highly skilled and passionate CTO with more than 10
-                    years of experience in fintech software development. I am
-                    currently working at Azimut Marketplace to create the best
-                    marketplace for entrepreneurs 2.0.
+                    I am a CTO with a clear mission: transform IT from a cost
+                    center into a strategic asset. At Azimut Marketplace, I
+                    reduced infrastructure costs by over 70% while building a
+                    robust, scalable architecture that serves multiple countries.
                   </p>
                   <p>
-                    I have developed a broad knowledge of cloud technologies and
-                    know how to successfully implement them in enterprise
-                    applications made of microservices. In addition to my work
-                    commitment, I am also an active member of the IT community,
-                    constantly participating in events and conferences to stay
-                    up-to-date and share my knowledge with others.
+                    My approach combines technical depth with business acumen. I
+                    don&apos;t just write code &mdash; I build teams, define
+                    processes, and create a culture where engineering excellence
+                    drives business results.
+                  </p>
+                  <p>
+                    Before stepping into management, I spent years as a hands-on
+                    developer and architect, giving me the foundation to make
+                    informed decisions and mentor the next generation of tech
+                    leaders.
                   </p>
                 </div>
               </div>
@@ -90,23 +100,110 @@ export default function AboutPage() {
         </PageWrapper>
       </section>
 
-      {/* Tech Stack by Category */}
-      <div className="border-t border-border bg-surface/50 py-24">
+      {/* Key Numbers */}
+      <div className="border-t border-border bg-surface/50 py-16">
+        <PageWrapper>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {highlights.map((item, i) => (
+              <ScrollReveal key={item.label} delay={i * 0.05}>
+                <div className="text-center">
+                  <p className="font-heading text-3xl text-gold md:text-4xl">
+                    {item.value}
+                  </p>
+                  <p className="mt-2 text-sm uppercase tracking-wider text-text-muted">
+                    {item.label}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </PageWrapper>
+      </div>
+
+      {/* Leadership Philosophy */}
+      <PageWrapper className="py-24">
+        <ScrollReveal>
+          <SectionTitle>Leadership Approach</SectionTitle>
+        </ScrollReveal>
+        <div className="grid gap-8 md:grid-cols-2">
+          <ScrollReveal>
+            <div className="rounded-lg border border-border bg-surface p-8">
+              <h3 className="font-heading text-xl text-text-primary">
+                Building IT Culture
+              </h3>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                When I joined Azimut Marketplace, there was no established IT
+                culture. I built it from scratch &mdash; introducing agile
+                methodologies, code reviews, automated testing, and CI/CD
+                pipelines. Today, the team operates autonomously with two
+                technology leaders I personally mentored.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-lg border border-border bg-surface p-8">
+              <h3 className="font-heading text-xl text-text-primary">
+                Cost Optimization
+              </h3>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                I reduced recurring IT costs by over &euro;700k through vendor
+                renegotiations, cloud architecture optimization, and strategic
+                insourcing. Every technical decision I make weighs both
+                engineering quality and business impact.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="rounded-lg border border-border bg-surface p-8">
+              <h3 className="font-heading text-xl text-text-primary">
+                Community & Speaking
+              </h3>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                I actively share my experience through 40+ conference talks,
+                panels, and podcasts. Topics range from IT governance and
+                cybersecurity to cloud architecture and team leadership. I
+                believe in giving back to the community that shaped my career.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-lg border border-border bg-surface p-8">
+              <h3 className="font-heading text-xl text-text-primary">
+                Platform Thinking
+              </h3>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                I led the transformation of Azimut Marketplace from a
+                spreadsheet-driven operation to a multi-country platform company.
+                My focus is always on governance, reusability, and building
+                systems that scale across teams and geographies.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </PageWrapper>
+
+      {/* CTA to Tech Skills */}
+      <div className="border-t border-border bg-surface/50 py-20">
         <PageWrapper>
           <ScrollReveal>
-            <SectionTitle>Frontend</SectionTitle>
+            <div className="text-center">
+              <h2 className="font-heading text-3xl text-text-primary md:text-4xl">
+                Want to see the technical side?
+              </h2>
+              <p className="mx-auto mt-4 max-w-lg text-text-secondary">
+                Beyond management, I have deep hands-on experience across the
+                full stack &mdash; from React frontends to Java microservices
+                and cloud infrastructure.
+              </p>
+              <Link
+                href="/about/tech"
+                className="mt-8 inline-flex items-center gap-3 rounded-lg bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-wider text-navy no-underline transition-colors hover:bg-gold-light"
+              >
+                <Code size={20} />
+                Scopri le mie skills tech
+              </Link>
+            </div>
           </ScrollReveal>
-          <TechStackGrid items={techStack} category="FE" />
-
-          <ScrollReveal>
-            <SectionTitle className="mt-20">Backend</SectionTitle>
-          </ScrollReveal>
-          <TechStackGrid items={techStack} category="BE" />
-
-          <ScrollReveal>
-            <SectionTitle className="mt-20">Cloud</SectionTitle>
-          </ScrollReveal>
-          <TechStackGrid items={techStack} category="CLOUD" />
         </PageWrapper>
       </div>
 
