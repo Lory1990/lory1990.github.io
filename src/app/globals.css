@@ -50,31 +50,69 @@
 .icon-nodejs:before { content: "\e90d"; }
 .icon-angularjs:before { content: "\e90e"; }
 
+/* === Light / Dark Mode Variables === */
+:root {
+  --bg: #F4F5F7;
+  --surface: #EAECF0;
+  --surface-elevated: #FFFFFF;
+  --border: #D0D5DD;
+  --border-subtle: #E0E3E8;
+  --gold: #D4580F;
+  --gold-light: #E8702A;
+  --gold-dark: #B84E2D;
+  --accent: #2E4A68;
+  --accent-light: #3D5F82;
+  --navy: #2E4A68;
+  --navy-light: #3A5A7C;
+  --text-primary: #141C26;
+  --text-secondary: #637288;
+  --text-muted: #8A95A5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0E1520;
+    --surface: #152030;
+    --surface-elevated: #1A2840;
+    --border: #1E2D42;
+    --border-subtle: #253548;
+    --gold: #E8702A;
+    --gold-light: #F08040;
+    --gold-dark: #D4580F;
+    --accent: #BFCFE0;
+    --accent-light: #D0DDE8;
+    --navy: #0E1520;
+    --navy-light: #152030;
+    --text-primary: #E4ECF4;
+    --text-secondary: #7A9AB8;
+    --text-muted: #5A7A98;
+  }
+}
+
 /* === Tailwind v4 Theme === */
 @theme {
-  /* Palette: coolors.co/000000-cf5c36-eee5e9-7c7c7c-efc88b */
-  --color-background: #000000;
-  --color-surface: #0A0A0A;
-  --color-surface-elevated: #141414;
-  --color-border: #1E1E1E;
-  --color-border-subtle: #2A2A2A;
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
 
-  --color-gold: #CF5C36;
-  --color-gold-light: #D97550;
-  --color-gold-dark: #B84E2D;
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
 
-  --color-accent: #EFC88B;
-  --color-accent-light: #F3D6A4;
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
 
-  --color-navy: #000000;
-  --color-navy-light: #0A0A0A;
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
 
-  --color-text-primary: #EEE5E9;
-  --color-text-secondary: #B0A8AC;
-  --color-text-muted: #7C7C7C;
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
 
-  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, sans-serif;
 }
 
 /* === Base === */

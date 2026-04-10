@@ -13,7 +13,7 @@ export default function HeroSection() {
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light to-background" />
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(201,169,110,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(212,88,15,0.10),transparent_50%)]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 text-center">
