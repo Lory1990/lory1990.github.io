@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* === Icon Font === */
+@font-face {
+  font-family: "icons";
+  src: url("/fonts/icons.eot?zhtkdw");
+  src: url("/fonts/icons.eot?zhtkdw#iefix") format("embedded-opentype"),
+    url("/fonts/icons.ttf?zhtkdw") format("truetype"),
+    url("/fonts/icons.woff?zhtkdw") format("woff"),
+    url("/fonts/icons.svg?zhtkdw#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mongodb:before { content: "\e913"; }
+.icon-docker:before { content: "\e90f"; }
+.icon-kubernetes:before { content: "\e910"; }
+.icon-redis:before { content: "\e911"; }
+.icon-vps:before { content: "\e912"; }
+.icon-github:before { content: "\e914"; }
+.icon-gitlab:before { content: "\e915"; }
+.icon-storybook:before { content: "\e916"; }
+.icon-react:before { content: "\e90b"; }
+.icon-javascript:before { content: "\e900"; }
+.icon-csharp:before { content: "\e901"; }
+.icon-java:before { content: "\e902"; }
+.icon-css3:before { content: "\e903"; }
+.icon-html5:before { content: "\e904"; }
+.icon-sass:before { content: "\e905"; }
+.icon-iphone:before { content: "\e906"; }
+.icon-database:before { content: "\e907"; }
+.icon-elasticsearch:before { content: "\e908"; }
+.icon-azure:before { content: "\e909"; }
+.icon-aws:before { content: "\e90a"; }
+.icon-php:before { content: "\e90c"; }
+.icon-nodejs:before { content: "\e90d"; }
+.icon-angularjs:before { content: "\e90e"; }
+
+/* === Light / Dark Mode Variables === */
+:root {
+  --bg: #F4F5F7;
+  --surface: #EAECF0;
+  --surface-elevated: #FFFFFF;
+  --border: #D0D5DD;
+  --border-subtle: #E0E3E8;
+  --gold: #D4580F;
+  --gold-light: #E8702A;
+  --gold-dark: #B84E2D;
+  --accent: #2E4A68;
+  --accent-light: #3D5F82;
+  --navy: #141C26;
+  --navy-light: #1E2E42;
+  --text-primary: #141C26;
+  --text-secondary: #637288;
+  --text-muted: #8A95A5;
+  --hero-text: #F4F5F7;
+  --hero-muted: #BFCFE0;
+  --hero-border: rgba(255,255,255,0.2);
+}
+
+/* Dark mode: explicit class OR system preference when no class set */
+:root.dark {
+  --bg: #0E1520;
+  --surface: #152030;
+  --surface-elevated: #1A2840;
+  --border: #1E2D42;
+  --border-subtle: #253548;
+  --gold: #E8702A;
+  --gold-light: #F08040;
+  --gold-dark: #D4580F;
+  --accent: #BFCFE0;
+  --accent-light: #D0DDE8;
+  --navy: #0E1520;
+  --navy-light: #152030;
+  --text-primary: #E4ECF4;
+  --text-secondary: #7A9AB8;
+  --text-muted: #5A7A98;
+  --hero-text: #E4ECF4;
+  --hero-muted: #7A9AB8;
+  --hero-border: rgba(255,255,255,0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg: #0E1520;
+    --surface: #152030;
+    --surface-elevated: #1A2840;
+    --border: #1E2D42;
+    --border-subtle: #253548;
+    --gold: #E8702A;
+    --gold-light: #F08040;
+    --gold-dark: #D4580F;
+    --accent: #BFCFE0;
+    --accent-light: #D0DDE8;
+    --navy: #0E1520;
+    --navy-light: #152030;
+    --text-primary: #E4ECF4;
+    --text-secondary: #7A9AB8;
+    --text-muted: #5A7A98;
+    --hero-text: #E4ECF4;
+    --hero-muted: #7A9AB8;
+    --hero-border: rgba(255,255,255,0.1);
+  }
+}
+
+/* === Tailwind v4 Theme === */
+@theme {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-hero-text: var(--hero-text);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-border: var(--hero-border);
+
+  --font-heading: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, sans-serif;
+}
+
+/* === Base === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-gold) 20%, transparent);
+    color: var(--color-gold-light);
+  }
+}

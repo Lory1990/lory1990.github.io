@@ -1,0 +1,220 @@
+# Lorenzo De Francesco - Full Profile
+
+> CTO, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development. Currently leading technology at Azimut Marketplace.
+
+---
+
+## Personal Info
+
+- **Name:** Lorenzo De Francesco
+- **Role:** Chief Technology Officer
+- **Company:** Azimut Marketplace
+- **Location:** Milan, Italy
+- **Website:** https://lory1990.github.io
+- **LinkedIn:** https://www.linkedin.com/in/lorenzodefrancesco
+- **GitHub:** https://github.com/Lory1990
+
+---
+
+## Bio
+
+Lorenzo De Francesco is a CTO with a clear mission: transform IT from a cost center into a strategic asset. At Azimut Marketplace, he reduced infrastructure costs by over 70% while building a robust, scalable architecture that serves multiple countries. His approach combines technical depth with business acumen — he doesn't just write code, he builds teams, defines processes, and creates a culture where engineering excellence drives business results. Before stepping into management, he spent years as a hands-on developer and architect, giving him the foundation to make informed decisions and mentor the next generation of tech leaders.
+
+He is one of the organizers of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
+
+---
+
+## Career
+
+### CTO — Azimut Marketplace (May 2022 – Present)
+Milan, Italy. Reduced cost of IT infrastructure by more than 70% while creating a robust, flexible and secure IT Architecture.
+
+### Architect & Team Leader Frontend — Fabrik (November 2020 – May 2022)
+Milan, Italy. Frontend Team Leader overseeing a team of 5 members, mentor to junior developers. Defined and maintained the foundational React architecture and common component libraries.
+
+### Senior Software Developer — Costa Crociere (August 2018 – October 2020)
+Genova, Italy. Specialized in real-time web applications for the maritime industry. Worked on budget optimization with CI/CD pipelines to deploy applications on ships.
+
+### Project Manager & Developer — CryptoForecast (July 2018 – May 2020)
+Remote. Development of the Cryptoforecast platform (application, backoffice, and web jobs). Financial Forecast Algorithms Developer and Project Manager.
+
+### ILS and Maintenance Engineer — Delfi/Fincantieri (January 2017 – August 2018)
+La Spezia, Italy. Integrated Logistic Support Technical Writer for the Italian Navy. Supplier management, spare parts identification, and writing maintenance manuals for complex systems.
+
+### Co-Founder & CEO — Navium (January 2015 – December 2016)
+Trieste, Italy. Co-founder of a startup developing decision support products for the cruise shipping market. Funded by POR-FESR 2020 Program (€300k).
+
+---
+
+## Technical Skills
+
+### Frontend
+- **React** — 4 years (highlighted skill)
+- **React Native** — 1 year
+- **CSS/SASS/Styled Components** — 4 years
+
+### Backend
+- **Java** — 7 years (Spring Boot, Quarkus) (highlighted skill)
+- **Node.js** — 5 years (Express, TypeScript) (highlighted skill)
+- **SQL + NoSQL** — 8 years (MongoDB, MSSQL, MySQL) (highlighted skill)
+
+### Cloud & Infrastructure
+- **Azure** — 4 years (highlighted skill)
+- **AWS** — 1 year
+- **Kubernetes** — 2 years (Mia Platform, Docker)
+
+---
+
+## Key Achievements
+
+- **€700k+** recurring IT costs reduced
+- **2 tech leaders** mentored from junior developers
+- **100% IT governance** established (security policies, GDPR, SSO, monitoring)
+- **5+ countries** served with multi-country fintech platform
+- **45+ talks** at conferences and events
+- **15+ projects** delivered
+
+---
+
+## Open Source Projects
+
+### MFE Orchestrator
+Like Kubernetes, but for frontend. A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments. Ship and manage microfrontends in minutes, not hours.
+- Multi-environment (DEV, UAT, PROD)
+- Multi-cloud (AWS, Azure, GCP)
+- Canary deployments, CI/CD integration
+- Version management & rollback
+- Website: https://mfe-orchestrator.dev/
+- GitHub: https://github.com/mfe-orchestrator
+
+### Swagger Aggregator
+A Kubernetes-native service that automatically discovers Ingress resources, retrieves associated services and pods, and aggregates their Swagger API definitions into a unified interface.
+- Auto-discovery of Ingress resources
+- Active pod validation
+- Swagger definition merging, Redis caching
+- Helm chart deployment
+- GitHub: https://github.com/Lory1990/swagger-aggregator
+
+---
+
+## Client & Side Projects
+
+### Tryvium
+Crypto-friendly booking platform. Online booking for hotels and accommodations with crypto payments. Role: Head of Frontend Development. Stack: React, Web3, CSS. Website: https://tryvium.io
+
+### Tongy
+Platform to teach English to babies through fun interactive activities and native speaker lessons. Role: Full Stack Developer. Stack: AWS, React, Docker, Node. Website: https://tongy.it
+
+### Autoconnexa
+InsurTech platform with mileage-based car insurance and vehicle tracking. Role: Team Leader. Stack: AWS, React, Docker, Node, Stripe. Website: https://autoconnexa.it
+
+### Spire Energia
+Platform to monitor building energy consumption for condominium administrators. Role: Full Stack Developer. Stack: VPS, Node, Stripe. Website: https://spire-energia.com
+
+### Newo
+Fintech web application for invoice advance, allowing businesses to get cash on outstanding invoices. Role: Head of development. Stack: AWS, Docker, Kubernetes, Node, React, Stripe. Website: https://newopay.it
+
+### Duck Internship
+Internship marketplace connecting graduates with practical work experience. Role: Full Stack Developer. Stack: VPS, Node, React. Website: https://duckinternship.com
+
+### The Personal Trainer
+PWA fitness tracker for personal trainers and athletes. Role: Head of development. Stack: VPS, Docker, Node, React.
+
+### Comunicazione per PT
+Personal trainer online video portal with YouTube integration and PayPal payments. Role: Head of development. Stack: VPS, Docker, Node, React.
+
+### CryptoForecast
+Platform to predict cryptocurrency prices, centralizing all useful trader information. Role: Head of development. Stack: VPS, Node, React, PHP.
+
+### Navium
+Marine tech startup specialized in damaged stability prediction and naval design software. Role: Head of development. Stack: Java.
+
+---
+
+## Speaking Events & Talks
+
+### 2026
+- **BacaroLive EP 10 - Carriera e Micro Mondi** (March 12, 2026) — Online, BacaroTech. Video: https://www.youtube.com/watch?v=4yucOO2SZxQ
+- **Creare una Test Factory Aziendale** (February 7, 2026) — Winter Tech. https://wintertech.it/
+
+### 2025
+- **Orchestrare Microfrontend Like a Pro** (November 22, 2025) — DevFest Alps 2025, Torino
+- **Orchestrare Microfrontend Like a Pro** (November 18, 2025) — Reggio Emilia Full Stack Meetup
+- **Mille modi di orchestrare Microfrontend** (October 25, 2025) — DevFest Roma. React, Vite Module Federation, Lerna, Web Components.
+- **Creare Agenti con Langflow** (October 24, 2025) — AI Day Conf 2025 Reloaded, Microsoft Italia Roma. Building AI agents with RAG and tools using Langflow.
+- **CTO Connext @ Codemotion** (October 14, 2025) — Codemotion 2025
+- **Guida pratica alla gestione delle eccezioni** (October 11, 2025) — Dev Fest Milano 2025. Exception handling end to end.
+- **Il Kubernetes per Frontend esiste, ed e' open source** (October 4, 2025) — DevFest Modena 2025. Lightning talk on MFE Orchestrator.
+- **Come costruire una cultura IT partendo dal disordine totale** (October 3, 2025) — Ordine degli Ingegneri, Verona
+- **Cybersecurity: solo adempimenti normativi o vera sicurezza?** (September 26, 2025) — Strategic Management Partners
+- **Oracolo del Test - Leadership talk e tavola rotonda** (February 25, 2025)
+
+### 2024
+- **Anche le infrastrutture cloud possono essere scriptate** (November 16, 2024) — DevFest Venezia. Terraform for Azure cloud.
+- **IT Governance con Lorenzo De Francesco** (July 8, 2024) — Azure Italia Podcast. IT governance on Azure.
+- **Azimut Marketplace: The Path to a Platform Company** (May 14, 2024) — Platmosphere, Talent Garden Calabiana
+- **Come hostare la tua startup 100% su Azure** (April 18, 2024) — Microsoft House Milano
+- **Come parlano i software?** (April 16, 2024) — Milano Luiss Hub. How software communicates.
+
+### 2023
+- **Come fare il grande passo: da sviluppatore a manager** (October 31, 2023) — GDG Cloud Milano
+- **Prendere in gestione un software scritto da altri** (December 2, 2023) — Dev Fest Alps 2023
+- **I passi giusti per creare una piattaforma solida e scalabile** (November 11, 2023) — Dev Fest Trento 2023
+- **Sviluppiamo una web app in TDD con Cypress** (June 30, 2023) — Working Software Conference, MotorK
+- **Data protection e Cyber Security** (May 23, 2023) — Fiera del Credito
+- **Resilienza e proattivita' per la sicurezza** (May 22, 2023) — ClassCnbc (Sky 507)
+- **Come sviluppare un reparto IT performante** (May 17, 2023) — CTO Mastermind. Video + Podcast.
+- **Da ingegnere navale a CTO** (May 11, 2023) — Pointer Podcast
+- **WANNABE MANAGER IN ICT** (April 19, 2023) — Lavoro Digitale Italia
+- **Un Tool zero-config per monitorare le attivita' degli utenti** (March 31, 2023) — React JS Milano
+- **Creare una Test Factory Aziendale** (January 13, 2023) — Google DevFest Alps 2023
+
+### 2022
+- **How to handle a multicountry enterprise platform** (October 22, 2022) — Google DevFest Triveneto 2022
+- **Il tuo primo giorno di lavoro** (September 21, 2022) — Tutored
+- **Guida pratica alla gestione di un prodotto IT** (September 20, 2022) — Crafted Software
+- **Recruiter & Dev: Celebrating Friendship!** (September 5, 2022)
+- **Colmare il debito tecnico** (June 23, 2022) — Tech Italia
+- **Colloquio tecnico per neolaureati** (June 21, 2022)
+- **Simulazione di colloquio per Back-end Developer** (May 16, 2022) — Tutored
+- **Come si supera il colloquio tecnico?** (January 31, 2022) — Tutored
+
+### 2021
+- **Il team leader cosa fa?** (December 22, 2021)
+- **Come creare un Frontend scalabile, robusto e coerente** (December 14, 2021) — React JS Milano. Storybook and Design System.
+- **Lavoro da posti incredibili e sono felice** (December 1, 2021) — Digital Nomadism talk
+- **Con le architetture disaccoppiate e' meglio!** (November 24, 2021) — Microservices PubSub patterns
+- **Deploy in ambienti critici** (November 18, 2021)
+- **Chat With UX/UI** (November 10, 2021) — UX/UI designer career paths
+- **TeclaSystem dove si creano software per palinsesti TV** (October 28, 2021)
+- **Bastano 200/giorno per un freelance?** (October 13, 2021) — Freelance cost-benefit analysis
+- **Chat with UX/UI - Design System** (October 6, 2021)
+
+---
+
+## Talk Topics
+
+Lorenzo speaks about:
+- IT governance and management
+- Cloud architecture (Azure, AWS, Terraform)
+- Microfrontend architecture and orchestration
+- Testing strategies and test factories
+- Cybersecurity and data protection
+- Career transitions (developer to manager)
+- AI agents and Langflow
+- Exception handling
+- Software communication patterns
+- Team leadership and mentoring
+
+---
+
+## Community Roles
+
+- **Organizer** — Google Developer Group Milano (https://gdg.community.dev/gdg-milano/)
+- **Scientific Coordinator** — Master in Full Stack Development & AI, start2impact (https://www.start2impact.it/)
+
+---
+
+## Contact
+
+Lorenzo is available for speaking engagements, collaborations, and consulting. Reach out via LinkedIn or through his website contact form.

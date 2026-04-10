@@ -1,0 +1,42 @@
+# Lorenzo De Francesco
+
+> CTO, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development.
+
+## About
+
+Lorenzo De Francesco is a Chief Technology Officer at Azimut Marketplace, based in Milan, Italy. He transformed the IT department from scratch, reducing infrastructure costs by over €700k while building a scalable multi-country fintech platform. He is an organizer of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
+
+## Current Role
+
+- **Position:** CTO at Azimut Marketplace (since May 2022)
+- **Focus:** IT governance, cloud architecture, cost optimization, team building
+- **Achievements:** 70% IT cost reduction, multi-country platform, mentored 2 tech leaders
+
+## Tech Skills
+
+- **Frontend:** React (4yr), React Native (1yr), CSS/SASS (4yr)
+- **Backend:** Java/Spring Boot/Quarkus (7yr), Node.js/TypeScript (5yr), SQL+NoSQL (8yr)
+- **Cloud:** Azure (4yr), AWS (1yr), Kubernetes (2yr)
+
+## Open Source Projects
+
+- [MFE Orchestrator](https://mfe-orchestrator.dev/) - Multi-cloud platform for orchestrating microfrontends
+- [Swagger Aggregator](https://github.com/Lory1990/swagger-aggregator) - Kubernetes-native Swagger auto-discovery and aggregation
+
+## Speaking
+
+Lorenzo has given 45+ talks at conferences, meetups, panels, and podcasts on topics including IT governance, cloud architecture, cybersecurity, microfrontends, AI agents, testing, and career development.
+
+## Links
+
+- Website: https://lory1990.github.io
+- LinkedIn: https://www.linkedin.com/in/lorenzodefrancesco
+- GitHub: https://github.com/Lory1990
+
+## Pages
+
+- [Home](https://lory1990.github.io/)
+- [About](https://lory1990.github.io/about)
+- [Tech Skills](https://lory1990.github.io/about/tech)
+- [Projects](https://lory1990.github.io/projects)
+- [Events & Talks](https://lory1990.github.io/events)
