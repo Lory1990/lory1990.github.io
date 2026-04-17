@@ -23,17 +23,44 @@ export async function generateMetadata({
   const { id } = await params
   const project = projects.find((p) => p.slug === id)
   if (!project) return {}
+  const description =
+    project.boxDescription || project.description?.slice(0, 160)
+  const keywords = [
+    project.title,
+    ...(project.category ?? []),
+    ...(project.stack ?? []),
+    "Lorenzo De Francesco",
+    "project",
+    "portfolio",
+    "case study",
+  ]
+  const image = project.image ?? siteConfig.image
   return {
     title: project.title,
-    description: project.boxDescription || project.description?.slice(0, 160),
+    description,
+    keywords,
     alternates: {
       canonical: `${siteConfig.url}/projects/${id}`,
     },
     openGraph: {
       title: `${project.title} | ${siteConfig.name}`,
-      description: project.boxDescription || project.description?.slice(0, 160),
+      description,
       url: `${siteConfig.url}/projects/${id}`,
-      ...(project.image && { images: [project.image] }),
+      siteName: siteConfig.name,
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: image,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | ${siteConfig.name}`,
+      description,
+      images: [image],
     },
   }
 }

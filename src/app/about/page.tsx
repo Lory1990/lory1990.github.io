@@ -12,19 +12,50 @@ import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
 import career from "@/data/career"
 
+const aboutDescription =
+  "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms."
+
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms.",
+  description: aboutDescription,
+  keywords: [
+    "Lorenzo De Francesco",
+    "CTO",
+    "Chief Technology Officer",
+    "About Lorenzo De Francesco",
+    "fintech leader",
+    "tech leadership",
+    "IT governance",
+    "cloud architecture",
+    "team building",
+    "Azimut Marketplace CTO",
+    "engineering manager",
+    "IT cost optimization",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
     title: `About | ${siteConfig.name}`,
-    description:
-      "CTO with 10+ years of experience leading technology teams, reducing IT costs, and building scalable fintech platforms.",
+    description: aboutDescription,
     url: `${siteConfig.url}/about`,
+    siteName: siteConfig.name,
+    locale: "en_US",
     type: "profile",
+    images: [
+      {
+        url: siteConfig.image,
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - ${siteConfig.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `About | ${siteConfig.name}`,
+    description: aboutDescription,
+    images: [siteConfig.image],
   },
 }
 

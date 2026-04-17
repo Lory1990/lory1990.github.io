@@ -10,12 +10,56 @@ import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
 import techStack from "@/data/tech-stack"
 
+const techDescription =
+  "Full stack expertise: React, Java, Node.js, Kubernetes, AWS, Azure, and more. 10+ years of hands-on development experience."
+
 export const metadata: Metadata = {
   title: "Tech Skills",
-  description:
-    "Full stack expertise: React, Java, Node.js, Kubernetes, AWS, Azure, and more. 10+ years of hands-on development experience.",
+  description: techDescription,
+  keywords: [
+    "Lorenzo De Francesco",
+    "tech skills",
+    "full stack developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "Kubernetes",
+    "Docker",
+    "AWS",
+    "Azure",
+    "GCP",
+    "Terraform",
+    "microservices",
+    "cloud architecture",
+    "DevOps",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/about/tech`,
+  },
+  openGraph: {
+    title: `Tech Skills | ${siteConfig.name}`,
+    description: techDescription,
+    url: `${siteConfig.url}/about/tech`,
+    siteName: siteConfig.name,
+    locale: "en_US",
+    type: "profile",
+    images: [
+      {
+        url: siteConfig.image,
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - Tech Skills`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Tech Skills | ${siteConfig.name}`,
+    description: techDescription,
+    images: [siteConfig.image],
   },
 }
 

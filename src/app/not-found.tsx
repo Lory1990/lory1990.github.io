@@ -1,5 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import PageWrapper from "@/components/layout/PageWrapper"
+import { siteConfig } from "@/data/site"
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description:
+    "The page you are looking for does not exist. Head back to the home page to keep exploring.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: `Page Not Found | ${siteConfig.name}`,
+    description:
+      "The page you are looking for does not exist. Head back to the home page to keep exploring.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: `Page Not Found | ${siteConfig.name}`,
+    description:
+      "The page you are looking for does not exist. Head back to the home page to keep exploring.",
+  },
+}
 
 export default function NotFound() {
   return (
