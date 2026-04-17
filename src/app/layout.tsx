@@ -108,6 +108,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${nunito.variable}`}>
       <head>
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/llms.txt"
+          title="LLM-friendly summary"
+        />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/llms-full.txt"
+          title="LLM-friendly full profile"
+        />
         <JsonLd
           data={{
             "@context": "https://schema.org",

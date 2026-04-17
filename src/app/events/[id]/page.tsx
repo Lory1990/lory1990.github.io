@@ -24,17 +24,44 @@ export async function generateMetadata({
   const { id } = await params
   const event = events.find((e) => e.slug === id)
   if (!event) return {}
+  const description =
+    event.shortDescription || event.description?.slice(0, 160)
+  const keywords = [
+    event.title,
+    "Lorenzo De Francesco",
+    "tech talk",
+    "speaking",
+    event.isOnline ? "online event" : "in-person event",
+    ...(event.venue ? [event.venue] : []),
+    ...(event.podcast ? ["podcast"] : []),
+    ...(event.video ? ["video", "recording"] : []),
+    "conference",
+  ]
   return {
     title: event.title,
-    description:
-      event.shortDescription || event.description?.slice(0, 160),
+    description,
+    keywords,
     alternates: {
       canonical: `${siteConfig.url}/events/${id}`,
     },
     openGraph: {
       title: `${event.title} | ${siteConfig.name}`,
-      description: event.shortDescription || event.description?.slice(0, 160),
+      description,
       url: `${siteConfig.url}/events/${id}`,
+      siteName: siteConfig.name,
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: event.image,
+          alt: event.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${event.title} | ${siteConfig.name}`,
+      description,
       images: [event.image],
     },
   }

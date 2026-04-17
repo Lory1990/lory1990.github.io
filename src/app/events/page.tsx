@@ -9,12 +9,50 @@ import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
 import events from "@/data/events"
 
+const eventsDescription =
+  "Speaking engagements, conference talks, panels, and webinars on fintech, cloud, and IT management."
+
 export const metadata: Metadata = {
   title: "Events",
-  description:
-    "Speaking engagements, conference talks, panels, and webinars on fintech, cloud, and IT management.",
+  description: eventsDescription,
+  keywords: [
+    "Lorenzo De Francesco",
+    "tech speaker",
+    "conference speaker",
+    "fintech conference",
+    "cloud conference",
+    "IT management talks",
+    "webinars",
+    "panels",
+    "podcasts",
+    "developer events",
+    "Google Developer Group Milano",
+    "keynote speaker",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/events`,
+  },
+  openGraph: {
+    title: `Events | ${siteConfig.name}`,
+    description: eventsDescription,
+    url: `${siteConfig.url}/events`,
+    siteName: siteConfig.name,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: siteConfig.image,
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - Events & Talks`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Events | ${siteConfig.name}`,
+    description: eventsDescription,
+    images: [siteConfig.image],
   },
 }
 

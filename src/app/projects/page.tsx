@@ -11,12 +11,52 @@ import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
 import projects from "@/data/projects"
 
+const projectsDescription =
+  "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development."
+
 export const metadata: Metadata = {
   title: "Projects",
-  description:
-    "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
+  description: projectsDescription,
+  keywords: [
+    "Lorenzo De Francesco projects",
+    "open source",
+    "MFE Orchestrator",
+    "Swagger Aggregator",
+    "microfrontends",
+    "fintech projects",
+    "insurtech projects",
+    "crypto projects",
+    "enterprise software",
+    "Kubernetes",
+    "React",
+    "Node.js",
+    "portfolio",
+    "software portfolio",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/projects`,
+  },
+  openGraph: {
+    title: `Projects | ${siteConfig.name}`,
+    description: projectsDescription,
+    url: `${siteConfig.url}/projects`,
+    siteName: siteConfig.name,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: siteConfig.image,
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - Projects`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Projects | ${siteConfig.name}`,
+    description: projectsDescription,
+    images: [siteConfig.image],
   },
 }
 
