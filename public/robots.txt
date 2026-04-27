@@ -1,0 +1,99 @@
+# robots.txt for https://lory1990.github.io
+# Personal site of Lorenzo De Francesco — public profile, talks, and projects.
+# Public content; AI training, search, and AI-input use are all allowed.
+
+# ---------- Default rules ----------
+User-agent: *
+Allow: /
+
+# ---------- AI training & assistant crawlers ----------
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google (Gemini, Vertex AI, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Meta (Llama)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# DuckDuckGo Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# ByteDance / Doubao
+User-agent: Bytespider
+Allow: /
+
+# Common Crawl (corpus used by many AI labs)
+User-agent: CCBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Diffbot (knowledge-graph extractor)
+User-agent: Diffbot
+Allow: /
+
+# ---------- Content Signals ----------
+# Declares preferences for how this site's content may be used.
+# See https://contentsignals.org and IETF draft-romm-aipref-contentsignals.
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+# ---------- Discovery ----------
+Host: https://lory1990.github.io
+Sitemap: https://lory1990.github.io/sitemap.xml

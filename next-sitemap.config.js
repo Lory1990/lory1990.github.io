@@ -1,25 +1,15 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://lory1990.github.io",
-  generateRobotsTxt: true,
+  // robots.txt is hand-written at public/robots.txt so we can declare
+  // Content-Signal directives and Host headers that next-sitemap doesn't
+  // support. Don't let next-sitemap overwrite it.
+  generateRobotsTxt: false,
   trailingSlash: false,
   generateIndexSitemap: false,
-  robotsTxtOptions: {
-    policies: [
-      { userAgent: "*", allow: "/" },
-      { userAgent: "GPTBot", allow: "/" },
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "OAI-SearchBot", allow: "/" },
-      { userAgent: "ClaudeBot", allow: "/" },
-      { userAgent: "Claude-Web", allow: "/" },
-      { userAgent: "anthropic-ai", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "CCBot", allow: "/" },
-      { userAgent: "Applebot-Extended", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
-      { userAgent: "Amazonbot", allow: "/" },
-      { userAgent: "Meta-ExternalAgent", allow: "/" },
-    ],
-  },
+  // The site is statically exported to ./out, so write the sitemap there.
+  // Without this, next-sitemap writes to ./public/ in CI (after `next build`
+  // has already finished copying public/ → out/), and the sitemap never makes
+  // it into the deployed artifact.
+  outDir: "./out",
 }

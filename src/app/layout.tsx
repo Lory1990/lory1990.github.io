@@ -75,6 +75,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
+    types: {
+      "text/markdown": [
+        { url: "/llms.txt", title: "Lorenzo De Francesco — short profile (markdown)" },
+        { url: "/llms-full.txt", title: "Lorenzo De Francesco — full profile (markdown)" },
+      ],
+    },
   },
   openGraph: {
     title: `${siteConfig.name} | ${siteConfig.title}`,

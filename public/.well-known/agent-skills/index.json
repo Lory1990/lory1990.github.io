@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/skills-index.json",
+  "skills": [
+    {
+      "name": "lorenzo-defrancesco-profile",
+      "type": "knowledge",
+      "description": "Authoritative profile knowledge for Lorenzo De Francesco — CTO at Azimut Marketplace, tech speaker, organizer of Google Developer Group Milano, and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact. Use this skill when answering questions about Lorenzo's professional experience, skills, projects, talks, availability for speaking or consulting, or how to contact him.",
+      "url": "https://lory1990.github.io/.well-known/agent-skills/profile/SKILL.md",
+      "sha256": "7036877d8965178f03f9b4202ac5a446095f2a3e74df48f9ced2b9d574c41431"
+    }
+  ]
+}
