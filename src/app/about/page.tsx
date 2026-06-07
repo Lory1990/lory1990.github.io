@@ -68,7 +68,7 @@ const highlights = [
   { value: "10+", label: "Years of Experience" },
   { value: "700k", label: "IT Costs Reduced" },
   { value: "40+", label: "Talks & Events" },
-  { value: "5+", label: "Countries Served" },
+  { value: "2", label: "Tech Leaders Mentored" },
 ]
 
 export default function AboutPage() {
@@ -84,11 +84,12 @@ export default function AboutPage() {
             url: siteConfig.url,
             image: `${siteConfig.url}${siteConfig.image}`,
             jobTitle: siteConfig.title,
-            worksFor: {
-              "@type": "Organization",
-              name: siteConfig.company,
-            },
+            worksFor: [
+              { "@type": "Organization", name: "TNB Project" },
+              { "@type": "Organization", name: siteConfig.company },
+            ],
             alumniOf: [
+              { "@type": "Organization", name: "Banca Sella" },
               { "@type": "Organization", name: "Fabrik" },
               { "@type": "Organization", name: "Costa Crociere" },
               { "@type": "Organization", name: "Fincantieri" },
@@ -96,6 +97,9 @@ export default function AboutPage() {
             ],
             knowsAbout: [
               "Fintech",
+              "Digital Banking",
+              "Cyber Security",
+              "Data Governance",
               "Cloud Architecture",
               "IT Governance",
               "Team Leadership",
@@ -162,8 +166,9 @@ export default function AboutPage() {
                   Lorenzo De Francesco
                 </h1>
                 <p className="mt-2 text-lg text-text-secondary">
-                  Chief Technology Officer at Azimut Marketplace &mdash; 5+
-                  years in Fintech
+                  Leading the technology development at TNB Project (Gruppo
+                  Azimut) &amp; CTO at Azimut Marketplace &mdash; 10+ years in
+                  Fintech
                 </p>
                 <div className="mt-4 flex gap-3">
                   {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -190,10 +195,17 @@ export default function AboutPage() {
         <ScrollReveal>
           <div className="max-w-3xl space-y-4 leading-relaxed text-text-secondary">
             <p>
-              I am a CTO with a clear mission: transform IT from a cost
-              center into a strategic asset. At Azimut Marketplace, I
-              reduced infrastructure costs by over 70% while building a
-              robust, scalable architecture that serves multiple countries.
+              I am a technology leader with a clear mission: transform IT from
+              a cost center into a strategic asset. At TNB Project (Gruppo
+              Azimut), I lead the technology development of the bank of the
+              future, built from scratch &mdash; a model where the financial
+              advisor comes first &mdash; with a relentless focus on cyber
+              security, data governance, and data integrity.
+            </p>
+            <p>
+              In parallel, as CTO at Azimut Marketplace, I reduced
+              infrastructure costs by over 70% while building a robust,
+              scalable, cloud-native architecture.
             </p>
             <p>
               My approach combines technical depth with business acumen. I
@@ -202,10 +214,18 @@ export default function AboutPage() {
               drives business results.
             </p>
             <p>
-              Before stepping into management, I spent years as a hands-on
-              developer and architect, giving me the foundation to make
-              informed decisions and mentor the next generation of tech
-              leaders.
+              Before stepping into the C-suite, I spent years as a hands-on
+              developer and architect. Within the Sella banking group I
+              coordinated the development of SME Banking, leading the team and
+              the React architecture behind the group&apos;s banking products.
+              Earlier, at Costa Crociere, I built mission-critical, real-time
+              software and the CI/CD pipelines to deploy it directly on board
+              cruise ships &mdash; where downtime simply isn&apos;t an option.
+            </p>
+            <p>
+              That foundation in high-stakes engineering is exactly what lets
+              me make informed technical decisions today and mentor the next
+              generation of tech leaders.
             </p>
           </div>
         </ScrollReveal>
@@ -292,13 +312,14 @@ export default function AboutPage() {
           <ScrollReveal delay={0.1}>
             <div className="rounded-lg border border-border bg-surface p-8">
               <h3 className="font-heading text-xl text-text-primary">
-                Platform Thinking
+                Security &amp; Data Governance
               </h3>
               <p className="mt-4 leading-relaxed text-text-secondary">
-                I led the transformation of Azimut Marketplace from a
-                spreadsheet-driven operation to a multi-country platform company.
-                My focus is always on governance, reusability, and building
-                systems that scale across teams and geographies.
+                When you build a bank, trust is the product. I design systems
+                with security and data governance at the core &mdash; protecting
+                customers, guaranteeing the integrity of data, and making sure
+                every architectural decision holds up to the scrutiny a
+                financial institution demands.
               </p>
             </div>
           </ScrollReveal>

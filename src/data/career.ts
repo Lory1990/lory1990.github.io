@@ -2,22 +2,37 @@ import { TimelineEvent } from "@/types"
 
 const career: TimelineEvent[] = [
   {
-    position: "CTO",
+    position: "Building the bank of the future",
+    company: "TNB Project · Gruppo Azimut",
+    location: "Italy",
+    from: "2025",
+    to: "Today",
+    highlight: true,
+    tags: ["Digital Banking", "Cyber Security", "Data Governance", "Data Integrity"],
+    description:
+      "I lead the technology development of the bank of the future, built from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and the integrity of data.",
+  },
+  {
+    position: "Chief Technology Officer",
     company: "Azimut Marketplace",
     location: "Milan, Italy",
     from: "May 2022",
     to: "Today",
+    highlight: true,
+    tags: ["IT Strategy", "Cloud Architecture", "Cost Optimization", "Governance"],
     description:
-      "Reduces cost of IT infrastructure of more than 70% while creating a robust, flexible and secure IT Architecture.",
+      "I lead technology at a fintech platform serving SMEs. I built the IT department from scratch, reduced recurring infrastructure costs by over €700k (70%), and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform — while mentoring two engineers into technology leaders.",
   },
   {
-    position: "Architect and Team Leader Frontend",
-    company: "Fabrik",
+    position: "Architect & Team Leader — SME Banking",
+    company: "Banca Sella (Fabrik)",
     location: "Milan, Italy",
     from: "November 2020",
     to: "May 2022",
+    highlight: true,
+    tags: ["SME Banking", "React Architecture", "Design System", "Team Leadership"],
     description:
-      "Experienced Frontend Team Leader overseeing a dynamic team of 5 members, coupled with a role as a dedicated mentor to junior developers. Proficient in defining and maintaining the foundational React architecture while also excelling in the creation and management of essential common component libraries.",
+      "Within the Sella banking group, I coordinated the development of SME Banking, leading a team of 5 engineers and mentoring junior developers. I defined and maintained the foundational React architecture and built the shared component libraries that powered the group's banking products.",
   },
   {
     position: "Senior Software Developer",
@@ -25,8 +40,9 @@ const career: TimelineEvent[] = [
     location: "Genova, Italy",
     from: "August 2018",
     to: "October 2020",
+    tags: ["Mission-Critical Systems", "Real-Time Apps", "CI/CD", "On-Board Deploy"],
     description:
-      "Senior Software Developer specialized in real time web applications for maritime industry. Worked also on budget optimization with the use of CD/CI pipeline to deploy applications on ship.",
+      "I built mission-critical, real-time web applications for the maritime industry, where failure is not an option. I designed CI/CD pipelines to safely deploy and update software directly on board cruise ships — operating in constrained, high-stakes environments far from the data center.",
   },
   {
     position: "Project Manager & Developer",
