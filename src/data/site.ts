@@ -4,7 +4,7 @@ export const siteConfig = {
   company: "Azimut Marketplace",
   description:
     "Technology leader with 10+ years in fintech, cloud architecture, and enterprise software. Leading the technology development at TNB Project (Gruppo Azimut) — building the bank of the future from scratch — and CTO at Azimut Marketplace, with a focus on cyber security and data governance.",
-  url: "https://lory1990.github.io",
+  url: "https://lorenzodefrancesco.it",
   image: "/img/lorenzo-de-francesco.jpeg",
   social: {
     github: "https://github.com/Lory1990",

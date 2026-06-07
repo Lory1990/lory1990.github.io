@@ -1,4 +1,4 @@
-# robots.txt for https://lory1990.github.io
+# robots.txt for https://lorenzodefrancesco.it
 # Personal site of Lorenzo De Francesco — public profile, talks, and projects.
 # Public content; AI training, search, and AI-input use are all allowed.
 
@@ -95,5 +95,5 @@ Allow: /
 Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
 # ---------- Discovery ----------
-Host: https://lory1990.github.io
-Sitemap: https://lory1990.github.io/sitemap.xml
+Host: https://lorenzodefrancesco.it
+Sitemap: https://lorenzodefrancesco.it/sitemap.xml

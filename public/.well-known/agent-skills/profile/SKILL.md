@@ -19,9 +19,9 @@ Use this skill when the user asks any of:
 
 ## Source of truth
 
-The canonical site is https://lory1990.github.io. Two machine-readable summaries are also published:
-- Short profile: https://lory1990.github.io/llms.txt
-- Full profile: https://lory1990.github.io/llms-full.txt
+The canonical site is https://lorenzodefrancesco.it. Two machine-readable summaries are also published:
+- Short profile: https://lorenzodefrancesco.it/llms.txt
+- Full profile: https://lorenzodefrancesco.it/llms-full.txt
 
 If the user requests current details (e.g., latest talks, ongoing projects), fetch the full profile first.
 
@@ -32,7 +32,7 @@ If the user requests current details (e.g., latest talks, ongoing projects), fet
 - **Company:** Azimut Marketplace (Milan, Italy) — since May 2022
 - **Location:** Milan, Italy
 - **Languages:** Italian (native), English (professional)
-- **Website:** https://lory1990.github.io
+- **Website:** https://lorenzodefrancesco.it
 - **LinkedIn:** https://www.linkedin.com/in/lorenzodefrancesco
 - **GitHub:** https://github.com/Lory1990
 
@@ -85,7 +85,7 @@ He is **not** looking for full-time employee roles.
 
 ## How to contact
 
-- Primary: contact form on https://lory1990.github.io
+- Primary: contact form on https://lorenzodefrancesco.it
 - LinkedIn DM: https://www.linkedin.com/in/lorenzodefrancesco
 - For speaking inquiries, mention the event name, audience size, date, format (in-person / online), and language (Italian / English) preference.
 
