@@ -1,16 +1,20 @@
 # Lorenzo De Francesco
 
-> CTO, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development.
+> Technology leader, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development.
 
 ## About
 
-Lorenzo De Francesco is a Chief Technology Officer at Azimut Marketplace, based in Milan, Italy. He transformed the IT department from scratch, reducing infrastructure costs by over €700k while building a scalable multi-country fintech platform. He is an organizer of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
+Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the technology development at TNB Project (Gruppo Azimut), building the bank of the future from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and data integrity. In parallel, as CTO at Azimut Marketplace, he built the IT department from scratch, reducing infrastructure costs by over €700k (70%) while turning a spreadsheet-driven operation into a robust, scalable, cloud-native platform. He is an organizer of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
 
-## Current Role
+## Current Roles
 
-- **Position:** CTO at Azimut Marketplace (since May 2022)
-- **Focus:** IT governance, cloud architecture, cost optimization, team building
-- **Achievements:** 70% IT cost reduction, multi-country platform, mentored 2 tech leaders
+- **TNB Project (Gruppo Azimut)** — leads the technology development of a new digital bank built from scratch; focus on cyber security, data governance, and data integrity (since 2025).
+- **CTO at Azimut Marketplace** (since May 2022) — IT governance, cloud architecture, cost optimization, team building. Achievements: 70% IT cost reduction, Excel-to-SaaS platform transformation, mentored 2 tech leaders.
+
+## Background
+
+- **Banca Sella (Sella group / Fabrik):** Architect & Team Leader — coordinated the development of SME Banking, leading the team and the React architecture behind the group's banking products.
+- **Costa Crociere:** built mission-critical, real-time software and the CI/CD pipelines to deploy it directly on board cruise ships.
 
 ## Tech Skills
 

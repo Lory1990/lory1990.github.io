@@ -1,14 +1,13 @@
 # Lorenzo De Francesco - Full Profile
 
-> CTO, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development. Currently leading technology at Azimut Marketplace.
+> Technology leader, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development. Currently leading the technology development at TNB Project (Gruppo Azimut) and CTO at Azimut Marketplace.
 
 ---
 
 ## Personal Info
 
 - **Name:** Lorenzo De Francesco
-- **Role:** Chief Technology Officer
-- **Company:** Azimut Marketplace
+- **Current Roles:** Leads the technology development at TNB Project (Gruppo Azimut); CTO at Azimut Marketplace
 - **Location:** Milan, Italy
 - **Website:** https://lory1990.github.io
 - **LinkedIn:** https://www.linkedin.com/in/lorenzodefrancesco
@@ -18,7 +17,7 @@
 
 ## Bio
 
-Lorenzo De Francesco is a CTO with a clear mission: transform IT from a cost center into a strategic asset. At Azimut Marketplace, he reduced infrastructure costs by over 70% while building a robust, scalable architecture that serves multiple countries. His approach combines technical depth with business acumen — he doesn't just write code, he builds teams, defines processes, and creates a culture where engineering excellence drives business results. Before stepping into management, he spent years as a hands-on developer and architect, giving him the foundation to make informed decisions and mentor the next generation of tech leaders.
+Lorenzo De Francesco is a technology leader with a clear mission: transform IT from a cost center into a strategic asset. At TNB Project (Gruppo Azimut) he leads the technology development of the bank of the future, built from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and data integrity. In parallel, as CTO at Azimut Marketplace, he reduced infrastructure costs by over 70% while building a robust, scalable, cloud-native architecture. His approach combines technical depth with business acumen — he doesn't just write code, he builds teams, defines processes, and creates a culture where engineering excellence drives business results. Before the C-suite, he spent years as a hands-on developer and architect, giving him the foundation to make informed decisions and mentor the next generation of tech leaders.
 
 He is one of the organizers of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
 
@@ -26,14 +25,17 @@ He is one of the organizers of the Google Developer Group Milano and Scientific 
 
 ## Career
 
-### CTO — Azimut Marketplace (May 2022 – Present)
-Milan, Italy. Reduced cost of IT infrastructure by more than 70% while creating a robust, flexible and secure IT Architecture.
+### TNB Project (Gruppo Azimut) — Building the bank of the future (2025 – Present)
+Italy. Leads the technology development of a new digital bank built from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and the integrity of data.
 
-### Architect & Team Leader Frontend — Fabrik (November 2020 – May 2022)
-Milan, Italy. Frontend Team Leader overseeing a team of 5 members, mentor to junior developers. Defined and maintained the foundational React architecture and common component libraries.
+### CTO — Azimut Marketplace (May 2022 – Present)
+Milan, Italy. Built the IT department from scratch, reduced recurring IT infrastructure costs by over €700k (70%), and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform while mentoring two engineers into technology leaders.
+
+### Architect & Team Leader, SME Banking — Banca Sella / Fabrik (November 2020 – May 2022)
+Milan, Italy. Within the Sella banking group, coordinated the development of SME Banking, leading a team of 5 engineers and mentoring junior developers. Defined and maintained the foundational React architecture and the shared component libraries powering the group's banking products.
 
 ### Senior Software Developer — Costa Crociere (August 2018 – October 2020)
-Genova, Italy. Specialized in real-time web applications for the maritime industry. Worked on budget optimization with CI/CD pipelines to deploy applications on ships.
+Genova, Italy. Built mission-critical, real-time web applications for the maritime industry and the CI/CD pipelines to deploy and update software directly on board cruise ships — operating in constrained, high-stakes environments where downtime is not an option.
 
 ### Project Manager & Developer — CryptoForecast (July 2018 – May 2020)
 Remote. Development of the Cryptoforecast platform (application, backoffice, and web jobs). Financial Forecast Algorithms Developer and Project Manager.
@@ -70,7 +72,7 @@ Trieste, Italy. Co-founder of a startup developing decision support products for
 - **€700k+** recurring IT costs reduced
 - **2 tech leaders** mentored from junior developers
 - **100% IT governance** established (security policies, GDPR, SSO, monitoring)
-- **5+ countries** served with multi-country fintech platform
+- **Excel → SaaS** platform transformation (spreadsheet-driven operation to a scalable cloud platform)
 - **45+ talks** at conferences and events
 - **15+ projects** delivered
 
