@@ -4,11 +4,15 @@ import {
   TrendingDown,
   Users,
   Shield,
-  Globe,
   Mic,
   Code,
   ExternalLink,
   Zap,
+  Building2,
+  Landmark,
+  ArrowRight,
+  Layers,
+  ShieldCheck,
 } from "lucide-react"
 import HeroSection from "@/components/sections/HeroSection"
 import ContactSection from "@/components/sections/ContactSection"
@@ -18,6 +22,11 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { GithubIcon } from "@/components/icons/SocialIcons"
 import { siteConfig } from "@/data/site"
+import events from "@/data/events"
+
+const recentTalks = events
+  .filter((e) => e.venue && e.date)
+  .slice(0, 6)
 
 const openSourceProjects = [
   {
@@ -48,7 +57,6 @@ const managerialQualities = [
   {
     icon: Users,
     title: "Team Building",
-    value: "2 Leaders",
     description:
       "Built an IT department from scratch and mentored two developers into technology leaders, creating a self-sustaining engineering culture.",
   },
@@ -60,11 +68,11 @@ const managerialQualities = [
       "Established complete IT governance with security policies, GDPR compliance, SSO integration, and automated monitoring across all services.",
   },
   {
-    icon: Globe,
-    title: "Multi-Country Platform",
-    value: "5+ Countries",
+    icon: Layers,
+    title: "Platform Transformation",
+    value: "Excel → SaaS",
     description:
-      "Architected and scaled a fintech platform serving multiple countries, transforming a spreadsheet-driven operation into an enterprise ecosystem.",
+      "Turned a spreadsheet-driven operation into a robust, scalable SaaS platform — with proper cloud architecture, CI/CD, and observability across all services.",
   },
 ]
 
@@ -86,13 +94,16 @@ export default function HomePage() {
           url: siteConfig.url,
           image: `${siteConfig.url}${siteConfig.image}`,
           jobTitle: siteConfig.title,
-          worksFor: {
-            "@type": "Organization",
-            name: siteConfig.company,
-          },
+          worksFor: [
+            { "@type": "Organization", name: "TNB Project" },
+            { "@type": "Organization", name: siteConfig.company },
+          ],
           description: siteConfig.description,
           knowsAbout: [
             "Fintech",
+            "Digital Banking",
+            "Cyber Security",
+            "Data Governance",
             "Cloud Architecture",
             "IT Governance",
             "Software Development",
@@ -164,7 +175,8 @@ export default function HomePage() {
                 optimize costs, and deliver enterprise platforms at scale.
               </p>
               <p className="mt-4 max-w-xl leading-relaxed text-text-secondary">
-                Currently leading technology at{" "}
+                Today I lead the technology development of the bank of the
+                future at TNB Project (Gruppo Azimut), and I&apos;m CTO at{" "}
                 <a
                   href="https://azimutmarketplace.it"
                   target="_blank"
@@ -174,7 +186,12 @@ export default function HomePage() {
                   Azimut Marketplace
                 </a>
                 , where I rebuilt the entire IT department, reduced costs by
-                over €700k, and scaled the platform across multiple countries.
+                over €700k, and turned a spreadsheet-driven operation into a
+                scalable, cloud-native platform.
+                Earlier, within the Sella banking group I coordinated the
+                development of SME Banking, and at Costa Crociere I built
+                mission-critical software deployed directly on board cruise
+                ships — experience that shapes how I lead engineering today.
               </p>
               <Link
                 href="/about"
@@ -187,9 +204,149 @@ export default function HomePage() {
         </ScrollReveal>
       </PageWrapper>
 
-      {/* Managerial Qualities */}
+      {/* Signature Roles */}
       <div className="border-t border-border bg-surface/50 py-24">
         <PageWrapper>
+          <ScrollReveal>
+            <SectionTitle>Where I&apos;ve Made an Impact</SectionTitle>
+          </ScrollReveal>
+
+          {/* Featured current role — TNB Project */}
+          <ScrollReveal>
+            <div className="mb-6 overflow-hidden rounded-lg border border-gold/50 bg-gradient-to-br from-surface to-surface-elevated p-8">
+              <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
+                    <ShieldCheck size={22} />
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="font-heading text-xl text-text-primary">
+                        TNB Project
+                      </h3>
+                      <span className="rounded-full bg-gold px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-navy">
+                        Current
+                      </span>
+                    </div>
+                    <p className="text-sm text-text-muted">
+                      Gruppo Azimut · 2025 — Today
+                    </p>
+                    <p className="mt-4 max-w-2xl text-lg font-heading leading-snug text-text-primary">
+                      Building the bank of the future from scratch — where the
+                      financial advisor comes first.
+                    </p>
+                    <p className="mt-3 max-w-2xl leading-relaxed text-text-secondary">
+                      I lead the technology and architecture end to end, with a
+                      relentless focus on cyber security, data governance, and
+                      the integrity of data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Digital Banking", "Cyber Security", "Data Governance", "Data Integrity"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-gold/10 px-3 py-1 text-xs font-semibold text-gold"
+                    >
+                      {tag}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <ScrollReveal>
+              <div className="flex h-full flex-col rounded-lg border border-gold/40 bg-surface p-8">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
+                    <Building2 size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl text-text-primary">
+                      Azimut Marketplace
+                    </h3>
+                    <p className="text-sm text-text-muted">
+                      Chief Technology Officer · 2022 — Today
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-5 leading-relaxed text-text-secondary">
+                  I built the IT department from scratch, cut over €700k of
+                  recurring infrastructure costs, and turned a spreadsheet-driven
+                  operation into a scalable fintech platform — establishing
+                  governance, security, and an engineering culture that runs
+                  autonomously.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {["−700k Costs", "Cloud Architecture", "IT Governance", "Team Building"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-gold/10 px-3 py-1 text-xs font-semibold text-gold"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <div className="flex h-full flex-col rounded-lg border border-gold/40 bg-surface p-8">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
+                    <Landmark size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl text-text-primary">
+                      Fabrick · Banca Sella
+                    </h3>
+                    <p className="text-sm text-text-muted">
+                      Architect &amp; Team Leader · Sella Group
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-5 leading-relaxed text-text-secondary">
+                  Within the Sella banking group, I coordinated the development
+                  of SME Banking — leading a team of engineers, defining the
+                  React architecture, and building the shared component
+                  libraries behind the group&apos;s banking products.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {["SME Banking", "React Architecture", "Design System", "Mentoring"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-gold/10 px-3 py-1 text-xs font-semibold text-gold"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal>
+            <div className="mt-10 text-center">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 border-b border-gold pb-0.5 text-sm font-medium uppercase tracking-wider text-gold no-underline transition-colors hover:text-gold-light"
+              >
+                Full career timeline
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </PageWrapper>
+      </div>
+
+      {/* Managerial Qualities */}
+      <PageWrapper className="py-24">
           <ScrollReveal>
             <SectionTitle>What I Bring to the Table</SectionTitle>
           </ScrollReveal>
@@ -206,9 +363,11 @@ export default function HomePage() {
                         <h3 className="font-heading text-lg text-text-primary">
                           {quality.title}
                         </h3>
-                        <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
-                          {quality.value}
-                        </span>
+                        {"value" in quality && quality.value && (
+                          <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
+                            {quality.value}
+                          </span>
+                        )}
                       </div>
                       <p className="mt-3 leading-relaxed text-text-secondary">
                         {quality.description}
@@ -220,29 +379,13 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Speaking & Tech CTAs */}
+          {/* Tech CTA */}
           <ScrollReveal>
-            <div className="mt-16 grid gap-6 md:grid-cols-2">
-              <Link
-                href="/events"
-                className="flex items-center gap-4 rounded-lg border border-border bg-surface p-6 no-underline transition-all hover:border-gold/30"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
-                  <Mic size={22} />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg text-text-primary">
-                    40+ Speaking Events
-                  </h3>
-                  <p className="mt-1 text-sm text-text-muted">
-                    Conferences, panels, podcasts on IT leadership &amp; tech
-                  </p>
-                </div>
-              </Link>
-              <Link
-                href="/about/tech"
-                className="flex items-center gap-4 rounded-lg border border-border bg-surface p-6 no-underline transition-all hover:border-gold/30"
-              >
+            <Link
+              href="/about/tech"
+              className="group mt-12 flex flex-col items-start gap-4 rounded-lg border border-border bg-surface p-6 no-underline transition-all hover:border-gold/30 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
                   <Code size={22} />
                 </div>
@@ -251,12 +394,66 @@ export default function HomePage() {
                     Full Stack Expertise
                   </h3>
                   <p className="mt-1 text-sm text-text-muted">
-                    React, Java, Node.js, Kubernetes, AWS, Azure
+                    React, Java, Node.js, Kubernetes, AWS, Azure &mdash; I never
+                    stopped being hands-on.
                   </p>
                 </div>
-              </Link>
-            </div>
+              </div>
+              <span className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-gold">
+                Tech skills
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
           </ScrollReveal>
+      </PageWrapper>
+
+      {/* Speaking & Thought Leadership */}
+      <div className="border-t border-border bg-surface/50 py-24">
+        <PageWrapper>
+        <ScrollReveal>
+          <SectionTitle>Speaking &amp; Thought Leadership</SectionTitle>
+        </ScrollReveal>
+        <ScrollReveal>
+          <p className="mb-10 max-w-2xl leading-relaxed text-text-secondary">
+            I am a regular speaker at conferences, meetups, panels, and
+            podcasts across Italy — with 40+ talks on IT governance, cloud
+            architecture, cybersecurity, microfrontends, and the journey from
+            developer to technology leader.
+          </p>
+        </ScrollReveal>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {recentTalks.map((talk, i) => (
+            <ScrollReveal key={talk.slug} delay={i * 0.05}>
+              <Link
+                href={`/events/${talk.slug}`}
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 no-underline transition-all hover:border-gold/30"
+              >
+                <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-gold">
+                  <Mic size={13} />
+                  {talk.venue}
+                </div>
+                <h3 className="mt-3 font-heading text-base leading-snug text-text-primary">
+                  {talk.title}
+                </h3>
+                {talk.date && (
+                  <p className="mt-auto pt-4 text-xs text-text-muted">
+                    {new Date(talk.date).getFullYear()}
+                  </p>
+                )}
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+        <ScrollReveal>
+          <div className="mt-10 text-center">
+            <Link
+              href="/events"
+              className="inline-block rounded-lg border border-gold px-8 py-3 text-sm font-medium uppercase tracking-wider text-gold no-underline transition-all hover:bg-gold hover:text-navy"
+            >
+              View All Talks &amp; Events
+            </Link>
+          </div>
+        </ScrollReveal>
         </PageWrapper>
       </div>
 

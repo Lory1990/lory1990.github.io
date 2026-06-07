@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Chief Technology Officer",
   company: "Azimut Marketplace",
   description:
-    "CTO with 10+ years of experience in fintech, cloud architecture, and enterprise software development. Currently leading technology at Azimut Marketplace.",
+    "Technology leader with 10+ years in fintech, cloud architecture, and enterprise software. Leading the technology development at TNB Project (Gruppo Azimut) — building the bank of the future from scratch — and CTO at Azimut Marketplace, with a focus on cyber security and data governance.",
   url: "https://lory1990.github.io",
   image: "/img/lorenzo-de-francesco.jpeg",
   social: {
@@ -19,35 +19,38 @@ export const siteConfig = {
     {
       route: "/",
       exact: true,
-      title: "Are you interested in software development?",
-      subtitle: "Let's have a chat together!",
+      title: "Looking for a technology leader?",
+      subtitle:
+        "Whether it's strategy, architecture, or a talk for your event — let's have a chat.",
     },
     {
       route: "/projects/",
-      title: "Did you like this project?",
-      subtitle: "Contact me if you want to create a similar one with me.",
+      title: "Interested in building something like this?",
+      subtitle: "Let's talk about how I can help bring it to life.",
     },
     {
       route: "/projects",
       exact: true,
-      title: "Do you like these projects?",
-      subtitle: "Contact me, I am here to develop your best project ever!",
+      title: "Like what you see?",
+      subtitle:
+        "From architecture to delivery, let's talk about your next platform.",
     },
     {
       route: "/events/",
-      title: "Shall we do a webinar together?",
-      subtitle: "Drop me a message, I love participating in events!",
+      title: "Want me to speak at your event?",
+      subtitle: "Drop me a message — I love sharing what I've learned.",
     },
     {
       route: "/events",
       exact: true,
-      title: "I am available for talks",
-      subtitle: "Do you need a technical speaker? Drop a message below.",
+      title: "Looking for a speaker?",
+      subtitle:
+        "Tech leadership, cloud, architecture, microfrontends — let's talk.",
     },
     {
       route: "/about",
-      title: "Do you need a CTO?",
-      subtitle: "Contact me to start a new collaboration.",
+      title: "Need a CTO or technical advisor?",
+      subtitle: "Let's start a conversation about working together.",
     },
   ],
 } as const
