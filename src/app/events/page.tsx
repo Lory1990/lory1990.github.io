@@ -7,6 +7,7 @@ import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
+import { PERSON_ID, WEBSITE_ID } from "@/data/person"
 import events from "@/data/events"
 
 const eventsDescription =
@@ -105,6 +106,10 @@ export default function EventsPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          "@id": `${siteConfig.url}/events#webpage`,
+          inLanguage: "en",
+          isPartOf: { "@id": WEBSITE_ID },
+          about: { "@id": PERSON_ID },
           name: "Events & Talks",
           description:
             "Speaking engagements, conference talks, panels, and webinars on fintech, cloud, and IT management.",

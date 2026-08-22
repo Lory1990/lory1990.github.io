@@ -10,6 +10,7 @@ import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
+import { IMAGE_ID, PERSON_ID, WEBSITE_ID } from "@/data/person"
 import career from "@/data/career"
 
 const aboutDescription =
@@ -74,54 +75,23 @@ const highlights = [
 export default function AboutPage() {
   return (
     <>
+      {/*
+        /about is the canonical profile page for the Person node declared in
+        the root layout graph; it references it by @id instead of restating it.
+      */}
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "ProfilePage",
-          mainEntity: {
-            "@type": "Person",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            image: `${siteConfig.url}${siteConfig.image}`,
-            jobTitle: siteConfig.title,
-            worksFor: [
-              { "@type": "Organization", name: "TNB Project" },
-              { "@type": "Organization", name: siteConfig.company },
-            ],
-            alumniOf: [
-              { "@type": "Organization", name: "Banca Sella" },
-              { "@type": "Organization", name: "Fabrik" },
-              { "@type": "Organization", name: "Costa Crociere" },
-              { "@type": "Organization", name: "Fincantieri" },
-              { "@type": "Organization", name: "Navium" },
-            ],
-            knowsAbout: [
-              "Fintech",
-              "Digital Banking",
-              "Cyber Security",
-              "Data Governance",
-              "Cloud Architecture",
-              "IT Governance",
-              "Team Leadership",
-              "Cost Optimization",
-            ],
-            memberOf: [
-              {
-                "@type": "Organization",
-                name: "Google Developer Group Milano",
-                url: "https://gdg.community.dev/gdg-milano/",
-              },
-              {
-                "@type": "EducationalOrganization",
-                name: "start2impact",
-                url: "https://www.start2impact.it/",
-              },
-            ],
-            sameAs: [
-              siteConfig.social.github,
-              siteConfig.social.linkedin,
-            ],
-          },
+          "@id": `${siteConfig.url}/about#webpage`,
+          url: `${siteConfig.url}/about`,
+          name: `About | ${siteConfig.name}`,
+          description: aboutDescription,
+          inLanguage: "en",
+          isPartOf: { "@id": WEBSITE_ID },
+          primaryImageOfPage: { "@id": IMAGE_ID },
+          about: { "@id": PERSON_ID },
+          mainEntity: { "@id": PERSON_ID },
         }}
       />
       <JsonLd

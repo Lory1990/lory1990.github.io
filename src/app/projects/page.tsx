@@ -9,6 +9,7 @@ import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
+import { PERSON_ID, WEBSITE_ID } from "@/data/person"
 import projects from "@/data/projects"
 
 const projectsDescription =
@@ -103,6 +104,10 @@ export default function ProjectsPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          "@id": `${siteConfig.url}/projects#webpage`,
+          inLanguage: "en",
+          isPartOf: { "@id": WEBSITE_ID },
+          about: { "@id": PERSON_ID },
           name: "Projects",
           description:
             "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",

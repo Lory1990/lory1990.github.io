@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Outfit, Nunito } from "next/font/google"
 import { siteConfig } from "@/data/site"
+import { personSchema, websiteSchema } from "@/data/person"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import JsonLd from "@/components/seo/JsonLd"
@@ -126,17 +127,15 @@ export default function RootLayout({
           href="/llms-full.txt"
           title="LLM-friendly full profile"
         />
+        {/*
+          The canonical entity graph, emitted on every page: Lorenzo as a
+          natural person / independent professional, plus the website he
+          publishes. Other pages link to these nodes by @id.
+        */}
         <JsonLd
           data={{
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            description: siteConfig.description,
-            author: {
-              "@type": "Person",
-              name: siteConfig.name,
-            },
+            "@graph": [personSchema, websiteSchema],
           }}
         />
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (

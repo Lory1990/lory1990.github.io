@@ -22,6 +22,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { GithubIcon } from "@/components/icons/SocialIcons"
 import { siteConfig } from "@/data/site"
+import { IMAGE_ID, PERSON_ID, WEBSITE_ID } from "@/data/person"
 import events from "@/data/events"
 
 const recentTalks = events
@@ -86,50 +87,23 @@ const stats = [
 export default function HomePage() {
   return (
     <>
+      {/*
+        The Person node itself lives in the root layout graph; the home page
+        only declares that this page is *about* that person.
+      */}
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: siteConfig.name,
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/#webpage`,
           url: siteConfig.url,
-          image: `${siteConfig.url}${siteConfig.image}`,
-          jobTitle: siteConfig.title,
-          worksFor: [
-            { "@type": "Organization", name: "TNB Project" },
-            { "@type": "Organization", name: siteConfig.company },
-          ],
+          name: `${siteConfig.name} | ${siteConfig.title}`,
           description: siteConfig.description,
-          knowsAbout: [
-            "Fintech",
-            "Digital Banking",
-            "Cyber Security",
-            "Data Governance",
-            "Cloud Architecture",
-            "IT Governance",
-            "Software Development",
-            "React",
-            "Java",
-            "Node.js",
-            "Kubernetes",
-            "Azure",
-            "AWS",
-          ],
-          memberOf: [
-            {
-              "@type": "Organization",
-              name: "Google Developer Group Milano",
-              url: "https://gdg.community.dev/gdg-milano/",
-            },
-            {
-              "@type": "EducationalOrganization",
-              name: "start2impact",
-              url: "https://www.start2impact.it/",
-            },
-          ],
-          sameAs: [
-            siteConfig.social.github,
-            siteConfig.social.linkedin,
-          ],
+          inLanguage: "en",
+          isPartOf: { "@id": WEBSITE_ID },
+          primaryImageOfPage: { "@id": IMAGE_ID },
+          about: { "@id": PERSON_ID },
+          mainEntity: { "@id": PERSON_ID },
         }}
       />
       <HeroSection />

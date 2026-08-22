@@ -8,6 +8,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 import ContactSection from "@/components/sections/ContactSection"
 import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
+import { PERSON_ID } from "@/data/person"
 import projects from "@/data/projects"
 import { notFound } from "next/navigation"
 
@@ -98,11 +99,8 @@ export default async function ProjectDetailPage({
           ...(project.image && {
             image: `${siteConfig.url}${project.image}`,
           }),
-          author: {
-            "@type": "Person",
-            name: siteConfig.name,
-            url: siteConfig.url,
-          },
+          author: { "@id": PERSON_ID },
+          creator: { "@id": PERSON_ID },
           ...(project.date && { dateCreated: project.date }),
           ...(project.category && { keywords: project.category.join(", ") }),
         }}

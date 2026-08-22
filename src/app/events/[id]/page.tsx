@@ -9,6 +9,7 @@ import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
 import { siteConfig } from "@/data/site"
+import { PERSON_ID } from "@/data/person"
 import events from "@/data/events"
 import { notFound } from "next/navigation"
 
@@ -136,11 +137,7 @@ export default async function EventDetailPage({
                   name: event.venue,
                 },
           }),
-          performer: {
-            "@type": "Person",
-            name: siteConfig.name,
-            url: siteConfig.url,
-          },
+          performer: { "@id": PERSON_ID },
           organizer: event.venue
             ? {
                 "@type": "Organization",

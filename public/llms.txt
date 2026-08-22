@@ -1,6 +1,14 @@
 # Lorenzo De Francesco
 
-> Technology leader, tech speaker, and community organizer with 10+ years of experience in fintech, cloud architecture, and enterprise software development.
+> Chief Technology Officer, tech speaker, and community organizer based in Milan, Italy, with 10+ years of experience in fintech, cloud architecture, and enterprise software development.
+
+## Profile
+
+- **Name:** Lorenzo De Francesco
+- **Occupation:** Chief Technology Officer (O*NET-SOC 11-3021.00 — Computer and Information Systems Managers)
+- **Location:** Milan, Lombardy, Italy
+- **Languages:** Italian (native), English (professional)
+- **Entity type:** natural person / independent professional — not a company
 
 ## About
 
@@ -13,8 +21,10 @@ Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the 
 
 ## Background
 
-- **Banca Sella (Sella group / Fabrik):** Architect & Team Leader — coordinated the development of SME Banking, leading the team and the React architecture behind the group's banking products.
+- **Banca Sella (Sella group / Fabrick):** Architect & Team Leader — coordinated the development of SME Banking, leading the team and the React architecture behind the group's banking products.
 - **Costa Crociere:** built mission-critical, real-time software and the CI/CD pipelines to deploy it directly on board cruise ships.
+- **Delfi (Fincantieri):** ILS and maintenance engineer for the Italian Navy.
+- **Navium:** co-founder and CEO of a marine-tech startup for the cruise shipping market.
 
 ## Tech Skills
 
@@ -31,6 +41,21 @@ Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the 
 
 Lorenzo has given 45+ talks at conferences, meetups, panels, and podcasts on topics including IT governance, cloud architecture, cybersecurity, microfrontends, AI agents, testing, and career development.
 
+## Community Roles
+
+- **Organizer** — [Google Developer Group Milano](https://gdg.community.dev/gdg-milano/)
+- **Scientific Coordinator** — Master in Full Stack Development & AI, [start2impact](https://www.start2impact.it/)
+
+## Availability
+
+Lorenzo works as an independent professional alongside his executive roles. He is open to:
+
+- Speaking at conferences, meetups, podcasts, panels, and webinars (Italian or English)
+- CTO-level consulting and fractional engagements — technology strategy, cloud architecture, IT governance, engineering team building
+- Partnerships and collaborations, especially in fintech, dev tooling, microfrontends, and AI tooling
+
+He is **not** looking for full-time employee roles. Primary contact: the contact form on https://lorenzodefrancesco.it — or a LinkedIn DM.
+
 ## Links
 
 - Website: https://lorenzodefrancesco.it
@@ -44,3 +69,9 @@ Lorenzo has given 45+ talks at conferences, meetups, panels, and podcasts on top
 - [Tech Skills](https://lorenzodefrancesco.it/about/tech)
 - [Projects](https://lorenzodefrancesco.it/projects)
 - [Events & Talks](https://lorenzodefrancesco.it/events)
+
+## Optional
+
+- [Full profile](https://lorenzodefrancesco.it/llms-full.txt) - Complete career history, every talk, and per-project detail
+- [Agent skill](https://lorenzodefrancesco.it/.well-known/agent-skills/profile/SKILL.md) - Packaged profile knowledge for agents
+- [Structured data](https://lorenzodefrancesco.it/) - Every page embeds a schema.org JSON-LD graph whose canonical `Person` node is `https://lorenzodefrancesco.it/#person`
