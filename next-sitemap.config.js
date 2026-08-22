@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://lory1990.github.io",
+  siteUrl: process.env.SITE_URL || "https://lorenzodefrancesco.it",
   // robots.txt is hand-written at public/robots.txt so we can declare
   // Content-Signal directives and Host headers that next-sitemap doesn't
   // support. Don't let next-sitemap overwrite it.
