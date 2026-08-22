@@ -33,14 +33,14 @@ Lorenzo has given 45+ talks at conferences, meetups, panels, and podcasts on top
 
 ## Links
 
-- Website: https://lory1990.github.io
+- Website: https://lorenzodefrancesco.it
 - LinkedIn: https://www.linkedin.com/in/lorenzodefrancesco
 - GitHub: https://github.com/Lory1990
 
 ## Pages
 
-- [Home](https://lory1990.github.io/)
-- [About](https://lory1990.github.io/about)
-- [Tech Skills](https://lory1990.github.io/about/tech)
-- [Projects](https://lory1990.github.io/projects)
-- [Events & Talks](https://lory1990.github.io/events)
+- [Home](https://lorenzodefrancesco.it/)
+- [About](https://lorenzodefrancesco.it/about)
+- [Tech Skills](https://lorenzodefrancesco.it/about/tech)
+- [Projects](https://lorenzodefrancesco.it/projects)
+- [Events & Talks](https://lorenzodefrancesco.it/events)

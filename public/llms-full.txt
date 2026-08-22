@@ -9,7 +9,7 @@
 - **Name:** Lorenzo De Francesco
 - **Current Roles:** Leads the technology development at TNB Project (Gruppo Azimut); CTO at Azimut Marketplace
 - **Location:** Milan, Italy
-- **Website:** https://lory1990.github.io
+- **Website:** https://lorenzodefrancesco.it
 - **LinkedIn:** https://www.linkedin.com/in/lorenzodefrancesco
 - **GitHub:** https://github.com/Lory1990
 
