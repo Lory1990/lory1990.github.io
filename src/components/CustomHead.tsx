@@ -23,10 +23,10 @@ export interface ICustomHeadProps {
   imageHeight?: string
 }
 
-export const CustomHead: React.FC<ICustomHeadProps> = ({ type = "website", url = "https://lory1990.github.io", image = "/assets/img/placeholders/logo.svg", description, ...props }) => {
+export const CustomHead: React.FC<ICustomHeadProps> = ({ type = "website", url = "https://lorenzodefrancesco.it", image = "/assets/img/placeholders/logo.svg", description, ...props }) => {
   const title = props.title ? `${props.title} | Lorenzo De Francesco` : "Lorenzo De Francesco"
-  const realUrl = url?.startsWith("http") ? url : "https://lory1990.github.io/" + url
-  const realImage = image?.startsWith("http") ? image : "https://lory1990.github.io/" + image
+  const realUrl = url?.startsWith("http") ? url : "https://lorenzodefrancesco.it/" + url
+  const realImage = image?.startsWith("http") ? image : "https://lorenzodefrancesco.it/" + image
 
   return (
     <Helmet>
