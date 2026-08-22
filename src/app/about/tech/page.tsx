@@ -126,7 +126,7 @@ export default function TechSkillsPage() {
             <SectionTitle>Frontend</SectionTitle>
             <p className="mb-8 max-w-xl text-text-secondary">
               I started my career as a frontend developer and led frontend
-              architecture at Fabrik, overseeing a team of 5 and defining
+              architecture at Fabrick, overseeing a team of 5 and defining
               component libraries used across the organization.
             </p>
           </ScrollReveal>

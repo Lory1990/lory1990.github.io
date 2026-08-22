@@ -25,7 +25,7 @@ const career: TimelineEvent[] = [
   },
   {
     position: "Architect & Team Leader — SME Banking",
-    company: "Banca Sella (Fabrik)",
+    company: "Banca Sella (Fabrick)",
     location: "Milan, Italy",
     from: "November 2020",
     to: "May 2022",

@@ -31,7 +31,7 @@ Italy. Leads the technology development of a new digital bank built from scratch
 ### CTO — Azimut Marketplace (May 2022 – Present)
 Milan, Italy. Built the IT department from scratch, reduced recurring IT infrastructure costs by over €700k (70%), and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform while mentoring two engineers into technology leaders.
 
-### Architect & Team Leader, SME Banking — Banca Sella / Fabrik (November 2020 – May 2022)
+### Architect & Team Leader, SME Banking — Banca Sella / Fabrick (November 2020 – May 2022)
 Milan, Italy. Within the Sella banking group, coordinated the development of SME Banking, leading a team of 5 engineers and mentoring junior developers. Defined and maintained the foundational React architecture and the shared component libraries powering the group's banking products.
 
 ### Senior Software Developer — Costa Crociere (August 2018 – October 2020)
