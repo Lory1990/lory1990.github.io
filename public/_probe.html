@@ -1,0 +1,10 @@
+<!doctype html><html><body style="margin:0;background:#888">
+<script>
+ var p=new URLSearchParams(location.search);
+ localStorage.setItem('theme', p.get('theme')||'light');
+ var f=document.createElement('iframe');
+ f.src=p.get('path')||'/';
+ f.style.cssText='width:'+(p.get('w')||1200)+'px;height:'+(p.get('h')||760)+'px;border:0';
+ document.body.appendChild(f);
+</script>
+</body></html>

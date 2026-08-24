@@ -73,18 +73,20 @@ export default async function BlogPage() {
         })}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden pb-16 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
+      {/* Hero — dark band in both themes, hero-* tokens for the text
+          (see the article page for why). */}
+      <section className="relative overflow-hidden pb-20 pt-32">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy to-navy-light" />
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-background" />
         <PageWrapper className="relative z-10">
           <ScrollReveal>
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-gold-light">
               Writing
             </p>
-            <h1 className="mt-2 font-heading text-4xl text-text-primary md:text-5xl">
+            <h1 className="mt-2 font-heading text-4xl text-hero-text md:text-5xl">
               Blog
             </h1>
-            <p className="mt-4 max-w-xl text-text-secondary">
+            <p className="mt-4 max-w-xl text-hero-muted">
               Architecture decisions, engineering leadership, and what actually
               happens when you build and run software organisations. Written
               from the inside, not from a framework diagram.

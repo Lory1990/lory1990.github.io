@@ -11,11 +11,11 @@
     "validate": "sanity schema validate"
   },
   "dependencies": {
-    "@sanity/vision": "^4.14.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "sanity": "^4.14.0",
-    "styled-components": "^6.1.19"
+    "@sanity/vision": "^6.10.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sanity": "^6.10.1",
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@types/react": "^19.2.0",

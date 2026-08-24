@@ -117,9 +117,15 @@ export default async function PostPage({
       <JsonLd data={blogPostingGraph(toPostRef(post))} />
 
       <article>
-        {/* Hero */}
-        <section className="relative overflow-hidden pb-12 pt-32">
-          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
+        {/* Hero — a dark band in both themes, like the home page and the
+            header sitting on top of it: the text uses the hero-* tokens, never
+            the page ones (in light mode text-primary is the same colour as
+            navy, so the title would disappear). The band stays dark for its
+            whole height and only the strip below the content fades into the
+            page background. */}
+        <section className="relative overflow-hidden pb-20 pt-32">
+          <div className="absolute inset-0 bg-gradient-to-b from-navy to-navy-light" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-background" />
           <PageWrapper className="relative z-10">
             <ScrollReveal>
               {post.categories.length > 0 && (
@@ -128,7 +134,7 @@ export default async function PostPage({
                     <Link
                       key={category.slug}
                       href={`/blog/category/${category.slug}`}
-                      className="rounded-sm border border-border-subtle px-2.5 py-1 text-xs font-medium uppercase tracking-wider text-text-secondary no-underline transition-colors hover:border-gold hover:text-gold"
+                      className="rounded-sm border border-hero-border px-2.5 py-1 text-xs font-medium uppercase tracking-wider text-hero-muted no-underline transition-colors hover:border-gold-light hover:text-gold-light"
                     >
                       {category.title}
                     </Link>
@@ -136,30 +142,30 @@ export default async function PostPage({
                 </div>
               )}
 
-              <h1 className="max-w-3xl font-heading text-3xl text-text-primary md:text-5xl">
+              <h1 className="max-w-3xl font-heading text-3xl text-hero-text md:text-5xl">
                 {post.title}
               </h1>
 
               {post.excerpt && (
-                <p className="mt-4 max-w-2xl text-lg text-text-secondary">
+                <p className="mt-4 max-w-2xl text-lg text-hero-muted">
                   {post.excerpt}
                 </p>
               )}
 
-              <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-text-muted">
+              <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-hero-muted">
                 <span className="flex items-center gap-2">
-                  <Calendar size={16} className="text-gold" />
+                  <Calendar size={16} className="text-gold-light" />
                   <time dateTime={dateAttribute(post.publishedAt)}>
                     {formatDate(post.publishedAt)}
                   </time>
                 </span>
                 <span className="flex items-center gap-2">
-                  <Clock size={16} className="text-gold" />
+                  <Clock size={16} className="text-gold-light" />
                   {readingLabel(post.readingMinutes)}
                 </span>
                 {post.updatedAt && (
                   <span className="flex items-center gap-2">
-                    <RefreshCw size={16} className="text-gold" />
+                    <RefreshCw size={16} className="text-gold-light" />
                     Updated{" "}
                     <time dateTime={dateAttribute(post.updatedAt)}>
                       {formatDate(post.updatedAt)}
