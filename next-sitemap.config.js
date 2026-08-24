@@ -12,4 +12,12 @@ module.exports = {
   // has already finished copying public/ → out/), and the sitemap never makes
   // it into the deployed artifact.
   outDir: "./out",
+  exclude: [
+    // The RSS feed is a file, not a page.
+    "/blog/rss.xml",
+    // Reserved pages that keep the blog's dynamic routes alive while the CMS is
+    // empty. They are already noindex — see PLACEHOLDER_SLUG in src/lib/blog.
+    "/blog/no-posts-yet",
+    "/blog/category/no-posts-yet",
+  ],
 }

@@ -34,6 +34,21 @@ npm run storybook
 
 Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
 
+## Blog
+
+Posts live in a headless CMS (Sanity) and become static pages at build time. The
+authoring Studio is hosted at
+[lorenzodefrancesco.sanity.studio](https://lorenzodefrancesco.sanity.studio) and
+lives in `studio/` as a separate project with its own dependencies.
+
+Setup, the rebuild webhook, and notes for writing: **[docs/blog.md](docs/blog.md)**.
+
+To work on the blog locally without the CMS:
+
+```bash
+BLOG_FIXTURES=1 pnpm dev
+```
+
 ## Troubleshooting
 
 If storybook dies not run, type on your terminal:

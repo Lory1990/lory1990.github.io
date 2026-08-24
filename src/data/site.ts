@@ -14,6 +14,7 @@ export const siteConfig = {
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Events", href: "/events" },
+    { label: "Blog", href: "/blog" },
   ],
   contactFormRules: [
     {
@@ -46,6 +47,19 @@ export const siteConfig = {
       title: "Looking for a speaker?",
       subtitle:
         "Tech leadership, cloud, architecture, microfrontends — let's talk.",
+    },
+    {
+      route: "/blog/",
+      title: "Want to dig into this?",
+      subtitle:
+        "If any of this is a problem you're facing right now, I'm happy to talk it through.",
+    },
+    {
+      route: "/blog",
+      exact: true,
+      title: "Reading something you recognise?",
+      subtitle:
+        "Architecture, teams, governance — let's talk about yours.",
     },
     {
       route: "/about",

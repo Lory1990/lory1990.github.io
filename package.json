@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@portabletext/react": "^8.0.1",
+    "@portabletext/types": "^4.0.2",
     "@sentry/nextjs": "^10.56.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
