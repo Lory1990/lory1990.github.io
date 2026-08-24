@@ -10,11 +10,15 @@ export const siteConfig = {
     github: "https://github.com/Lory1990",
     linkedin: "https://www.linkedin.com/in/lorenzodefrancesco",
   },
+  // `requiresPosts` marks an entry that stays hidden until the CMS has
+  // something to show. The flag is on every entry, not only the ones that use
+  // it, because `as const` would otherwise make it absent from the other
+  // members of the union and unreadable in a filter. See visibleNav below.
   nav: [
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Events", href: "/events" },
-    { label: "Blog", href: "/blog" },
+    { label: "About", href: "/about", requiresPosts: false },
+    { label: "Projects", href: "/projects", requiresPosts: false },
+    { label: "Events", href: "/events", requiresPosts: false },
+    { label: "Blog", href: "/blog", requiresPosts: true },
   ],
   contactFormRules: [
     {
@@ -68,3 +72,15 @@ export const siteConfig = {
     },
   ],
 } as const
+
+export type NavItem = (typeof siteConfig.nav)[number]
+
+// The navigation a visitor should actually see.
+//
+// While the blog has no posts the entry disappears: sending someone to an
+// empty section is worse than not offering the link at all. The route keeps
+// working — direct URL, RSS, sitemap — nothing advertises it. `hasPosts` is
+// resolved once at build time in the root layout.
+export function visibleNav(hasPosts: boolean): readonly NavItem[] {
+  return siteConfig.nav.filter((item) => hasPosts || !item.requiresPosts)
+}

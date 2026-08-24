@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Outfit, Nunito } from "next/font/google"
 import { siteConfig } from "@/data/site"
+import { hasPosts } from "@/lib/blog"
 import { personSchema, websiteSchema } from "@/data/person"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
@@ -107,11 +108,16 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+// Async because the navigation depends on the CMS: the "Blog" entry only
+// appears once there is a post to show. The query runs at build time and is
+// shared with the rest of the build through the fetch cache.
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const blogHasPosts = await hasPosts()
+
   return (
     <html lang="en" className={`${outfit.variable} ${nunito.variable}`}>
       <head>
@@ -158,7 +164,7 @@ gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`,
       <body>
         <RecaptchaProvider>
           <div className="flex min-h-screen flex-col">
-            <Header />
+            <Header hasPosts={blogHasPosts} />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

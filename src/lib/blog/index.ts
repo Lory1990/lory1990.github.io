@@ -84,6 +84,13 @@ export async function getPosts(): Promise<PostSummary[]> {
   return (posts ?? []).map(toSummary)
 }
 
+// Whether the blog has anything to show. Used by the root layout to decide if
+// the "Blog" entry belongs in the navigation: reuses the slug query, which is
+// the cheapest one, and rides the same fetch cache as the rest of the build.
+export async function hasPosts(): Promise<boolean> {
+  return (await getPostSlugs()).length > 0
+}
+
 export async function getPostSlugs(): Promise<string[]> {
   if (USE_FIXTURES) return (await import("./fixtures")).fixtureSlugs()
   if (!isCmsConfigured()) return []

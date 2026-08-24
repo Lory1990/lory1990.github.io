@@ -7,7 +7,7 @@ import JsonLd from "@/components/seo/JsonLd"
 import ContactSection from "@/components/sections/ContactSection"
 import PostCard from "@/components/blog/PostCard"
 import NoPosts from "@/components/blog/NoPosts"
-import { getCategories, getPosts } from "@/lib/blog"
+import { getCategories, getPosts, hasPosts } from "@/lib/blog"
 import { toPostRefs } from "@/lib/blog/seo"
 import { blogIndexGraph } from "@/data/blog"
 import { siteConfig } from "@/data/site"
@@ -15,7 +15,7 @@ import { siteConfig } from "@/data/site"
 const blogDescription =
   "Notes on software architecture, engineering leadership, cloud, and the work of running a technology organisation."
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Blog",
   description: blogDescription,
   keywords: [
@@ -56,6 +56,15 @@ export const metadata: Metadata = {
     description: blogDescription,
     images: [siteConfig.image],
   },
+}
+
+// An empty blog is not worth indexing: while there are no posts the page stays
+// reachable but tells crawlers to skip it, matching the navigation, which
+// hides the entry (see visibleNav in @/data/site). next-sitemap drops the URL
+// in the same state, so the sitemap never advertises a noindex page.
+export async function generateMetadata(): Promise<Metadata> {
+  if (await hasPosts()) return baseMetadata
+  return { ...baseMetadata, robots: { index: false, follow: false } }
 }
 
 export default async function BlogPage() {

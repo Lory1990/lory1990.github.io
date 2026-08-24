@@ -4,14 +4,17 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
-import { siteConfig } from "@/data/site"
+import { siteConfig, visibleNav } from "@/data/site"
 import { cn } from "@/lib/cn"
 import ThemeToggle from "@/components/ui/ThemeToggle"
 
-export default function Header() {
+// `hasPosts` comes from the root layout, which resolves it at build time: this
+// component runs in the browser and cannot query the CMS itself.
+export default function Header({ hasPosts }: { hasPosts: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
+  const nav = visibleNav(hasPosts)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -39,7 +42,7 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-8 md:flex">
-            {siteConfig.nav.map((item) => (
+            {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -75,7 +78,7 @@ export default function Header() {
       {/* Mobile overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-navy/98 backdrop-blur-lg md:hidden">
-          {siteConfig.nav.map((item) => (
+          {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
