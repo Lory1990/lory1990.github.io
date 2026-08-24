@@ -65,9 +65,16 @@ export async function query<T>(
   }
 
   const response = await fetch(url, {
-    // One build issues several queries (index, each post, the feed): caching
-    // collapses identical ones into a single request.
-    cache: "force-cache",
+    // Cached for seconds, not forever. The identical queries a build issues
+    // (index, each post, the feed) still collapse into one request, but the
+    // entry expires long before the next build: `force-cache` used to sit
+    // here, which stores the response in .next/cache with a one-year TTL, and
+    // since CI restores that directory between runs every rebuild triggered by
+    // a publish re-served the content of the first build.
+    //
+    // `no-store` is not an option: it opts the route out of static rendering,
+    // which `output: "export"` rejects.
+    next: { revalidate: 5 },
     headers: { Accept: "application/json" },
   })
 

@@ -102,6 +102,16 @@ https://github.com/Lory1990/lory1990.github.io/actions.
 If the webhook is missing or broken the site still updates on every push to
 `main`, and the *Github Page Deploy* workflow can be run by hand.
 
+**d) Green run, old content.** If a rebuild finishes clean and the site still
+shows the previous version of a post, suspect Next's fetch cache before the
+webhook. The CMS reads live in `src/lib/blog/client.ts`, and Next stores each
+response under `.next/cache/fetch-cache`; a `force-cache` there gets a one-year
+TTL, so any workflow step that restores `.next/cache` between runs pins the blog
+to the content of the first build. That is why the queries carry a
+`revalidate: 5` and why the workflow caches nothing. Do not put a
+`.next/cache` step back: Turbopack keeps nothing else in that directory, so it
+buys no build time and costs correctness.
+
 ## Writing a post
 
 1. https://lorenzodefrancesco.sanity.studio → **Post** → Create.

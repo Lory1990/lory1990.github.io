@@ -18,6 +18,13 @@ on:
   repository_dispatch:
     types: [sanity-publish]
 
+# Every run rebuilds the whole site from the CMS, so the newest run always wins:
+# an older one still in flight has nothing to add, and letting two deploys race
+# can put the earlier content online last.
+concurrency:
+  group: github-pages-deploy
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,22 +34,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
-      - name: Cache Next
-        uses: actions/cache@v4
-        with:
-          path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}
-
+      # No .next/cache step here on purpose. Turbopack writes nothing to that
+      # directory except fetch-cache, the CMS responses, so restoring it
+      # between runs did not speed up a 20 s build: it made every rebuild
+      # fired by a publication re-serve the content of the first build. A
+      # short TTL in src/lib/blog/client.ts guards the same door from the
+      # other side.
       - run: pnpm install
 
       - name: Build
@@ -55,7 +62,7 @@ jobs:
         run: pnpm build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
@@ -74,4 +81,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
