@@ -25,6 +25,7 @@ export interface BlogPostRef {
   updatedAt: string | null
   imageUrl?: string | null
   categories?: readonly string[]
+  readingMinutes?: number
 }
 
 export interface Crumb {
@@ -111,7 +112,15 @@ export function blogPostingGraph(post: BlogPostRef): Graph {
         mainEntityOfPage: { "@id": `${url}#webpage` },
         ...(post.imageUrl ? { image: post.imageUrl } : {}),
         ...(post.categories?.length
-          ? { articleSection: [...post.categories] }
+          ? {
+              articleSection: [...post.categories],
+              keywords: [...post.categories],
+            }
+          : {}),
+        // ISO 8601 duration: Google reads timeRequired, never the "5 min read"
+        // label the page renders.
+        ...(post.readingMinutes
+          ? { timeRequired: `PT${post.readingMinutes}M` }
           : {}),
       },
       {

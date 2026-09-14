@@ -48,6 +48,7 @@ export function toPostRef(post: PostSummary): BlogPostRef {
     updatedAt: post.updatedAt,
     imageUrl: articleImage(post),
     categories: post.categories.map((category) => category.title),
+    readingMinutes: post.readingMinutes,
   }
 }
 
