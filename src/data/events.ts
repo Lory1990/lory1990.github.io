@@ -4,6 +4,7 @@ const events: IEvent[] = [
   {
     title: "Il Kubernetes per Frontend esiste, ed e' open source",
     slug: "kubernetes-per-frontend-devfest-modena",
+    lang: "it",
     date: "2025-10-04",
     isOnline: false,
     venue: "DevFest Modena 2025",
@@ -15,6 +16,7 @@ const events: IEvent[] = [
   {
     title: "BacaroLive EP 10 - Carriera e Micro Mondi",
     slug: "bacarolive-ep10-carriera-e-micro-mondi",
+    lang: "it",
     date: "2026-03-12",
     isOnline: true,
     venue: "BacaroTech",
@@ -27,6 +29,7 @@ const events: IEvent[] = [
   {
     title: "Creare una Test Factory Aziendale",
     slug: "creare-una-test-factory-aziendale-winter-tech",
+    lang: "it",
     date: "2026-02-07",
     isOnline: false,
     venue: "Winter Tech",
@@ -38,6 +41,7 @@ const events: IEvent[] = [
   {
     title: "Orchestrare Microfrontend Like a Pro",
     slug: "orchestrare-microfrontend-like-a-pro-devfest-alps",
+    lang: "it",
     date: "2025-11-22",
     isOnline: false,
     venue: "DevFest Alps 2025",
@@ -49,6 +53,7 @@ const events: IEvent[] = [
   {
     title: "Orchestrare Microfrontend Like a Pro",
     slug: "orchestrare-microfrontend-like-a-pro-reggio-emilia",
+    lang: "it",
     date: "2025-11-18",
     isOnline: false,
     venue: "Reggio Emilia Full Stack Meetup",
@@ -60,6 +65,7 @@ const events: IEvent[] = [
   {
     title: "Mille modi di orchestrare Microfrontend",
     slug: "mille-modi-orchestrare-microfrontend-devfest-roma",
+    lang: "it",
     date: "2025-10-25",
     isOnline: false,
     venue: "DevFest Roma",
@@ -73,6 +79,7 @@ const events: IEvent[] = [
   {
     title: "Creare Agenti con Langflow",
     slug: "creare-agenti-con-langflow-ai-day",
+    lang: "it",
     date: "2025-10-24",
     isOnline: false,
     venue: "AI Day Conf 2025 Reloaded",
@@ -87,6 +94,7 @@ const events: IEvent[] = [
     title: "CTO Connext @ Codemotion",
     venue: "Codemotion 2025",
     slug: "cto-connect-codemotion",
+    lang: "it",
     shortDescription:
       "Confronto tra CTO a Codemotion 2025 su leadership tecnica, scelte di architettura e gestione dei team di sviluppo.",
     date: "2025-10-14",
@@ -96,6 +104,7 @@ const events: IEvent[] = [
   {
     title: "Oracolo del Test - Leadership talk e tavola rotonda",
     slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
+    lang: "it",
     shortDescription:
       "Leadership talk e tavola rotonda sull'Oracolo del Test: qualita' del software, cultura del testing e ruolo di chi guida i team tecnici.",
     date: "2025-02-25",
@@ -105,6 +114,7 @@ const events: IEvent[] = [
   {
     title: "Anche le infrastrutture cloud possono essere scriptate",
     slug: "anche-le-infrastrutture-cloud-possono-essere-scriptate",
+    lang: "it",
     link: "https://devfest24.gdgvenezia.it/",
     isOnline: false,
     venue: "Campus Scientifico Universita' Ca' Foscari",
@@ -117,6 +127,7 @@ const events: IEvent[] = [
   {
     title: "IT Governance con Lorenzo De Francesco",
     slug: "it-governance-con-lorenzo-de-francesco",
+    lang: "it",
     link: "https://open.spotify.com/episode/2ushjt8QXbhXiYNplzxEeH",
     isOnline: true,
     venue: "Azure Italia Podcast",
@@ -128,6 +139,7 @@ const events: IEvent[] = [
   {
     title: "Guida pratica alla gestione delle eccezioni",
     slug: "guida-pratica-alla-gestione-delle-eccezioni",
+    lang: "it",
     link: "https://devfestmilano.it/",
     isOnline: false,
     venue: "Dev Fest Milano 2025",
@@ -141,6 +153,7 @@ const events: IEvent[] = [
   {
     title: "Cybersecurity: solo adempimenti normativi o vera sicurezza?",
     slug: "cybersecurity-solo-adempimenti-normativi-o-vera-sicurezza",
+    lang: "it",
     shortDescription:
       "Talk per Strategic Management Partners: perche' la cybersecurity e' una scelta strategica e non un semplice adempimento normativo.",
     isOnline: false,
@@ -151,6 +164,7 @@ const events: IEvent[] = [
   {
     title: "Come costruire una cultura IT partendo dal disordine totale",
     slug: "come-costruire-una-cultura-it-partendo-dal-disordine-totale",
+    lang: "it",
     isOnline: false,
     venue: "Ordine degli Ingegneri - Verona",
     date: "2025-10-03",
@@ -176,6 +190,7 @@ const events: IEvent[] = [
   {
     title: "Come hostare la tua startup 100% su Azure, non solo l'app!",
     slug: "come-hostare-la-tua-startup-100-su-azure-non-solo-lapp",
+    lang: "it",
     image: "/img/global-azure-logo.png",
     shortDescription:
       "Su Azure e' possibile creare un azienda full remote e questo talk vi spiega come fare",
@@ -189,6 +204,7 @@ const events: IEvent[] = [
   {
     title: "Come parlano i software?",
     slug: "come-parlano-i-software",
+    lang: "it",
     isOnline: false,
     image: "/img/coding-bunker-logo.png",
     shortDescription:
@@ -202,6 +218,7 @@ const events: IEvent[] = [
   {
     title: "Prendere in gestione un software scritto da altri",
     slug: "prendere-in-gestione-un-software-scritto-da-altri",
+    lang: "it",
     shortDescription:
       "Talk al DevFest Alps 2023 su come ereditare un software scritto da altri: capirlo, metterlo in sicurezza e riportarlo sotto controllo.",
     isOnline: false,
@@ -214,6 +231,7 @@ const events: IEvent[] = [
   {
     title: "I passi giusti per creare una piattaforma solida e scalabile",
     slug: "i-passi-giusti-per-creare-una-piattaforma-solida-e-scalabile",
+    lang: "it",
     shortDescription:
       "Talk al DevFest Trento 2023 sui passi concreti per costruire una piattaforma software solida, scalabile e sostenibile nel tempo.",
     isOnline: false,
@@ -225,6 +243,7 @@ const events: IEvent[] = [
   {
     title: "Come fare il grande passo: da sviluppatore a manager",
     slug: "come-fare-il-grande-passo-da-sviluppatore-a-manager",
+    lang: "it",
     isOnline: false,
     venue: "GDG Cloud Milano",
     date: "2023-10-31",
@@ -238,6 +257,7 @@ const events: IEvent[] = [
   {
     title: "Sviluppiamo una web app in TDD con Cypress",
     slug: "sviluppiamo-una-web-app-in-tdd-con-cypress",
+    lang: "it",
     image: "/img/events/working-software.png",
     isOnline: false,
     venue: "MotorK",
@@ -251,6 +271,7 @@ const events: IEvent[] = [
   {
     title: "Data protection e Cyber Security: la tutela della privacy nella filiera del credito",
     slug: "data-protection-e-cyber-security-la-tutela-della-privacy-nella-filiera-del-credito",
+    lang: "it",
     image: "/img/events/fiera-del-credito.png",
     isOnline: false,
     venue: "Fiera del Credito",
@@ -271,6 +292,7 @@ const events: IEvent[] = [
   {
     title: "Resilienza e proattivita' per la sicurezza dell'ecosistema aziendale",
     slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
+    lang: "it",
     shortDescription:
       "Intervento su ClassCNBC sugli strumenti di difesa digitale piu' efficaci per aziende e pubblica amministrazione.",
     subtitle: "I piu' efficaci strumenti di difesa e sicurezza digitale",
@@ -293,6 +315,7 @@ const events: IEvent[] = [
   {
     title: "Come sviluppare un reparto IT performante",
     slug: "come-sviluppare-un-reparto-it-performante",
+    lang: "it",
     subtitle: "La mia esperienza dopo un anno di management",
     date: "2023-05-17",
     image: "/img/events/cto_mastermind.png",
@@ -315,6 +338,7 @@ const events: IEvent[] = [
     description:
       "Are you still using Google Analytics to monitor your site? Did you know that there is a zero-config tool that allows you to incorporate Hotjar, Analytics and many other monitoring tools?",
     slug: "un-tool-zero-config-per-monitorare-le-attivita-degli-utenti",
+    lang: "it",
     video: "https://www.youtube.com/watch?v=9m0VBf1swsk",
     venue: "React JS Milano",
     link: "https://www.meetup.com/it-IT/react-js-milano/events/292297518/",
@@ -324,6 +348,7 @@ const events: IEvent[] = [
   },
   {
     slug: "come-creare-un-frontend-scalabile-robusto-e-coerente",
+    lang: "it",
     title: "Come creare un Frontend scalabile, robusto e coerente",
     subtitle: "Con l'aiuto di Storybook e del Design System",
     shortDescription: "Storybook is your best friend if you need a scalable frontend",
@@ -338,6 +363,7 @@ const events: IEvent[] = [
   {
     title: "WANNABE MANAGER IN ICT",
     slug: "wanna-be-manager-in-ict",
+    lang: "it",
     subtitle: "Tool e metodologie per gestire un team IT in maniera efficace",
     description:
       "In this webinar I will discuss about tools and methodologies in project management.",
@@ -351,6 +377,7 @@ const events: IEvent[] = [
   {
     title: "Da ingegnere navale a CTO",
     slug: "da-ingegnere-navale-a-cto",
+    lang: "it",
     description:
       "I was interviewed by the Pointer Podcast about my incredible career. During the interview, we discussed why I chose managerial roles and the challenges I faced along the way.",
     date: "2023-05-11",
@@ -369,6 +396,7 @@ const events: IEvent[] = [
   {
     title: "Colloquio tecnico per neolaureati, tips&tricks",
     slug: "colloquio-tecnico-per-neolaureati-tips-and-tricks",
+    lang: "it",
     description:
       "In this webinar with opinno I will give some Tips and tricks to Junior developers to have a great performance at job interview",
     date: "2022-06-21",
@@ -382,6 +410,7 @@ const events: IEvent[] = [
     description:
       "In this round table we will discuss together on how to delete the technical debt in large enterprise applications",
     slug: "tech-italia-colmare-il-debito-tecnico",
+    lang: "it",
     date: "2022-06-23",
     image: "/img/youtube-live.png",
     venue: "YouTube",
@@ -389,6 +418,7 @@ const events: IEvent[] = [
   },
   {
     slug: "creare-una-test-factory-aziendale",
+    lang: "it",
     title: "Creare una Test Factory Aziendale",
     description:
       "We all know that testing is essential, but there is never time to do it. In this talk, we will see together how to create a corporate testing strategy, what the costs are, the tools and the people to involve.",
@@ -413,6 +443,7 @@ const events: IEvent[] = [
   },
   {
     slug: "tutored-il-tuo-primo-giorno-di-lavoro",
+    lang: "it",
     title: "Il tuo primo giorno di lavoro",
     subtitle: "The to do list for your onboarding in a company",
     description:
@@ -427,6 +458,7 @@ const events: IEvent[] = [
   },
   {
     slug: "guida-pratica-alla-gestione-di-un-prodotto-it",
+    lang: "it",
     title: "Guida pratica alla gestione di un prodotto IT",
     subtitle: "Because there is no manual to be a great IT manager",
     shortDescription: "The practical guide to handle a IT SaaS",
@@ -443,6 +475,7 @@ const events: IEvent[] = [
     title: "Deploy in ambienti critici",
     subtitle: "Feat Vincenzo Raimondo",
     slug: "deploy-in-ambienti-critici-quando-nulla-puo-andare-storto",
+    lang: "it",
     shortDescription: "When nothing can go wrong",
     description:
       "Sometimes deployments should not go wrong, especially when it comes to systems with millions of users.",
@@ -457,6 +490,7 @@ const events: IEvent[] = [
     shortDescription: "Interview with a developer of tv shows editor",
     description: "Interview with a developer of tv shows editor",
     slug: "teclasystem-dove-si-creano-software-per-palinsesti-tv",
+    lang: "it",
     subtitle: "Feat Emanuele Gurini",
     video: "https://www.youtube.com/watch?v=n9CfAbduFAk",
     image: "/img/youtube-live.png",
@@ -467,6 +501,7 @@ const events: IEvent[] = [
   {
     title: "Con le architetture disaccoppiate e' meglio!",
     slug: "con-le-architetture-disaccoppiate-e-meglio",
+    lang: "it",
     subtitle: "Feat Simone Checcoli",
     shortDescription:
       "A practical demonstration of how microservices should interact",
@@ -520,6 +555,7 @@ const events: IEvent[] = [
   },
   {
     slug: "lavoro-da-posti-incredibili-e-sono-felice",
+    lang: "it",
     title: "Lavoro da posti incredibili e sono felice",
     subtitle: "Feat Christian Cannata",
     shortDescription:
@@ -539,6 +575,7 @@ const events: IEvent[] = [
     description:
       "In this video, we will delve into the crucial role that an IT Team Leader plays within a company.",
     slug: "il-team-leader-cosa-fa",
+    lang: "it",
     video: "https://www.youtube.com/watch?v=esVxIrfWdIY",
     date: "2021-12-22",
     image: "/img/youtube-live.png",
@@ -563,6 +600,7 @@ const events: IEvent[] = [
   },
   {
     slug: "recruiter-and-dev-celebrating-friendship",
+    lang: "it",
     shortDescription:
       "Live YouTube tra recruiter e sviluppatori: come funziona davvero la selezione tecnica, vista dai due lati del colloquio.",
     title: "Recruiter & Dev",
@@ -574,6 +612,7 @@ const events: IEvent[] = [
   },
   {
     slug: "come-si-supera-il-colloquio-tecnico",
+    lang: "it",
     shortDescription:
       "In a technical interview what is the best way to answer the interviewer?",
     description:

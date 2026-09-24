@@ -8,6 +8,13 @@ export interface PodcastLinks {
 
 export interface IEvent {
   slug: string
+  /**
+   * Language of what the page actually shows — its title and description.
+   * The site is English, so this is only set on the talks that are not:
+   * they keep their original Italian title, which is what people search for
+   * after seeing the talk. Absent means English.
+   */
+  lang?: "it" | "en"
   highlight?: boolean
   title: string
   subtitle?: string

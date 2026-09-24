@@ -1,37 +1,38 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import { Calendar, MapPin, Globe, ExternalLink } from "lucide-react"
-import { format, parseISO } from "date-fns"
-import PageWrapper from "@/components/layout/PageWrapper"
-import Badge from "@/components/ui/Badge"
-import ArticleRenderer from "@/components/content/ArticleRenderer"
-import ContactSection from "@/components/sections/ContactSection"
-import ScrollReveal from "@/components/ui/ScrollReveal"
-import JsonLd from "@/components/seo/JsonLd"
-import { pageTitle, siteConfig } from "@/data/site"
-import { PERSON_ID } from "@/data/person"
-import events from "@/data/events"
-import { notFound } from "next/navigation"
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Calendar, MapPin, Globe, ExternalLink } from "lucide-react";
+import { format, parseISO } from "date-fns";
+import PageWrapper from "@/components/layout/PageWrapper";
+import Badge from "@/components/ui/Badge";
+import ArticleRenderer from "@/components/content/ArticleRenderer";
+import ContactSection from "@/components/sections/ContactSection";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import JsonLd from "@/components/seo/JsonLd";
+import { pageTitle, siteConfig } from "@/data/site";
+import { PERSON_ID } from "@/data/person";
+import events from "@/data/events";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  return events.map((e) => ({ id: e.slug }))
+  return events.map((e) => ({ id: e.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const { id } = await params
-  const event = events.find((e) => e.slug === id)
-  if (!event) return {}
+  const { id } = await params;
+  const event = events.find((e) => e.slug === id);
+  if (!event) return {};
+  const lang = event.lang ?? "en";
   // Last resort so the tag is never absent: an event with neither description
   // is still better described by its own title and venue than by whatever
   // Google would scrape off the page instead.
   const description =
     event.shortDescription ||
     event.description?.slice(0, 160) ||
-    `${event.title}${event.venue ? ` at ${event.venue}` : ""} — a talk by ${siteConfig.name}.`
+    `${event.title}${event.venue ? ` at ${event.venue}` : ""} — a talk by ${siteConfig.name}.`;
   const keywords = [
     event.title,
     "Lorenzo De Francesco",
@@ -42,7 +43,7 @@ export async function generateMetadata({
     ...(event.podcast ? ["podcast"] : []),
     ...(event.video ? ["video", "recording"] : []),
     "conference",
-  ]
+  ];
   return {
     title: pageTitle(event.title),
     description,
@@ -55,7 +56,7 @@ export async function generateMetadata({
       description,
       url: `${siteConfig.url}/events/${id}`,
       siteName: siteConfig.name,
-      locale: "en_US",
+      locale: lang === "it" ? "it_IT" : "en_US",
       type: "article",
       images: [
         {
@@ -70,22 +71,22 @@ export async function generateMetadata({
       description,
       images: [event.image],
     },
-  }
+  };
 }
 
 function VideoEmbed({ url }: { url: string }) {
-  let embedUrl = url
+  let embedUrl = url;
   if (url.includes("youtube.com/watch")) {
-    const id = new URL(url).searchParams.get("v")
-    embedUrl = `https://www.youtube.com/embed/${id}`
+    const id = new URL(url).searchParams.get("v");
+    embedUrl = `https://www.youtube.com/embed/${id}`;
   } else if (url.includes("youtu.be/")) {
-    const id = url.split("youtu.be/")[1]?.split("?")[0]
-    embedUrl = `https://www.youtube.com/embed/${id}`
+    const id = url.split("youtu.be/")[1]?.split("?")[0];
+    embedUrl = `https://www.youtube.com/embed/${id}`;
   } else if (url.includes("youtube.com/live/")) {
-    const parts = url.split("youtube.com/live/")[1]
-    const id = parts?.split("?")[0]
-    const tParam = url.match(/[?&]t=(\d+)/)?.[1]
-    embedUrl = `https://www.youtube.com/embed/${id}${tParam ? `?start=${tParam}` : ""}`
+    const parts = url.split("youtube.com/live/")[1];
+    const id = parts?.split("?")[0];
+    const tParam = url.match(/[?&]t=(\d+)/)?.[1];
+    embedUrl = `https://www.youtube.com/embed/${id}${tParam ? `?start=${tParam}` : ""}`;
   }
 
   return (
@@ -98,21 +99,22 @@ function VideoEmbed({ url }: { url: string }) {
         className="absolute inset-0 h-full w-full"
       />
     </div>
-  )
+  );
 }
 
 export default async function EventDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = await params
-  const event = events.find((e) => e.slug === id)
-  if (!event) notFound()
+  const { id } = await params;
+  const event = events.find((e) => e.slug === id);
+  if (!event) notFound();
 
   const formattedDate = event.date
     ? format(parseISO(event.date), "MMMM d, yyyy")
-    : null
+    : null;
+  const lang = event.lang ?? "en";
 
   return (
     <>
@@ -120,9 +122,12 @@ export default async function EventDetailPage({
         data={{
           "@context": "https://schema.org",
           "@type": "Event",
+          inLanguage: lang,
           name: event.title,
           description:
-            event.shortDescription || event.description?.slice(0, 160) || event.title,
+            event.shortDescription ||
+            event.description?.slice(0, 160) ||
+            event.title,
           ...(event.date && { startDate: event.date }),
           eventAttendanceMode: event.isOnline
             ? "https://schema.org/OnlineEventAttendanceMode"
@@ -177,116 +182,124 @@ export default async function EventDetailPage({
           ],
         }}
       />
-      {/* Hero */}
-      <section className="relative overflow-hidden pb-16 pt-32">
-        {event.cover && (
-          <>
-            <Image
-              src={event.cover}
-              alt={event.title}
-              fill
-              className="object-cover opacity-10"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-navy-light/30 to-background" />
-          </>
-        )}
-        {!event.cover && (
-          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
-        )}
-
-        <PageWrapper className="relative z-10">
-          <ScrollReveal>
-            <div className="mb-4 flex flex-wrap gap-2">
-              <Badge>{event.isOnline ? "Online" : "In Person"}</Badge>
-            </div>
-            <h1 className="font-heading text-3xl text-text-primary md:text-5xl">
-              {event.title}
-            </h1>
-            {event.subtitle && (
-              <p className="mt-3 text-lg text-text-secondary">
-                {event.subtitle}
-              </p>
-            )}
-
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-text-muted">
-              {formattedDate && (
-                <span className="flex items-center gap-2">
-                  <Calendar size={16} className="text-gold" />
-                  {formattedDate}
-                </span>
-              )}
-              {event.venue && (
-                <span className="flex items-center gap-2">
-                  <MapPin size={16} className="text-gold" />
-                  {event.venue}
-                </span>
-              )}
-              <span className="flex items-center gap-2">
-                <Globe size={16} className="text-gold" />
-                {event.isOnline ? "Online" : "In Person"}
-              </span>
-            </div>
-          </ScrollReveal>
-        </PageWrapper>
-      </section>
-
-      <PageWrapper className="pb-24">
-        <div className="flex flex-col gap-12 md:flex-row">
-          <div className="flex-1 space-y-8">
-            {/* Video */}
-            {event.video && (
-              <ScrollReveal>
-                <VideoEmbed url={event.video} />
-              </ScrollReveal>
-            )}
-
-            {/* Description */}
-            {event.description && (
-              <ScrollReveal>
-                <p className="text-lg leading-relaxed text-text-secondary">
-                  {event.description}
-                </p>
-              </ScrollReveal>
-            )}
-
-            {/* External link */}
-            {event.link && (
-              <ScrollReveal>
-                <a
-                  href={event.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-gold px-5 py-2.5 text-sm font-medium text-gold no-underline transition-all hover:bg-gold hover:text-navy"
-                >
-                  <ExternalLink size={16} />
-                  Visit Event Page
-                </a>
-              </ScrollReveal>
-            )}
-          </div>
-
-          {/* Sidebar with event image */}
-          <ScrollReveal delay={0.1}>
-            <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-lg border border-border md:h-auto md:w-72">
+      {/*
+        The talk's own content, in the language the talk was given in. The
+        wrapper is `display: contents`, so it carries lang down the DOM without
+        adding a box: nothing about the layout changes. ContactSection stays
+        outside it — that copy is the site speaking, and the site is English.
+      */}
+      <div className="contents" lang={lang}>
+        {/* Hero */}
+        <section className="relative overflow-hidden pb-16 pt-32">
+          {event.cover && (
+            <>
               <Image
-                src={event.image}
+                src={event.cover}
                 alt={event.title}
                 fill
-                className="object-cover"
+                className="object-cover opacity-10"
               />
-            </div>
-          </ScrollReveal>
-        </div>
-      </PageWrapper>
+              <div className="absolute inset-0 bg-gradient-to-b from-navy-light/30 to-background" />
+            </>
+          )}
+          {!event.cover && (
+            <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/40 to-background" />
+          )}
 
-      {/* Article blocks */}
-      {event.article && event.article.length > 0 && (
-        <div className="pb-24">
-          <ArticleRenderer articles={event.article} />
-        </div>
-      )}
+          <PageWrapper className="relative z-10">
+            <ScrollReveal>
+              <div className="mb-4 flex flex-wrap gap-2">
+                <Badge>{event.isOnline ? "Online" : "In Person"}</Badge>
+              </div>
+              <h1 className="font-heading text-3xl text-text-primary md:text-5xl">
+                {event.title}
+              </h1>
+              {event.subtitle && (
+                <p className="mt-3 text-lg text-text-secondary">
+                  {event.subtitle}
+                </p>
+              )}
+
+              <div className="mt-6 flex flex-wrap items-center gap-6 text-text-muted">
+                {formattedDate && (
+                  <span className="flex items-center gap-2">
+                    <Calendar size={16} className="text-gold" />
+                    {formattedDate}
+                  </span>
+                )}
+                {event.venue && (
+                  <span className="flex items-center gap-2">
+                    <MapPin size={16} className="text-gold" />
+                    {event.venue}
+                  </span>
+                )}
+                <span className="flex items-center gap-2">
+                  <Globe size={16} className="text-gold" />
+                  {event.isOnline ? "Online" : "In Person"}
+                </span>
+              </div>
+            </ScrollReveal>
+          </PageWrapper>
+        </section>
+
+        <PageWrapper className="pb-24">
+          <div className="flex flex-col gap-12 md:flex-row">
+            <div className="flex-1 space-y-8">
+              {/* Video */}
+              {event.video && (
+                <ScrollReveal>
+                  <VideoEmbed url={event.video} />
+                </ScrollReveal>
+              )}
+
+              {/* Description */}
+              {event.description && (
+                <ScrollReveal>
+                  <p className="text-lg leading-relaxed text-text-secondary">
+                    {event.description}
+                  </p>
+                </ScrollReveal>
+              )}
+
+              {/* External link */}
+              {event.link && (
+                <ScrollReveal>
+                  <a
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-gold px-5 py-2.5 text-sm font-medium text-gold no-underline transition-all hover:bg-gold hover:text-navy"
+                  >
+                    <ExternalLink size={16} />
+                    Visit Event Page
+                  </a>
+                </ScrollReveal>
+              )}
+            </div>
+
+            {/* Sidebar with event image */}
+            <ScrollReveal delay={0.1}>
+              <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-lg border border-border md:h-auto md:w-72">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+        </PageWrapper>
+
+        {/* Article blocks */}
+        {event.article && event.article.length > 0 && (
+          <div className="pb-24">
+            <ArticleRenderer articles={event.article} />
+          </div>
+        )}
+      </div>
 
       <ContactSection />
     </>
-  )
+  );
 }
