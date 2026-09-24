@@ -31,6 +31,7 @@ module.exports = {
   generateRobotsTxt: false,
   trailingSlash: false,
   generateIndexSitemap: false,
+  autoLastmod: false,
   // The site is statically exported to ./out, so write the sitemap there.
   // Without this, next-sitemap writes to ./public/ in CI (after `next build`
   // has already finished copying public/ → out/), and the sitemap never makes
@@ -53,11 +54,26 @@ module.exports = {
     if (blogIsEmpty() && (url === "/blog" || url.startsWith("/blog/"))) {
       return null
     }
+
+    // Depth is a good enough proxy for importance here: the homepage, then the
+    // section indexes, then the individual talks and projects. A flat 0.7 on
+    // every URL tells a crawler nothing about what matters.
+    const segments = url.split("/").filter(Boolean)
+    const priority = url === "/" ? 1.0 : segments.length === 1 ? 0.8 : 0.6
+
+    // The indexes gain an entry whenever a talk or a post is added; a talk that
+    // happened in 2023 does not change again. Claiming "daily" for all 71 URLs
+    // is a signal search engines learn to ignore.
+    const changefreq = segments.length <= 1 ? "weekly" : "yearly"
+
     return {
       loc: url,
-      changefreq: config.changefreq,
-      priority: config.priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      changefreq,
+      priority,
+      // Deliberately omitted. next-sitemap's autoLastmod stamps every URL with
+      // the build time, so a deploy that touched one page would tell crawlers
+      // all 71 had changed. Without it they fall back to their own crawl
+      // history, which is accurate.
       alternateRefs: config.alternateRefs ?? [],
     }
   },

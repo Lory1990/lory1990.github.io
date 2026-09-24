@@ -24,6 +24,7 @@ import { GithubIcon } from "@/components/icons/SocialIcons"
 import { siteConfig } from "@/data/site"
 import { IMAGE_ID, PERSON_ID, WEBSITE_ID } from "@/data/person"
 import events from "@/data/events"
+import { faq, faqSchema } from "@/data/faq"
 
 const recentTalks = events
   .filter((e) => e.venue && e.date)
@@ -106,6 +107,12 @@ export default function HomePage() {
           mainEntity: { "@id": PERSON_ID },
         }}
       />
+      {/*
+        Answer-engine markup. Kept as its own node rather than folded into the
+        WebPage above: the two describe different things, and Google reads a
+        standalone FAQPage without needing the page to claim it *is* an FAQ.
+      */}
+      <JsonLd data={{ "@context": "https://schema.org", ...faqSchema }} />
       <HeroSection />
 
       {/* Stats bar */}
@@ -574,6 +581,29 @@ export default function HomePage() {
           </div>
         </PageWrapper>
       </div>
+
+      {/* FAQ — the answers are the schema's answers; see @/data/faq */}
+      <PageWrapper className="py-24">
+        <ScrollReveal>
+          <SectionTitle>Frequently Asked Questions</SectionTitle>
+        </ScrollReveal>
+        <dl className="max-w-3xl">
+          {faq.map((entry, i) => (
+            <ScrollReveal key={entry.question} delay={i * 0.05}>
+              <div className="border-b border-border py-6 first:pt-0 last:border-0">
+                <dt>
+                  <h3 className="font-heading text-xl text-text-primary">
+                    {entry.question}
+                  </h3>
+                </dt>
+                <dd className="mt-3 leading-relaxed text-text-secondary">
+                  {entry.answer}
+                </dd>
+              </div>
+            </ScrollReveal>
+          ))}
+        </dl>
+      </PageWrapper>
 
       <ContactSection />
     </>

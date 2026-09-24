@@ -100,6 +100,7 @@ const components: PortableTextComponents = {
         <figure>
           <BlogImage
             image={image}
+            alt={image.caption ?? undefined}
             sizes="(min-width: 768px) 720px, 100vw"
             className="w-full rounded-lg border border-border"
           />

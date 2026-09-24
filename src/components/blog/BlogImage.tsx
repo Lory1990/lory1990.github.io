@@ -23,6 +23,7 @@ export default function BlogImage({
   ratio,
   priority = false,
   className,
+  alt,
 }: {
   image: CmsImage
   sizes: string
@@ -32,6 +33,13 @@ export default function BlogImage({
   /** Only for an article's cover: it is the LCP element and must not be lazy. */
   priority?: boolean
   className?: string
+  /**
+   * Used when the CMS image has no alt of its own. Alt text is an optional
+   * field in the Studio, and a published image without one would otherwise
+   * ship as alt="" — correct for decoration, wrong for a cover or an
+   * illustration that carries meaning.
+   */
+  alt?: string
 }) {
   const displayRatio = ratio ?? aspectRatio(image)
   const largest = widths[widths.length - 1]
@@ -48,7 +56,7 @@ export default function BlogImage({
       src={src}
       srcSet={imageSrcSet(image, widths, { ratio, crop: Boolean(ratio) })}
       sizes={sizes}
-      alt={image.alt ?? ""}
+      alt={image.alt || alt || ""}
       width={image.width ?? undefined}
       height={
         ratio && image.width

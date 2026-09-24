@@ -2,8 +2,13 @@ export const siteConfig = {
   name: "Lorenzo De Francesco",
   title: "Chief Technology Officer",
   company: "Azimut Marketplace",
+  // Kept under ~160 characters on purpose: this string is the meta description
+  // on every page that does not override it, and Google truncates the tag
+  // around there. The longer form of the same facts lives in
+  // `disambiguatingDescription` on the Person schema and in llms.txt, which
+  // have no length budget.
   description:
-    "Technology leader with 10+ years in fintech, cloud architecture, and enterprise software. Leading the technology development at TNB Project (Gruppo Azimut) — building the bank of the future from scratch — and CTO at Azimut Marketplace, with a focus on cyber security and data governance.",
+    "Technology leader with 10+ years in fintech and cloud architecture. Leads the tech at TNB Project (Gruppo Azimut), CTO at Azimut Marketplace.",
   url: "https://lorenzodefrancesco.it",
   image: "/img/lorenzo-de-francesco.jpeg",
   social: {
@@ -83,4 +88,12 @@ export type NavItem = (typeof siteConfig.nav)[number]
 // resolved once at build time in the root layout.
 export function visibleNav(hasPosts: boolean): readonly NavItem[] {
   return siteConfig.nav.filter((item) => hasPosts || !item.requiresPosts)
+}
+
+// Next appends the `%s | Lorenzo De Francesco` template to every page title,
+// which costs 24 characters. Past ~36 characters of its own a title would be
+// pushed over the ~60 Google renders and cut off mid-suffix, so a long title
+// ships on its own instead.
+export function pageTitle(title: string) {
+  return title.length > 36 ? { absolute: title } : title
 }

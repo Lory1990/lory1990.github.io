@@ -8,7 +8,7 @@ import ArticleRenderer from "@/components/content/ArticleRenderer"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
-import { siteConfig } from "@/data/site"
+import { pageTitle, siteConfig } from "@/data/site"
 import { PERSON_ID } from "@/data/person"
 import events from "@/data/events"
 import { notFound } from "next/navigation"
@@ -25,8 +25,13 @@ export async function generateMetadata({
   const { id } = await params
   const event = events.find((e) => e.slug === id)
   if (!event) return {}
+  // Last resort so the tag is never absent: an event with neither description
+  // is still better described by its own title and venue than by whatever
+  // Google would scrape off the page instead.
   const description =
-    event.shortDescription || event.description?.slice(0, 160)
+    event.shortDescription ||
+    event.description?.slice(0, 160) ||
+    `${event.title}${event.venue ? ` at ${event.venue}` : ""} — a talk by ${siteConfig.name}.`
   const keywords = [
     event.title,
     "Lorenzo De Francesco",
@@ -39,7 +44,7 @@ export async function generateMetadata({
     "conference",
   ]
   return {
-    title: event.title,
+    title: pageTitle(event.title),
     description,
     keywords,
     alternates: {

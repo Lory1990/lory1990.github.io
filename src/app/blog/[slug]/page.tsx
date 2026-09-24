@@ -23,7 +23,7 @@ import {
 } from "@/lib/blog"
 import { OG_HEIGHT, OG_WIDTH, ogImage, toPostRef } from "@/lib/blog/seo"
 import { blogPostingGraph } from "@/data/blog"
-import { siteConfig } from "@/data/site"
+import { pageTitle, siteConfig } from "@/data/site"
 
 interface Params {
   slug: string
@@ -52,12 +52,15 @@ export async function generateMetadata({
   }
 
   const title = post.metaTitle || post.title
-  const description = post.metaDescription || post.excerpt
+  // The CMS fields are both optional, so a post published without either would
+  // otherwise ship with no meta description at all.
+  const description =
+    post.metaDescription || post.excerpt || `${post.title} — ${siteConfig.name}`
   const image = ogImage(post)
   const url = `${siteConfig.url}/blog/${post.slug}`
 
   return {
-    title,
+    title: pageTitle(title),
     description,
     keywords: [
       ...post.categories.map((category) => category.title),
@@ -183,6 +186,7 @@ export default async function PostPage({
             <figure>
               <BlogImage
                 image={post.coverImage}
+                alt={post.title}
                 ratio={16 / 9}
                 priority
                 sizes="(min-width: 1200px) 1152px, 100vw"

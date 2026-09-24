@@ -87,6 +87,8 @@ const events: IEvent[] = [
     title: "CTO Connext @ Codemotion",
     venue: "Codemotion 2025",
     slug: "cto-connect-codemotion",
+    shortDescription:
+      "Confronto tra CTO a Codemotion 2025 su leadership tecnica, scelte di architettura e gestione dei team di sviluppo.",
     date: "2025-10-14",
     isOnline: false,
     image: "/img/codemotion.png",
@@ -94,6 +96,8 @@ const events: IEvent[] = [
   {
     title: "Oracolo del Test - Leadership talk e tavola rotonda",
     slug: "oracolo-del-test-leadership-talk-e-tavola-rotonda",
+    shortDescription:
+      "Leadership talk e tavola rotonda sull'Oracolo del Test: qualita' del software, cultura del testing e ruolo di chi guida i team tecnici.",
     date: "2025-02-25",
     image: "/img/oracolo-del-test.jpg",
     isOnline: false,
@@ -137,6 +141,8 @@ const events: IEvent[] = [
   {
     title: "Cybersecurity: solo adempimenti normativi o vera sicurezza?",
     slug: "cybersecurity-solo-adempimenti-normativi-o-vera-sicurezza",
+    shortDescription:
+      "Talk per Strategic Management Partners: perche' la cybersecurity e' una scelta strategica e non un semplice adempimento normativo.",
     isOnline: false,
     venue: "Strategic Management Partners",
     date: "2025-09-26",
@@ -196,6 +202,8 @@ const events: IEvent[] = [
   {
     title: "Prendere in gestione un software scritto da altri",
     slug: "prendere-in-gestione-un-software-scritto-da-altri",
+    shortDescription:
+      "Talk al DevFest Alps 2023 su come ereditare un software scritto da altri: capirlo, metterlo in sicurezza e riportarlo sotto controllo.",
     isOnline: false,
     venue: "Dev Fest Alps 2023",
     date: "2023-12-02",
@@ -206,6 +214,8 @@ const events: IEvent[] = [
   {
     title: "I passi giusti per creare una piattaforma solida e scalabile",
     slug: "i-passi-giusti-per-creare-una-piattaforma-solida-e-scalabile",
+    shortDescription:
+      "Talk al DevFest Trento 2023 sui passi concreti per costruire una piattaforma software solida, scalabile e sostenibile nel tempo.",
     isOnline: false,
     venue: "Dev Fest Trento 2023",
     date: "2023-11-11",
@@ -261,6 +271,8 @@ const events: IEvent[] = [
   {
     title: "Resilienza e proattivita' per la sicurezza dell'ecosistema aziendale",
     slug: "resilienza-e-proattivita-per-la-sicurezza-dell-ecosistema-aziendale",
+    shortDescription:
+      "Intervento su ClassCNBC sugli strumenti di difesa digitale piu' efficaci per aziende e pubblica amministrazione.",
     subtitle: "I piu' efficaci strumenti di difesa e sicurezza digitale",
     link: "https://video.milanofinanza.it/video/evoluzione-delle-strategie-di-protezione-dal-cybercrime-nei-mercati-finanziari-IrYPAMXyFIoY",
     isOnline: true,
@@ -551,6 +563,8 @@ const events: IEvent[] = [
   },
   {
     slug: "recruiter-and-dev-celebrating-friendship",
+    shortDescription:
+      "Live YouTube tra recruiter e sviluppatori: come funziona davvero la selezione tecnica, vista dai due lati del colloquio.",
     title: "Recruiter & Dev",
     subtitle: "Celebrating Friendship!",
     date: "2022-09-05",

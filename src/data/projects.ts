@@ -102,6 +102,8 @@ const projects: IProject[] = [
     article: [
       {
         type: ArticleDataType.IMAGE,
+        imageAlt:
+          "Spire Energia dashboard showing per-building energy consumption",
         image: "/img/projects/spire-energia/cover-screen.png",
       },
     ],
