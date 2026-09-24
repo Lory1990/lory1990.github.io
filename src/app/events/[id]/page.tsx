@@ -8,7 +8,7 @@ import ArticleRenderer from "@/components/content/ArticleRenderer"
 import ContactSection from "@/components/sections/ContactSection"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import JsonLd from "@/components/seo/JsonLd"
-import { pageTitle, siteConfig } from "@/data/site"
+import { clampDescription, pageTitle, siteConfig } from "@/data/site"
 import { PERSON_ID } from "@/data/person"
 import events from "@/data/events"
 import { notFound } from "next/navigation"
@@ -31,7 +31,7 @@ export async function generateMetadata({
   // Google would scrape off the page instead.
   const description =
     event.shortDescription ||
-    event.description?.slice(0, 160) ||
+    clampDescription(event.description) ||
     `${event.title}${event.venue ? ` at ${event.venue}` : ""} — a talk by ${siteConfig.name}.`
   const keywords = [
     event.title,
@@ -125,7 +125,7 @@ export default async function EventDetailPage({
           inLanguage: lang,
           name: event.title,
           description:
-            event.shortDescription || event.description?.slice(0, 160) || event.title,
+            event.shortDescription || clampDescription(event.description) || event.title,
           ...(event.date && { startDate: event.date }),
           eventAttendanceMode: event.isOnline
             ? "https://schema.org/OnlineEventAttendanceMode"

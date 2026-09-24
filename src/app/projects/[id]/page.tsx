@@ -7,7 +7,7 @@ import ArticleRenderer from "@/components/content/ArticleRenderer"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ContactSection from "@/components/sections/ContactSection"
 import JsonLd from "@/components/seo/JsonLd"
-import { siteConfig } from "@/data/site"
+import { clampDescription, siteConfig } from "@/data/site"
 import { PERSON_ID } from "@/data/person"
 import projects from "@/data/projects"
 import { notFound } from "next/navigation"
@@ -25,7 +25,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.slug === id)
   if (!project) return {}
   const description =
-    project.boxDescription || project.description?.slice(0, 160)
+    project.boxDescription || clampDescription(project.description)
   const keywords = [
     project.title,
     ...(project.category ?? []),
@@ -94,7 +94,7 @@ export default async function ProjectDetailPage({
           "@type": "CreativeWork",
           name: project.title,
           description:
-            project.boxDescription || project.description?.slice(0, 160),
+            project.boxDescription || clampDescription(project.description),
           url: `${siteConfig.url}/projects/${project.slug}`,
           ...(project.image && {
             image: `${siteConfig.url}${project.image}`,

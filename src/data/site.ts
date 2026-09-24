@@ -97,3 +97,14 @@ export function visibleNav(hasPosts: boolean): readonly NavItem[] {
 export function pageTitle(title: string) {
   return title.length > 36 ? { absolute: title } : title
 }
+
+// Cutting a description at a fixed character count lands mid-word about as
+// often as not, and Google renders the fragment exactly as it finds it —
+// "...the challenges I faced " is what the searcher reads. Cut at the last
+// space before the limit instead, and say the sentence continues.
+export function clampDescription(text?: string, max = 157) {
+  if (!text) return undefined
+  if (text.length <= max) return text
+  const cut = text.slice(0, max)
+  return cut.slice(0, cut.lastIndexOf(" ")).trimEnd() + "\u2026"
+}
