@@ -1,6 +1,6 @@
 import nextConfig from "eslint-config-next"
 
-export default [
+const config = [
   ...nextConfig,
   {
     // The CMS Studio is a separate project with its own dependencies and
@@ -8,3 +8,5 @@ export default [
     ignores: ["studio/**", "out/**"],
   },
 ]
+
+export default config
