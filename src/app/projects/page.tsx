@@ -77,6 +77,7 @@ const openSourceProjects = [
     ],
     website: "https://flightroom.dev/",
     github: "https://github.com/flightroom/flightroom",
+    logo: "/img/projects/flightroom/logo.png",
   },
   {
     name: "MFE Orchestrator",
@@ -191,9 +192,19 @@ export default function ProjectsPage() {
               <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
                 <div className="flex flex-col gap-8 md:flex-row md:items-start">
                   {/* Icon */}
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-gold/20 bg-gold/5">
-                    <Zap size={32} className="text-gold" />
-                  </div>
+                  {"logo" in project && project.logo ? (
+                    <Image
+                      src={project.logo}
+                      alt={`${project.name} logo`}
+                      width={64}
+                      height={64}
+                      className="h-16 w-16 shrink-0 rounded-xl"
+                    />
+                  ) : (
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-gold/20 bg-gold/5">
+                      <Zap size={32} className="text-gold" />
+                    </div>
+                  )}
 
                   <div className="flex-1">
                     {/* Header */}

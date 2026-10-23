@@ -38,6 +38,7 @@ const openSourceProjects = [
       "A self-hosted platform: describe an app or an AI agent and AI writes the first version in your own repositories, reviewed as a pull request and deployed to your Kubernetes cluster in one click.",
     website: "https://flightroom.dev/",
     github: "https://github.com/flightroom/flightroom",
+    logo: "/img/projects/flightroom/logo.png",
   },
   {
     name: "MFE Orchestrator",
@@ -456,9 +457,19 @@ export default function HomePage() {
             <ScrollReveal key={project.name}>
               <div className="group rounded-lg border border-border bg-surface p-8 transition-all hover:border-gold/30">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-background text-gold transition-colors group-hover:border-gold/30">
-                    <Zap size={22} />
-                  </div>
+                  {"logo" in project && project.logo ? (
+                    <Image
+                      src={project.logo}
+                      alt={`${project.name} logo`}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 shrink-0 rounded-lg"
+                    />
+                  ) : (
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-background text-gold transition-colors group-hover:border-gold/30">
+                      <Zap size={22} />
+                    </div>
+                  )}
                   <div>
                     <h3 className="font-heading text-xl text-text-primary">
                       {project.name}
