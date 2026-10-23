@@ -63,6 +63,22 @@ export const metadata: Metadata = {
 
 const openSourceProjects = [
   {
+    name: "Flightroom",
+    tagline: "Apps and AI agents, shipped in one click",
+    description:
+      "An open source, self-hosted enterprise platform where anyone in a company describes an app or an AI agent and AI writes the first version on a branch of the company's own repositories, starting from its templates. Changes go through normal code review, then deploy to the company's Kubernetes cluster in one click, with its single sign-on, roles and chosen AI models.",
+    features: [
+      "Apps and agents from plain language",
+      "Pull request review on every change",
+      "One-click deploy via GitOps & Argo CD",
+      "SSO (Entra ID, Google, Auth0) & roles",
+      "Bring your own AI model",
+      "Self-hosted (Kubernetes, Docker, Terraform)",
+    ],
+    website: "https://flightroom.dev/",
+    github: "https://github.com/flightroom/flightroom",
+  },
+  {
     name: "MFE Orchestrator",
     tagline: "Like Kubernetes... but for frontend",
     description:
@@ -185,9 +201,11 @@ export default function ProjectsPage() {
                       <h3 className="font-heading text-2xl text-text-primary md:text-3xl">
                         {project.name}
                       </h3>
-                      <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
-                        {project.version}
-                      </span>
+                      {"version" in project && project.version && (
+                        <span className="rounded-sm bg-gold/10 px-2 py-0.5 text-xs font-semibold text-gold">
+                          {project.version}
+                        </span>
+                      )}
                     </div>
                     <p className="mt-1 font-heading text-lg italic text-text-muted">
                       {project.tagline}

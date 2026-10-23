@@ -32,6 +32,14 @@ const recentTalks = events
 
 const openSourceProjects = [
   {
+    name: "Flightroom",
+    tagline: "Apps and AI agents, shipped in one click",
+    description:
+      "A self-hosted platform: describe an app or an AI agent and AI writes the first version in your own repositories, reviewed as a pull request and deployed to your Kubernetes cluster in one click.",
+    website: "https://flightroom.dev/",
+    github: "https://github.com/flightroom/flightroom",
+  },
+  {
     name: "MFE Orchestrator",
     tagline: "Like Kubernetes... but for frontend",
     description:
