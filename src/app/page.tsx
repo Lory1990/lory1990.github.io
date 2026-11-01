@@ -61,9 +61,9 @@ const managerialQualities = [
   {
     icon: TrendingDown,
     title: "Cost Optimization",
-    value: "-700k",
+    value: "-€700k",
     description:
-      "Reduced recurring IT infrastructure costs by over €700k through vendor renegotiations, cloud optimization, and strategic insourcing.",
+      "Cut over €700k (~70%) of recurring IT costs through vendor renegotiations, cloud optimization, and strategic insourcing.",
   },
   {
     icon: Users,
@@ -175,8 +175,8 @@ export default function HomePage() {
                 >
                   Azimut Marketplace
                 </a>
-                , where I rebuilt the entire IT department, reduced costs by
-                over €700k, and turned a spreadsheet-driven operation into a
+                , where I rebuilt the entire IT department, cut over €700k
+                (~70%) of recurring IT costs, and turned a spreadsheet-driven operation into a
                 scalable, cloud-native platform.
                 Earlier, within the Sella banking group I coordinated the
                 development of SME Banking, and at Costa Crociere I built
@@ -265,14 +265,14 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="mt-5 leading-relaxed text-text-secondary">
-                  I built the IT department from scratch, cut over €700k of
-                  recurring infrastructure costs, and turned a spreadsheet-driven
+                  I built the IT department from scratch, cut over €700k (~70%)
+                  of recurring IT costs, and turned a spreadsheet-driven
                   operation into a scalable fintech platform — establishing
                   governance, security, and an engineering culture that runs
                   autonomously.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {["−700k Costs", "Cloud Architecture", "IT Governance", "Team Building"].map(
+                  {["−€700k Costs", "Cloud Architecture", "IT Governance", "Team Building"].map(
                     (tag) => (
                       <span
                         key={tag}

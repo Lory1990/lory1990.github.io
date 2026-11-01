@@ -21,7 +21,7 @@ const career: TimelineEvent[] = [
     highlight: true,
     tags: ["IT Strategy", "Cloud Architecture", "Cost Optimization", "Governance"],
     description:
-      "I lead technology at a fintech platform serving SMEs. I built the IT department from scratch, reduced recurring infrastructure costs by over €700k (70%), and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform — while mentoring two engineers into technology leaders.",
+      "I lead technology at a fintech platform serving SMEs. I built the IT department from scratch, cut over €700k (~70%) of recurring IT costs, and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform — while mentoring two engineers into technology leaders.",
   },
   {
     position: "Architect & Team Leader — SME Banking",

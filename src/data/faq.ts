@@ -31,7 +31,7 @@ export const faq: FaqEntry[] = [
   {
     question: "How do you reduce IT infrastructure costs?",
     answer:
-      "By attacking three things in order: vendor contracts, cloud waste, and work paid for externally that belongs in-house. At Azimut Marketplace that combination removed over €700k of recurring annual cost — roughly 70% — through renegotiation, right-sizing cloud resources, and insourcing development.",
+      "By attacking three things in order: vendor contracts, cloud waste, and work paid for externally that belongs in-house. At Azimut Marketplace that combination removed over €700k (~70%) of recurring IT costs through renegotiation, right-sizing cloud resources, and insourcing development.",
   },
   {
     question: "What is microfrontend orchestration?",

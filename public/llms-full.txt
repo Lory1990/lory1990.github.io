@@ -29,7 +29,7 @@ He is one of the organizers of the Google Developer Group Milano and Scientific 
 Italy. Leads the technology development of a new digital bank built from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and the integrity of data.
 
 ### CTO — Azimut Marketplace (May 2022 – Present)
-Milan, Italy. Built the IT department from scratch, reduced recurring IT infrastructure costs by over €700k (70%), and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform while mentoring two engineers into technology leaders.
+Milan, Italy. Built the IT department from scratch, cut over €700k (~70%) of recurring IT costs, and turned a spreadsheet-driven operation into a robust, secure, scalable cloud platform while mentoring two engineers into technology leaders.
 
 ### Architect & Team Leader, SME Banking — Banca Sella / Fabrick (November 2020 – May 2022)
 Milan, Italy. Within the Sella banking group, coordinated the development of SME Banking, leading a team of 5 engineers and mentoring junior developers. Defined and maintained the foundational React architecture and the shared component libraries powering the group's banking products.
@@ -69,7 +69,7 @@ Trieste, Italy. Co-founder of a startup developing decision support products for
 
 ## Key Achievements
 
-- **€700k+** recurring IT costs reduced
+- **€700k+** (~70%) of recurring IT costs cut
 - **2 tech leaders** mentored from junior developers
 - **100% IT governance** established (security policies, GDPR, SSO, monitoring)
 - **Excel → SaaS** platform transformation (spreadsheet-driven operation to a scalable cloud platform)

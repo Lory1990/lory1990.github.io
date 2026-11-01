@@ -49,7 +49,7 @@ If the user requests current details (e.g., latest talks, ongoing projects), fet
 
 ## Key achievements
 
-- 70%+ recurring IT cost reduction at Azimut Marketplace (€700k+/yr)
+- Over €700k (~70%) of recurring IT costs cut at Azimut Marketplace
 - Multi-country fintech platform serving 5+ countries
 - 2 tech leaders mentored from junior to leadership roles
 - 100% IT governance baseline (security policies, GDPR, SSO, monitoring) established from scratch

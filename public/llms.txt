@@ -17,7 +17,7 @@ Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the 
 ## Current Roles
 
 - **TNB Project (Gruppo Azimut)** — leads the technology development of a new digital bank built from scratch; focus on cyber security, data governance, and data integrity (since 2025).
-- **CTO at Azimut Marketplace** (since May 2022) — IT governance, cloud architecture, cost optimization, team building. Achievements: 70% IT cost reduction, Excel-to-SaaS platform transformation, mentored 2 tech leaders.
+- **CTO at Azimut Marketplace** (since May 2022) — IT governance, cloud architecture, cost optimization, team building. Achievements: over €700k (~70%) of recurring IT costs cut, Excel-to-SaaS platform transformation, mentored 2 tech leaders.
 
 ## Background
 

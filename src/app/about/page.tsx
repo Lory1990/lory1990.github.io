@@ -67,7 +67,7 @@ const socialLinks = [
 
 const highlights = [
   { value: "10+", label: "Years of Experience" },
-  { value: "700k", label: "IT Costs Reduced" },
+  { value: "€700k+", label: "IT Costs Reduced" },
   { value: "40+", label: "Talks & Events" },
   { value: "2", label: "Tech Leaders Mentored" },
 ]
@@ -173,8 +173,8 @@ export default function AboutPage() {
               security, data governance, and data integrity.
             </p>
             <p>
-              In parallel, as CTO at Azimut Marketplace, I reduced
-              infrastructure costs by over 70% while building a robust,
+              In parallel, as CTO at Azimut Marketplace, I cut over
+              €700k (~70%) of recurring IT costs while building a robust,
               scalable, cloud-native architecture.
             </p>
             <p>
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 Cost Optimization
               </h3>
               <p className="mt-4 leading-relaxed text-text-secondary">
-                I reduced recurring IT costs by over &euro;700k through vendor
+                I cut over &euro;700k (~70%) of recurring IT costs through vendor
                 renegotiations, cloud architecture optimization, and strategic
                 insourcing. Every technical decision I make weighs both
                 engineering quality and business impact.

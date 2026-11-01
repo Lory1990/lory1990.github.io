@@ -171,7 +171,7 @@ const events: IEvent[] = [
     link: "https://usecaseconf.tech/",
     image: "/img/events/2023-use-case-conf.png",
     description:
-      "Quando sono arrivato, nessuno sapeva nemmeno quanto costasse davvero l'infrastruttura IT. E tutti si fidavano ciecamente dei fornitori. Sono arrivato io e in tre anni di lavoro ho abbattuto 700k di costi ricorrenti, creato una cultura IT sana e creato due leader tecnologici.",
+      "Quando sono arrivato, nessuno sapeva nemmeno quanto costasse davvero l'infrastruttura IT. E tutti si fidavano ciecamente dei fornitori. Sono arrivato io e in tre anni di lavoro ho tagliato oltre 700k€ (~70%) di costi IT ricorrenti, creato una cultura IT sana e creato due leader tecnologici.",
     shortDescription:
       "La storia vera di come si puo' ricostruire un reparto IT, partendo dal caos.",
   },
