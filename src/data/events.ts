@@ -2,6 +2,29 @@ import { IEvent, ArticleDataType } from "@/types"
 
 const events: IEvent[] = [
   {
+    title: "Tech Lead Summit @ Codemotion Milan 2026",
+    slug: "tech-lead-summit-codemotion-milan-2026",
+    date: "2026-10-28",
+    isOnline: false,
+    venue: "Codemotion Milan 2026 - Superstudio Piu'",
+    link: "https://conferences.codemotion.com/milan/tech-lead-summit/",
+    image: "/img/codemotion.png",
+    shortDescription:
+      "Tech leader at the Codemotion Tech Lead Summit: a closed-door discussion among CTOs, VPs of Engineering and Heads of IT on the challenges of modern tech companies.",
+  },
+  {
+    title: "DevFest Milano 2026",
+    subtitle: "Organizer",
+    slug: "devfest-milano-2026-organizer",
+    date: "2026-10-10",
+    isOnline: false,
+    venue: "DevFest Milano 2026 - Randstad Box",
+    link: "https://gdg.community.dev/events/details/google-gdg-cloud-milano-presents-devfest-milano-2026/",
+    image: "/img/gdg-cloud-milano.webp",
+    shortDescription:
+      "Organizer of DevFest Milano 2026 with GDG Milano and GDG Cloud Milano: a day of talks and workshops on generative and agentic AI, Cloud, Web and Android.",
+  },
+  {
     title: "Il Kubernetes per Frontend esiste, ed e' open source",
     slug: "kubernetes-per-frontend-devfest-modena",
     lang: "it",
