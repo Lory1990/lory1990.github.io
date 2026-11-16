@@ -34,7 +34,7 @@ Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the 
 
 ## Side Projects
 
-- [Opsburg](https://opsburg.dev/) - Self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps, with a console played as a steampunk city builder (in development; grew out of MFE Orchestrator)
+- [Opsburg](https://opsburg.dev/) - Self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps, with a console played as a steampunk city builder (in development)
 - [Swagger Aggregator](https://github.com/Lory1990/swagger-aggregator) - Kubernetes-native Swagger auto-discovery and aggregation
 
 ## Speaking

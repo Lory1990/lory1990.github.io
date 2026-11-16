@@ -67,7 +67,7 @@ const sideProjects = [
     name: "Opsburg",
     tagline: "Keep your cloud up and running. Play it like a city.",
     description:
-      "A self-hosted platform for platform engineers, DevOps teams and SREs. It builds and ships apps and AI agents from the repository to your Kubernetes through GitOps, under rules the platform team sets once for the whole organization. The console is a 3D steampunk city builder: every service is a building, every deploy an airship, every incident a storm. It grew out of MFE Orchestrator.",
+      "A self-hosted platform for platform engineers, DevOps teams and SREs. It builds and ships apps and AI agents from the repository to your Kubernetes through GitOps, under rules the platform team sets once for the whole organization. The console is a 3D steampunk city builder: every service is a building, every deploy an airship, every incident a storm.",
     features: [
       "Apps and AI agents from approved templates",
       "GitOps deploys via Argo CD, with rollback",

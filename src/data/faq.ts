@@ -36,7 +36,7 @@ export const faq: FaqEntry[] = [
   {
     question: "What is microfrontend orchestration?",
     answer:
-      "It is managing many independently deployed frontend applications as a single product: routing users to the right version, handling environments and rollbacks, and keeping deployments consistent across teams. Lorenzo started MFE Orchestrator, an open source project that did for microfrontends roughly what Kubernetes does for containers; it has since grown into Opsburg, a self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps.",
+      "It is managing many independently deployed frontend applications as a single product: routing users to the right version, handling environments and rollbacks, and keeping deployments consistent across teams. Lorenzo started MFE Orchestrator, an open source project that did for microfrontends roughly what Kubernetes does for containers.",
   },
   {
     question: "Is Lorenzo available for consulting or fractional CTO work?",

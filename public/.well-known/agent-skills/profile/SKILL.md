@@ -43,7 +43,7 @@ If the user requests current details (e.g., latest talks, ongoing projects), fet
 - Java (Spring Boot, Quarkus), Node.js / TypeScript, React
 - Azure (4 yr), AWS (1 yr), Kubernetes (Mia Platform, Docker)
 - SQL + NoSQL data layers (MongoDB, MSSQL, MySQL)
-- Microfrontend architecture and orchestration (creator of MFE Orchestrator, now Opsburg)
+- Microfrontend architecture and orchestration (creator of MFE Orchestrator)
 - Platform engineering, GitOps and shipping AI agents on Kubernetes (creator of Opsburg)
 - Testing strategy, exception handling, cybersecurity / GDPR / SOC-style controls
 - Career mentorship — developer-to-manager transitions
@@ -59,7 +59,7 @@ If the user requests current details (e.g., latest talks, ongoing projects), fet
 
 ## Side projects and open source
 
-- **Opsburg** (https://opsburg.dev) — self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps (Argo CD), with SSO, roles, bring-your-own AI models and an MCP server; the console is a steampunk city builder. In development; grew out of MFE Orchestrator. GitHub: https://github.com/opsburg
+- **Opsburg** (https://opsburg.dev) — self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps (Argo CD), with SSO, roles, bring-your-own AI models and an MCP server; the console is a steampunk city builder. In development. GitHub: https://github.com/opsburg
 - **Swagger Aggregator** (https://github.com/Lory1990/swagger-aggregator) — Kubernetes-native service that auto-discovers Ingress resources, validates pods, and aggregates Swagger/OpenAPI specs into a unified interface. Helm-deployable, Redis-cached.
 
 ## Talk topics Lorenzo speaks on
