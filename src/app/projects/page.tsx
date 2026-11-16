@@ -13,7 +13,7 @@ import { PERSON_ID, WEBSITE_ID } from "@/data/person"
 import projects from "@/data/projects"
 
 const projectsDescription =
-  "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development."
+  "Side projects, open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development."
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -21,9 +21,10 @@ export const metadata: Metadata = {
   keywords: [
     "Lorenzo De Francesco projects",
     "open source",
-    "MFE Orchestrator",
+    "Opsburg",
     "Swagger Aggregator",
-    "microfrontends",
+    "platform engineering",
+    "GitOps",
     "fintech projects",
     "insurtech projects",
     "crypto projects",
@@ -61,40 +62,24 @@ export const metadata: Metadata = {
   },
 }
 
-const openSourceProjects = [
+const sideProjects = [
   {
-    name: "Flightroom",
-    tagline: "Apps and AI agents, shipped in one click",
+    name: "Opsburg",
+    tagline: "Keep your cloud up and running. Play it like a city.",
     description:
-      "An open source, self-hosted enterprise platform where anyone in a company describes an app or an AI agent and AI writes the first version on a branch of the company's own repositories, starting from its templates. Changes go through normal code review, then deploy to the company's Kubernetes cluster in one click, with its single sign-on, roles and chosen AI models.",
+      "A self-hosted platform for platform engineers, DevOps teams and SREs. It builds and ships apps and AI agents from the repository to your Kubernetes through GitOps, under rules the platform team sets once for the whole organization. The console is a 3D steampunk city builder: every service is a building, every deploy an airship, every incident a storm. It grew out of MFE Orchestrator.",
     features: [
-      "Apps and agents from plain language",
-      "Pull request review on every change",
-      "One-click deploy via GitOps & Argo CD",
-      "SSO (Entra ID, Google, Auth0) & roles",
-      "Bring your own AI model",
-      "Self-hosted (Kubernetes, Docker, Terraform)",
+      "Apps and AI agents from approved templates",
+      "GitOps deploys via Argo CD, with rollback",
+      "AI agents that read logs and propose fixes",
+      "SSO, roles & your own AI models",
+      "MCP server for AI clients",
+      "Self-hosted on your Kubernetes",
     ],
-    website: "https://flightroom.dev/",
-    github: "https://github.com/flightroom/flightroom",
-    logo: "/img/projects/flightroom/logo.png",
-  },
-  {
-    name: "MFE Orchestrator",
-    tagline: "Like Kubernetes... but for frontend",
-    description:
-      "A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments. Ship and manage microfrontends in minutes, not hours.",
-    features: [
-      "Multi-environment (DEV, UAT, PROD)",
-      "Multi-cloud (AWS, Azure, GCP)",
-      "Canary deployments",
-      "CI/CD integration",
-      "Version management & rollback",
-      "Drag-and-drop configuration",
-    ],
-    website: "https://mfe-orchestrator.dev/",
-    github: "https://github.com/mfe-orchestrator",
-    version: "v1.0.0",
+    website: "https://opsburg.dev/",
+    github: "https://github.com/opsburg",
+    logo: "/img/projects/opsburg/logo.png",
+    version: "In development",
   },
   {
     name: "Swagger Aggregator",
@@ -127,7 +112,7 @@ export default function ProjectsPage() {
           about: { "@id": PERSON_ID },
           name: "Projects",
           description:
-            "Open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
+            "Side projects, open source tools and a selection of fintech, insurtech, and enterprise projects built over 10+ years of software development.",
           url: `${siteConfig.url}/projects`,
           mainEntity: {
             "@type": "ItemList",
@@ -172,22 +157,22 @@ export default function ProjectsPage() {
               Projects
             </h1>
             <p className="mt-4 max-w-xl text-text-secondary">
-              Open source tools and a selection of projects I have led across
+              Side projects, open source tools and a selection of projects I have led across
               fintech, insurtech, crypto, and enterprise software.
             </p>
           </ScrollReveal>
         </PageWrapper>
       </section>
 
-      {/* Open Source */}
+      {/* Side Projects */}
       <div className="border-t border-border bg-surface/50 py-24">
         <PageWrapper>
           <ScrollReveal>
-            <SectionTitle>Open Source</SectionTitle>
+            <SectionTitle>Side Projects</SectionTitle>
           </ScrollReveal>
 
           <div className="space-y-6">
-          {openSourceProjects.map((project) => (
+          {sideProjects.map((project) => (
             <ScrollReveal key={project.name}>
               <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
                 <div className="flex flex-col gap-8 md:flex-row md:items-start">

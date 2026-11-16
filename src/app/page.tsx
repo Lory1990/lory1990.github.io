@@ -30,23 +30,15 @@ const recentTalks = events
   .filter((e) => e.venue && e.date)
   .slice(0, 6)
 
-const openSourceProjects = [
+const sideProjects = [
   {
-    name: "Flightroom",
-    tagline: "Apps and AI agents, shipped in one click",
+    name: "Opsburg",
+    tagline: "Keep your cloud up and running. Play it like a city.",
     description:
-      "A self-hosted platform: describe an app or an AI agent and AI writes the first version in your own repositories, reviewed as a pull request and deployed to your Kubernetes cluster in one click.",
-    website: "https://flightroom.dev/",
-    github: "https://github.com/flightroom/flightroom",
-    logo: "/img/projects/flightroom/logo.png",
-  },
-  {
-    name: "MFE Orchestrator",
-    tagline: "Like Kubernetes... but for frontend",
-    description:
-      "A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments.",
-    website: "https://mfe-orchestrator.dev/",
-    github: "https://github.com/mfe-orchestrator",
+      "A self-hosted platform that builds and ships apps and AI agents to your Kubernetes through GitOps, with a console you play as a steampunk city builder: every service is a building, every incident a storm.",
+    website: "https://opsburg.dev/",
+    github: "https://github.com/opsburg",
+    logo: "/img/projects/opsburg/logo.png",
   },
   {
     name: "Swagger Aggregator",
@@ -447,13 +439,13 @@ export default function HomePage() {
         </PageWrapper>
       </div>
 
-      {/* Open Source */}
+      {/* Side Projects */}
       <PageWrapper className="py-24">
         <ScrollReveal>
-          <SectionTitle>Open Source</SectionTitle>
+          <SectionTitle>Side Projects</SectionTitle>
         </ScrollReveal>
         <div className="grid gap-6 md:grid-cols-2">
-          {openSourceProjects.map((project) => (
+          {sideProjects.map((project) => (
             <ScrollReveal key={project.name}>
               <div className="group rounded-lg border border-border bg-surface p-8 transition-all hover:border-gold/30">
                 <div className="flex items-start gap-4">

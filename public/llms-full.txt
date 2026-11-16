@@ -78,16 +78,17 @@ Trieste, Italy. Co-founder of a startup developing decision support products for
 
 ---
 
-## Open Source Projects
+## Side Projects
 
-### MFE Orchestrator
-Like Kubernetes, but for frontend. A centralized multi-cloud platform for managing and orchestrating microfrontends across multiple environments. Ship and manage microfrontends in minutes, not hours.
-- Multi-environment (DEV, UAT, PROD)
-- Multi-cloud (AWS, Azure, GCP)
-- Canary deployments, CI/CD integration
-- Version management & rollback
-- Website: https://mfe-orchestrator.dev/
-- GitHub: https://github.com/mfe-orchestrator
+### Opsburg
+Keep your cloud up and running. Play it like a city. A self-hosted platform for platform engineers, DevOps teams and SREs: it builds and ships apps and AI agents from the repository to Kubernetes through GitOps, under rules set once for the whole organization. The console is a 3D steampunk city builder: every service is a building, every deploy an airship, every incident a storm. Status: in development. It grew out of MFE Orchestrator, Lorenzo's earlier open source microfrontend orchestrator.
+- Apps and AI agents from approved templates, repositories on GitHub, GitLab or Azure DevOps
+- GitOps deploys via Argo CD, with rollback
+- AI agents that read logs and propose fixes, with human approval before production
+- Single sign-on, roles, your own AI models, MCP server for AI clients
+- Self-hosted on your Kubernetes
+- Website: https://opsburg.dev/
+- GitHub: https://github.com/opsburg
 
 ### Swagger Aggregator
 A Kubernetes-native service that automatically discovers Ingress resources, retrieves associated services and pods, and aggregates their Swagger API definitions into a unified interface.

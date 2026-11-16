@@ -32,9 +32,9 @@ Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the 
 - **Backend:** Java/Spring Boot/Quarkus (7yr), Node.js/TypeScript (5yr), SQL+NoSQL (8yr)
 - **Cloud:** Azure (4yr), AWS (1yr), Kubernetes (2yr)
 
-## Open Source Projects
+## Side Projects
 
-- [MFE Orchestrator](https://mfe-orchestrator.dev/) - Multi-cloud platform for orchestrating microfrontends
+- [Opsburg](https://opsburg.dev/) - Self-hosted platform that builds and ships apps and AI agents to Kubernetes through GitOps, with a console played as a steampunk city builder (in development; grew out of MFE Orchestrator)
 - [Swagger Aggregator](https://github.com/Lory1990/swagger-aggregator) - Kubernetes-native Swagger auto-discovery and aggregation
 
 ## Speaking
