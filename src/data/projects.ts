@@ -220,9 +220,33 @@ const projects: IProject[] = [
     subtitle: "The all in one solution to predict ship damage onboard",
     date: "2014",
     image: "/img/projects/navium/card-logo.png",
-    stack: ["Java"],
+    stack: ["Java", "Rust", "WebAssembly", "React"],
     category: ["Marinetech"],
     background: "/img/projects/navium/card-background.png",
+    link: {
+      web: "https://lorenzodefrancesco.it/navium-faber/",
+      github: "https://github.com/Lory1990/navium-faber",
+    },
+    article: [
+      { type: ArticleDataType.TITLE, text: "Navium Faber, back online" },
+      {
+        type: ArticleDataType.TEXT,
+        text: "Faber was the ship design suite we built at Navium between 2012 and 2017. It's about 250,000 lines of Java: hull geometry, hydrostatics, intact and damaged stability, resistance, propulsion, maneuvering and dynamic positioning. When Navium closed, it went into a Dropbox folder. It stayed there for years.",
+      },
+      {
+        type: ArticleDataType.TEXT,
+        text: "I didn't want it to die there. So in 2026 I started bringing it back as a web app, rewriting the calculation engine in Rust and compiling it to WebAssembly, which means it runs in your browser at native speed and your ship data never leaves your computer. React on top. Three.js for the 3D hull. The original Faber icons, all of them.",
+      },
+      {
+        type: ArticleDataType.TEXT,
+        text: "Hull import, hydrostatic tables and intact stability with the IMO 2008 criteria already work, and I check them against the same benchmarks we used back then. The rest is coming one module at a time.",
+      },
+    ],
+    desktopScreenshots: [
+      "/img/projects/navium/faber-hull.png",
+      "/img/projects/navium/faber-hydrostatics.png",
+      "/img/projects/navium/faber-stability.png",
+    ],
   },
 ]
 
