@@ -239,13 +239,15 @@ const projects: IProject[] = [
       },
       {
         type: ArticleDataType.TEXT,
-        text: "Hull import, hydrostatic tables and intact stability with the IMO 2008 criteria already work, and I check them against the same benchmarks we used back then. The rest is coming one module at a time.",
+        text: "It's done. All 34 modules run in the browser now, from the hull and the hydrostatic tables to damaged stability, flooding simulation, propellers, longitudinal strength, escort tugs and dynamic positioning: about 33,000 lines of Rust and 222 tests, each checked against hand calculations or the Cubotto benchmark we used back then. Porting it, I found bugs we'd shipped. Real ones. The flooding simulation never let a single cubic metre of water in, because its time loop had been commented out.",
       },
     ],
     desktopScreenshots: [
       "/img/projects/navium/faber-hull.png",
       "/img/projects/navium/faber-hydrostatics.png",
       "/img/projects/navium/faber-stability.png",
+      "/img/projects/navium/faber-flooding.png",
+      "/img/projects/navium/faber-dp.png",
     ],
   },
 ]
