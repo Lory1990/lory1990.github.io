@@ -68,21 +68,21 @@ const managerialQualities = [
     title: "IT Governance",
     value: "100%",
     description:
-      "Established complete IT governance with security policies, GDPR compliance, SSO integration, and automated monitoring across all services.",
+      "Established complete IT governance for a CONSOB-regulated platform and wrote the full IT policy framework required by Bank of Italy and CONSOB, from disaster recovery to business continuity.",
   },
   {
     icon: Layers,
     title: "Platform Transformation",
-    value: "Excel → SaaS",
+    value: "Excel → DevOps",
     description:
-      "Turned a spreadsheet-driven operation into a robust, scalable SaaS platform — with proper cloud architecture, CI/CD, and observability across all services.",
+      "Turned a software development lifecycle governed by a single Excel file into an orchestrated Agile process on Azure DevOps, from backlog to release.",
   },
 ]
 
 const stats = [
   { value: "10+", label: "Years Experience" },
   { value: "70%", label: "IT Costs Reduced" },
-  { value: "40+", label: "Talks & Events" },
+  { value: "45+", label: "Talks & Events" },
   { value: "15+", label: "Projects Delivered" },
 ]
 
@@ -157,8 +157,8 @@ export default function HomePage() {
                 optimize costs, and deliver enterprise platforms at scale.
               </p>
               <p className="mt-4 max-w-xl leading-relaxed text-text-secondary">
-                Today I lead the technology development of the bank of the
-                future at TNB Project (Gruppo Azimut), and I&apos;m CTO at{" "}
+                Today I lead the technology development of Italy&apos;s first
+                wealth management bank at TNB Project (Gruppo Azimut), and I&apos;m CTO at{" "}
                 <a
                   href="https://azimutmarketplace.it"
                   target="_blank"
@@ -168,8 +168,8 @@ export default function HomePage() {
                   Azimut Marketplace
                 </a>
                 , where I rebuilt the entire IT department, cut over €700k
-                (~70%) of recurring IT costs, and turned a spreadsheet-driven operation into a
-                scalable, cloud-native platform.
+                (~70%) of recurring IT costs, and turned an Excel-governed
+                software lifecycle into an orchestrated Agile process on Azure DevOps.
                 Earlier, within the Sella banking group I coordinated the
                 development of SME Banking, and at Costa Crociere I built
                 mission-critical software deployed directly on board cruise
@@ -211,16 +211,18 @@ export default function HomePage() {
                       </span>
                     </div>
                     <p className="text-sm text-text-muted">
-                      Gruppo Azimut · 2025 — Today
+                      Gruppo Azimut · May 2025 — Today
                     </p>
                     <p className="mt-4 max-w-2xl text-lg font-heading leading-snug text-text-primary">
-                      Building the bank of the future from scratch — where the
-                      financial advisor comes first.
+                      Italy&apos;s first wealth management bank, where AI works
+                      for the financial advisor.
                     </p>
                     <p className="mt-3 max-w-2xl leading-relaxed text-text-secondary">
-                      I lead the technology and architecture end to end, with a
-                      relentless focus on cyber security, data governance, and
-                      the integrity of data.
+                      I lead the technology end to end, with a relentless focus
+                      on cyber security, data governance, and data integrity.
+                      Business teams build their own apps with AI on an
+                      internal control tower I coordinate, compliant with
+                      banking regulations by design.
                     </p>
                   </div>
                 </div>
@@ -258,10 +260,10 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 leading-relaxed text-text-secondary">
                   I built the IT department from scratch, cut over €700k (~70%)
-                  of recurring IT costs, and turned a spreadsheet-driven
-                  operation into a scalable fintech platform — establishing
-                  governance, security, and an engineering culture that runs
-                  autonomously.
+                  of recurring IT costs, and moved software delivery from a
+                  single Excel file to an Agile process on Azure DevOps,
+                  establishing governance, security, and an engineering culture
+                  that runs autonomously.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {["−€700k Costs", "Cloud Architecture", "IT Governance", "Team Building"].map(
@@ -398,7 +400,7 @@ export default function HomePage() {
         <ScrollReveal>
           <p className="mb-10 max-w-2xl leading-relaxed text-text-secondary">
             I am a regular speaker at conferences, meetups, panels, and
-            podcasts across Italy — with 40+ talks on IT governance, cloud
+            podcasts across Italy — with 45+ talks on IT governance, cloud
             architecture, cybersecurity, microfrontends, and the journey from
             developer to technology leader.
           </p>

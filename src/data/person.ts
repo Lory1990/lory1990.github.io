@@ -95,7 +95,7 @@ export const personSchema: Person = {
       name: "TNB Project",
       parentOrganization: { "@type": "Organization", name: "Gruppo Azimut" },
       description:
-        "A new digital bank built from scratch, where the financial advisor comes first.",
+        "Italy's first wealth management bank, built from scratch, where AI works for the financial advisor.",
     },
     {
       "@type": "Organization",

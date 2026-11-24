@@ -12,12 +12,12 @@
 
 ## About
 
-Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the technology development at TNB Project (Gruppo Azimut), building the bank of the future from scratch — a model where the financial advisor comes first — with a relentless focus on cyber security, data governance, and data integrity. In parallel, as CTO at Azimut Marketplace, he built the IT department from scratch, reducing infrastructure costs by over €700k (70%) while turning a spreadsheet-driven operation into a robust, scalable, cloud-native platform. He is an organizer of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
+Lorenzo De Francesco is a technology leader based in Milan, Italy. He leads the technology development at TNB Project (Gruppo Azimut), building from scratch Italy's first wealth management bank, where AI works for the financial advisor, with a relentless focus on cyber security, data governance, and data integrity. Before that, as CTO at Azimut Marketplace (a role he still holds), he built the IT department from scratch, cut over €700k (~70%) of recurring IT costs and turned an Excel-governed software lifecycle into an orchestrated Agile process on Azure DevOps. He is an organizer of the Google Developer Group Milano and Scientific Coordinator of the Master in Full Stack Development & AI at start2impact.
 
 ## Current Roles
 
-- **TNB Project (Gruppo Azimut)** — leads the technology development of a new digital bank built from scratch; focus on cyber security, data governance, and data integrity (since 2025).
-- **CTO at Azimut Marketplace** (since May 2022) — IT governance, cloud architecture, cost optimization, team building. Achievements: over €700k (~70%) of recurring IT costs cut, Excel-to-SaaS platform transformation, mentored 2 tech leaders.
+- **TNB Project (Gruppo Azimut)** — leads the technology development of Italy's first wealth management bank, where AI works for the financial advisor; business teams build their own compliant apps with AI on an internal control tower he coordinates; compliance with GDPR, DORA, NIS2, ISO 9001 and the AI Act (since May 2025).
+- **CTO at Azimut Marketplace** (since May 2022) — IT governance, cloud architecture, cost optimization, team building. Achievements: over €700k (~70%) of recurring IT costs cut, Excel-to-Azure DevOps SDLC transformation, IT policy framework for Bank of Italy and CONSOB, mentored 2 tech leaders.
 
 ## Background
 

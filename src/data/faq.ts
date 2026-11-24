@@ -46,7 +46,7 @@ export const faq: FaqEntry[] = [
   {
     question: "Can Lorenzo speak at my conference or podcast?",
     answer:
-      "Yes — he has delivered more than 45 talks, in Italian and English, at events including Codemotion, DevFest and Winter Tech. Recurring topics are IT governance, cloud architecture, cyber security, microfrontends, AI agents, and the path from developer to CTO. Past talks are listed under Events.",
+      "Yes — he has delivered more than 45 talks, in Italian and English, at events including DevFest and Winter Tech. Recurring topics are IT governance, cloud architecture, cyber security, microfrontends, AI agents, and the path from developer to CTO. Past talks are listed under Events.",
   },
 ]
 

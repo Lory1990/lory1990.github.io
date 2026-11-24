@@ -12,7 +12,7 @@ const credentials = [
   "ex-Costa Crociere",
   "ex-Banca Sella",
   "Azimut Marketplace",
-  "40+ Talks",
+  "45+ Talks",
 ]
 
 export default function HeroSection() {
@@ -42,8 +42,8 @@ export default function HeroSection() {
 
         <ScrollReveal delay={0.2}>
           <p className="mx-auto mt-8 max-w-2xl font-heading text-xl leading-snug text-hero-text md:text-2xl">
-            Building the bank of the future from scratch — where the financial
-            advisor comes first.
+            Italy&apos;s first wealth management bank, where AI works for the
+            financial advisor.
           </p>
         </ScrollReveal>
 

@@ -68,7 +68,7 @@ const socialLinks = [
 const highlights = [
   { value: "10+", label: "Years of Experience" },
   { value: "€700k+", label: "IT Costs Reduced" },
-  { value: "40+", label: "Talks & Events" },
+  { value: "45+", label: "Talks & Events" },
   { value: "2", label: "Tech Leaders Mentored" },
 ]
 
@@ -166,22 +166,24 @@ export default function AboutPage() {
           <div className="max-w-3xl space-y-4 leading-relaxed text-text-secondary">
             <p>
               I am a technology leader with a clear mission: transform IT from
-              a cost center into a strategic asset. At TNB Project (Gruppo
-              Azimut), I lead the technology development of the bank of the
-              future, built from scratch &mdash; a model where the financial
-              advisor comes first &mdash; with a relentless focus on cyber
-              security, data governance, and data integrity.
+              a cost center into a strategic asset. As CTO of Azimut
+              Marketplace, a role I still hold, I first cut over €700k (~70%)
+              of recurring IT costs while building a robust, scalable,
+              cloud-native architecture.
             </p>
             <p>
-              In parallel, as CTO at Azimut Marketplace, I cut over
-              €700k (~70%) of recurring IT costs while building a robust,
-              scalable, cloud-native architecture.
+              Since 2025, at TNB Project (Gruppo Azimut), I have been leading
+              from scratch the technology development of Italy&apos;s first
+              wealth management bank, where AI works for the financial
+              advisor. AI is part of how the bank works too: through an
+              internal control tower that I coordinate, business teams
+              vibe-code their own apps and have already automated manual
+              processes that used to take days.
             </p>
             <p>
-              My approach combines technical depth with business acumen. I
-              don&apos;t just write code &mdash; I build teams, define
-              processes, and create a culture where engineering excellence
-              drives business results.
+              My approach combines technical depth with business acumen: I
+              build teams, define processes, and create a culture where
+              engineering excellence drives business results.
             </p>
             <p>
               Before stepping into the C-suite, I spent years as a hands-on
@@ -260,7 +262,7 @@ export default function AboutPage() {
                 Community & Speaking
               </h3>
               <p className="mt-4 leading-relaxed text-text-secondary">
-                I actively share my experience through 40+ conference talks,
+                I actively share my experience through 45+ conference talks,
                 panels, and podcasts. Topics range from IT governance and
                 cybersecurity to cloud architecture and team leadership. I am
                 also one of the organizers of the Google Developer Group
