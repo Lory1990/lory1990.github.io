@@ -165,40 +165,39 @@ export default function AboutPage() {
         <ScrollReveal>
           <div className="max-w-3xl space-y-4 leading-relaxed text-text-secondary">
             <p>
-              I am a technology leader with a clear mission: transform IT from
-              a cost center into a strategic asset. As CTO of Azimut
-              Marketplace, a role I still hold, I first cut over €700k (~70%)
-              of recurring IT costs while building a robust, scalable,
-              cloud-native architecture.
+              I turn IT from a cost center into a strategic asset. I&apos;m a
+              CTO with 10+ years in fintech and banking. In finance, trust is
+              the real product, and technology either protects it or puts it
+              at risk. The hardest problems I deal with are rarely technical:
+              they are about governance, cost, risk and people.
+            </p>
+            <h3 className="pt-4 font-heading text-xl text-text-primary">
+              What I do today
+            </h3>
+            <p>
+              At TNB Project (Gruppo Azimut) I lead the technology development
+              of Italy&apos;s first wealth management bank, where AI works for
+              the financial advisor. AI also shapes how the bank works:
+              business teams build the apps they need with AI, within rules
+              that keep every app compliant with banking regulations.
             </p>
             <p>
-              Since 2025, at TNB Project (Gruppo Azimut), I have been leading
-              from scratch the technology development of Italy&apos;s first
-              wealth management bank, where AI works for the financial
-              advisor. AI is part of how the bank works too: through an
-              internal control tower that I coordinate, business teams
-              vibe-code their own apps and have already automated manual
-              processes that used to take days.
+              Before that, as CTO of Azimut Marketplace, a CONSOB-regulated
+              fintech platform where I still lead technology, I built the IT
+              department from scratch, cut recurring IT costs by about 70%
+              (over €700k) and wrote the IT policies required by Bank of Italy
+              and CONSOB.
             </p>
-            <p>
-              My approach combines technical depth with business acumen: I
-              build teams, define processes, and create a culture where
-              engineering excellence drives business results.
-            </p>
-            <p>
-              Before stepping into the C-suite, I spent years as a hands-on
-              developer and architect. Within the Sella banking group I
-              coordinated the development of SME Banking, leading the team and
-              the React architecture behind the group&apos;s banking products.
-              Earlier, at Costa Crociere, I built mission-critical, real-time
-              software and the CI/CD pipelines to deploy it directly on board
-              cruise ships &mdash; where downtime simply isn&apos;t an option.
-            </p>
-            <p>
-              That foundation in high-stakes engineering is exactly what lets
-              me make informed technical decisions today and mentor the next
-              generation of tech leaders.
-            </p>
+            <h3 className="pt-4 font-heading text-xl text-text-primary">
+              What I work on
+            </h3>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>Regulated platforms that stay secure and auditable as they grow</li>
+              <li>AI and agents in regulated environments, without losing control</li>
+              <li>Technology compliance: DORA, NIS2, AI Act, GDPR, ISO 9001</li>
+              <li>Making IT speak the language of the CFO and the board</li>
+              <li>Engineering teams and a strong technical culture</li>
+            </ul>
           </div>
         </ScrollReveal>
       </PageWrapper>
