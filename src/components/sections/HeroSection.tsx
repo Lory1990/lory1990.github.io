@@ -42,8 +42,8 @@ export default function HeroSection() {
 
         <ScrollReveal delay={0.2}>
           <p className="mx-auto mt-8 max-w-2xl font-heading text-xl leading-snug text-hero-text md:text-2xl">
-            Italy&apos;s first wealth management bank, where AI works for the
-            financial advisor.
+            Technology leader in banking &amp; AI. I build banks, teams and
+            platforms from scratch.
           </p>
         </ScrollReveal>
 

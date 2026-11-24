@@ -10,7 +10,7 @@ const career: TimelineEvent[] = [
     highlight: true,
     tags: ["Wealth Management", "AI for Advisors", "Vibe Coding", "Regulatory Compliance"],
     description:
-      "I lead, from scratch, the technology development of Italy's first wealth management bank, where AI works for the financial advisor, with a relentless focus on cyber security, data governance and data integrity. I brought vibe coding into a regulated bank: business teams build their own apps with AI on an internal control tower I coordinate, automating manual processes that used to take days, each one compliant with banking regulations by design. I coordinate the bank's IT suppliers, lead data integration with partner banks and fund distribution platforms, and oversee compliance with GDPR, DORA, NIS2, ISO 9001 and the AI Act.",
+      "I lead, from scratch, the technology development of Italy's first wealth management bank, where AI works for the financial advisor, with a relentless focus on cyber security, data governance and data integrity. I brought vibe coding into a regulated bank: business teams build their own apps with AI on an internal control tower I coordinate, automating manual processes that used to take days, each one compliant with banking regulations by design. I lead data integration with partner banks and fund distribution platforms, and oversee compliance with GDPR, DORA, NIS2, ISO 9001 and the AI Act.",
   },
   {
     position: "Chief Technology Officer",
