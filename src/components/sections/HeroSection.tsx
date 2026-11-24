@@ -17,7 +17,7 @@ const credentials = [
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-28 pb-12">
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light to-background" />
       <div className="absolute inset-0 opacity-5">
